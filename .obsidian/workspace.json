@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "test.md",
+                "file": "모.구.모.구.md",
                 "mode": "source",
                 "source": false
               }
@@ -154,14 +154,81 @@
       "daily-notes:Open today's daily note": false,
       "templates:Insert template": false,
       "command-palette:Open command palette": false,
-      "obsidian-kanban:Create new board": false
+      "obsidian-kanban:Create new board": false,
+      "obsidian-rich-links:Rich Links": false,
+      "webpage-html-export:Export Vault to HTML": false
     }
   },
-  "active": "e85638fcd2d3f4e4",
+  "floating": {
+    "id": "cfc20e3fa15ebe4a",
+    "type": "floating",
+    "children": [
+      {
+        "id": "55e4804f26e7ceb7",
+        "type": "window",
+        "children": [
+          {
+            "id": "76bb9af963fddd10",
+            "type": "tabs",
+            "children": [
+              {
+                "id": "3a3d6fabdb454e15",
+                "type": "leaf",
+                "state": {
+                  "type": "markdown",
+                  "state": {
+                    "file": "test.md",
+                    "mode": "source",
+                    "source": false
+                  }
+                }
+              }
+            ]
+          }
+        ],
+        "direction": "vertical",
+        "x": 270,
+        "y": 352,
+        "width": 900,
+        "height": 500,
+        "maximize": false,
+        "zoom": 0
+      },
+      {
+        "id": "e979118e06d3bfeb",
+        "type": "window",
+        "children": [
+          {
+            "id": "4ed03f3b7f1c52cf",
+            "type": "tabs",
+            "children": [
+              {
+                "id": "3f85a36d7ff6e763",
+                "type": "leaf",
+                "state": {
+                  "type": "empty",
+                  "state": {}
+                }
+              }
+            ]
+          }
+        ],
+        "direction": "vertical",
+        "x": 270,
+        "y": 352,
+        "width": 900,
+        "height": 500,
+        "maximize": false,
+        "zoom": 0
+      }
+    ]
+  },
+  "active": "3a3d6fabdb454e15",
   "lastOpenFiles": [
+    "모.구.모.구.md",
     "test.md",
-    "index.md",
     "README.md",
+    "index.md",
     "이름 없는 보드.md",
     "이름 없는 보드 1.md",
     "docs/lib/search-index.json",
