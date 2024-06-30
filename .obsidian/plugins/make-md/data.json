@@ -40,7 +40,8 @@
   "showRibbon": true,
   "deleteFileOption": "trash",
   "expandedSpaces": [
-    "/"
+    "/",
+    "//docs"
   ],
   "expandFolderOnClick": true,
   "menuTriggerChar": "/",
