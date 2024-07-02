@@ -159,48 +159,11 @@
       "webpage-html-export:Export Vault to HTML": false
     }
   },
-  "floating": {
-    "id": "cfc20e3fa15ebe4a",
-    "type": "floating",
-    "children": [
-      {
-        "id": "6e3932309e293ef7",
-        "type": "window",
-        "children": [
-          {
-            "id": "d67d63fc6d2b3088",
-            "type": "tabs",
-            "children": [
-              {
-                "id": "28bac29d8dfef77e",
-                "type": "leaf",
-                "state": {
-                  "type": "markdown",
-                  "state": {
-                    "file": "mogumogu.md",
-                    "mode": "source",
-                    "source": false
-                  }
-                }
-              }
-            ]
-          }
-        ],
-        "direction": "vertical",
-        "x": 270,
-        "y": 352,
-        "width": 900,
-        "height": 500,
-        "maximize": false,
-        "zoom": 0
-      }
-    ]
-  },
-  "active": "28bac29d8dfef77e",
+  "active": "e85638fcd2d3f4e4",
   "lastOpenFiles": [
     "mogumogu.md",
-    "docs/docs.md",
     "모.구.모.구.md",
+    "docs/docs.md",
     "test.md",
     "README.md",
     "index.md",
