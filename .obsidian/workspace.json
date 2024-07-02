@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "mogumogu.md",
+                "file": "모.구.모.구.md",
                 "mode": "source",
                 "source": false
               }
@@ -94,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "mogumogu.md",
+                "file": "모.구.모.구.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -111,7 +111,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "mogumogu.md",
+                "file": "모.구.모.구.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -134,7 +134,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "mogumogu.md"
+                "file": "모.구.모.구.md"
               }
             }
           }
@@ -161,8 +161,8 @@
   },
   "active": "e85638fcd2d3f4e4",
   "lastOpenFiles": [
-    "mogumogu.md",
     "모.구.모.구.md",
+    "mogumogu.md",
     "docs/docs.md",
     "test.md",
     "README.md",

@@ -1,9 +1,13 @@
-<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[ejkiwi.github.io]]></title><description><![CDATA[Obsidian digital garden]]></description><link>http://github.com/dylang/node-rss</link><image><url>lib\media\favicon.png</url><title>ejkiwi.github.io</title><link/></image><generator>Webpage HTML Export plugin for Obsidian</generator><lastBuildDate>Tue, 02 Jul 2024 02:26:52 GMT</lastBuildDate><atom:link href="lib\rss.xml" rel="self" type="application/rss+xml"/><pubDate>Tue, 02 Jul 2024 02:26:51 GMT</pubDate><ttl>60</ttl><dc:creator/><item><title><![CDATA[mogumogu]]></title><description><![CDATA[ 
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[ejkiwi.github.io]]></title><description><![CDATA[Obsidian digital garden]]></description><link>http://github.com/dylang/node-rss</link><image><url>lib\media\favicon.png</url><title>ejkiwi.github.io</title><link/></image><generator>Webpage HTML Export plugin for Obsidian</generator><lastBuildDate>Tue, 02 Jul 2024 02:33:18 GMT</lastBuildDate><atom:link href="lib\rss.xml" rel="self" type="application/rss+xml"/><pubDate>Tue, 02 Jul 2024 02:33:18 GMT</pubDate><ttl>60</ttl><dc:creator/><item><title><![CDATA[모.구.모.구]]></title><description><![CDATA[ 
+ <br>모.구.모.구 모각코 소동아리는!!<br>!!절대 포기하지 않기!!<br>
+!!모르는 거 그냥 넘어가지 않기!!<br>화요일까지 할 것<br>
+1.모각코 팀 모임 날짜 정하기<br>
+2.날짜별 팀 계획 세우기<br>
+3.개인별 모각코 목표 세우기<br>
+4.팀 모각코 목표 세우기]]></description><link>모.구.모.구.html</link><guid isPermaLink="false">모.구.모.구.md</guid><pubDate>Tue, 02 Jul 2024 02:33:06 GMT</pubDate></item><item><title><![CDATA[mogumogu]]></title><description><![CDATA[ 
  <br>momogugumomogugu<br>
 나 계절학기 드랍했다!!!]]></description><link>mogumogu.html</link><guid isPermaLink="false">mogumogu.md</guid><pubDate>Tue, 02 Jul 2024 02:26:38 GMT</pubDate></item><item><title><![CDATA[index]]></title><description><![CDATA[ 
  <br>]]></description><link>index.html</link><guid isPermaLink="false">index.md</guid><pubDate>Wed, 26 Jun 2024 13:06:53 GMT</pubDate></item><item><title><![CDATA[Obsidian template for using github.io]]></title><description><![CDATA[ 
  <br>]]></description><link>readme.html</link><guid isPermaLink="false">README.md</guid><pubDate>Wed, 26 Jun 2024 12:40:01 GMT</pubDate></item><item><title><![CDATA[test]]></title><description><![CDATA[ 
  <br>안녕하세요!<br>
-테스트 페이지입니다.]]></description><link>test.html</link><guid isPermaLink="false">test.md</guid><pubDate>Wed, 26 Jun 2024 14:10:59 GMT</pubDate></item><item><title><![CDATA[모.구.모.구]]></title><description><![CDATA[ 
- <br>모.구.모.구 모각코 소동아리는!!<br>!!절대 포기하지 않기!!<br>
-!!모르는 거 그냥 넘어가지 않기!!]]></description><link>모.구.모.구.html</link><guid isPermaLink="false">모.구.모.구.md</guid><pubDate>Fri, 28 Jun 2024 08:28:16 GMT</pubDate></item></channel></rss>
+테스트 페이지입니다.]]></description><link>test.html</link><guid isPermaLink="false">test.md</guid><pubDate>Wed, 26 Jun 2024 14:10:59 GMT</pubDate></item></channel></rss>
