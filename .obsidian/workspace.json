@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "README.md",
+                "file": "index.md",
                 "mode": "source",
                 "source": false
               }
@@ -94,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "README.md",
+                "file": "index.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -111,7 +111,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "README.md",
+                "file": "index.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -134,7 +134,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "README.md"
+                "file": "index.md"
               }
             }
           }
@@ -161,13 +161,13 @@
   },
   "active": "e85638fcd2d3f4e4",
   "lastOpenFiles": [
+    "index.md",
+    "모.구.모.구 모각코 활동.md",
     "README.md",
     "test.md",
-    "모.구.모.구 모각코 활동.md",
     "docs/모.구.모.구-모각코-활동.html",
     "mogumogu.md",
     "docs/docs.md",
-    "index.md",
     "docs/mogumogu.md",
     "Tags",
     "이름 없는 보드.md",
