@@ -1,12 +1,23 @@
-<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[ejkiwi.github.io]]></title><description><![CDATA[Obsidian digital garden]]></description><link>http://github.com/dylang/node-rss</link><image><url>lib\media\favicon.png</url><title>ejkiwi.github.io</title><link/></image><generator>Webpage HTML Export plugin for Obsidian</generator><lastBuildDate>Tue, 02 Jul 2024 02:33:18 GMT</lastBuildDate><atom:link href="lib\rss.xml" rel="self" type="application/rss+xml"/><pubDate>Tue, 02 Jul 2024 02:33:18 GMT</pubDate><ttl>60</ttl><dc:creator/><item><title><![CDATA[모.구.모.구]]></title><description><![CDATA[ 
- <br>모.구.모.구 모각코 소동아리는!!<br>!!절대 포기하지 않기!!<br>
-!!모르는 거 그냥 넘어가지 않기!!<br>화요일까지 할 것<br>
-1.모각코 팀 모임 날짜 정하기<br>
-2.날짜별 팀 계획 세우기<br>
-3.개인별 모각코 목표 세우기<br>
-4.팀 모각코 목표 세우기]]></description><link>모.구.모.구.html</link><guid isPermaLink="false">모.구.모.구.md</guid><pubDate>Tue, 02 Jul 2024 02:33:06 GMT</pubDate></item><item><title><![CDATA[mogumogu]]></title><description><![CDATA[ 
- <br>momogugumomogugu<br>
-나 계절학기 드랍했다!!!]]></description><link>mogumogu.html</link><guid isPermaLink="false">mogumogu.md</guid><pubDate>Tue, 02 Jul 2024 02:26:38 GMT</pubDate></item><item><title><![CDATA[index]]></title><description><![CDATA[ 
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[ejkiwi.github.io]]></title><description><![CDATA[Obsidian digital garden]]></description><link>http://github.com/dylang/node-rss</link><image><url>lib\media\favicon.png</url><title>ejkiwi.github.io</title><link/></image><generator>Webpage HTML Export plugin for Obsidian</generator><lastBuildDate>Fri, 05 Jul 2024 08:49:32 GMT</lastBuildDate><atom:link href="lib\rss.xml" rel="self" type="application/rss+xml"/><pubDate>Fri, 05 Jul 2024 08:49:31 GMT</pubDate><ttl>60</ttl><dc:creator/><item><title><![CDATA[모.구.모.구 모각코 활동]]></title><description><![CDATA[ 
+ <br>팀 모각코 목표 : 1. 절대 포기하지 않기, 2. 모르는 거 그냥 넘어가지 않기<br>나의 모각코 활동 다짐 : 활동 계획을 완벽히 마무리 할 수 있도록 노력하겠습니다!<br>나의 모각코 활동 계획<br>
+<br>7월 7일
+
+<br>모각코 활동 동안 공부할 주제 전체적으로 톺아보기, 팀원들과 친해지기
+
+
+<br>7월 9일, 7월 16일
+
+<br>파이토치 사용 익히기
+<br>선배님 프로젝트의 레포지토리에 있는 코드 분석해보며 공부하기
+
+
+<br>7월 23일, 7월 30일, 8월 6일, 8월 13일
+
+<br>CNN 구조 공부하기
+<br>RESNET 구조 공부하기
+
+
+]]></description><link>모.구.모.구-모각코-활동.html</link><guid isPermaLink="false">모.구.모.구 모각코 활동.md</guid><pubDate>Fri, 05 Jul 2024 08:47:48 GMT</pubDate></item><item><title><![CDATA[index]]></title><description><![CDATA[ 
  <br>]]></description><link>index.html</link><guid isPermaLink="false">index.md</guid><pubDate>Wed, 26 Jun 2024 13:06:53 GMT</pubDate></item><item><title><![CDATA[Obsidian template for using github.io]]></title><description><![CDATA[ 
  <br>]]></description><link>readme.html</link><guid isPermaLink="false">README.md</guid><pubDate>Wed, 26 Jun 2024 12:40:01 GMT</pubDate></item><item><title><![CDATA[test]]></title><description><![CDATA[ 
  <br>안녕하세요!<br>
