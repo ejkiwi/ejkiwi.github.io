@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "모.구.모.구 모각코 활동.md",
+                "file": "README.md",
                 "mode": "source",
                 "source": false
               }
@@ -94,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "모.구.모.구 모각코 활동.md",
+                "file": "README.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -111,7 +111,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "모.구.모.구 모각코 활동.md",
+                "file": "README.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -134,7 +134,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "모.구.모.구 모각코 활동.md"
+                "file": "README.md"
               }
             }
           }
@@ -161,10 +161,10 @@
   },
   "active": "e85638fcd2d3f4e4",
   "lastOpenFiles": [
-    "docs/모.구.모.구-모각코-활동.html",
-    "모.구.모.구 모각코 활동.md",
-    "test.md",
     "README.md",
+    "test.md",
+    "모.구.모.구 모각코 활동.md",
+    "docs/모.구.모.구-모각코-활동.html",
     "mogumogu.md",
     "docs/docs.md",
     "index.md",
@@ -180,7 +180,6 @@
     "docs/lib/styles",
     "docs/lib/scripts/graph-data.js",
     "docs/lib/scripts/minisearch.js",
-    "docs/lib/scripts/pixi.js",
     "docs/lib/media/favicon.png",
     "docs/lib/media/3d6c1bdc4d87cde4de67.svg",
     "docs/lib/media/874d8b8e340f75575caa.svg",
