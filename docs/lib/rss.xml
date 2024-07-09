@@ -1,4 +1,37 @@
-<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[ejkiwi.github.io]]></title><description><![CDATA[Obsidian digital garden]]></description><link>http://github.com/dylang/node-rss</link><image><url>lib\media\favicon.png</url><title>ejkiwi.github.io</title><link/></image><generator>Webpage HTML Export plugin for Obsidian</generator><lastBuildDate>Tue, 09 Jul 2024 09:57:44 GMT</lastBuildDate><atom:link href="lib\rss.xml" rel="self" type="application/rss+xml"/><pubDate>Tue, 09 Jul 2024 09:57:44 GMT</pubDate><ttl>60</ttl><dc:creator/><item><title><![CDATA[20240707 모각코 활동 1회차]]></title><description><![CDATA[ 
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[ejkiwi.github.io]]></title><description><![CDATA[Obsidian digital garden]]></description><link>http://github.com/dylang/node-rss</link><image><url>lib\media\favicon.png</url><title>ejkiwi.github.io</title><link/></image><generator>Webpage HTML Export plugin for Obsidian</generator><lastBuildDate>Tue, 09 Jul 2024 16:16:43 GMT</lastBuildDate><atom:link href="lib\rss.xml" rel="self" type="application/rss+xml"/><pubDate>Tue, 09 Jul 2024 16:16:43 GMT</pubDate><ttl>60</ttl><dc:creator/><item><title><![CDATA[20240709 모각코 활동 2회차]]></title><description><![CDATA[ 
+ <br>오늘의 목표<br>
+1.파이토치 공부하기 - youtube에 있는 파이토치 설명 강좌(<a rel="noopener" class="external-link" href="https://youtube.com/playlist?list=PLS8gIc2q83Oit-utRso2iblvt00fZOw85&amp;si=i0CZi4e5g_dVJ3dx" target="_blank">https://youtube.com/playlist?list=PLS8gIc2q83Oit-utRso2iblvt00fZOw85&amp;si=i0CZi4e5g_dVJ3dx</a>) 1,2,3강 들으며 공부<br>
+2.선배님의 프로젝트 코드 절반 분석하기 - whisper 부분<br>파이토치<br>
+al분야에서 google tensorflow와 함께 딥러닝 모델을 구축하고 학습하는 데 가장 많이 사용되고 있는 오픈 소스 기반의 딥러닝 프레임워크임.<br>
+<br>오픈소스 : 개방형 협업을 장려하는 소프트웨어 개발 모델
+<br>프레임워크 : 소프트웨어 개발에 있어 하나의 뼈대와 같은 역할을 하는 것으로, 목적에 필요한 것을 고민할 필요 없이 이용할 수 있도록 일괄로 가져다 쓰도록 만들어 놓은 구조화된 틀임.<br>
+텐서 : 파이토치의 기본 데이터 타입
+<br>배열이나 행렬과 유사한 자료 구조이다
+<br>일반적으로는 1차원 - 벡터 , 2차원 - 행렬, 3차원 이상 - 벡터 이지만, 파이토치에서는 입력과 출력 그리고 학습에 필요한모든 데이터들을 모두 텐서 데이터타입으로 정의하고 있다.
+<br>텐서의 속성으로는 모양,자료형,저장되는 위치가 있다
+<br>보통 저장되는 위치는 cpu인데, gpu를 사용할 수 있다면, .to("cuda")를 사용해서 텐서를 gpu로 이동시킬 수 있다.
+
+<br>gpu : 컴퓨터 그래픽을 처리하는 장치로 그래픽 카드를 구성하는 가장 중요한 핵심 요소.
+
+
+<br>1.파이썬의 리스트 데이터로부터 직접 텐서를 만들 수 있다.<br>
+- listdata = [[10,20],[30,40]] 	tensor1 = torch.Tensor(listdata)`
+<br>2.파이썬의 넘파이 데이터로부터 직접 텐서를 만들 수도 있다.(넘파이로만들어진건 보통 int로 생성되기때문에 원래 데이터가 float의 형태인 경우, 캐스팅해주는 작업이 필요하기도 하다.)
+<br>3.파이썬의 랜덤 데이터로부터 직접 텐서를 만들 수도 있다.<br>
+- tensor3 = torch.rand(2,2) -&gt; rand()메서드는 0~1사이의 균일 분포 랜덤값을 생성함 ( randn()메서드는 정규분포를 가지는 랜덤값을 생성 )
+<br>텐서를 넘파이로 바꿀 수도 있다.<br>
+- tensor.numpy()
+<br>인덱싱과 슬라이싱이 가능하다
+<br>elment-wise product 연산
+<br>matrix multiplication 연산
+<br>선배님 프로젝트 분석<br>
+1.from faster_whisper import WhisperModel<br>
+2.def get_whisper() :  	 3.   model_size = "medium"  #@param ['tiny', 'base', 'small', 'medium', 'large', 'large-v2', 'large-v3'] 	 4.   compute_type = "int8"  #@param ['float16', 'int8']<br>
+5.   return WhisperModel(model_size, device=DEVICE, cpu_threads=12, compute_type=compute_type).transcribe<br>1: faster_whisper 에서 WhisperModel 모듈 불러오기<br>
+2: get_whisper 라는 이름의 함수 설정하기<br>
+3: model_size는 "medium"이다. model_size가 가질 수 있는 옵션으로는 "tiny","base","small","medium","large","large-v3" 이 있다. -&gt; model_size는 모델의 크기를 뜻한다.<br>
+4: compute_type은 "int8"이다. compute_type이 가질 수 있는 옵션으로는 "float16","int8"이 있다. -&gt; compute_type은 계산 유형을 뜻한다.<br>
+5: WhisperModel은 4가지의 매개변수를 사용하는데, 여기에서 model_size는 앞서 정한 크기와 같고, device는 모델이 실행될 장치를 지정한다. cpu_threads는 CPU의 스레드 수를 뜻한다. compute_type또한 앞서 정한 계산 유형과 같다. 이 때 .transcribe는 모델의 음성 인식 기능을 호출해서 음성을 텍스트로 변환해준다.]]></description><link>20240709-모각코-활동-2회차.html</link><guid isPermaLink="false">20240709 모각코 활동 2회차.md</guid><pubDate>Tue, 09 Jul 2024 16:16:31 GMT</pubDate></item><item><title><![CDATA[20240707 모각코 활동 1회차]]></title><description><![CDATA[ 
  <br>오늘의 목표<br>
 1.모각코 활동 동안 공부할 주제 전체적으로 톺아보기<br>
 2.팀원들과 친해지기<br>파이토치<br>
@@ -17,10 +50,7 @@
 <br>**RESNET 모델<br>
 <br>CNN 모델에 잔차 연결 개념을 도입한 것.
 <br>잔차 연결 : 각 층의 출력을 다음 층으로 직접 보내는 대신에, 입력을 더한 뒤 다음 층으로 전달하는 연결.
-]]></description><link>20240707-모각코-활동-1회차.html</link><guid isPermaLink="false">20240707 모각코 활동 1회차.md</guid><pubDate>Tue, 09 Jul 2024 09:57:10 GMT</pubDate></item><item><title><![CDATA[20240709 모각코 활동 2회차]]></title><description><![CDATA[ 
- <br>오늘의 목표<br>
-1.파이토치 공부하기 - youtube에 있는 파이토치 설명 강좌(<a rel="noopener" class="external-link" href="https://youtube.com/playlist?list=PLS8gIc2q83Oit-utRso2iblvt00fZOw85&amp;si=i0CZi4e5g_dVJ3dx" target="_blank">https://youtube.com/playlist?list=PLS8gIc2q83Oit-utRso2iblvt00fZOw85&amp;si=i0CZi4e5g_dVJ3dx</a>) 1,2,3,9,10강 들으며 공부<br>
-2.선배님의 프로젝트 코드 절반 분석하기]]></description><link>20240709-모각코-활동-2회차.html</link><guid isPermaLink="false">20240709 모각코 활동 2회차.md</guid><pubDate>Tue, 09 Jul 2024 09:47:39 GMT</pubDate></item><item><title><![CDATA[모.구.모.구 모각코 활동]]></title><description><![CDATA[ 
+]]></description><link>20240707-모각코-활동-1회차.html</link><guid isPermaLink="false">20240707 모각코 활동 1회차.md</guid><pubDate>Tue, 09 Jul 2024 09:57:10 GMT</pubDate></item><item><title><![CDATA[모.구.모.구 모각코 활동]]></title><description><![CDATA[ 
  <br>팀 모각코 목표 : 1. 절대 포기하지 않기, 2. 모르는 거 그냥 넘어가지 않기<br>나의 모각코 활동 다짐 : 활동 계획을 완벽히 마무리 할 수 있도록 노력하겠습니다!<br>나의 모각코 활동 계획<br>
 <br>7월 7일
 
