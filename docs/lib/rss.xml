@@ -1,20 +1,26 @@
-<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[ejkiwi.github.io]]></title><description><![CDATA[Obsidian digital garden]]></description><link>http://github.com/dylang/node-rss</link><image><url>lib\media\favicon.png</url><title>ejkiwi.github.io</title><link/></image><generator>Webpage HTML Export plugin for Obsidian</generator><lastBuildDate>Sun, 07 Jul 2024 02:27:56 GMT</lastBuildDate><atom:link href="lib\rss.xml" rel="self" type="application/rss+xml"/><pubDate>Sun, 07 Jul 2024 02:27:55 GMT</pubDate><ttl>60</ttl><dc:creator/><item><title><![CDATA[20240707 모각코 활동 1회차]]></title><description><![CDATA[ 
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[ejkiwi.github.io]]></title><description><![CDATA[Obsidian digital garden]]></description><link>http://github.com/dylang/node-rss</link><image><url>lib\media\favicon.png</url><title>ejkiwi.github.io</title><link/></image><generator>Webpage HTML Export plugin for Obsidian</generator><lastBuildDate>Tue, 09 Jul 2024 09:57:44 GMT</lastBuildDate><atom:link href="lib\rss.xml" rel="self" type="application/rss+xml"/><pubDate>Tue, 09 Jul 2024 09:57:44 GMT</pubDate><ttl>60</ttl><dc:creator/><item><title><![CDATA[20240707 모각코 활동 1회차]]></title><description><![CDATA[ 
  <br>오늘의 목표<br>
 1.모각코 활동 동안 공부할 주제 전체적으로 톺아보기<br>
 2.팀원들과 친해지기<br>파이토치<br>
 <br>python을 바탕으로 제작된, 딥러닝과  인공지능 분야에서 주로 활용되는 라이브러리
-<br>tensor를 기본으로 작동
-<br>tensor : 파이토치의 기본 데이터 타입. 배열이나 행렬과 유사한 구조이다.
+<br>pytorch의 연산은 tensor를 기본으로 하여 작동
+<br>tensor : 파이토치의 기본 데이터 타입. 배열이나 행렬과 유사한 구조(다차원 배열)이다.
+<br>파이토치를 기반으로 구성된 모델은 학습을 위한 그래디언트를 자동으로 계산한다. -&gt; 자동 미분
+<br>그래디언트 : 벡터 미분의 결과 (=함수의 기울기, 각 변수에 대한 변화율)
 <br>선배님의 프로젝트<br>
-<br>생성AI의 가짜 음성 검출과 탐지 프로젝트
+<br><a data-tooltip-position="top" aria-label="https://github.com/b-re-w/2024-1_BPL_STalk_Model_Research" rel="noopener" class="external-link" href="https://github.com/b-re-w/2024-1_BPL_STalk_Model_Research" target="_blank">2024-1_BPL_STalk_Model_Research</a>
 <br>CNN 모델<br>
 <br>2차원 데이터 (이미지 등)의 패턴을 인식하고 분석하는 데 사용되는 딥러닝 모델.
 <br>여러개의 층으로 구성됨.
 <br>인간의 시신경 구조를 모방한 구조임
-<br>RESNET 모델<br>
+<br>이미지의 
+<br>**RESNET 모델<br>
 <br>CNN 모델에 잔차 연결 개념을 도입한 것.
 <br>잔차 연결 : 각 층의 출력을 다음 층으로 직접 보내는 대신에, 입력을 더한 뒤 다음 층으로 전달하는 연결.
-]]></description><link>20240707-모각코-활동-1회차.html</link><guid isPermaLink="false">20240707 모각코 활동 1회차.md</guid><pubDate>Sun, 07 Jul 2024 02:27:23 GMT</pubDate></item><item><title><![CDATA[모.구.모.구 모각코 활동]]></title><description><![CDATA[ 
+]]></description><link>20240707-모각코-활동-1회차.html</link><guid isPermaLink="false">20240707 모각코 활동 1회차.md</guid><pubDate>Tue, 09 Jul 2024 09:57:10 GMT</pubDate></item><item><title><![CDATA[20240709 모각코 활동 2회차]]></title><description><![CDATA[ 
+ <br>오늘의 목표<br>
+1.파이토치 공부하기 - youtube에 있는 파이토치 설명 강좌(<a rel="noopener" class="external-link" href="https://youtube.com/playlist?list=PLS8gIc2q83Oit-utRso2iblvt00fZOw85&amp;si=i0CZi4e5g_dVJ3dx" target="_blank">https://youtube.com/playlist?list=PLS8gIc2q83Oit-utRso2iblvt00fZOw85&amp;si=i0CZi4e5g_dVJ3dx</a>) 1,2,3,9,10강 들으며 공부<br>
+2.선배님의 프로젝트 코드 절반 분석하기]]></description><link>20240709-모각코-활동-2회차.html</link><guid isPermaLink="false">20240709 모각코 활동 2회차.md</guid><pubDate>Tue, 09 Jul 2024 09:47:39 GMT</pubDate></item><item><title><![CDATA[모.구.모.구 모각코 활동]]></title><description><![CDATA[ 
  <br>팀 모각코 목표 : 1. 절대 포기하지 않기, 2. 모르는 거 그냥 넘어가지 않기<br>나의 모각코 활동 다짐 : 활동 계획을 완벽히 마무리 할 수 있도록 노력하겠습니다!<br>나의 모각코 활동 계획<br>
 <br>7월 7일
 
