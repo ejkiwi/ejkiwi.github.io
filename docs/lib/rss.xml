@@ -1,4 +1,4 @@
-<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[ejkiwi.github.io]]></title><description><![CDATA[Obsidian digital garden]]></description><link>http://github.com/dylang/node-rss</link><image><url>lib\media\favicon.png</url><title>ejkiwi.github.io</title><link/></image><generator>Webpage HTML Export plugin for Obsidian</generator><lastBuildDate>Tue, 09 Jul 2024 16:16:43 GMT</lastBuildDate><atom:link href="lib\rss.xml" rel="self" type="application/rss+xml"/><pubDate>Tue, 09 Jul 2024 16:16:43 GMT</pubDate><ttl>60</ttl><dc:creator/><item><title><![CDATA[20240709 모각코 활동 2회차]]></title><description><![CDATA[ 
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[ejkiwi.github.io]]></title><description><![CDATA[Obsidian digital garden]]></description><link>http://github.com/dylang/node-rss</link><image><url>lib\media\favicon.png</url><title>ejkiwi.github.io</title><link/></image><generator>Webpage HTML Export plugin for Obsidian</generator><lastBuildDate>Mon, 15 Jul 2024 07:31:42 GMT</lastBuildDate><atom:link href="lib\rss.xml" rel="self" type="application/rss+xml"/><pubDate>Mon, 15 Jul 2024 07:31:41 GMT</pubDate><ttl>60</ttl><dc:creator/><item><title><![CDATA[20240709 모각코 활동 2회차]]></title><description><![CDATA[ 
  <br>오늘의 목표<br>
 1.파이토치 공부하기 - youtube에 있는 파이토치 설명 강좌(<a rel="noopener" class="external-link" href="https://youtube.com/playlist?list=PLS8gIc2q83Oit-utRso2iblvt00fZOw85&amp;si=i0CZi4e5g_dVJ3dx" target="_blank">https://youtube.com/playlist?list=PLS8gIc2q83Oit-utRso2iblvt00fZOw85&amp;si=i0CZi4e5g_dVJ3dx</a>) 1,2,3강 들으며 공부<br>
 2.선배님의 프로젝트 코드 절반 분석하기 - whisper 부분<br>파이토치<br>
@@ -22,16 +22,120 @@ al분야에서 google tensorflow와 함께 딥러닝 모델을 구축하고 학�
 <br>텐서를 넘파이로 바꿀 수도 있다.<br>
 - tensor.numpy()
 <br>인덱싱과 슬라이싱이 가능하다
-<br>elment-wise product 연산
-<br>matrix multiplication 연산
-<br>선배님 프로젝트 분석<br>
+<br>elment-wise product 연산 
+<br>matrix multiplication 연산 (행렬곱)
+<br>텐서를 합칠 수 있다. Tensor Concatenate (dim=0 세로, dim=1 가로)<br>
+파이토치 딥러닝 모델 구조 :<br>
+1.데이터정의<br>
+- 기본 데이터타입인 TENSOR로 생성해야함.<br>
+- TensorDataset(x_train,y_train) : 텐서 데이터셋 생성<br>
+- DataLoader(dataset, batch_size, shuffle) : 미니 배치 학습과 데이터 셔플, 멀티 프로세싱 등을 간단하게 수행할 수 있음.<br>
+- 미니 배치 학습 : 전체 데이터를 n등분 하여 각각의 학습 데이터를 배치 방식으로 학습시키는 것.<br>
+- 데이터 셔플 : train데이터와test데이터 간의 동일한 분포를 가지도록 섞어는 것.<br>
+- 멀티 프로세싱 : 여러 작업을 별도의 프로세스를 생성 후 병렬처리를 하는 과정을 거치기 때문에 더 빠르게 결과를 얻을 수 있다.<br>
+2.모델구축<br>
+- nn.Module을 상속받는 class를 생성하여 정의하는 것이 일반적이다.<br>
+- 클래스 속 __init__함수에서 계층(신경망 모델을 구성하는)을 정의.<br>
+- 클래스 속 forward 함수에서 신경망에 데이터 전달하기를 수하고, 결과값을 리턴함<br>
+3.피드포워드<br>
+- 모델 학습을 위해서는 피드 포워드 계산값과 정답의 차이 계산이 필요  -&gt; 이 계산을 위해서는 손실함수와 옵티마이저가 필요함.<br>
+- 손실함수 : MSE 등<br>
+- 옵티마이저 : SDG, ADAM<br>
+4.손실함수계산<br>
+- nn.MSELoss(model(x_train),y_train) : 피드포워드 계산 값과 정답과의 오차 계산.<br>
+- 이 때, model에 데이터를 전달하면 model 클래스 안에 있는 forward()함수자동으로 forward()함수를 호출하기 때문에 우리가 따로 호출해줄 필요가 없다.<br>
+5.모델학습<br>
+-역전파 코드 : 학습이 진행됨에 따라서 모델 파라미터(가중치와 바이어스)를 업데이트하면서 최적화 시킨다<br>
+- optimizer.zero.grad()<br>
+- loss.backward()<br>
+- optimizer.step()<br>
+- 모델(model) : 각 층을 포함하고 있는 인공신경망 그 자체 (이를 레고처럼 순차적으로 쌓기 -&gt; CNN, RNN 등 다양한 모델 구축 가능)<br>
+- 3&gt;4&gt;5의 반복 -&gt; 딥러닝 학습<br>
+- 손실함수가 최소가 될 때까지 모델 파라미터(가중치, 바이어스) 값을 찾아감.
+<br>선배님 프로젝트 분석 - whisper<br>
 1.from faster_whisper import WhisperModel<br>
 2.def get_whisper() :  	 3.   model_size = "medium"  #@param ['tiny', 'base', 'small', 'medium', 'large', 'large-v2', 'large-v3'] 	 4.   compute_type = "int8"  #@param ['float16', 'int8']<br>
 5.   return WhisperModel(model_size, device=DEVICE, cpu_threads=12, compute_type=compute_type).transcribe<br>1: faster_whisper 에서 WhisperModel 모듈 불러오기<br>
 2: get_whisper 라는 이름의 함수 설정하기<br>
 3: model_size는 "medium"이다. model_size가 가질 수 있는 옵션으로는 "tiny","base","small","medium","large","large-v3" 이 있다. -&gt; model_size는 모델의 크기를 뜻한다.<br>
 4: compute_type은 "int8"이다. compute_type이 가질 수 있는 옵션으로는 "float16","int8"이 있다. -&gt; compute_type은 계산 유형을 뜻한다.<br>
-5: WhisperModel은 4가지의 매개변수를 사용하는데, 여기에서 model_size는 앞서 정한 크기와 같고, device는 모델이 실행될 장치를 지정한다. cpu_threads는 CPU의 스레드 수를 뜻한다. compute_type또한 앞서 정한 계산 유형과 같다. 이 때 .transcribe는 모델의 음성 인식 기능을 호출해서 음성을 텍스트로 변환해준다.]]></description><link>20240709-모각코-활동-2회차.html</link><guid isPermaLink="false">20240709 모각코 활동 2회차.md</guid><pubDate>Tue, 09 Jul 2024 16:16:31 GMT</pubDate></item><item><title><![CDATA[20240707 모각코 활동 1회차]]></title><description><![CDATA[ 
+5: WhisperModel은 4가지의 매개변수를 사용하는데, 여기에서 model_size는 앞서 정한 크기와 같고, device는 모델이 실행될 장치를 지정한다. cpu_threads는 CPU의 스레드 수를 뜻한다. compute_type또한 앞서 정한 계산 유형과 같다. 이 때 .transcribe는 모델의 음성 인식 기능을 호출해서 음성을 텍스트로 변환해준다.]]></description><link>20240709-모각코-활동-2회차.html</link><guid isPermaLink="false">20240709 모각코 활동 2회차.md</guid><pubDate>Mon, 15 Jul 2024 06:27:57 GMT</pubDate></item><item><title><![CDATA[20240716 모각코 활동 3회차]]></title><description><![CDATA[ 
+ <br>오늘의 목표<br>
+1.파이토치 공부하기  - 실습해보기<br>
+2.선배님의 프로젝트 코드 절반 분석하기 - resnet 부분<br>파이토치 실습<br>import torch #파이토치 불러오기
+from torch import nn #토치에서 nn 불러오기
+  
+
+#텐서 형태로 train데이터 가져오기
+x_train = torch.Tensor([1,2,3,4,5,6]).view(6,1)
+y_train = torch.Tensor([3,6,9,12,15,18]).view(6,1)
+
+  
+#MyNeuralNetwork 클래스 만들기. nn.Module이 부모클래스가 됨.
+class MyNeuralNetwork(nn.Module):
+&nbsp; def __init__(self):
+&nbsp; &nbsp; super().__init__()
+&nbsp; &nbsp; self.linear_relu_stack = nn.Sequential(nn.Linear(1,1))
+
+&nbsp; def forward(self, x):
+&nbsp; &nbsp; logits = self.linear_relu_stack(x)
+&nbsp; &nbsp; return logits
+
+
+#모델
+model = MyNeuralNetwork()
+#손실함수
+loss_function = nn.MSELoss()
+#옵티마이저
+optimizer = torch.optim.SGD(model.parameters(),lr=1e-2)
+
+nums_epoch = 2000
+
+
+#학습시키기
+for epoch in range(nums_epoch + 1):
+&nbsp; prediction = model(x_train)
+&nbsp; loss = loss_function(prediction, y_train)
+
+&nbsp; optimizer.zero_grad()
+&nbsp; loss.backward()
+&nbsp; optimizer.step()
+
+&nbsp; if epoch % 100 == 0:
+&nbsp; &nbsp; print('epoch = ', epoch, 'current loss = ', loss.item())
+Copy<br>#예측하기
+x_test = torch.Tensor([8,9,10,11]).view(4,1)
+pred = model(x_test)
+pred
+Copy<br>선배님의 프로젝트 코드<br> def get_resnet152():
+    model_id = "Wespeaker/wespeaker-voxceleb-resnet152-LM"
+    model_name = model_id.replace("Wespeaker/wespeaker-", "").replace("-", "_")
+
+    root_dir = hf_hub_download(model_id, filename=model_name+".onnx").replace(model_name+".onnx", "")
+
+    import os
+    if not os.path.isfile(root_dir+"avg_model.pt"):
+        os.rename(hf_hub_download(model_id, filename=model_name+".pt"), root_dir+"avg_model.pt")
+    if not os.path.isfile(root_dir+"config.yaml"):
+        os.rename(hf_hub_download(model_id, filename=model_name+".yaml"), root_dir+"config.yaml")
+
+    resnet = wespeaker.load_model_local(root_dir)
+
+    #print("Compile model for the NPU")
+    #resnet.model = intel_npu_acceleration_library.compile(resnet.model)
+
+    def resnet152(ado, sample_rate=None):
+        if isinstance(ado, str):
+            return resnet.recognize(ado)
+        else:
+            return recognize(resnet, ado, sample_rate)
+
+    resnet152.__dict__['register'] = lambda *args, **kwargs: resnet.register(*args, **kwargs)
+
+    return resnet152
+Copy<br>분석<br>resnet152 = get_resnet152()
+print("INFO: ResNet152 Ready -", resnet152)
+Copy]]></description><link>20240716-모각코-활동-3회차.html</link><guid isPermaLink="false">20240716 모각코 활동 3회차.md</guid><pubDate>Mon, 15 Jul 2024 07:31:25 GMT</pubDate></item><item><title><![CDATA[20240707 모각코 활동 1회차]]></title><description><![CDATA[ 
  <br>오늘의 목표<br>
 1.모각코 활동 동안 공부할 주제 전체적으로 톺아보기<br>
 2.팀원들과 친해지기<br>파이토치<br>

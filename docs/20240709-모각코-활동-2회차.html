@@ -34,9 +34,37 @@ al분야에서 google tensorflow와 함께 딥러닝 모델을 구축하고 학�
 <li data-line="14" dir="auto">텐서를 넘파이로 바꿀 수도 있다.<br>
 <code>- tensor.numpy()</code></li>
 <li data-line="16" dir="auto">인덱싱과 슬라이싱이 가능하다</li>
-<li data-line="17" dir="auto">elment-wise product 연산</li>
-<li data-line="18" dir="auto">matrix multiplication 연산</li>
-</ul></div><div><p dir="auto">선배님 프로젝트 분석<br>
+<li data-line="17" dir="auto">elment-wise product 연산 </li>
+<li data-line="18" dir="auto">matrix multiplication 연산 (행렬곱)</li>
+<li data-line="19" dir="auto">텐서를 합칠 수 있다. Tensor Concatenate (dim=0 세로, dim=1 가로)<br>
+파이토치 딥러닝 모델 구조 :<br>
+1.데이터정의<br>
+- 기본 데이터타입인 TENSOR로 생성해야함.<br>
+- TensorDataset(x_train,y_train) : 텐서 데이터셋 생성<br>
+- DataLoader(dataset, batch_size, shuffle) : 미니 배치 학습과 데이터 셔플, 멀티 프로세싱 등을 간단하게 수행할 수 있음.<br>
+- 미니 배치 학습 : 전체 데이터를 n등분 하여 각각의 학습 데이터를 배치 방식으로 학습시키는 것.<br>
+- 데이터 셔플 : train데이터와test데이터 간의 동일한 분포를 가지도록 섞어는 것.<br>
+- 멀티 프로세싱 : 여러 작업을 별도의 프로세스를 생성 후 병렬처리를 하는 과정을 거치기 때문에 더 빠르게 결과를 얻을 수 있다.<br>
+2.모델구축<br>
+- nn.Module을 상속받는 class를 생성하여 정의하는 것이 일반적이다.<br>
+- 클래스 속 <code>__init__</code>함수에서 계층(신경망 모델을 구성하는)을 정의.<br>
+- 클래스 속 <code>forward</code> 함수에서 신경망에 데이터 전달하기를 수하고, 결과값을 리턴함<br>
+3.피드포워드<br>
+- 모델 학습을 위해서는 피드 포워드 계산값과 정답의 차이 계산이 필요  -&gt; 이 계산을 위해서는 손실함수와 옵티마이저가 필요함.<br>
+- 손실함수 : MSE 등<br>
+- 옵티마이저 : SDG, ADAM<br>
+4.손실함수계산<br>
+- <code>nn.MSELoss(model(x_train),y_train)</code> : 피드포워드 계산 값과 정답과의 오차 계산.<br>
+- 이 때, model에 데이터를 전달하면 model 클래스 안에 있는 forward()함수자동으로 forward()함수를 호출하기 때문에 우리가 따로 호출해줄 필요가 없다.<br>
+5.모델학습<br>
+-역전파 코드 : 학습이 진행됨에 따라서 모델 파라미터(가중치와 바이어스)를 업데이트하면서 최적화 시킨다<br>
+- <code>optimizer.zero.grad()</code><br>
+- <code>loss.backward()</code><br>
+- <code>optimizer.step()</code><br>
+- 모델(model) : 각 층을 포함하고 있는 인공신경망 그 자체 (이를 레고처럼 순차적으로 쌓기 -&gt; CNN, RNN 등 다양한 모델 구축 가능)<br>
+- 3&gt;4&gt;5의 반복 -&gt; 딥러닝 학습<br>
+- 손실함수가 최소가 될 때까지 모델 파라미터(가중치, 바이어스) 값을 찾아감.</li>
+</ul></div><div><p dir="auto"><strong>선배님 프로젝트 분석 - whisper</strong><br>
 1.<code>from faster_whisper import WhisperModel</code><br>
 2.<code>def get_whisper() :  	 3.</code>   model_size = "medium"  #@param ['tiny', 'base', 'small', 'medium', 'large', 'large-v2', 'large-v3']<code> 	 4.</code>   compute_type = "int8"  #@param ['float16', 'int8']<br>
 5.<code>   return WhisperModel(model_size, device=DEVICE, cpu_threads=12, compute_type=compute_type).transcribe</code></p></div><div><p dir="auto">1: faster_whisper 에서 WhisperModel 모듈 불러오기<br>
