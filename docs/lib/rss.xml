@@ -1,4 +1,17 @@
-<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[ejkiwi.github.io]]></title><description><![CDATA[Obsidian digital garden]]></description><link>http://github.com/dylang/node-rss</link><image><url>lib\media\favicon.png</url><title>ejkiwi.github.io</title><link/></image><generator>Webpage HTML Export plugin for Obsidian</generator><lastBuildDate>Mon, 15 Jul 2024 07:42:09 GMT</lastBuildDate><atom:link href="lib\rss.xml" rel="self" type="application/rss+xml"/><pubDate>Mon, 15 Jul 2024 07:42:08 GMT</pubDate><ttl>60</ttl><dc:creator/><item><title><![CDATA[20240709 모각코 활동 2회차]]></title><description><![CDATA[ 
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[ejkiwi.github.io]]></title><description><![CDATA[Obsidian digital garden]]></description><link>http://github.com/dylang/node-rss</link><image><url>lib\media\favicon.png</url><title>ejkiwi.github.io</title><link/></image><generator>Webpage HTML Export plugin for Obsidian</generator><lastBuildDate>Mon, 15 Jul 2024 07:46:35 GMT</lastBuildDate><atom:link href="lib\rss.xml" rel="self" type="application/rss+xml"/><pubDate>Mon, 15 Jul 2024 07:46:34 GMT</pubDate><ttl>60</ttl><dc:creator/><item><title><![CDATA[20240723 모각코 활동 4회차]]></title><description><![CDATA[ 
+ <br>오늘의목표<br>
+cnn구조 공부하기<br>
+resnet구조 공부하기]]></description><link>20240723-모각코-활동-4회차.html</link><guid isPermaLink="false">20240723 모각코 활동 4회차.md</guid><pubDate>Mon, 15 Jul 2024 07:45:18 GMT</pubDate></item><item><title><![CDATA[20240730 모각코 활동 5회차]]></title><description><![CDATA[ 
+ <br>오늘의목표<br>
+cnn구조 공부하기<br>
+resnet구조 공부하기]]></description><link>20240730-모각코-활동-5회차.html</link><guid isPermaLink="false">20240730 모각코 활동 5회차.md</guid><pubDate>Mon, 15 Jul 2024 07:45:25 GMT</pubDate></item><item><title><![CDATA[20240806 모각코 활동 6회차]]></title><description><![CDATA[ 
+ <br>오늘의목표<br>
+cnn구조 공부하기<br>
+resnet구조 공부하기]]></description><link>20240806-모각코-활동-6회차.html</link><guid isPermaLink="false">20240806 모각코 활동 6회차.md</guid><pubDate>Mon, 15 Jul 2024 07:45:48 GMT</pubDate></item><item><title><![CDATA[20240813 모각코 활동 7회차]]></title><description><![CDATA[ 
+ <br>오늘의목표<br>
+cnn구조 공부하기<br>
+resnet구조 공부하기<br>
+모각코 팀원들과 작별인사하기]]></description><link>20240813-모각코-활동-7회차.html</link><guid isPermaLink="false">20240813 모각코 활동 7회차.md</guid><pubDate>Mon, 15 Jul 2024 07:46:10 GMT</pubDate></item><item><title><![CDATA[20240709 모각코 활동 2회차]]></title><description><![CDATA[ 
  <br>오늘의 목표<br>
 1.파이토치 공부하기 - youtube에 있는 파이토치 설명 강좌(<a rel="noopener" class="external-link" href="https://youtube.com/playlist?list=PLS8gIc2q83Oit-utRso2iblvt00fZOw85&amp;si=i0CZi4e5g_dVJ3dx" target="_blank">https://youtube.com/playlist?list=PLS8gIc2q83Oit-utRso2iblvt00fZOw85&amp;si=i0CZi4e5g_dVJ3dx</a>) 1,2,3강 들으며 공부<br>
 2.선배님의 프로젝트 코드 절반 분석하기 - whisper 부분<br>파이토치<br>
