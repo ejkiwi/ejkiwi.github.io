@@ -61,7 +61,7 @@ pred
 </code><button class="copy-code-button">Copy</button></pre></div><div><p dir="auto"><strong>선배님의 프로젝트 코드</strong></p></div><div><pre dir="auto"><code> def get_resnet152():
     model_id = "Wespeaker/wespeaker-voxceleb-resnet152-LM"
     model_name = model_id.replace("Wespeaker/wespeaker-", "").replace("-", "_")
-
+ 
     root_dir = hf_hub_download(model_id, filename=model_name+".onnx").replace(model_name+".onnx", "")
 
     import os
@@ -84,9 +84,43 @@ pred
     resnet152.__dict__['register'] = lambda *args, **kwargs: resnet.register(*args, **kwargs)
 
     return resnet152
-</code><button class="copy-code-button">Copy</button></pre></div><div><p dir="auto">분석</p></div><div><pre dir="auto"><code>resnet152 = get_resnet152()
+</code><button class="copy-code-button">Copy</button></pre></div><div><p dir="auto">분석<br>
+def get<em>resnet152():<br>
+get_resnet 152 라는 이름의 함수를 정의<br>
+model_id = "Wespeaker/wespeaker-voxceleb-resnet152-LM"<br>
+model_id라는 변수에 "Wespeaker/wespeaker-voxceleb-resnet152-LM"를 지정. 아마  모델 아이디에 모델의 이름을 저장한 것일 것.<br>
+moldel_name = model.id.replace("Wespeaker/wespeaker-",").replace("-", "</em> ")<br>
+model_name이라는 변수를 만들어서, model_id를 약간 변형시킨 이름으로 지정해줌. "voxceleb_resnet152_LM"이 될 것.<br>
+root_dir = hf_hub_download(model_id, filename = model_name+" .onnx").replace(model_name+" .onnx", "")<br>
+hf_hub_download : 이건 함수임. 함수를 사용해서 모델 파일을 다운로드하고, 다운로드한 파일을 root_dir변수에 저장함.<br>
+import os<br>
+os 모듈을 가져옴<br>
+if not os.path.isfile(root_dir+"avg_model.pt"):<br>
+os.rename(hf_hub_download(model_id, filename=model_name+".pt"), root_dir+"avg_model.pt")<br>
+만약 avg_model.pt이름을 가진 파일이 없다면, 모델의 pt파일을 다운로드 한 뒤 이름을 avg_model.pt로 바꾸어서 root_dir 변수에 저장함.<br>
+if not os.path.isfile(root_dir+"config.yaml"):<br>
+os.rename(hf_hub_download(model_id, filename=model_name+".yaml"), root_dir+"config.yaml")<br>
+앞 코드와 같은 느낌인데, 만약 config.yaml파일이 없으면 모델의 yaml파일을 다운로드 한 뒤 이름을 바꾸어서 root_dir변수에 저장함.<br>
+resnet = wespeaker.load_model_local(root_dir)<br>
+resnet이라는 변수를 지정해줄건데, wespeaker 라이브러리의 load_model_local 함수를 사용할거임. 이 때 root_dir에 있는 파일들을 불러오게 됨.<br>
+def resnet152(ado, sample_rate=None):<br>
+if isinstance(ado, str):<br>
+return resnet.recognize(ado)<br>
+else:<br>
+return recognize(resnet, ado, sample_rate)<br>
+resnet152라는 함수를 정의해주는데, 이 함수는 입력으로 ado를 받음.<br>
+ado가 문자열이라면  resnet.recognize(ado)를 리턴하고<br>
+그렇지 않다면  recognize(resnet, ado, sample_rate)을 리턴함.<br>
+<code>resnet152.__dict__['register'] = lambda *args, **kwargs: resnet.register(*args, **kwargs)</code><br>
+resnet152라는 함수에 register라는 기능을 추가<br>
+return resnet152<br>
+get_resnet152라는 함수는 resnet152를 반환함.</p></div><div><pre dir="auto"><code>resnet152 = get_resnet152()
 print("INFO: ResNet152 Ready -", resnet152)
-</code><button class="copy-code-button">Copy</button></pre></div><div class="mod-footer"></div></div></div></div><div class="sidebar-right sidebar"><div class="sidebar-handle"></div><div class="sidebar-topbar"><div class="topbar-content"></div><div class="clickable-icon sidebar-collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="svg-icon"><path d="M21 3H3C1.89543 3 1 3.89543 1 5V19C1 20.1046 1.89543 21 3 21H21C22.1046 21 23 20.1046 23 19V5C23 3.89543 22.1046 3 21 3Z"></path><path d="M10 4V20"></path><path d="M4 7H7"></path><path d="M4 10H7"></path><path d="M4 13H7"></path></svg></div></div><div class="sidebar-content"><div class="graph-view-wrapper"><div class="sidebar-section-header">Interactive Graph</div><div class="graph-view-placeholder">
+</code><button class="copy-code-button">Copy</button></pre></div><div><p dir="auto">분석<br>
+resnet152 = get_resnet152()<br>
+get_resnet152함수를 가져와서 resnet152함수에 저장함<br>
+print("INFO: ResNet152 Ready -", resnet152)<br>
+모델이 준비되었다는 메시지를 출력한 뒤, resnet152를 출력함.</p></div><div class="mod-footer"></div></div></div></div><div class="sidebar-right sidebar"><div class="sidebar-handle"></div><div class="sidebar-topbar"><div class="topbar-content"></div><div class="clickable-icon sidebar-collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="svg-icon"><path d="M21 3H3C1.89543 3 1 3.89543 1 5V19C1 20.1046 1.89543 21 3 21H21C22.1046 21 23 20.1046 23 19V5C23 3.89543 22.1046 3 21 3Z"></path><path d="M10 4V20"></path><path d="M4 7H7"></path><path d="M4 10H7"></path><path d="M4 13H7"></path></svg></div></div><div class="sidebar-content"><div class="graph-view-wrapper"><div class="sidebar-section-header">Interactive Graph</div><div class="graph-view-placeholder">
 		<div class="graph-view-container">
 			<div class="graph-icon graph-expand" role="button" aria-label="Expand" data-tooltip-position="top"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg></div>
 			<canvas id="graph-canvas" class="hide" width="512px" height="512px"></canvas>
