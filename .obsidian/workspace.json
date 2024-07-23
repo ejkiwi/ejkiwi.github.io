@@ -4,19 +4,15 @@
     "type": "split",
     "children": [
       {
-        "id": "192c6e836bc29340",
+        "id": "4a53a2dcc76747b9",
         "type": "tabs",
         "children": [
           {
-            "id": "6a86e2d6ef341f97",
+            "id": "e85638fcd2d3f4e4",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "20240723 모각코 활동 4회차.md",
-                "mode": "source",
-                "source": false
-              }
+              "type": "empty",
+              "state": {}
             }
           }
         ]
@@ -78,7 +74,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 244.5
+    "width": 300
   },
   "right": {
     "id": "b8b53b513e17a2f3",
@@ -148,57 +144,76 @@
   },
   "left-ribbon": {
     "hiddenItems": {
+      "obsidian-kanban:Create new board": false,
       "switcher:Open quick switcher": false,
       "graph:Open graph view": false,
       "canvas:Create new canvas": false,
       "daily-notes:Open today's daily note": false,
       "templates:Insert template": false,
       "command-palette:Open command palette": false,
-      "obsidian-kanban:Create new board": false,
-      "obsidian-rich-links:Rich Links": false,
-      "webpage-html-export:Export Vault to HTML": false
+      "webpage-html-export:Export Vault to HTML": false,
+      "obsidian-rich-links:Rich Links": false
     }
   },
-  "active": "6a86e2d6ef341f97",
+  "floating": {
+    "id": "b2c717b42b7ebefc",
+    "type": "floating",
+    "children": [
+      {
+        "id": "2953ec1fd5583a6e",
+        "type": "window",
+        "children": [
+          {
+            "id": "146511e7690e13e6",
+            "type": "tabs",
+            "children": [
+              {
+                "id": "8f5b6889989c5db4",
+                "type": "leaf",
+                "state": {
+                  "type": "markdown",
+                  "state": {
+                    "file": "20240723 모각코 활동 4회차.md",
+                    "mode": "source",
+                    "source": false
+                  }
+                }
+              }
+            ]
+          }
+        ],
+        "direction": "vertical",
+        "x": 270,
+        "y": 352,
+        "width": 900,
+        "height": 500,
+        "maximize": false,
+        "zoom": 0
+      }
+    ]
+  },
+  "active": "8f5b6889989c5db4",
   "lastOpenFiles": [
-    "20240723 모각코 활동 4회차.md",
-    "docs/lib/media/resnet.png",
-    "docs/lib/media/cnn2.png",
-    "docs/lib/media/cnn1.png",
-    "docs/lib/resnet.png",
-    "docs/lib/cnn2.png",
-    "docs/lib/cnn1.png",
-    "index.md",
-    "20240730 모각코 활동 5회차.md",
-    "20240806 모각코 활동 6회차.md",
-    "20240813 모각코 활동 7회차.md",
-    "docs/lib/media/rddesNet.png",
-    "docs/lib/media/resNet.png",
-    "docs/lib/media/cCNN2.png",
-    "docs/lib/media/C1.png",
-    "모.구.모.구 모각코 활동.md",
-    "Vault.md",
-    "docs/Untitled.md",
-    "README.md",
-    "Tags",
     "20240716 모각코 활동 3회차.md",
-    "20240709 모각코 활동 2회차.md",
     "20240707 모각코 활동 1회차.md",
-    "docs/20240730-모각코-활동-5회차.html",
-    "docs/20240723-모각코-활동-4회차.html",
-    "docs/20240716-모각코-활동-3회차.html",
-    "docs/20240709-모각코-활동-2회차.html",
-    "docs/20240707-모각코-활동-1회차.html",
+    "Tags",
     "test.md",
-    "docs/모.구.모.구-모각코-활동.html",
-    "mogumogu.md",
-    "docs/docs.md",
-    "docs/mogumogu.md",
+    "index.md",
+    "README.md",
     "이름 없는 보드.md",
     "이름 없는 보드 1.md",
     "docs/lib/search-index.json",
     "docs/lib/metadata.json",
     "docs/lib/styles/obsidian.css",
+    "docs/lib/styles/main-styles.css",
+    "docs/lib/styles/global-variable-styles.css",
+    "docs/lib/styles",
+    "docs/lib/scripts/graph-data.js",
+    "docs/lib/scripts/minisearch.js",
+    "docs/lib/scripts/pixi.js",
+    "docs/lib/media/favicon.png",
+    "docs/lib/media/3d6c1bdc4d87cde4de67.svg",
+    "docs/lib/media/874d8b8e340f75575caa.svg",
     "2024-06-26.md"
   ]
 }
