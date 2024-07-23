@@ -1,4 +1,4 @@
-<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[ejkiwi.github.io]]></title><description><![CDATA[Obsidian digital garden]]></description><link>https://ejkiwi.github.io/</link><image><url>https://ejkiwi.github.io/lib/media/favicon.png</url><title>ejkiwi.github.io</title><link>https://ejkiwi.github.io/</link></image><generator>Webpage HTML Export plugin for Obsidian</generator><lastBuildDate>Tue, 23 Jul 2024 13:37:20 GMT</lastBuildDate><atom:link href="https://ejkiwi.github.io/lib/rss.xml" rel="self" type="application/rss+xml"/><pubDate>Tue, 23 Jul 2024 13:37:19 GMT</pubDate><ttl>60</ttl><dc:creator/><item><title><![CDATA[20240723 모각코 활동 4회차]]></title><description><![CDATA[ 
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[ejkiwi.github.io]]></title><description><![CDATA[Obsidian digital garden]]></description><link>https://ejkiwi.github.io/</link><image><url>https://ejkiwi.github.io/lib/media/favicon.png</url><title>ejkiwi.github.io</title><link>https://ejkiwi.github.io/</link></image><generator>Webpage HTML Export plugin for Obsidian</generator><lastBuildDate>Tue, 23 Jul 2024 13:38:35 GMT</lastBuildDate><atom:link href="https://ejkiwi.github.io/lib/rss.xml" rel="self" type="application/rss+xml"/><pubDate>Tue, 23 Jul 2024 13:38:34 GMT</pubDate><ttl>60</ttl><dc:creator/><item><title><![CDATA[20240723 모각코 활동 4회차]]></title><description><![CDATA[ 
  <br>오늘의목표<br>
 1.cnn공부 - 정의와 구조 살펴보기<br>
 2.resnet공부 - 정의와 구조 살펴보기<br>딥 러닝 : 심층 신경망을 주로 다루는 ai분야. 심층 신경망은 신경망을 여러 계층으로 구성한 것.<br>
@@ -17,7 +17,9 @@
 - 합성곱 연산을 수행함.<br>
 - 커널(n  m의 행렬)로 이미지(높이  너비)를 처음부터 끝까지 겹쳐 훑는다. 겹쳐지는 부분의 각 이미지와 원소의 값을 곱해서 모두 더한 값을 출력함.<br>
 - 스트라이드 : 커널이 입력을 훑는데, 이 때의 보폭을 뜻함.<br>
-- 이 때 출력되는 것(입력으로부터 커널을 사용하여 합성곱 연산을 통법](<a rel="noopener" class="external-link" href="https://ejkiwi.github.io/lib/media/cnn1.png" target="_blank">https://ejkiwi.github.io/lib/media/cnn1.png</a>)<br>
+- 이 때 출력되는 것(입력으로부터 커널을 사용하여 합성곱 연산을 통해 나온 결과)은 '출력 특성 맵(output feature map)' 이라 함.<br>
+- CNN에서는 합성곱 계층의 입출력 데이터를 특성 맵(feature map) 이라 함.<br>
+- <img alt="cnn 연산 방법" src="https://ejkiwi.github.io/lib/media/cnn1.png" referrerpolicy="no-referrer"><br>
 3.ReLU층<br>
 - 인공신경망에서 사용되는 활성화함수 f(x) = max(0, x) -&gt; 입력값이 0보다 크면 그 값을 그대로 출력하고, 0 이하면 0을 출력.<br>
 4. 풀링층<br>
@@ -31,7 +33,7 @@ CNN의 한 종류<br>
 - 잔여학습 : 스킵연결(입력값이 일정층들을 건너뛰어서 출력에 더할 수 있게 하는 역할) -&gt; 기존신경망은 k번째 층과 (i+1)번째 층의 연결로 이루어져있는데, resnet은 (i+r)층의 연결을 허용(shortcut connection).<br>
 - <img alt="ResNet 구조" src="https://ejkiwi.github.io/lib/media/resnet.png" referrerpolicy="no-referrer"><br>
 -최대 152개 층까지 쌓을 수 있게 됨.<br>
-<img alt="cnn2" src="https://ejkiwi.github.io/lib/media/cnn2.png" referrerpolicy="no-referrer">]]]></description><link>https://ejkiwi.github.io/20240723-모각코-활동-4회차.html</link><guid isPermaLink="false">20240723 모각코 활동 4회차.md</guid><pubDate>Tue, 23 Jul 2024 13:37:12 GMT</pubDate><enclosure url="https://ejkiwi.github.io/lib/media/resnet.png" length="0" type="image/png"/><content:encoded>&lt;figure&gt;&lt;img src="https://ejkiwi.github.io/lib/media/resnet.png"&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[20240707 모각코 활동 1회차]]></title><description><![CDATA[ 
+<img alt="cnn2" src="https://ejkiwi.github.io/lib/media/cnn2.png" referrerpolicy="no-referrer">]]]></description><link>https://ejkiwi.github.io/20240723-모각코-활동-4회차.html</link><guid isPermaLink="false">20240723 모각코 활동 4회차.md</guid><pubDate>Tue, 23 Jul 2024 13:38:23 GMT</pubDate><enclosure url="https://ejkiwi.github.io/lib/media/cnn1.png" length="0" type="image/png"/><content:encoded>&lt;figure&gt;&lt;img src="https://ejkiwi.github.io/lib/media/cnn1.png"&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[20240707 모각코 활동 1회차]]></title><description><![CDATA[ 
  <br>오늘의 목표<br>
 1.모각코 활동 동안 공부할 주제 전체적으로 톺아보기<br>
 2.팀원들과 친해지기<br>파이토치<br>
