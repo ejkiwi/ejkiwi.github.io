@@ -43,7 +43,8 @@
     "//Tags",
     "//docs/docs/lib",
     "//docs/docs/lib/docs/lib/media",
-    "/"
+    "/",
+    "//docs"
   ],
   "expandFolderOnClick": true,
   "menuTriggerChar": "/",
