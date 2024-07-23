@@ -11,11 +11,9 @@
             "id": "e85638fcd2d3f4e4",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "image",
               "state": {
-                "file": "20240723 모각코 활동 4회차.md",
-                "mode": "source",
-                "source": false
+                "file": "CNN1.png"
               }
             }
           },
@@ -104,7 +102,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "20240723 모각코 활동 4회차.md",
+                "file": "CNN1.png",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -121,7 +119,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "20240723 모각코 활동 4회차.md",
+                "file": "CNN1.png",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -144,7 +142,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "20240723 모각코 활동 4회차.md"
+                "file": "CNN1.png"
               }
             }
           }
@@ -172,9 +170,9 @@
   "active": "e85638fcd2d3f4e4",
   "lastOpenFiles": [
     "20240723 모각코 활동 4회차.md",
-    "Pasted image 20240723195657.png",
-    "Pasted image 20240723195601.png",
-    "Pasted image 20240723195409.png",
+    "CNN1.png",
+    "CNN2.png",
+    "ResNet.png",
     "20240716 모각코 활동 3회차.md",
     "20240707 모각코 활동 1회차.md",
     "20240709 모각코 활동 2회차.md",
