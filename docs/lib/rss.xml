@@ -1,4 +1,5 @@
-<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[ejkiwi.github.io]]></title><description><![CDATA[Obsidian digital garden]]></description><link>http://github.com/dylang/node-rss</link><image><url>lib\media\favicon.png</url><title>ejkiwi.github.io</title><link/></image><generator>Webpage HTML Export plugin for Obsidian</generator><lastBuildDate>Tue, 23 Jul 2024 12:35:57 GMT</lastBuildDate><atom:link href="lib\rss.xml" rel="self" type="application/rss+xml"/><pubDate>Tue, 23 Jul 2024 12:35:56 GMT</pubDate><ttl>60</ttl><dc:creator/><item><title><![CDATA[20240723 모각코 활동 4회차]]></title><description><![CDATA[ 
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[ejkiwi.github.io]]></title><description><![CDATA[Obsidian digital garden]]></description><link>http://github.com/dylang/node-rss</link><image><url>lib\media\favicon.png</url><title>ejkiwi.github.io</title><link/></image><generator>Webpage HTML Export plugin for Obsidian</generator><lastBuildDate>Tue, 23 Jul 2024 13:03:33 GMT</lastBuildDate><atom:link href="lib\rss.xml" rel="self" type="application/rss+xml"/><pubDate>Tue, 23 Jul 2024 13:03:32 GMT</pubDate><ttl>60</ttl><dc:creator/><item><title><![CDATA[index]]></title><description><![CDATA[ 
+ <br>]]></description><link>index.html</link><guid isPermaLink="false">index.md</guid><pubDate>Tue, 23 Jul 2024 13:00:20 GMT</pubDate></item><item><title><![CDATA[20240723 모각코 활동 4회차]]></title><description><![CDATA[ 
  <br>오늘의목표<br>
 1.cnn공부 - 정의와 구조 살펴보기<br>
 2.resnet공부 - 정의와 구조 살펴보기<br>딥 러닝 : 심층 신경망을 주로 다루는 ai분야. 심층 신경망은 신경망을 여러 계층으로 구성한 것.<br>
@@ -245,6 +246,4 @@ al분야에서 google tensorflow와 함께 딥러닝 모델을 구축하고 학�
 <br>RESNET 구조 공부하기
 
 
-]]></description><link>모.구.모.구-모각코-활동.html</link><guid isPermaLink="false">모.구.모.구 모각코 활동.md</guid><pubDate>Fri, 05 Jul 2024 08:47:48 GMT</pubDate></item><item><title><![CDATA[index]]></title><description><![CDATA[ 
- <br>]]></description><link>index.html</link><guid isPermaLink="false">index.md</guid><pubDate>Wed, 26 Jun 2024 13:06:53 GMT</pubDate></item><item><title><![CDATA[Obsidian template for using github.io]]></title><description><![CDATA[ 
- <br>]]></description><link>readme.html</link><guid isPermaLink="false">README.md</guid><pubDate>Wed, 26 Jun 2024 12:40:01 GMT</pubDate></item></channel></rss>
+]]></description><link>모.구.모.구-모각코-활동.html</link><guid isPermaLink="false">모.구.모.구 모각코 활동.md</guid><pubDate>Fri, 05 Jul 2024 08:47:48 GMT</pubDate></item></channel></rss>

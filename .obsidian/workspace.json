@@ -4,26 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "4a53a2dcc76747b9",
+        "id": "d54644a95f908bd3",
         "type": "tabs",
         "children": [
           {
-            "id": "e85638fcd2d3f4e4",
+            "id": "aedbfa624c5b5dc2",
             "type": "leaf",
             "state": {
-              "type": "image",
+              "type": "mk-space",
               "state": {
-                "file": "CNN1.png"
-              }
-            }
-          },
-          {
-            "id": "9bff5d431ea466ea",
-            "type": "leaf",
-            "state": {
-              "type": "release-notes",
-              "state": {
-                "currentVersion": "1.6.7"
+                "path": "/"
               }
             }
           }
@@ -86,7 +76,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 244.5
   },
   "right": {
     "id": "b8b53b513e17a2f3",
@@ -102,7 +92,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "CNN1.png",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -119,7 +108,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "CNN1.png",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -141,9 +129,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "CNN1.png"
-              }
+              "state": {}
             }
           }
         ],
@@ -167,32 +153,34 @@
       "webpage-html-export:Export Vault to HTML": false
     }
   },
-  "active": "e85638fcd2d3f4e4",
+  "active": "aedbfa624c5b5dc2",
   "lastOpenFiles": [
+    "index.md",
+    "Vault.md",
+    "docs/Untitled.md",
     "20240723 모각코 활동 4회차.md",
-    "CNN1.png",
-    "CNN2.png",
-    "ResNet.png",
-    "20240716 모각코 활동 3회차.md",
-    "20240707 모각코 활동 1회차.md",
-    "20240709 모각코 활동 2회차.md",
+    "20240730 모각코 활동 5회차.md",
+    "20240806 모각코 활동 6회차.md",
     "20240813 모각코 활동 7회차.md",
+    "README.md",
+    "docs/lib/media/ResNet.png",
+    "Tags",
+    "20240716 모각코 활동 3회차.md",
+    "20240709 모각코 활동 2회차.md",
+    "20240707 모각코 활동 1회차.md",
+    "모.구.모.구 모각코 활동.md",
+    "docs/lib/media/CNN1.png",
+    "docs/lib/media/CNN2.png",
     "docs/20240730-모각코-활동-5회차.html",
     "docs/20240723-모각코-활동-4회차.html",
-    "20240806 모각코 활동 6회차.md",
-    "20240730 모각코 활동 5회차.md",
     "docs/20240716-모각코-활동-3회차.html",
     "docs/20240709-모각코-활동-2회차.html",
-    "모.구.모.구 모각코 활동.md",
-    "index.md",
-    "README.md",
     "docs/20240707-모각코-활동-1회차.html",
     "test.md",
     "docs/모.구.모.구-모각코-활동.html",
     "mogumogu.md",
     "docs/docs.md",
     "docs/mogumogu.md",
-    "Tags",
     "이름 없는 보드.md",
     "이름 없는 보드 1.md",
     "docs/lib/search-index.json",
