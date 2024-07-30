@@ -41,7 +41,6 @@
   "deleteFileOption": "trash",
   "expandedSpaces": [
     "/",
-    "//docs/docs/lib",
     "//docs/docs/lib/docs/lib/media",
     "//docs"
   ],
