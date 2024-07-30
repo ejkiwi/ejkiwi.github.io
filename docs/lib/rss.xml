@@ -1,6 +1,131 @@
-<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[ejkiwi.github.io]]></title><description><![CDATA[Obsidian digital garden]]></description><link>https://ejkiwi.github.io/</link><image><url>https://ejkiwi.github.io/lib/media/favicon.png</url><title>ejkiwi.github.io</title><link>https://ejkiwi.github.io/</link></image><generator>Webpage HTML Export plugin for Obsidian</generator><lastBuildDate>Tue, 23 Jul 2024 14:06:51 GMT</lastBuildDate><atom:link href="https://ejkiwi.github.io/lib/rss.xml" rel="self" type="application/rss+xml"/><pubDate>Tue, 23 Jul 2024 14:06:51 GMT</pubDate><ttl>60</ttl><dc:creator/><item><title><![CDATA[20240730 모각코 활동 5회차]]></title><description><![CDATA[ 
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[ejkiwi.github.io]]></title><description><![CDATA[Obsidian digital garden]]></description><link>https://ejkiwi.github.io/</link><image><url>https://ejkiwi.github.io/lib/media/favicon.png</url><title>ejkiwi.github.io</title><link>https://ejkiwi.github.io/</link></image><generator>Webpage HTML Export plugin for Obsidian</generator><lastBuildDate>Tue, 30 Jul 2024 04:17:35 GMT</lastBuildDate><atom:link href="https://ejkiwi.github.io/lib/rss.xml" rel="self" type="application/rss+xml"/><pubDate>Tue, 30 Jul 2024 04:17:35 GMT</pubDate><ttl>60</ttl><dc:creator/><item><title><![CDATA[20240716 모각코 활동 3회차]]></title><description><![CDATA[ 
+ <br>오늘의 목표<br>
+1.파이토치 공부하기  - 실습해보기<br>
+2.선배님의 프로젝트 코드 절반 분석하기 - resnet 부분<br>파이토치 실습<br>import torch #파이토치 불러오기
+from torch import nn #토치에서 nn 불러오기
+  
+
+#텐서 형태로 train데이터 가져오기
+x_train = torch.Tensor([1,2,3,4,5,6]).view(6,1)
+y_train = torch.Tensor([3,6,9,12,15,18]).view(6,1)
+
+  
+#MyNeuralNetwork 클래스 만들기. nn.Module이 부모클래스가 됨.
+class MyNeuralNetwork(nn.Module):
+&nbsp; def __init__(self):
+&nbsp; &nbsp; super().__init__()
+&nbsp; &nbsp; self.linear_relu_stack = nn.Sequential(nn.Linear(1,1))
+
+&nbsp; def forward(self, x):
+&nbsp; &nbsp; logits = self.linear_relu_stack(x)
+&nbsp; &nbsp; return logits
+
+
+#모델
+model = MyNeuralNetwork()
+#손실함수
+loss_function = nn.MSELoss()
+#옵티마이저
+optimizer = torch.optim.SGD(model.parameters(),lr=1e-2)
+
+nums_epoch = 2000
+
+
+#학습시키기
+for epoch in range(nums_epoch + 1):
+&nbsp; prediction = model(x_train)
+&nbsp; loss = loss_function(prediction, y_train)
+
+&nbsp; optimizer.zero_grad()
+&nbsp; loss.backward()
+&nbsp; optimizer.step()
+
+&nbsp; if epoch % 100 == 0:
+&nbsp; &nbsp; print('epoch = ', epoch, 'current loss = ', loss.item())
+Copy<br>#예측하기
+x_test = torch.Tensor([8,9,10,11]).view(4,1)
+pred = model(x_test)
+pred
+Copy<br>선배님의 프로젝트 코드<br>from huggingface_hub import hf_hub_download
+import wespeaker
+Copy<br>from huggingface_hub import hf_hub_download<br>
+huggingface_hub 라이브러리를 통해서 hf_hub_download함수를 가져와준다.<br>
+hf_hub_download함수를 통해서 모델을 다운로드 할 수 있다.<br>
+기본적으로, 함수에는 repo_id와 repo_type을 인자로 넘겨준다. (revision - 특정 버전의 파일을 다운로드 하고 싶을 시. / local_dir 특정 위치에 저장하고 싶을 시.)<br>
+import wespeaker<br>
+wespeaker을 가져와준다.<br> def get_resnet152():
+    model_id = "Wespeaker/wespeaker-voxceleb-resnet152-LM"
+    model_name = model_id.replace("Wespeaker/wespeaker-", "").replace("-", "_")
+ 
+    root_dir = hf_hub_download(model_id, filename=model_name+".onnx").replace(model_name+".onnx", "")
+
+    import os
+    if not os.path.isfile(root_dir+"avg_model.pt"):
+        os.rename(hf_hub_download(model_id, filename=model_name+".pt"), root_dir+"avg_model.pt")
+    if not os.path.isfile(root_dir+"config.yaml"):
+        os.rename(hf_hub_download(model_id, filename=model_name+".yaml"), root_dir+"config.yaml")
+
+    resnet = wespeaker.load_model_local(root_dir)
+
+    #print("Compile model for the NPU")
+    #resnet.model = intel_npu_acceleration_library.compile(resnet.model)
+
+    def resnet152(ado, sample_rate=None):
+        if isinstance(ado, str):
+            return resnet.recognize(ado)
+        else:
+            return recognize(resnet, ado, sample_rate)
+
+    resnet152.__dict__['register'] = lambda *args, **kwargs: resnet.register(*args, **kwargs)
+
+    return resnet152
+Copy<br>분석<br>
+def get_resnet152():<br>
+get_resnet 152 라는 이름의 함수를 정의<br>model_id = "Wespeaker/wespeaker-voxceleb-resnet152-LM"<br>
+model_id라는 변수에 "Wespeaker/wespeaker-voxceleb-resnet152-LM"를 지정. 아마  모델 아이디에 모델의 이름을 저장한 것일 것.<br>moldelname = model.id.replace("Wespeaker/wespeaker-",").replace("-", " ")<br>
+model_name이라는 변수를 만들어서, model_id를 약간 변형시킨 이름으로 지정해줌. "voxceleb_resnet152_LM"이 될 것.<br>root_dir = hf_hub_download(model_id, filename = model_name+" .onnx").replace(model_name+" .onnx", "")<br>
+hf_hub_download : huggingface_hub 라이브러리를 통해서 가져왔던 함수. 함수를 사용해서 모델 파일을 다운로드하고, 다운로드한 파일을 root_dir에 저장함.<br>import os<br>
+os 모듈을 가져옴<br>
+os 모듈 : 파일 및 디렉토리 작업, 프로세스 및 스레드 관리, 시스템 정보와 관련한 작업들을 수행할 수 있는 모듈이다.<br>if not os.path.isfile(root_dir+"avg_model.pt"):<br>
+os.rename(hf_hub_download(model_id, filename=model_name+".pt"), root_dir+"avg_model.pt")<br>
+만약 avg_model.pt이름을 가진 파일이 없다면, 모델의 pt파일을 다운로드 한 뒤 이름을 avg_model.pt로 바꾸어서 root_dir 변수에 저장함.<br>
+os.path.isfile(path) : path가 파일인 경우 true를 리턴, 아니면 false를 리턴.<br>
+os.rename : 파일 또는 폴더의 이름을 간단히 변경할 수 있다.<br>if not os.path.isfile(root_dir+"config.yaml"):<br>
+os.rename(hf_hub_download(model_id, filename=model_name+".yaml"), root_dir+"config.yaml")<br>
+앞 코드와 같은 느낌인데, 만약 config.yaml파일이 없으면 모델의 yaml파일을 다운로드 한 뒤 이름을 바꾸어서 root_dir변수에 저장함.<br>resnet = wespeaker.load_model_local(root_dir)<br>
+resnet이라는 변수를 지정해줄건데, wespeaker 라이브러리의 load_model_local 함수를 사용할거임. 이 때 root_dir에 있는 파일들을 불러오게 됨.<br>def resnet152(ado, sample_rate=None):<br>
+if isinstance(ado, str):<br>
+return resnet.recognize(ado)<br>
+else:<br>
+return recognize(resnet, ado, sample_rate) 	 resnet152라는 함수를 정의해주는데, 이 함수는 입력으로 ado를 받음.<br>
+instance(객체, 타입) : isinstance함수는 지정된 객체(여기에서는 ado)가 지정된 타입이면 true를 반환하고 아니면 false를 반환한다.<br>
+ado가 문자열이라면  resnet.recognize(ado)를 리턴하고<br>
+그렇지 않다면  recognize(resnet, ado, sample_rate)을 리턴함.<br>(recognize함수는 이전에 지정해둔 함수이다.)<br>def recognize(model, pcm, sample_rate):
+    q = extract_embedding(model, pcm, sample_rate)
+    best_score = 0.0
+    best_name = ''
+    for name, e in model.table.items():
+        score = model.cosine_similarity(q, e)
+        if best_score &lt; score:
+            best_score = score
+            best_name = name
+        del score
+        gc.collect()
+    return {'name': best_name, 'confidence': best_score}
+Copy<br>resnet152.__dict__['register'] = lambda *args, **kwargs: resnet.register(*args, **kwargs)<br>
+resnet152라는 함수에 register라는 기능을 추가(대체?)<br>
+lambda함수를 통해서 resnet152에서 register메서드를 사용하려고 할 때, resnet객체의 register 메서드를 가져와서 사용하게 된다.<br>
+args, kwargs : 몇 개의 인자를 받아야 할지 정할 수 없을 때 args와 kwargs(keyword arguments)를 파라미터로 써줌. args 앞에 붙는  * 는 여러개의 인자를 묶어서 하나의 튜플로 묶어주고 이를 args에 할당해준다. kwargs 앞에 붙는 ** 는 여러개의 키워드 아규먼트들을 묶어서 딕셔너리로 만들어준다. <br>return resnet152<br>
+get_resnet152라는 함수는 resnet152를 반환함.<br>resnet152 = get_resnet152()
+print("INFO: ResNet152 Ready -", resnet152)
+Copy<br>분석<br>
+resnet152 = get_resnet152()<br>
+get_resnet152함수를 가져와서 resnet152함수에 저장함<br>
+print("INFO: ResNet152 Ready -", resnet152)<br>
+모델이 준비되었다는 메시지를 출력한 뒤, resnet152를 출력함.]]></description><link>https://ejkiwi.github.io/20240716-모각코-활동-3회차.html</link><guid isPermaLink="false">20240716 모각코 활동 3회차.md</guid><pubDate>Tue, 30 Jul 2024 04:01:59 GMT</pubDate></item><item><title><![CDATA[20240730 모각코 활동 5회차]]></title><description><![CDATA[ 
  <br>오늘의목표<br>
-<img alt="펭귄테스트" src="https://ejkiwi.github.io/lib/media/o.jpg" referrerpolicy="no-referrer">]]></description><link>https://ejkiwi.github.io/20240730-모각코-활동-5회차.html</link><guid isPermaLink="false">20240730 모각코 활동 5회차.md</guid><pubDate>Tue, 23 Jul 2024 14:06:32 GMT</pubDate><enclosure url="https://ejkiwi.github.io/lib/media/o.jpg" length="0" type="image/jpeg"/><content:encoded>&lt;figure&gt;&lt;img src="https://ejkiwi.github.io/lib/media/o.jpg"&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[20240723 모각코 활동 4회차]]></title><description><![CDATA[ 
+1.cnn공부 -<br>
+2.resnet공부 - ]]></description><link>https://ejkiwi.github.io/20240730-모각코-활동-5회차.html</link><guid isPermaLink="false">20240730 모각코 활동 5회차.md</guid><pubDate>Tue, 30 Jul 2024 03:44:41 GMT</pubDate></item><item><title><![CDATA[20240723 모각코 활동 4회차]]></title><description><![CDATA[ 
  <br>오늘의목표<br>
 1.cnn공부 - 정의와 구조 살펴보기<br>
 2.resnet공부 - 정의와 구조 살펴보기<br>딥 러닝 : 심층 신경망을 주로 다루는 ai분야. 심층 신경망은 신경망을 여러 계층으로 구성한 것.<br>
@@ -115,117 +240,7 @@ al분야에서 google tensorflow와 함께 딥러닝 모델을 구축하고 학�
 2: get_whisper 라는 이름의 함수 설정하기<br>
 3: model_size는 "medium"이다. model_size가 가질 수 있는 옵션으로는 "tiny","base","small","medium","large","large-v3" 이 있다. -&gt; model_size는 모델의 크기를 뜻한다.<br>
 4: compute_type은 "int8"이다. compute_type이 가질 수 있는 옵션으로는 "float16","int8"이 있다. -&gt; compute_type은 계산 유형을 뜻한다.<br>
-5: WhisperModel은 4가지의 매개변수를 사용하는데, 여기에서 model_size는 앞서 정한 크기와 같고, device는 모델이 실행될 장치를 지정한다. cpu_threads는 CPU의 스레드 수를 뜻한다. compute_type또한 앞서 정한 계산 유형과 같다. 이 때 .transcribe는 모델의 음성 인식 기능을 호출해서 음성을 텍스트로 변환해준다.]]></description><link>20240709-모각코-활동-2회차.html</link><guid isPermaLink="false">20240709 모각코 활동 2회차.md</guid><pubDate>Mon, 15 Jul 2024 06:27:57 GMT</pubDate></item><item><title><![CDATA[20240716 모각코 활동 3회차]]></title><description><![CDATA[ 
- <br>오늘의 목표<br>
-1.파이토치 공부하기  - 실습해보기<br>
-2.선배님의 프로젝트 코드 절반 분석하기 - resnet 부분<br>파이토치 실습<br>import torch #파이토치 불러오기
-from torch import nn #토치에서 nn 불러오기
-  
-
-#텐서 형태로 train데이터 가져오기
-x_train = torch.Tensor([1,2,3,4,5,6]).view(6,1)
-y_train = torch.Tensor([3,6,9,12,15,18]).view(6,1)
-
-  
-#MyNeuralNetwork 클래스 만들기. nn.Module이 부모클래스가 됨.
-class MyNeuralNetwork(nn.Module):
-&nbsp; def __init__(self):
-&nbsp; &nbsp; super().__init__()
-&nbsp; &nbsp; self.linear_relu_stack = nn.Sequential(nn.Linear(1,1))
-
-&nbsp; def forward(self, x):
-&nbsp; &nbsp; logits = self.linear_relu_stack(x)
-&nbsp; &nbsp; return logits
-
-
-#모델
-model = MyNeuralNetwork()
-#손실함수
-loss_function = nn.MSELoss()
-#옵티마이저
-optimizer = torch.optim.SGD(model.parameters(),lr=1e-2)
-
-nums_epoch = 2000
-
-
-#학습시키기
-for epoch in range(nums_epoch + 1):
-&nbsp; prediction = model(x_train)
-&nbsp; loss = loss_function(prediction, y_train)
-
-&nbsp; optimizer.zero_grad()
-&nbsp; loss.backward()
-&nbsp; optimizer.step()
-
-&nbsp; if epoch % 100 == 0:
-&nbsp; &nbsp; print('epoch = ', epoch, 'current loss = ', loss.item())
-Copy<br>#예측하기
-x_test = torch.Tensor([8,9,10,11]).view(4,1)
-pred = model(x_test)
-pred
-Copy<br>선배님의 프로젝트 코드<br> def get_resnet152():
-    model_id = "Wespeaker/wespeaker-voxceleb-resnet152-LM"
-    model_name = model_id.replace("Wespeaker/wespeaker-", "").replace("-", "_")
- 
-    root_dir = hf_hub_download(model_id, filename=model_name+".onnx").replace(model_name+".onnx", "")
-
-    import os
-    if not os.path.isfile(root_dir+"avg_model.pt"):
-        os.rename(hf_hub_download(model_id, filename=model_name+".pt"), root_dir+"avg_model.pt")
-    if not os.path.isfile(root_dir+"config.yaml"):
-        os.rename(hf_hub_download(model_id, filename=model_name+".yaml"), root_dir+"config.yaml")
-
-    resnet = wespeaker.load_model_local(root_dir)
-
-    #print("Compile model for the NPU")
-    #resnet.model = intel_npu_acceleration_library.compile(resnet.model)
-
-    def resnet152(ado, sample_rate=None):
-        if isinstance(ado, str):
-            return resnet.recognize(ado)
-        else:
-            return recognize(resnet, ado, sample_rate)
-
-    resnet152.__dict__['register'] = lambda *args, **kwargs: resnet.register(*args, **kwargs)
-
-    return resnet152
-Copy<br>분석<br>
-def getresnet152():<br>
-get_resnet 152 라는 이름의 함수를 정의<br>
-model_id = "Wespeaker/wespeaker-voxceleb-resnet152-LM"<br>
-model_id라는 변수에 "Wespeaker/wespeaker-voxceleb-resnet152-LM"를 지정. 아마  모델 아이디에 모델의 이름을 저장한 것일 것.<br>
-moldel_name = model.id.replace("Wespeaker/wespeaker-",").replace("-", " ")<br>
-model_name이라는 변수를 만들어서, model_id를 약간 변형시킨 이름으로 지정해줌. "voxceleb_resnet152_LM"이 될 것.<br>
-root_dir = hf_hub_download(model_id, filename = model_name+" .onnx").replace(model_name+" .onnx", "")<br>
-hf_hub_download : 이건 함수임. 함수를 사용해서 모델 파일을 다운로드하고, 다운로드한 파일을 root_dir변수에 저장함.<br>
-import os<br>
-os 모듈을 가져옴<br>
-if not os.path.isfile(root_dir+"avg_model.pt"):<br>
-os.rename(hf_hub_download(model_id, filename=model_name+".pt"), root_dir+"avg_model.pt")<br>
-만약 avg_model.pt이름을 가진 파일이 없다면, 모델의 pt파일을 다운로드 한 뒤 이름을 avg_model.pt로 바꾸어서 root_dir 변수에 저장함.<br>
-if not os.path.isfile(root_dir+"config.yaml"):<br>
-os.rename(hf_hub_download(model_id, filename=model_name+".yaml"), root_dir+"config.yaml")<br>
-앞 코드와 같은 느낌인데, 만약 config.yaml파일이 없으면 모델의 yaml파일을 다운로드 한 뒤 이름을 바꾸어서 root_dir변수에 저장함.<br>
-resnet = wespeaker.load_model_local(root_dir)<br>
-resnet이라는 변수를 지정해줄건데, wespeaker 라이브러리의 load_model_local 함수를 사용할거임. 이 때 root_dir에 있는 파일들을 불러오게 됨.<br>
-def resnet152(ado, sample_rate=None):<br>
-if isinstance(ado, str):<br>
-return resnet.recognize(ado)<br>
-else:<br>
-return recognize(resnet, ado, sample_rate)<br>
-resnet152라는 함수를 정의해주는데, 이 함수는 입력으로 ado를 받음.<br>
-ado가 문자열이라면  resnet.recognize(ado)를 리턴하고<br>
-그렇지 않다면  recognize(resnet, ado, sample_rate)을 리턴함.<br>
-resnet152.__dict__['register'] = lambda *args, **kwargs: resnet.register(*args, **kwargs)<br>
-resnet152라는 함수에 register라는 기능을 추가<br>
-return resnet152<br>
-get_resnet152라는 함수는 resnet152를 반환함.<br>resnet152 = get_resnet152()
-print("INFO: ResNet152 Ready -", resnet152)
-Copy<br>분석<br>
-resnet152 = get_resnet152()<br>
-get_resnet152함수를 가져와서 resnet152함수에 저장함<br>
-print("INFO: ResNet152 Ready -", resnet152)<br>
-모델이 준비되었다는 메시지를 출력한 뒤, resnet152를 출력함.]]></description><link>20240716-모각코-활동-3회차.html</link><guid isPermaLink="false">20240716 모각코 활동 3회차.md</guid><pubDate>Tue, 16 Jul 2024 08:16:09 GMT</pubDate></item><item><title><![CDATA[20240806 모각코 활동 6회차]]></title><description><![CDATA[ 
+5: WhisperModel은 4가지의 매개변수를 사용하는데, 여기에서 model_size는 앞서 정한 크기와 같고, device는 모델이 실행될 장치를 지정한다. cpu_threads는 CPU의 스레드 수를 뜻한다. compute_type또한 앞서 정한 계산 유형과 같다. 이 때 .transcribe는 모델의 음성 인식 기능을 호출해서 음성을 텍스트로 변환해준다.]]></description><link>20240709-모각코-활동-2회차.html</link><guid isPermaLink="false">20240709 모각코 활동 2회차.md</guid><pubDate>Mon, 15 Jul 2024 06:27:57 GMT</pubDate></item><item><title><![CDATA[20240806 모각코 활동 6회차]]></title><description><![CDATA[ 
  <br>오늘의목표]]></description><link>20240806-모각코-활동-6회차.html</link><guid isPermaLink="false">20240806 모각코 활동 6회차.md</guid><pubDate>Mon, 15 Jul 2024 07:54:55 GMT</pubDate></item><item><title><![CDATA[20240813 모각코 활동 7회차]]></title><description><![CDATA[ 
  <br>오늘의목표]]></description><link>20240813-모각코-활동-7회차.html</link><guid isPermaLink="false">20240813 모각코 활동 7회차.md</guid><pubDate>Mon, 15 Jul 2024 07:55:03 GMT</pubDate></item><item><title><![CDATA[모.구.모.구 모각코 활동]]></title><description><![CDATA[ 
  <br>팀 모각코 목표 : 1. 절대 포기하지 않기, 2. 모르는 거 그냥 넘어가지 않기<br>나의 모각코 활동 다짐 : 활동 계획을 완벽히 마무리 할 수 있도록 노력하겠습니다!<br>나의 모각코 활동 계획<br>
