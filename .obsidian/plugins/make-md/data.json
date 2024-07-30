@@ -42,7 +42,8 @@
   "expandedSpaces": [
     "/",
     "//docs/docs/lib/docs/lib/media",
-    "//docs"
+    "//docs",
+    "//docs/docs/lib"
   ],
   "expandFolderOnClick": true,
   "menuTriggerChar": "/",
