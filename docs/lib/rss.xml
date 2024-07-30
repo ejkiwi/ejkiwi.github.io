@@ -1,4 +1,4 @@
-<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[ejkiwi.github.io]]></title><description><![CDATA[Obsidian digital garden]]></description><link>https://ejkiwi.github.io/</link><image><url>https://ejkiwi.github.io/lib/media/favicon.png</url><title>ejkiwi.github.io</title><link>https://ejkiwi.github.io/</link></image><generator>Webpage HTML Export plugin for Obsidian</generator><lastBuildDate>Tue, 30 Jul 2024 11:08:30 GMT</lastBuildDate><atom:link href="https://ejkiwi.github.io/lib/rss.xml" rel="self" type="application/rss+xml"/><pubDate>Tue, 30 Jul 2024 11:08:29 GMT</pubDate><ttl>60</ttl><dc:creator/><item><title><![CDATA[20240730 모각코 활동 5회차]]></title><description><![CDATA[ 
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[ejkiwi.github.io]]></title><description><![CDATA[Obsidian digital garden]]></description><link>https://ejkiwi.github.io/</link><image><url>https://ejkiwi.github.io/lib/media/favicon.png</url><title>ejkiwi.github.io</title><link>https://ejkiwi.github.io/</link></image><generator>Webpage HTML Export plugin for Obsidian</generator><lastBuildDate>Tue, 30 Jul 2024 11:27:47 GMT</lastBuildDate><atom:link href="https://ejkiwi.github.io/lib/rss.xml" rel="self" type="application/rss+xml"/><pubDate>Tue, 30 Jul 2024 11:27:46 GMT</pubDate><ttl>60</ttl><dc:creator/><item><title><![CDATA[20240730 모각코 활동 5회차]]></title><description><![CDATA[ 
  <br>오늘의목표<br>
 1.cnn공부 - 합성곱 계층에서의filter, Padding에 대해 더 알아보기.<br>
 2.resnet공부 - Residual Block과 Skip-Connection 에 대해 더 깊이 알아보기<br>합성곱 계층에서의 filter<br>
@@ -7,7 +7,8 @@ filter를 사용하는 이유는 사진에서 feature(특징)를 뽑아내기 �
 <br>입력 데이터의 전체 이미지에서, filter를 통해 천제 이미지를 순환하며, 특정 filter모양과 일치할수록 더 큰 값을 가지게 될 것인데, 이는 전체 이미지서 특정 filter와 유사한 모양을 가진 부분에 대한 feature들만 얻게 된다는 것을 의미한다. =&gt; 특정 filter에 부합하는 feature정보를 얻는 과정.
 <br>Padding<br>
 cnn구조에서, 합성곱층을 지나게 되면, 합성곱 연산으로 인해서 Feature Map의 크기는 입력데이터보다 크기가 작아지게 된다. 이렇게 크기가 작아지는것을 피하기 위해서 Padding 이라는 방법을 사용할 수 있다.<br>
-<br>zero padding : 입력 데이터(이미지) 주위를 0으로 둘러주는 padding의 방법이다.
+<br>zero padding : 입력 데이터(이미지) 주위를 0으로 둘러주는 padding의 방법이다.<br>
+<img alt="zero padding" src="https://ejkiwi.github.io/lib/media/zero_Padding.png" referrerpolicy="no-referrer">
 
 <br>P : padding layer의 수
 <br>n : 이미지의 크기가 n * n
@@ -19,12 +20,12 @@ cnn구조에서, 합성곱층을 지나게 되면, 합성곱 연산으로 인해
 <br>padding이 필요한 이유
 
 <br>이미지 데이터의 축소를 막을 수 있다. -  여러번의 계산을 거쳐야 하는데 초반부터 이미지가 너무 작아져버린다면 학습을 별로 하지 못하고 끝나버릴 수 있기 때문에 padding을 통해 이미지의 크기를 조절해줘야한다.
-<br>모서리에 있는 중요한 정보를 충분히 활용할 수 있다. - padding을 사용하지 않는 경우, 모서를 학습할 기회가 적어지게 된다. 만약 중요한 정보가 모서리쪽에 있다면, 모델의 성능이 떨어기 때문에 padding을 사용하여 모서리의 정보들도 충분히 학습할 수 있도록 해주어야 한다.<br>
--<img alt="패딩과 모서리~" src="" referrerpolicy="no-referrer">
+<br>모서리에 있는 중요한 정보를 충분히 활용할 수 있다. - padding을 사용하지 않는 경우, 모서를 학습할 기회가 적어지게 된다. 만약 중요한 정보가 모서리쪽에 있다면, 모델의 성능이 떨어지기 때문에 padding을 사용하여 모서리의 정보들도 충분히 학습할 수 있도록 해주어야 한다.<br>
+<img alt="패딩과 모서리~" src="https://ejkiwi.github.io/lib/media/CNN_Padding_Edge.png" referrerpolicy="no-referrer">
 
 
 <br>Valid Padding과 Same Padding : 각각 순서대로 패딩하지 않는 것, 입력데이터와 출력데이터가 동일하도록 하는 패딩을 뜻한다.
-<br>Residual Block<br>Skip-Connection]]></description><link>https://ejkiwi.github.io/20240730-모각코-활동-5회차.html</link><guid isPermaLink="false">20240730 모각코 활동 5회차.md</guid><pubDate>Tue, 30 Jul 2024 11:07:59 GMT</pubDate></item><item><title><![CDATA[20240716 모각코 활동 3회차]]></title><description><![CDATA[ 
+<br>Residual Block<br>Skip-Connection]]></description><link>https://ejkiwi.github.io/20240730-모각코-활동-5회차.html</link><guid isPermaLink="false">20240730 모각코 활동 5회차.md</guid><pubDate>Tue, 30 Jul 2024 11:26:51 GMT</pubDate><enclosure url="https://ejkiwi.github.io/lib/media/zero_Padding.png" length="0" type="image/png"/><content:encoded>&lt;figure&gt;&lt;img src="https://ejkiwi.github.io/lib/media/zero_Padding.png"&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[20240716 모각코 활동 3회차]]></title><description><![CDATA[ 
  <br>오늘의 목표<br>
 1.파이토치 공부하기  - 실습해보기<br>
 2.선배님의 프로젝트 코드 절반 분석하기 - resnet 부분<br>파이토치 실습<br>import torch #파이토치 불러오기
