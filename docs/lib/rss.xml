@@ -1,4 +1,218 @@
-<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[ejkiwi.github.io]]></title><description><![CDATA[Obsidian digital garden]]></description><link>https://ejkiwi.github.io/</link><image><url>https://ejkiwi.github.io/lib/media/favicon.png</url><title>ejkiwi.github.io</title><link>https://ejkiwi.github.io/</link></image><generator>Webpage HTML Export plugin for Obsidian</generator><lastBuildDate>Wed, 31 Jul 2024 12:40:58 GMT</lastBuildDate><atom:link href="https://ejkiwi.github.io/lib/rss.xml" rel="self" type="application/rss+xml"/><pubDate>Wed, 31 Jul 2024 12:40:58 GMT</pubDate><ttl>60</ttl><dc:creator/><item><title><![CDATA[20240730 모각코 활동 5회차]]></title><description><![CDATA[ 
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[ejkiwi.github.io]]></title><description><![CDATA[Obsidian digital garden]]></description><link>https://ejkiwi.github.io/</link><image><url>https://ejkiwi.github.io/lib/media/favicon.png</url><title>ejkiwi.github.io</title><link>https://ejkiwi.github.io/</link></image><generator>Webpage HTML Export plugin for Obsidian</generator><lastBuildDate>Tue, 06 Aug 2024 03:17:16 GMT</lastBuildDate><atom:link href="https://ejkiwi.github.io/lib/rss.xml" rel="self" type="application/rss+xml"/><pubDate>Tue, 06 Aug 2024 03:17:16 GMT</pubDate><ttl>60</ttl><dc:creator/><item><title><![CDATA[20240806 모각코 활동 6회차]]></title><description><![CDATA[ 
+ <br>오늘의목표 CNN 실습 - MNIST 이미지 분류<br>
+(RESNET은 7회차에 진행할 예정)<br>import torch #pytorch 가져오기
+Copy<br>#데이터셋불러오고 텐서로 바꿔주기
+
+from torchvision import datasets #데이터셋 불러오고
+
+from torchvision.transforms import ToTensor #텐서로 바꿔주기
+
+  
+
+#datasets에서 MNIST 가져와서 훈련데이터와 테스트데이터 가져와주기.
+
+#datasets.MNIST(root - 데이터가 저장될 경로, train - train이 true 이면 train data이고 false면 test data, download - 데이터 없으면 인터넷에서 다운로드해줌 , transform - transform을 ToTensor로 지정해주지 않으면 텐서의 형식이 아닌, PIL이미지로 데이터가 가져와지게 된다, target_transform)
+
+  
+
+train_data = datasets.MNIST(
+
+&nbsp; &nbsp; root = "data",
+
+&nbsp; &nbsp; train = True, #train data를 다운로드
+
+&nbsp; &nbsp; transform = ToTensor(),
+
+&nbsp; &nbsp; download = True
+
+)
+
+test_data = datasets.MNIST(
+
+&nbsp; &nbsp; root = 'data',
+
+&nbsp; &nbsp; train = False, #test data를 다운로드
+
+&nbsp; &nbsp; transform = ToTensor()
+
+)
+Copy<br>#학습데이터 확인
+
+print(train_data)
+
+print(train_data.data.size())
+
+# 데이터셋의 이름은 MNIST
+
+# 데이터의 수는 60000개
+
+# 훈련데이터
+
+# StandardTransform(데이터셋에 일관되게 적용되는 변환의 표준을 정의) -&gt; Transform: ToTensor() #이미지 데이터들을 모두 일관되게 텐서 형태로 변환하겠다는 것을 의미.
+
+
+#테스트데이터 확인
+
+print(test_data)
+
+print(test_data.data.size())
+
+#데이터의 수가 10000 인 것과 테스트데이터라는 것을 제외하면 나머지 속성은 학습데이터와 동일함.
+Copy<br>#데이터 시각적으로 확인
+
+import matplotlib.pyplot as plt #시각적 확인을 위해 matplotlib을 사용.
+
+fig, ax = plt.subplots() #fig와 ax는 plt.subplot()으로 쓰일 것.
+
+ax.imshow(train_data.data[0], cmap='gray')
+
+  
+
+for i in range(train_data.data[0].shape[0]):
+
+&nbsp; for j in range(train_data.data[0].shape[1]):
+
+&nbsp; &nbsp; c = 1 if train_data.data[0][i, j].item() &lt; 125 else 0
+
+&nbsp; &nbsp; ax.text(j, i, str(train_data.data[0][i, j].item()), color=(c, c, c), ha='center', va='center', fontsize=5)
+
+  
+
+plt.title("%i" % train_data.targets[0])
+
+plt.show
+Copy<br><img alt="mnist_1" src="https://ejkiwi.github.io/lib/media/MNIST.png" referrerpolicy="no-referrer"><br>from torch.utils.data import DataLoader
+
+loaders = {
+
+&nbsp; &nbsp; 'train' : torch.utils.data.DataLoader(train_data,
+
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; batch_size=100,
+
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; shuffle=True,
+
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; num_workers=1),
+
+&nbsp; &nbsp; 'test' : torch.utils.data.DataLoader(test_data,
+
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;batch_size=100,
+
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;shuffle=True,
+
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;num_workers=1)
+
+}
+
+loaders
+Copy<br>class CNN(torch.nn.Module):
+
+  
+
+&nbsp; def __init__(self):
+
+&nbsp; &nbsp; super(CNN, self).__init__()
+
+&nbsp; &nbsp; self.layer1 = torch.nn.Sequential(
+
+&nbsp; &nbsp; &nbsp; &nbsp; torch.nn.Conv2d(1, 16, kernel_size=5, stride=1, padding=2), #컨볼루션 레이어(합성곱층) #1차원 데이터를 받아 16개의 feature로 나누겟다!!임.
+
+&nbsp; &nbsp; &nbsp; &nbsp; torch.nn.ReLU(), #ReLU층
+
+&nbsp; &nbsp; &nbsp; &nbsp; torch.nn.MaxPool2d(kernel_size=2, stride=2)) #풀링층
+
+&nbsp; &nbsp; self.layer2 = torch.nn.Sequential(
+
+&nbsp; &nbsp; &nbsp; &nbsp; torch.nn.Conv2d(16, 32, kernel_size=5, stride=1, padding=2),
+
+&nbsp; &nbsp; &nbsp; &nbsp; torch.nn.ReLU(),
+
+&nbsp; &nbsp; &nbsp; &nbsp; torch.nn.MaxPool2d(kernel_size=2, stride=2))
+
+&nbsp; &nbsp; self.fc = torch.nn.Linear(32 * 7 * 7, 10, bias=True) #32*7*7만큼의 입력을 linear레이어에 의해 계산되게 해서... 10개의 출력이 나오도록 함.
+
+&nbsp; &nbsp; torch.nn.init.xavier_uniform_(self.fc.weight)
+
+&nbsp; &nbsp; # __init__에서 정의내린 레이어들을
+
+&nbsp; &nbsp; # 아래 forward(얘가 실제적인 모델의 형태가 됨)에서 사용한다.
+
+  
+
+&nbsp; def forward(self, x): #순전파
+
+&nbsp; &nbsp; out = self.layer1(x)
+
+&nbsp; &nbsp; out = self.layer2(out)
+
+&nbsp; &nbsp; out = out.view(out.size(0), -1)
+
+&nbsp; &nbsp; out = self.fc(out)
+
+&nbsp; &nbsp; return out
+Copy<br>model = CNN()
+
+model
+Copy<br>CNN(<br>
+(layer1): Sequential(<br>
+(0): Conv2d(1, 16, kernel_size=(5, 5), stride=(1, 1), padding=(2, 2))<br>
+(1): ReLU()<br>
+(2): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)<br>
+)<br>
+(layer2): Sequential(<br>
+(0): Conv2d(16, 32, kernel_size=(5, 5), stride=(1, 1), padding=(2, 2))<br>
+(1): ReLU()<br>
+(2): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)<br>
+)<br>
+(fc): Linear(in_features=1568, out_features=10, bias=True)<br>
+)<br><br>learning_rate = 0.01
+
+loss_func = torch.nn.CrossEntropyLoss()
+
+optimizer = &nbsp;torch.optim.Adam(model.parameters(), lr=learning_rate)
+
+training_epochs = 10
+Copy<br>total_batch = len(loaders['train'])
+
+for epoch in range(training_epochs):
+
+&nbsp; avg_cost = 0
+
+  
+
+&nbsp; for X, Y in loaders['train']:
+
+&nbsp; &nbsp; optimizer.zero_grad()
+
+&nbsp; &nbsp; pred = model(X) #순전파
+
+&nbsp; &nbsp; cost = loss_func(pred, Y) #손실함수계산
+
+&nbsp; &nbsp; cost.backward() #역전파
+
+&nbsp; &nbsp; optimizer.step()
+
+  
+
+&nbsp; &nbsp; avg_cost += cost / total_batch
+
+  
+
+&nbsp; print('[Epoch: {:&gt;4}] cost = {:&gt;.9}'.format(epoch + 1, avg_cost))
+
+&nbsp; # print('[Epoch: ', epoch + 1, '] &nbsp;','cost = ', avg_cost)
+
+print('Learning Finished....&gt;_&lt;')
+Copy<br>[Epoch: 1] cost = 0.0461711548<br>
+[Epoch: 2] cost = 0.0472225286<br>
+[Epoch: 3] cost = 0.0413064063<br>
+[Epoch: 4] cost = 0.0417594947<br>
+[Epoch: 5] cost = 0.0395734794<br>
+[Epoch: 6] cost = 0.0441303253<br>
+[Epoch: 7] cost = 0.0408433564<br>
+[Epoch: 8] cost = 0.043582622<br>
+[Epoch: 9] cost = 0.0441764817<br>
+[Epoch: 10] cost = 0.0412645154<br>
+Learning Finished....&gt;_&lt;]]></description><link>https://ejkiwi.github.io/20240806-모각코-활동-6회차.html</link><guid isPermaLink="false">20240806 모각코 활동 6회차.md</guid><pubDate>Tue, 06 Aug 2024 03:16:32 GMT</pubDate><enclosure url="https://ejkiwi.github.io/lib/media/MNIST.png" length="0" type="image/png"/><content:encoded>&lt;figure&gt;&lt;img src="https://ejkiwi.github.io/lib/media/MNIST.png"&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[20240730 모각코 활동 5회차]]></title><description><![CDATA[ 
  <br>오늘의목표<br>
 1.cnn공부 - 합성곱 계층에서의filter, Padding에 대해 더 알아보기.<br>
 2.resnet공부 - Residual Block과 Skip-Connection 에 대해 더 깊이 알아보기<br>합성곱 계층에서의 filter<br>
@@ -278,8 +492,7 @@ al분야에서 google tensorflow와 함께 딥러닝 모델을 구축하고 학�
 2: get_whisper 라는 이름의 함수 설정하기<br>
 3: model_size는 "medium"이다. model_size가 가질 수 있는 옵션으로는 "tiny","base","small","medium","large","large-v3" 이 있다. -&gt; model_size는 모델의 크기를 뜻한다.<br>
 4: compute_type은 "int8"이다. compute_type이 가질 수 있는 옵션으로는 "float16","int8"이 있다. -&gt; compute_type은 계산 유형을 뜻한다.<br>
-5: WhisperModel은 4가지의 매개변수를 사용하는데, 여기에서 model_size는 앞서 정한 크기와 같고, device는 모델이 실행될 장치를 지정한다. cpu_threads는 CPU의 스레드 수를 뜻한다. compute_type또한 앞서 정한 계산 유형과 같다. 이 때 .transcribe는 모델의 음성 인식 기능을 호출해서 음성을 텍스트로 변환해준다.]]></description><link>20240709-모각코-활동-2회차.html</link><guid isPermaLink="false">20240709 모각코 활동 2회차.md</guid><pubDate>Mon, 15 Jul 2024 06:27:57 GMT</pubDate></item><item><title><![CDATA[20240806 모각코 활동 6회차]]></title><description><![CDATA[ 
- <br>오늘의목표]]></description><link>20240806-모각코-활동-6회차.html</link><guid isPermaLink="false">20240806 모각코 활동 6회차.md</guid><pubDate>Mon, 15 Jul 2024 07:54:55 GMT</pubDate></item><item><title><![CDATA[20240813 모각코 활동 7회차]]></title><description><![CDATA[ 
+5: WhisperModel은 4가지의 매개변수를 사용하는데, 여기에서 model_size는 앞서 정한 크기와 같고, device는 모델이 실행될 장치를 지정한다. cpu_threads는 CPU의 스레드 수를 뜻한다. compute_type또한 앞서 정한 계산 유형과 같다. 이 때 .transcribe는 모델의 음성 인식 기능을 호출해서 음성을 텍스트로 변환해준다.]]></description><link>20240709-모각코-활동-2회차.html</link><guid isPermaLink="false">20240709 모각코 활동 2회차.md</guid><pubDate>Mon, 15 Jul 2024 06:27:57 GMT</pubDate></item><item><title><![CDATA[20240813 모각코 활동 7회차]]></title><description><![CDATA[ 
  <br>오늘의목표]]></description><link>20240813-모각코-활동-7회차.html</link><guid isPermaLink="false">20240813 모각코 활동 7회차.md</guid><pubDate>Mon, 15 Jul 2024 07:55:03 GMT</pubDate></item><item><title><![CDATA[모.구.모.구 모각코 활동]]></title><description><![CDATA[ 
  <br>팀 모각코 목표 : 1. 절대 포기하지 않기, 2. 모르는 거 그냥 넘어가지 않기<br>나의 모각코 활동 다짐 : 활동 계획을 완벽히 마무리 할 수 있도록 노력하겠습니다!<br>나의 모각코 활동 계획<br>
 <br>7월 7일
