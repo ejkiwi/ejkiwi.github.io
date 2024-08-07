@@ -1,7 +1,7 @@
-<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[ejkiwi.github.io]]></title><description><![CDATA[Obsidian digital garden]]></description><link>https://ejkiwi.github.io/</link><image><url>https://ejkiwi.github.io/lib/media/favicon.png</url><title>ejkiwi.github.io</title><link>https://ejkiwi.github.io/</link></image><generator>Webpage HTML Export plugin for Obsidian</generator><lastBuildDate>Tue, 06 Aug 2024 03:17:16 GMT</lastBuildDate><atom:link href="https://ejkiwi.github.io/lib/rss.xml" rel="self" type="application/rss+xml"/><pubDate>Tue, 06 Aug 2024 03:17:16 GMT</pubDate><ttl>60</ttl><dc:creator/><item><title><![CDATA[20240806 모각코 활동 6회차]]></title><description><![CDATA[ 
- <br>오늘의목표 CNN 실습 - MNIST 이미지 분류<br>
-(RESNET은 7회차에 진행할 예정)<br>import torch #pytorch 가져오기
-Copy<br>#데이터셋불러오고 텐서로 바꿔주기
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[ejkiwi.github.io]]></title><description><![CDATA[Obsidian digital garden]]></description><link>https://ejkiwi.github.io/</link><image><url>https://ejkiwi.github.io/lib/media/favicon.png</url><title>ejkiwi.github.io</title><link>https://ejkiwi.github.io/</link></image><generator>Webpage HTML Export plugin for Obsidian</generator><lastBuildDate>Wed, 07 Aug 2024 08:31:48 GMT</lastBuildDate><atom:link href="https://ejkiwi.github.io/lib/rss.xml" rel="self" type="application/rss+xml"/><pubDate>Wed, 07 Aug 2024 08:31:48 GMT</pubDate><ttl>60</ttl><dc:creator/><item><title><![CDATA[20240806 모각코 활동 6회차]]></title><description><![CDATA[ 
+ <br>오늘의목표<br>
+CNN 실습 - MNIST 이미지 분류 (RESNET은 7회차에 진행할 예정)<br>import torch #pytorch 가져오기
+Copy<br>데이터 가져오기<br>#데이터셋불러오고 텐서로 바꿔주기
 
 from torchvision import datasets #데이터셋 불러오고
 
@@ -11,7 +11,7 @@ from torchvision.transforms import ToTensor #텐서로 바꿔주기
 
 #datasets에서 MNIST 가져와서 훈련데이터와 테스트데이터 가져와주기.
 
-#datasets.MNIST(root - 데이터가 저장될 경로, train - train이 true 이면 train data이고 false면 test data, download - 데이터 없으면 인터넷에서 다운로드해줌 , transform - transform을 ToTensor로 지정해주지 않으면 텐서의 형식이 아닌, PIL이미지로 데이터가 가져와지게 된다, target_transform)
+#datasets.MNIST(root - 데이터가 저장될 경로, train - train이 true 이면 train data이고 false면 test data, download - 데이터 없으면 인터넷에서 다운로드해줌 , transform - transform을 ToTensor로 지정해주지 않으면 텐서의 형식이 아닌, PIL이미지로 데이터가 가져와지게 된다)
 
   
 
@@ -36,7 +36,7 @@ test_data = datasets.MNIST(
 &nbsp; &nbsp; transform = ToTensor()
 
 )
-Copy<br>#학습데이터 확인
+Copy<br>데이터 확인하기<br>#학습데이터 확인
 
 print(train_data)
 
@@ -62,26 +62,32 @@ Copy<br>#데이터 시각적으로 확인
 
 import matplotlib.pyplot as plt #시각적 확인을 위해 matplotlib을 사용.
 
-fig, ax = plt.subplots() #fig와 ax는 plt.subplot()으로 쓰일 것.
+fig, ax = plt.subplots() # fig -&gt; 데이터가 담기는 프레임 / ax -&gt; 실제 데이터가 그려지는 캔버스
 
-ax.imshow(train_data.data[0], cmap='gray')
+ax.imshow(train_data.data[0], cmap='gray') #데이터의 모습
 
   
 
-for i in range(train_data.data[0].shape[0]):
+#이미지 위에 각 픽셀 값을 표시해서 나타내보기
+
+for i in range(train_data.data[0].shape[0]): # i와j는 텍스트를 표시할 위치를 지정하기 위함.
 
 &nbsp; for j in range(train_data.data[0].shape[1]):
 
-&nbsp; &nbsp; c = 1 if train_data.data[0][i, j].item() &lt; 125 else 0
+&nbsp; &nbsp; c = 1 if train_data.data[0][i, j].item() &lt; 125 else 0 # 이미지의 각 픽셀 값( train_data.data[0][i,j].item() )이 125보다 작으면 c = 1 흰색을 사용, 크면 c = 0 검정 사용.
 
-&nbsp; &nbsp; ax.text(j, i, str(train_data.data[0][i, j].item()), color=(c, c, c), ha='center', va='center', fontsize=5)
+&nbsp; &nbsp; ax.text(j, i, str(train_data.data[0][i, j].item()), color=(c, c, c), ha='center', va='center', fontsize=5) # text()를 사용하여 이미지 위에 텍스트 그리기
 
   
 
 plt.title("%i" % train_data.targets[0])
 
 plt.show
-Copy<br><img alt="mnist_1" src="https://ejkiwi.github.io/lib/media/MNIST.png" referrerpolicy="no-referrer"><br>from torch.utils.data import DataLoader
+Copy<br><img alt="mnist_1" src="https://ejkiwi.github.io/lib/media/MNIST.png" referrerpolicy="no-referrer"><br>데이터 준비하기<br>from torch.utils.data import DataLoader
+# DataLoader -&gt; &nbsp;데이터를 미니배치 형태로 만들어서 우리가 실제로 학습할 때 이용할 수 있도록 함.
+#DataLoader(dataset 데이터 , batch_size=1 한 번의 배치 안에 있는 샘플 사이즈, shuffle=False 데이터셋을 섞어서 데이터가 학습되는 순서를 바꿈, num_workers=0 동시에 처리하는 프로세서의 수. 하나 더 추가하면 20%정도 속도가 빨라짐.)
+
+#배치 학습 -&gt; 전체 데이터를 n등분 하여 학습.
 
 loaders = {
 
@@ -104,7 +110,7 @@ loaders = {
 }
 
 loaders
-Copy<br>class CNN(torch.nn.Module):
+Copy<br>CNN 모델 설정하기<br>class CNN(torch.nn.Module):
 
   
 
@@ -114,7 +120,7 @@ Copy<br>class CNN(torch.nn.Module):
 
 &nbsp; &nbsp; self.layer1 = torch.nn.Sequential(
 
-&nbsp; &nbsp; &nbsp; &nbsp; torch.nn.Conv2d(1, 16, kernel_size=5, stride=1, padding=2), #컨볼루션 레이어(합성곱층) #1차원 데이터를 받아 16개의 feature로 나누겟다!!임.
+&nbsp; &nbsp; &nbsp; &nbsp; torch.nn.Conv2d(1, 16, kernel_size=5, stride=1, padding=2), #컨볼루션 레이어(합성곱층) #1차원(1개채널) 데이터를 받아 16개의 feature(16개의채널)로 나누겟다!!임.
 
 &nbsp; &nbsp; &nbsp; &nbsp; torch.nn.ReLU(), #ReLU층
 
@@ -127,25 +133,28 @@ Copy<br>class CNN(torch.nn.Module):
 &nbsp; &nbsp; &nbsp; &nbsp; torch.nn.ReLU(),
 
 &nbsp; &nbsp; &nbsp; &nbsp; torch.nn.MaxPool2d(kernel_size=2, stride=2))
+&nbsp; &nbsp; &nbsp; &nbsp; 
+&nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; # layer 1, layer2 층까지는 이미지를 형상으로 분할하고 분석하는 부분
+&nbsp; &nbsp; &nbsp; &nbsp; # 다음 fc 층에서는 이미지를 분류 예측하는 부분.
+&nbsp; &nbsp; &nbsp; &nbsp; 
 
-&nbsp; &nbsp; self.fc = torch.nn.Linear(32 * 7 * 7, 10, bias=True) #32*7*7만큼의 입력을 linear레이어에 의해 계산되게 해서... 10개의 출력이 나오도록 함.
+&nbsp; &nbsp; self.fc = torch.nn.Linear(32 * 7 * 7, 10, bias=True) #32*7*7만큼의 입력을 linear레이어에 의해 계산되게 해서... 10개의 출력( MNIST 이미지를 0부터 9까지 분류해야하기때문 )이 나오도록 함.
 
-&nbsp; &nbsp; torch.nn.init.xavier_uniform_(self.fc.weight)
+&nbsp; &nbsp; torch.nn.init.xavier_uniform_(self.fc.weight) # 신경망의 가중치를 초기화 ( 신경망의 가중치를 학습 전에 적절한 값으로 설정하는 과정 )
 
-&nbsp; &nbsp; # __init__에서 정의내린 레이어들을
 
+
+&nbsp; &nbsp; # __init__에서는 필요한 레이어들을 정의내렸다고 볼 수 있음.
 &nbsp; &nbsp; # 아래 forward(얘가 실제적인 모델의 형태가 됨)에서 사용한다.
 
-  
-
-&nbsp; def forward(self, x): #순전파
+&nbsp; def forward(self, x): #순전파 #순전파만 지정해주어도 pytorch에서는 역전파 과정을 매우 쉽게 할 수 있도록 해준다.
 
 &nbsp; &nbsp; out = self.layer1(x)
 
 &nbsp; &nbsp; out = self.layer2(out)
 
-&nbsp; &nbsp; out = out.view(out.size(0), -1)
-
+&nbsp; &nbsp; out = out.view(out.size(0), -1) #  view() 함수는 텐서의 크기를 변경하는 데 사용 # 데이터를 완전 연결(fc) 층에 전달하기 위해 2차원 또는 3차원 텐서를 1차원 벡터로 평탄화 하는 과정이 필요함.
 &nbsp; &nbsp; out = self.fc(out)
 
 &nbsp; &nbsp; return out
@@ -164,24 +173,24 @@ Copy<br>CNN(<br>
 (2): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)<br>
 )<br>
 (fc): Linear(in_features=1568, out_features=10, bias=True)<br>
-)<br><br>learning_rate = 0.01
+)<br><br>학습하기<br>learning_rate = 0.01 # 파라미터를 얼마나 업데이트할 것인지를 결정. 학습률, step size. 너무 크지도 작지도 않아야 함.
 
-loss_func = torch.nn.CrossEntropyLoss()
+loss_func = torch.nn.CrossEntropyLoss() # 모델 예측과 실제값 간의 차이를 측정하는 손실함수.
 
-optimizer = &nbsp;torch.optim.Adam(model.parameters(), lr=learning_rate)
+optimizer = &nbsp;torch.optim.Adam(model.parameters(), lr=learning_rate) # 손실함수를 통해 나온 을 최소화하기 위해 가중치를 업데이트하는 방법
 
-training_epochs = 10
-Copy<br>total_batch = len(loaders['train'])
+training_epochs = 10 # 전체 데이터셋을 몇 번 반복할 것인지 결정.
+Copy<br># 반복의 횟수는 epoch과 batch의 크기에 따라 결정
+
+total_batch = len(loaders['train'])
 
 for epoch in range(training_epochs):
 
 &nbsp; avg_cost = 0
 
-  
-
 &nbsp; for X, Y in loaders['train']:
 
-&nbsp; &nbsp; optimizer.zero_grad()
+&nbsp; &nbsp; optimizer.zero_grad() # 학습에서, 역전파를 거칠 때 마다 각 .grad 값에 변화도가 저장이 되는데,  이어지는 다음 학습에서 .grad의 값을 0으로 초기화시켜주지 않으면 이전에 저장된 변화도 값이 다음 학습에 영향을 주기 때문에 원하는 방향으로 학습하기 힘들다. 그래서zero_grad를 통해 .grad 의 값들을 0으로 초기화시켜준다.
 
 &nbsp; &nbsp; pred = model(X) #순전파
 
@@ -189,7 +198,7 @@ for epoch in range(training_epochs):
 
 &nbsp; &nbsp; cost.backward() #역전파
 
-&nbsp; &nbsp; optimizer.step()
+&nbsp; &nbsp; optimizer.step() # 역전파 단계에서 수집된 변화도로 매개변수를 조정
 
   
 
@@ -198,8 +207,8 @@ for epoch in range(training_epochs):
   
 
 &nbsp; print('[Epoch: {:&gt;4}] cost = {:&gt;.9}'.format(epoch + 1, avg_cost))
-
-&nbsp; # print('[Epoch: ', epoch + 1, '] &nbsp;','cost = ', avg_cost)
+&nbsp; # `epoch + 1` 값을 최소 4칸의 너비로 오른쪽 정렬하여 출력
+&nbsp; # `avg_cost` 값을 최소 9자리까지 나타내어 오른쪽 정렬하여 출력
 
 print('Learning Finished....&gt;_&lt;')
 Copy<br>[Epoch: 1] cost = 0.0461711548<br>
@@ -212,7 +221,7 @@ Copy<br>[Epoch: 1] cost = 0.0461711548<br>
 [Epoch: 8] cost = 0.043582622<br>
 [Epoch: 9] cost = 0.0441764817<br>
 [Epoch: 10] cost = 0.0412645154<br>
-Learning Finished....&gt;_&lt;]]></description><link>https://ejkiwi.github.io/20240806-모각코-활동-6회차.html</link><guid isPermaLink="false">20240806 모각코 활동 6회차.md</guid><pubDate>Tue, 06 Aug 2024 03:16:32 GMT</pubDate><enclosure url="https://ejkiwi.github.io/lib/media/MNIST.png" length="0" type="image/png"/><content:encoded>&lt;figure&gt;&lt;img src="https://ejkiwi.github.io/lib/media/MNIST.png"&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[20240730 모각코 활동 5회차]]></title><description><![CDATA[ 
+Learning Finished....&gt;_&lt;]]></description><link>https://ejkiwi.github.io/20240806-모각코-활동-6회차.html</link><guid isPermaLink="false">20240806 모각코 활동 6회차.md</guid><pubDate>Wed, 07 Aug 2024 08:30:52 GMT</pubDate><enclosure url="https://ejkiwi.github.io/lib/media/MNIST.png" length="0" type="image/png"/><content:encoded>&lt;figure&gt;&lt;img src="https://ejkiwi.github.io/lib/media/MNIST.png"&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[20240730 모각코 활동 5회차]]></title><description><![CDATA[ 
  <br>오늘의목표<br>
 1.cnn공부 - 합성곱 계층에서의filter, Padding에 대해 더 알아보기.<br>
 2.resnet공부 - Residual Block과 Skip-Connection 에 대해 더 깊이 알아보기<br>합성곱 계층에서의 filter<br>
