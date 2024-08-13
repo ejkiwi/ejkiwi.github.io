@@ -1,6 +1,6 @@
-<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[ejkiwi.github.io]]></title><description><![CDATA[Obsidian digital garden]]></description><link>https://ejkiwi.github.io/</link><image><url>https://ejkiwi.github.io/lib/media/favicon.png</url><title>ejkiwi.github.io</title><link>https://ejkiwi.github.io/</link></image><generator>Webpage HTML Export plugin for Obsidian</generator><lastBuildDate>Wed, 07 Aug 2024 08:31:48 GMT</lastBuildDate><atom:link href="https://ejkiwi.github.io/lib/rss.xml" rel="self" type="application/rss+xml"/><pubDate>Wed, 07 Aug 2024 08:31:48 GMT</pubDate><ttl>60</ttl><dc:creator/><item><title><![CDATA[20240806 모각코 활동 6회차]]></title><description><![CDATA[ 
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[ejkiwi.github.io]]></title><description><![CDATA[Obsidian digital garden]]></description><link>https://ejkiwi.github.io/</link><image><url>https://ejkiwi.github.io/lib/media/favicon.png</url><title>ejkiwi.github.io</title><link>https://ejkiwi.github.io/</link></image><generator>Webpage HTML Export plugin for Obsidian</generator><lastBuildDate>Tue, 13 Aug 2024 05:14:11 GMT</lastBuildDate><atom:link href="https://ejkiwi.github.io/lib/rss.xml" rel="self" type="application/rss+xml"/><pubDate>Tue, 13 Aug 2024 05:14:10 GMT</pubDate><ttl>60</ttl><dc:creator/><item><title><![CDATA[20240806 모각코 활동 6회차]]></title><description><![CDATA[ 
  <br>오늘의목표<br>
-CNN 실습 - MNIST 이미지 분류 (RESNET은 7회차에 진행할 예정)<br>import torch #pytorch 가져오기
+CNN 실습 - MNIST 이미지 분류 ( RESNET은 7회차에 진행할 예정 )<br>import torch #pytorch 가져오기
 Copy<br>데이터 가져오기<br>#데이터셋불러오고 텐서로 바꿔주기
 
 from torchvision import datasets #데이터셋 불러오고
@@ -66,7 +66,7 @@ fig, ax = plt.subplots() # fig -&gt; 데이터가 담기는 프레임 / ax -&gt;
 
 ax.imshow(train_data.data[0], cmap='gray') #데이터의 모습
 
-  
+
 
 #이미지 위에 각 픽셀 값을 표시해서 나타내보기
 
@@ -86,7 +86,6 @@ plt.show
 Copy<br><img alt="mnist_1" src="https://ejkiwi.github.io/lib/media/MNIST.png" referrerpolicy="no-referrer"><br>데이터 준비하기<br>from torch.utils.data import DataLoader
 # DataLoader -&gt; &nbsp;데이터를 미니배치 형태로 만들어서 우리가 실제로 학습할 때 이용할 수 있도록 함.
 #DataLoader(dataset 데이터 , batch_size=1 한 번의 배치 안에 있는 샘플 사이즈, shuffle=False 데이터셋을 섞어서 데이터가 학습되는 순서를 바꿈, num_workers=0 동시에 처리하는 프로세서의 수. 하나 더 추가하면 20%정도 속도가 빨라짐.)
-
 #배치 학습 -&gt; 전체 데이터를 n등분 하여 학습.
 
 loaders = {
@@ -221,7 +220,406 @@ Copy<br>[Epoch: 1] cost = 0.0461711548<br>
 [Epoch: 8] cost = 0.043582622<br>
 [Epoch: 9] cost = 0.0441764817<br>
 [Epoch: 10] cost = 0.0412645154<br>
-Learning Finished....&gt;_&lt;]]></description><link>https://ejkiwi.github.io/20240806-모각코-활동-6회차.html</link><guid isPermaLink="false">20240806 모각코 활동 6회차.md</guid><pubDate>Wed, 07 Aug 2024 08:30:52 GMT</pubDate><enclosure url="https://ejkiwi.github.io/lib/media/MNIST.png" length="0" type="image/png"/><content:encoded>&lt;figure&gt;&lt;img src="https://ejkiwi.github.io/lib/media/MNIST.png"&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[20240730 모각코 활동 5회차]]></title><description><![CDATA[ 
+Learning Finished....&gt;_&lt;]]></description><link>https://ejkiwi.github.io/20240806-모각코-활동-6회차.html</link><guid isPermaLink="false">20240806 모각코 활동 6회차.md</guid><pubDate>Wed, 07 Aug 2024 13:56:13 GMT</pubDate><enclosure url="https://ejkiwi.github.io/lib/media/MNIST.png" length="0" type="image/png"/><content:encoded>&lt;figure&gt;&lt;img src="https://ejkiwi.github.io/lib/media/MNIST.png"&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[20240813 모각코 활동 7회차]]></title><description><![CDATA[ 
+ <br>오늘의목표<br>
+RESNET 실습 - CIFAR10 이미지 분류<br>
+양자화 공부<br>import torch
+
+import torch.nn as nn
+
+import torch.nn.functional as F
+
+import torch.backends.cudnn as cudnn
+
+  
+  
+
+# ResNet18을 위해 최대한 간단히 수정한 BasicBlock 클래스 정의
+
+class BasicBlock(nn.Module):
+
+&nbsp; &nbsp; def __init__(self, in_planes, planes, stride=1):
+
+&nbsp; &nbsp; &nbsp; &nbsp; super(BasicBlock, self).__init__()
+
+  
+
+&nbsp; &nbsp; &nbsp; &nbsp; # 3x3 필터를 사용 (너비와 높이를 줄일 때는 stride 값 조절)
+
+&nbsp; &nbsp; &nbsp; &nbsp; self.conv1 = nn.Conv2d(in_planes, planes, kernel_size=3, stride=stride, padding=1, bias=False)
+
+&nbsp; &nbsp; &nbsp; &nbsp; self.bn1 = nn.BatchNorm2d(planes) # 배치 정규화(batch normalization)
+
+  
+
+&nbsp; &nbsp; &nbsp; &nbsp; # 3x3 필터를 사용 (패딩을 1만큼 주기 때문에 너비와 높이가 동일)
+
+&nbsp; &nbsp; &nbsp; &nbsp; self.conv2 = nn.Conv2d(planes, planes, kernel_size=3, stride=1, padding=1, bias=False)
+
+&nbsp; &nbsp; &nbsp; &nbsp; self.bn2 = nn.BatchNorm2d(planes) # 배치 정규화(batch normalization)
+
+  
+
+&nbsp; &nbsp; &nbsp; &nbsp; self.shortcut = nn.Sequential() # identity인 경우
+
+&nbsp; &nbsp; &nbsp; &nbsp; if stride != 1: # stride가 1이 아니라면, Identity mapping이 아닌 경우
+
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; self.shortcut = nn.Sequential(
+
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; nn.Conv2d(in_planes, planes, kernel_size=1, stride=stride, bias=False),
+
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; nn.BatchNorm2d(planes)
+
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; )
+
+  
+
+&nbsp; &nbsp; def forward(self, x):
+
+&nbsp; &nbsp; &nbsp; &nbsp; out = F.relu(self.bn1(self.conv1(x)))
+
+&nbsp; &nbsp; &nbsp; &nbsp; out = self.bn2(self.conv2(out))
+
+&nbsp; &nbsp; &nbsp; &nbsp; out += self.shortcut(x) # (핵심) skip connection
+
+&nbsp; &nbsp; &nbsp; &nbsp; out = F.relu(out)
+
+&nbsp; &nbsp; &nbsp; &nbsp; return out
+
+  
+  
+
+# ResNet 클래스 정의
+
+class ResNet(nn.Module):
+
+&nbsp; &nbsp; def __init__(self, block, num_blocks, num_classes=10):
+
+&nbsp; &nbsp; &nbsp; &nbsp; super(ResNet, self).__init__()
+
+&nbsp; &nbsp; &nbsp; &nbsp; self.in_planes = 64
+
+  
+
+&nbsp; &nbsp; &nbsp; &nbsp; # 64개의 3x3 필터(filter)를 사용
+
+&nbsp; &nbsp; &nbsp; &nbsp; self.conv1 = nn.Conv2d(3, 64, kernel_size=3, stride=1, padding=1, bias=False)
+
+&nbsp; &nbsp; &nbsp; &nbsp; self.bn1 = nn.BatchNorm2d(64)
+
+&nbsp; &nbsp; &nbsp; &nbsp; self.layer1 = self._make_layer(block, 64, num_blocks[0], stride=1)
+
+&nbsp; &nbsp; &nbsp; &nbsp; self.layer2 = self._make_layer(block, 128, num_blocks[1], stride=2)
+
+&nbsp; &nbsp; &nbsp; &nbsp; self.layer3 = self._make_layer(block, 256, num_blocks[2], stride=2)
+
+&nbsp; &nbsp; &nbsp; &nbsp; self.layer4 = self._make_layer(block, 512, num_blocks[3], stride=2)
+
+&nbsp; &nbsp; &nbsp; &nbsp; self.linear = nn.Linear(512, num_classes)
+
+  
+
+&nbsp; &nbsp; def _make_layer(self, block, planes, num_blocks, stride):
+
+&nbsp; &nbsp; &nbsp; &nbsp; strides = [stride] + [1] * (num_blocks - 1)
+
+&nbsp; &nbsp; &nbsp; &nbsp; layers = []
+
+&nbsp; &nbsp; &nbsp; &nbsp; for stride in strides:
+
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; layers.append(block(self.in_planes, planes, stride))
+
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; self.in_planes = planes # 다음 레이어를 위해 채널 수 변경
+
+&nbsp; &nbsp; &nbsp; &nbsp; return nn.Sequential(*layers)
+
+  
+
+&nbsp; &nbsp; def forward(self, x):
+
+&nbsp; &nbsp; &nbsp; &nbsp; out = F.relu(self.bn1(self.conv1(x)))
+
+&nbsp; &nbsp; &nbsp; &nbsp; out = self.layer1(out)
+
+&nbsp; &nbsp; &nbsp; &nbsp; out = self.layer2(out)
+
+&nbsp; &nbsp; &nbsp; &nbsp; out = self.layer3(out)
+
+&nbsp; &nbsp; &nbsp; &nbsp; out = self.layer4(out)
+
+&nbsp; &nbsp; &nbsp; &nbsp; out = F.avg_pool2d(out, 4)
+
+&nbsp; &nbsp; &nbsp; &nbsp; out = out.view(out.size(0), -1)
+
+&nbsp; &nbsp; &nbsp; &nbsp; out = self.linear(out)
+
+&nbsp; &nbsp; &nbsp; &nbsp; return out
+
+  
+  
+
+# ResNet18 함수 정의
+
+def ResNet18():
+
+&nbsp; &nbsp; return ResNet(BasicBlock, [2, 2, 2, 2])
+Copy<br>import torchvision
+
+import torchvision.transforms as transforms
+
+  
+
+transform_train = transforms.Compose([
+
+&nbsp; &nbsp; transforms.RandomCrop(32, padding=4),
+
+&nbsp; &nbsp; transforms.RandomHorizontalFlip(),
+
+&nbsp; &nbsp; transforms.ToTensor(),
+
+])
+
+  
+
+transform_test = transforms.Compose([
+
+&nbsp; &nbsp; transforms.ToTensor(),
+
+])
+
+  
+
+train_dataset = torchvision.datasets.CIFAR10(root='./data', train=True, download=True, transform=transform_train)
+
+test_dataset = torchvision.datasets.CIFAR10(root='./data', train=False, download=True, transform=transform_test)
+
+  
+
+train_loader = torch.utils.data.DataLoader(train_dataset, batch_size=128, shuffle=True, num_workers=2)
+
+test_loader = torch.utils.data.DataLoader(test_dataset, batch_size=100, shuffle=False, num_workers=2)
+Copy<br>device = 'cuda'
+
+  
+
+net = ResNet18()
+
+net = net.to(device)
+
+  
+
+learning_rate = 0.1
+
+file_name = 'resnet18_cifar10.pth'
+
+  
+
+criterion = nn.CrossEntropyLoss()
+
+optimizer = optim.SGD(net.parameters(), lr=learning_rate, momentum=0.9, weight_decay=0.0002)
+
+  
+  
+
+def train(epoch):
+
+&nbsp; &nbsp; print('\n[ Train epoch: %d ]' % epoch)
+
+&nbsp; &nbsp; net.train()
+
+&nbsp; &nbsp; train_loss = 0
+
+&nbsp; &nbsp; correct = 0
+
+&nbsp; &nbsp; total = 0
+
+  
+
+&nbsp; &nbsp; for batch_idx, (inputs, targets) in enumerate(train_loader):
+
+&nbsp; &nbsp; &nbsp; &nbsp; inputs, targets = inputs.to(device), targets.to(device)
+
+&nbsp; &nbsp; &nbsp; &nbsp; optimizer.zero_grad()
+
+  
+
+&nbsp; &nbsp; &nbsp; &nbsp; outputs = net(inputs)
+
+&nbsp; &nbsp; &nbsp; &nbsp; loss = criterion(outputs, targets)
+
+&nbsp; &nbsp; &nbsp; &nbsp; loss.backward()
+
+  
+
+&nbsp; &nbsp; &nbsp; &nbsp; optimizer.step()
+
+&nbsp; &nbsp; &nbsp; &nbsp; train_loss += loss.item()
+
+&nbsp; &nbsp; &nbsp; &nbsp; _, predicted = outputs.max(1)
+
+  
+
+&nbsp; &nbsp; &nbsp; &nbsp; total += targets.size(0)
+
+&nbsp; &nbsp; &nbsp; &nbsp; current_correct = predicted.eq(targets).sum().item()
+
+&nbsp; &nbsp; &nbsp; &nbsp; correct += current_correct
+
+&nbsp; &nbsp; &nbsp; &nbsp; if batch_idx % 100 == 0:
+
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; print('\nCurrent batch:', str(batch_idx))
+
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; print('Current batch average train accuracy:', current_correct / targets.size(0))
+
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; print('Current batch average train loss:', loss.item() / targets.size(0))
+
+  
+
+&nbsp; &nbsp; print('\nTotal average train accuarcy:', correct / total)
+
+&nbsp; &nbsp; print('Total average train loss:', train_loss / total)
+
+  
+  
+
+def test(epoch):
+
+&nbsp; &nbsp; print('\n[ Test epoch: %d ]' % epoch)
+
+&nbsp; &nbsp; net.eval()
+
+&nbsp; &nbsp; loss = 0
+
+&nbsp; &nbsp; correct = 0
+
+&nbsp; &nbsp; total = 0
+
+  
+
+&nbsp; &nbsp; for batch_idx, (inputs, targets) in enumerate(test_loader):
+
+&nbsp; &nbsp; &nbsp; &nbsp; inputs, targets = inputs.to(device), targets.to(device)
+
+&nbsp; &nbsp; &nbsp; &nbsp; total += targets.size(0)
+
+  
+
+&nbsp; &nbsp; &nbsp; &nbsp; outputs = net(inputs)
+
+&nbsp; &nbsp; &nbsp; &nbsp; loss += criterion(outputs, targets).item()
+
+  
+
+&nbsp; &nbsp; &nbsp; &nbsp; _, predicted = outputs.max(1)
+
+&nbsp; &nbsp; &nbsp; &nbsp; correct += predicted.eq(targets).sum().item()
+
+  
+
+&nbsp; &nbsp; print('\nTotal average test accuarcy:', correct / total)
+
+&nbsp; &nbsp; print('Total average test loss:', loss / total)
+
+  
+
+&nbsp; &nbsp; state = {
+
+&nbsp; &nbsp; &nbsp; &nbsp; 'net': net.state_dict()
+
+&nbsp; &nbsp; }
+
+&nbsp; &nbsp; if not os.path.isdir('checkpoint'):
+
+&nbsp; &nbsp; &nbsp; &nbsp; os.mkdir('checkpoint')
+
+&nbsp; &nbsp; torch.save(state, './checkpoint/' + file_name)
+
+&nbsp; &nbsp; print('Model Saved!')
+Copy<br>import time
+
+  
+  
+
+def adjust_learning_rate(optimizer, epoch):
+
+&nbsp; &nbsp; lr = learning_rate
+
+&nbsp; &nbsp; if epoch &gt;= 50:
+
+&nbsp; &nbsp; &nbsp; &nbsp; lr /= 10
+
+&nbsp; &nbsp; if epoch &gt;= 100:
+
+&nbsp; &nbsp; &nbsp; &nbsp; lr /= 10
+
+&nbsp; &nbsp; for param_group in optimizer.param_groups:
+
+&nbsp; &nbsp; &nbsp; &nbsp; param_group['lr'] = lr
+
+  
+
+start_time = time.time()
+
+  
+
+for epoch in range(0, 150):
+
+&nbsp; &nbsp; adjust_learning_rate(optimizer, epoch)
+
+&nbsp; &nbsp; train(epoch)
+
+&nbsp; &nbsp; test(epoch)
+
+&nbsp; &nbsp; print('\nTime elapsed:', time.time() - start_time)
+Copy<br>양자화 공부<br>
+양자화 : 실수형 변수(floating-point type)를 정수형 변수(integer or fixed point)로 변환하는 과정<br>
+양자화 하는 이유 : 인공지능 모델에 큰 비트수의 자료형을 사용 -&gt; 학습 과정에서 계산량과 필요한 메모리 크기 등이 커지게 됨. -&gt; 학습을 시키기 위해 많은 리소스가 필요해지고, 추론도 오래 걸리는 문제가 발생. 양자화를 통하여 효과적인 모델 최적화를 할 수 있는데, float 타입을 int형으로 줄이면서 용량을 줄일 수 있고 bit 수를 줄임으로써 계산 복잡도도 줄일 수 있음<br>
+Pipeline<br>
+-HuggingFace의 가장 기본 기능으로, 자연어 처리 작업, inference(추론)을 빠르게 할 수 있게 해준다.<br>
+-(hugging face에 대한 내용은 처음 보낸 코랩 파일 가장 위에 있으니 더 알아보고싶으시면 참고하시면 됩니다!)<br>
+-pretrained model(사전학습 모델)을 사용하는 가장 쉬운 방법.<br>
+-사전학습모델이란 : 예를 들어 텍스트 유사도 예측 모델을 만들기 위해서, 감정 분석 문제를 학습했던 모델의 가중치를 활용하는 방법. 즉, 감정 분석 문제를 학습하면서 얻은 언어에 대한 이해를 텍스트 유사도 문제를 학습하는 데 활용하는 방식이다.<br>
+pipeline(task, model, config, tokenizer, feature_extractor, framework, revision, use_fast, use_auth_token, model_kwargs, pipeline_class, kwargs) 매개변수 설명**<br>
+-task : 어떤 작업을 할것인가? -&gt; 여기에서는 'text-generation' 텍스트 생성 작업을 할거임. ( 그 외 question-answering, translation 등등이 있음 ) 이건 pipeline을 사용할 때 꼭 지정해주어야 함. 나머지것들은 기본으로 지정된 것들이 있기 때문에 따로 필요한 경우만 지정해주면 됨.<br>
+-model : 어떤 모델을 사용할것인가? -&gt; 여기에서는 "meta-llama/Meta-Llama-3-8B-Instruct" 라는 hugging face에서 미리 가져온 모델을 사용.<br>
+-device map : 모델이 어디서(GPU 또는 CPU) 실행되어야할까? -&gt; 여기에서는 "auto" 로, 현재 기기에서 사용가능한 장소를 자동으로 감지하고, GPU가 있다면 이를 우선적으로 사용<br>
+-model_kwargs : 추가로 전달할 매개변수(예를 들어 특정 설정을 변경하는 경우 사용) -&gt; 여기에서는 {"quantization_config": quantization_config} 이라는 quantization(양자화) 에 대한 설정을 포함하구 있음.<br>#준비
+
+!pip install bitsandbytes # 양자화 기법을 사용할 수 있게 해주는 파이썬 모듈 다운로드
+!pip install -U bitsandbytes
+from transformers import pipeline, BitsAndBytesConfig # BitsAndBytesConfig 허깅페이스에서 양자화를 위한 라이브러리
+
+  
+
+#허깅페이스 로그인("meta-llama/Meta-Llama-3-8B-Instruct"를 사용하기 위함)
+
+from huggingface_hub import login
+login("내 TOKEN")
+
+  
+
+#양자화 옵션 설정
+#4bit로 되어있긴 하지만, 8bit도 가능.
+
+quantization_config = BitsAndBytesConfig(load_in_4bit=True) &nbsp;# You can also try load_in_8bit
+pipe = pipeline("text-generation", "meta-llama/Meta-Llama-3-8B-Instruct", device_map="auto", model_kwargs={"quantization_config": quantization_config})
+
+
+
+#양자화 한 후 실행
+
+chat = [
+&nbsp; &nbsp; {"role": "system", "content": "You are a sassy, wise-cracking robot as imagined by Hollywood circa 1986."},
+&nbsp; &nbsp; {"role": "user", "content": "Hey, can you tell me any fun things to do in New York?"}
+]
+response = pipe(chat, max_new_tokens=512)
+print(response[0]['generated_text'][-1]['content'])
+chat.append(
+&nbsp; &nbsp; {"role": "user", "content": "Wait, what's so wild about soup cans?"}
+)
+response = pipe(chat, max_new_tokens=512)
+print(response[0]['generated_text'][-1]['content'])
+Copy]]></description><link>https://ejkiwi.github.io/20240813-모각코-활동-7회차.html</link><guid isPermaLink="false">20240813 모각코 활동 7회차.md</guid><pubDate>Tue, 13 Aug 2024 05:13:50 GMT</pubDate></item><item><title><![CDATA[20240730 모각코 활동 5회차]]></title><description><![CDATA[ 
  <br>오늘의목표<br>
 1.cnn공부 - 합성곱 계층에서의filter, Padding에 대해 더 알아보기.<br>
 2.resnet공부 - Residual Block과 Skip-Connection 에 대해 더 깊이 알아보기<br>합성곱 계층에서의 filter<br>
@@ -501,8 +899,7 @@ al분야에서 google tensorflow와 함께 딥러닝 모델을 구축하고 학�
 2: get_whisper 라는 이름의 함수 설정하기<br>
 3: model_size는 "medium"이다. model_size가 가질 수 있는 옵션으로는 "tiny","base","small","medium","large","large-v3" 이 있다. -&gt; model_size는 모델의 크기를 뜻한다.<br>
 4: compute_type은 "int8"이다. compute_type이 가질 수 있는 옵션으로는 "float16","int8"이 있다. -&gt; compute_type은 계산 유형을 뜻한다.<br>
-5: WhisperModel은 4가지의 매개변수를 사용하는데, 여기에서 model_size는 앞서 정한 크기와 같고, device는 모델이 실행될 장치를 지정한다. cpu_threads는 CPU의 스레드 수를 뜻한다. compute_type또한 앞서 정한 계산 유형과 같다. 이 때 .transcribe는 모델의 음성 인식 기능을 호출해서 음성을 텍스트로 변환해준다.]]></description><link>20240709-모각코-활동-2회차.html</link><guid isPermaLink="false">20240709 모각코 활동 2회차.md</guid><pubDate>Mon, 15 Jul 2024 06:27:57 GMT</pubDate></item><item><title><![CDATA[20240813 모각코 활동 7회차]]></title><description><![CDATA[ 
- <br>오늘의목표]]></description><link>20240813-모각코-활동-7회차.html</link><guid isPermaLink="false">20240813 모각코 활동 7회차.md</guid><pubDate>Mon, 15 Jul 2024 07:55:03 GMT</pubDate></item><item><title><![CDATA[모.구.모.구 모각코 활동]]></title><description><![CDATA[ 
+5: WhisperModel은 4가지의 매개변수를 사용하는데, 여기에서 model_size는 앞서 정한 크기와 같고, device는 모델이 실행될 장치를 지정한다. cpu_threads는 CPU의 스레드 수를 뜻한다. compute_type또한 앞서 정한 계산 유형과 같다. 이 때 .transcribe는 모델의 음성 인식 기능을 호출해서 음성을 텍스트로 변환해준다.]]></description><link>20240709-모각코-활동-2회차.html</link><guid isPermaLink="false">20240709 모각코 활동 2회차.md</guid><pubDate>Mon, 15 Jul 2024 06:27:57 GMT</pubDate></item><item><title><![CDATA[모.구.모.구 모각코 활동]]></title><description><![CDATA[ 
  <br>팀 모각코 목표 : 1. 절대 포기하지 않기, 2. 모르는 거 그냥 넘어가지 않기<br>나의 모각코 활동 다짐 : 활동 계획을 완벽히 마무리 할 수 있도록 노력하겠습니다!<br>나의 모각코 활동 계획<br>
 <br>7월 7일
 

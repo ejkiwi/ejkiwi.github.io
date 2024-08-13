@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "20240806 모각코 활동 6회차.md",
+                "file": "20240813 모각코 활동 7회차.md",
                 "mode": "source",
                 "source": false
               }
@@ -159,18 +159,55 @@
       "obsidian-rich-links:Rich Links": false
     }
   },
-  "active": "e85638fcd2d3f4e4",
+  "floating": {
+    "id": "961300c56abb1e64",
+    "type": "floating",
+    "children": [
+      {
+        "id": "8167f2ad8cc19521",
+        "type": "window",
+        "children": [
+          {
+            "id": "a40d544e3eb6184d",
+            "type": "tabs",
+            "children": [
+              {
+                "id": "f18d92d2b2092954",
+                "type": "leaf",
+                "state": {
+                  "type": "markdown",
+                  "state": {
+                    "file": "20240806 모각코 활동 6회차.md",
+                    "mode": "source",
+                    "source": false
+                  }
+                }
+              }
+            ]
+          }
+        ],
+        "direction": "vertical",
+        "x": 270,
+        "y": 375,
+        "width": 800,
+        "height": 400,
+        "maximize": false,
+        "zoom": 0
+      }
+    ]
+  },
+  "active": "f18d92d2b2092954",
   "lastOpenFiles": [
-    "20240806 모각코 활동 6회차.md",
     "20240813 모각코 활동 7회차.md",
-    "20240716 모각코 활동 3회차.md",
-    "20240723 모각코 활동 4회차.md",
+    "20240806 모각코 활동 6회차.md",
     "20240730 모각코 활동 5회차.md",
+    "20240723 모각코 활동 4회차.md",
+    "20240707 모각코 활동 1회차.md",
+    "20240716 모각코 활동 3회차.md",
     "docs/lib/media/MNIST.png",
     "docs/lib/media/residual block.png",
     "docs/lib/media/zero_Padding.png",
     "docs/lib/media/CNN_Padding_Edge.png",
-    "20240707 모각코 활동 1회차.md",
     "모.구.모.구 모각코 활동.md",
     "docs/lib/media/o.jpg",
     "docs/lib/styles/other-plugins.css",
