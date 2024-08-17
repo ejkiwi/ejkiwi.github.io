@@ -13,354 +13,196 @@
 		<meta property="og:site_name" content="ejkiwi.github.io">
 		<link rel="alternate" type="application/rss+xml" title="RSS Feed" href="https://ejkiwi.github.io/lib/rss.xml"><script async="" id="webpage-script" src="lib/scripts/webpage.js" onload="this.onload=null;this.setAttribute(&quot;loaded&quot;, &quot;true&quot;)"></script><script type="module" async="" id="graph-view-script" src="lib/scripts/graph-view.js"></script><script async="" id="graph-wasm-script" src="lib/scripts/graph-wasm.js" onload="this.onload=null;this.setAttribute(&quot;loaded&quot;, &quot;true&quot;)"></script><script async="" id="graph-render-worker-script" src="lib/scripts/graph-render-worker.js" onload="this.onload=null;this.setAttribute(&quot;loaded&quot;, &quot;true&quot;)"></script><script async="" id="tinycolor-script" src="lib/scripts/tinycolor.js" onload="this.onload=null;this.setAttribute(&quot;loaded&quot;, &quot;true&quot;)"></script><script async="" id="pixi-script" src="https://cdnjs.cloudflare.com/ajax/libs/pixi.js/7.4.0/pixi.min.js" onload="this.onload=null;this.setAttribute(&quot;loaded&quot;, &quot;true&quot;)"></script><script async="" id="minisearch-script" src="https://cdn.jsdelivr.net/npm/minisearch@6.3.0/dist/umd/index.min.js" onload="this.onload=null;this.setAttribute(&quot;loaded&quot;, &quot;true&quot;)"></script><link rel="icon" href="lib/media/favicon.png"><script async="" id="graph-data-script" src="lib/scripts/graph-data.js" onload="this.onload=null;this.setAttribute(&quot;loaded&quot;, &quot;true&quot;)"></script><style>body{--line-width:40em;--line-width-adaptive:40em;--file-line-width:40em;--sidebar-width:min(20em, 80vw);--collapse-arrow-size:11px;--tree-horizontal-spacing:0.6em;--tree-vertical-spacing:0.6em;--sidebar-margin:12px}.sidebar{height:100%;min-width:calc(var(--sidebar-width) + var(--divider-width-hover));max-width:calc(var(--sidebar-width) + var(--divider-width-hover));font-size:14px;z-index:10;position:relative;overflow:hidden;transition:min-width ease-in-out,max-width ease-in-out;transition-duration:.2s;contain:size}.sidebar-left{left:0}.sidebar-right{right:0}.sidebar.is-collapsed{min-width:0;max-width:0}body.floating-sidebars .sidebar{position:absolute}.sidebar-content{height:100%;min-width:calc(var(--sidebar-width) - var(--divider-width-hover));top:0;padding:var(--sidebar-margin);padding-top:4em;line-height:var(--line-height-tight);background-color:var(--background-secondary);transition:background-color,border-right,border-left,box-shadow;transition-duration:var(--color-fade-speed);transition-timing-function:ease-in-out;position:absolute;display:flex;flex-direction:column}.sidebar:not(.is-collapsed) .sidebar-content{min-width:calc(max(100%,var(--sidebar-width)) - 3px);max-width:calc(max(100%,var(--sidebar-width)) - 3px)}.sidebar-left .sidebar-content{left:0;border-top-right-radius:var(--radius-l);border-bottom-right-radius:var(--radius-l)}.sidebar-right .sidebar-content{right:0;border-top-left-radius:var(--radius-l);border-bottom-left-radius:var(--radius-l)}.sidebar:has(.sidebar-content:empty):has(.topbar-content:empty){display:none}.sidebar-topbar{height:2em;width:var(--sidebar-width);top:var(--sidebar-margin);padding-inline:var(--sidebar-margin);z-index:1;position:fixed;display:flex;align-items:center;transition:width ease-in-out;transition-duration:inherit}.sidebar.is-collapsed .sidebar-topbar{width:calc(2.3em + var(--sidebar-margin) * 2)}.sidebar .sidebar-topbar.is-collapsed{width:0}.sidebar-left .sidebar-topbar{left:0}.sidebar-right .sidebar-topbar{right:0}.topbar-content{overflow:hidden;overflow:clip;width:100%;height:100%;display:flex;align-items:center;transition:inherit}.sidebar.is-collapsed .topbar-content{width:0;transition:inherit}.clickable-icon.sidebar-collapse-icon{background-color:transparent;color:var(--icon-color-focused);padding:0!important;margin:0!important;height:100%!important;width:2.3em!important;margin-inline:0.14em!important;position:absolute}.sidebar-left .clickable-icon.sidebar-collapse-icon{transform:rotateY(180deg);right:var(--sidebar-margin)}.sidebar-right .clickable-icon.sidebar-collapse-icon{transform:rotateY(180deg);left:var(--sidebar-margin)}.clickable-icon.sidebar-collapse-icon svg.svg-icon{width:100%;height:100%}.sidebar-section-header{margin:0 0 1em 0;text-transform:uppercase;letter-spacing:.06em;font-weight:600}body{transition:background-color var(--color-fade-speed) ease-in-out}.webpage-container{display:flex;flex-direction:row;height:100%;width:100%;align-items:stretch;justify-content:center}.document-container{opacity:1;flex-basis:100%;max-width:100%;width:100%;height:100%;display:flex;flex-direction:column;align-items:center;transition:opacity .2s ease-in-out;contain:inline-size}.hide{opacity:0;transition:opacity .2s ease-in-out}.document-container>.markdown-preview-view{margin:var(--sidebar-margin);margin-bottom:0;width:100%;width:-webkit-fill-available;width:-moz-available;width:fill-available;background-color:var(--background-primary);transition:background-color var(--color-fade-speed) ease-in-out;border-top-right-radius:var(--window-radius,var(--radius-m));border-top-left-radius:var(--window-radius,var(--radius-m));overflow-x:hidden!important;overflow-y:auto!important;display:flex!important;flex-direction:column!important;align-items:center!important;contain:inline-size}.document-container>.markdown-preview-view>.markdown-preview-sizer{padding-bottom:80vh!important;width:100%!important;max-width:var(--line-width)!important;flex-basis:var(--line-width)!important;transition:background-color var(--color-fade-speed) ease-in-out;contain:inline-size}.markdown-rendered img:not([width]),.view-content img:not([width]){max-width:100%;outline:0}.document-container>.view-content.embed{display:flex;padding:1em;height:100%;width:100%;align-items:center;justify-content:center}.document-container>.view-content.embed>*{max-width:100%;max-height:100%;object-fit:contain}:has(> :is(.math,table)){overflow-x:auto!important}.document-container>.view-content{overflow-x:auto;contain:content;padding:0;margin:0;height:100%}.scroll-highlight{position:absolute;width:100%;height:100%;pointer-events:none;z-index:1000;background-color:hsla(var(--color-accent-hsl),.25);opacity:0;padding:1em;inset:50%;translate:-50% -50%;border-radius:var(--radius-s)}</style><script defer="">async function loadIncludes(){if("file:"!=location.protocol){let e=document.querySelectorAll("include");for(let t=0;t<e.length;t++){let o=e[t],l=o.getAttribute("src");try{const e=await fetch(l);if(!e.ok){console.log("Could not include file: "+l),o?.remove();continue}let t=await e.text(),n=document.createRange().createContextualFragment(t),i=Array.from(n.children);for(let e of i)e.classList.add("hide"),e.style.transition="opacity 0.5s ease-in-out",setTimeout((()=>{e.classList.remove("hide")}),10);o.before(n),o.remove(),console.log("Included file: "+l)}catch(e){o?.remove(),console.log("Could not include file: "+l,e);continue}}}else{if(document.querySelectorAll("include").length>0){var e=document.createElement("div");e.id="error",e.textContent="Web server exports must be hosted on an http / web server to be viewed correctly.",e.style.position="fixed",e.style.top="50%",e.style.left="50%",e.style.transform="translate(-50%, -50%)",e.style.fontSize="1.5em",e.style.fontWeight="bold",e.style.textAlign="center",document.body.appendChild(e),document.querySelector(".document-container")?.classList.remove("hide")}}}document.addEventListener("DOMContentLoaded",(()=>{loadIncludes()}));let isFileProtocol="file:"==location.protocol;function waitLoadScripts(e,t){let o=e.map((e=>document.getElementById(e+"-script"))),l=0;!function e(){let n=o[l];l++,n&&"true"!=n.getAttribute("loaded")||l<o.length&&e(),l<o.length?n.addEventListener("load",e):t()}()}</script><link rel="stylesheet" href="lib/styles/obsidian.css"><link rel="preload" href="lib/styles/other-plugins.css" as="style" onload="this.onload=null;this.rel='stylesheet'"><noscript><link rel="stylesheet" href="lib/styles/other-plugins.css"></noscript><link rel="preload" href="lib/styles/global-variable-styles.css" as="style" onload="this.onload=null;this.rel='stylesheet'"><noscript><link rel="stylesheet" href="lib/styles/global-variable-styles.css"></noscript><link rel="preload" href="lib/styles/main-styles.css" as="style" onload="this.onload=null;this.rel='stylesheet'"><noscript><link rel="stylesheet" href="lib/styles/main-styles.css"></noscript></head><body class="publish css-settings-manager theme-light show-inline-title show-ribbon mk-readable-line mk-folder-lines mk-spaces-enabled mk-inline-context-enabled mk-flow-seamless"><script defer="">let theme=localStorage.getItem("theme")||(window.matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light");"dark"==theme?(document.body.classList.add("theme-dark"),document.body.classList.remove("theme-light")):(document.body.classList.add("theme-light"),document.body.classList.remove("theme-dark")),window.innerWidth<480?document.body.classList.add("is-phone"):window.innerWidth<768?document.body.classList.add("is-tablet"):window.innerWidth<1024?document.body.classList.add("is-small-screen"):document.body.classList.add("is-large-screen")</script><div class="webpage-container workspace"><div class="sidebar-left sidebar"><div class="sidebar-handle"></div><div class="sidebar-topbar"><div class="topbar-content"><label class="theme-toggle-container" for="theme_toggle"><input class="theme-toggle-input" type="checkbox" id="theme_toggle"><div class="toggle-background"></div></label></div><div class="clickable-icon sidebar-collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="svg-icon"><path d="M21 3H3C1.89543 3 1 3.89543 1 5V19C1 20.1046 1.89543 21 3 21H21C22.1046 21 23 20.1046 23 19V5C23 3.89543 22.1046 3 21 3Z"></path><path d="M10 4V20"></path><path d="M4 7H7"></path><path d="M4 10H7"></path><path d="M4 13H7"></path></svg></div></div><div class="sidebar-content"><div class="search-input-container"><input enterkeyhint="search" type="search" spellcheck="false" placeholder="Search..." style="border-radius:10px; border-width: 0px;"><div class="search-input-clear-button" aria-label="Clear search"></div></div><include src="lib/html/file-tree.html"></include></div><script defer="">let ls = document.querySelector(".sidebar-left"); ls.classList.add("is-collapsed"); if (window.innerWidth > 768) ls.classList.remove("is-collapsed"); ls.style.setProperty("--sidebar-width", localStorage.getItem("sidebar-left-width"));</script></div><div class="document-container markdown-reading-view hide"><div class="markdown-preview-view markdown-rendered allow-fold-headings allow-fold-lists is-readable-line-width"><style id="MJX-CHTML-styles"></style><div class="markdown-preview-sizer markdown-preview-section"><h1 class="page-title heading inline-title" id="20240813 모각코 활동 7회차"><p dir="auto">20240813 모각코 활동 7회차</p></h1><div><p dir="auto">오늘의목표<br>
 RESNET 실습 - CIFAR10 이미지 분류<br>
-양자화 공부</p></div><div><pre><code>import torch
+양자화 공부</p></div><div><pre><code>#필요한 모듈 불러오기
 
-import torch.nn as nn
-
-import torch.nn.functional as F
-
+import torch
+import torch.nn as nn #다양한 종류의 레이어 제공 -&gt; 모델 만들기 도우미!
+import torch.nn.functional as F #활성화 함수, 손실함수 등을 함수 형태로 제공.
 import torch.backends.cudnn as cudnn
-
+</code><button class="copy-code-button">Copy</button></pre></div><div><p dir="auto">모델링</p></div><div><pre><code>#BasicBlock 클래스 정의  
   
+class BasicBlock(nn.Module): # nn.Module 상속받기  
+    def __init__(self, in_planes, planes, stride = 1):  
+        super(BasicBlock, self).__init__() #BasicBlock의 부모클래스인 nn.Module의 __init__함수를 먼저 호출해서 사용.  
+                  
+        #conv1과 conv2 설정  
+        #2D 컨볼루션 레이어 설정  
+        self.conv1 = nn.Conv2d(in_planes, planes, kernel_size = 3, stride = stride, padding = 1, bias = False) # in_planes 입력채널 수 / planes 출력채널 수 / kernel_size 3*3 필터(커널) 사용 / stride (커널로 훑을 때의 보폭) 기본값은 1 / padding 패딩의 크기 1 / bias = False 바이어스(출력값을 조절하기 위해 사용되는  값) 를 사용하지 않겠다. -&gt; 바로 다음 줄의 코드(배치정규화)에서 바이어스의 역할을 해주기 때문에 여기에선 사용하지 않는다.  
+        #배치 정규화 설정  
+        self.bn1 = nn.BatchNorm2d(planes) # planes 배치정규화를 적용할 채널의 수. 앞의 출력 채널의 수와 동일해야함(당연함)  
   
-
-# ResNet18을 위해 최대한 간단히 수정한 BasicBlock 클래스 정의
-
-class BasicBlock(nn.Module):
-
-&nbsp; &nbsp; def __init__(self, in_planes, planes, stride=1):
-
-&nbsp; &nbsp; &nbsp; &nbsp; super(BasicBlock, self).__init__()
-
-  
-
-&nbsp; &nbsp; &nbsp; &nbsp; # 3x3 필터를 사용 (너비와 높이를 줄일 때는 stride 값 조절)
-
-&nbsp; &nbsp; &nbsp; &nbsp; self.conv1 = nn.Conv2d(in_planes, planes, kernel_size=3, stride=stride, padding=1, bias=False)
-
-&nbsp; &nbsp; &nbsp; &nbsp; self.bn1 = nn.BatchNorm2d(planes) # 배치 정규화(batch normalization)
-
-  
-
-&nbsp; &nbsp; &nbsp; &nbsp; # 3x3 필터를 사용 (패딩을 1만큼 주기 때문에 너비와 높이가 동일)
-
-&nbsp; &nbsp; &nbsp; &nbsp; self.conv2 = nn.Conv2d(planes, planes, kernel_size=3, stride=1, padding=1, bias=False)
-
-&nbsp; &nbsp; &nbsp; &nbsp; self.bn2 = nn.BatchNorm2d(planes) # 배치 정규화(batch normalization)
-
-  
-
-&nbsp; &nbsp; &nbsp; &nbsp; self.shortcut = nn.Sequential() # identity인 경우
-
-&nbsp; &nbsp; &nbsp; &nbsp; if stride != 1: # stride가 1이 아니라면, Identity mapping이 아닌 경우
-
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; self.shortcut = nn.Sequential(
-
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; nn.Conv2d(in_planes, planes, kernel_size=1, stride=stride, bias=False),
-
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; nn.BatchNorm2d(planes)
-
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; )
-
-  
-
-&nbsp; &nbsp; def forward(self, x):
-
-&nbsp; &nbsp; &nbsp; &nbsp; out = F.relu(self.bn1(self.conv1(x)))
-
-&nbsp; &nbsp; &nbsp; &nbsp; out = self.bn2(self.conv2(out))
-
-&nbsp; &nbsp; &nbsp; &nbsp; out += self.shortcut(x) # (핵심) skip connection
-
-&nbsp; &nbsp; &nbsp; &nbsp; out = F.relu(out)
-
-&nbsp; &nbsp; &nbsp; &nbsp; return out
-
-  
-  
-
-# ResNet 클래스 정의
-
-class ResNet(nn.Module):
-
-&nbsp; &nbsp; def __init__(self, block, num_blocks, num_classes=10):
-
-&nbsp; &nbsp; &nbsp; &nbsp; super(ResNet, self).__init__()
-
-&nbsp; &nbsp; &nbsp; &nbsp; self.in_planes = 64
-
-  
-
-&nbsp; &nbsp; &nbsp; &nbsp; # 64개의 3x3 필터(filter)를 사용
-
-&nbsp; &nbsp; &nbsp; &nbsp; self.conv1 = nn.Conv2d(3, 64, kernel_size=3, stride=1, padding=1, bias=False)
-
-&nbsp; &nbsp; &nbsp; &nbsp; self.bn1 = nn.BatchNorm2d(64)
-
-&nbsp; &nbsp; &nbsp; &nbsp; self.layer1 = self._make_layer(block, 64, num_blocks[0], stride=1)
-
-&nbsp; &nbsp; &nbsp; &nbsp; self.layer2 = self._make_layer(block, 128, num_blocks[1], stride=2)
-
-&nbsp; &nbsp; &nbsp; &nbsp; self.layer3 = self._make_layer(block, 256, num_blocks[2], stride=2)
-
-&nbsp; &nbsp; &nbsp; &nbsp; self.layer4 = self._make_layer(block, 512, num_blocks[3], stride=2)
-
-&nbsp; &nbsp; &nbsp; &nbsp; self.linear = nn.Linear(512, num_classes)
-
-  
-
-&nbsp; &nbsp; def _make_layer(self, block, planes, num_blocks, stride):
-
-&nbsp; &nbsp; &nbsp; &nbsp; strides = [stride] + [1] * (num_blocks - 1)
-
-&nbsp; &nbsp; &nbsp; &nbsp; layers = []
-
-&nbsp; &nbsp; &nbsp; &nbsp; for stride in strides:
-
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; layers.append(block(self.in_planes, planes, stride))
-
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; self.in_planes = planes # 다음 레이어를 위해 채널 수 변경
-
-&nbsp; &nbsp; &nbsp; &nbsp; return nn.Sequential(*layers)
-
-  
-
-&nbsp; &nbsp; def forward(self, x):
-
-&nbsp; &nbsp; &nbsp; &nbsp; out = F.relu(self.bn1(self.conv1(x)))
-
-&nbsp; &nbsp; &nbsp; &nbsp; out = self.layer1(out)
-
-&nbsp; &nbsp; &nbsp; &nbsp; out = self.layer2(out)
-
-&nbsp; &nbsp; &nbsp; &nbsp; out = self.layer3(out)
-
-&nbsp; &nbsp; &nbsp; &nbsp; out = self.layer4(out)
-
-&nbsp; &nbsp; &nbsp; &nbsp; out = F.avg_pool2d(out, 4)
-
-&nbsp; &nbsp; &nbsp; &nbsp; out = out.view(out.size(0), -1)
-
-&nbsp; &nbsp; &nbsp; &nbsp; out = self.linear(out)
-
-&nbsp; &nbsp; &nbsp; &nbsp; return out
-
-  
-  
-
-# ResNet18 함수 정의
-
-def ResNet18():
-
-&nbsp; &nbsp; return ResNet(BasicBlock, [2, 2, 2, 2])
-</code><button class="copy-code-button">Copy</button></pre></div><div><pre><code>import torchvision
-
+        #2D 컨볼루션 레이어 설정  
+        self.conv2 = nn.Conv2d(planes, planes, kernel_size = 3, stride = 1, padding = 1, bias = False)  
+        #배치 정규화 설정  
+        self.bn2 = nn.BatchNorm2d(planes)  
+                    
+# shortcut 설정 -&gt; `H(x) = R(x) + x`에서의 x를 위한 작업  
+        self.shortcut = nn.Sequential() # nn.Sequential : pytorch에서 여러 레이어들을 순서대로 쌓을 때 사용하는 도구 # x를 그대로 더할 수 있는 경우  
+        if stride != 1: #stride의 값이 1인경우(입력과 출력의 채널 수가 다른 경우 = x를 그대로 더할 수 없는 경우)   
+self.shortcut = nn.Sequential(  
+                nn.Conv2d(in_planes, planes, kernel_size = 1, stride = stride, bias = False),  
+                nn.BatchNorm2d(planes)  
+            ) # nn.Sequential을 사용해서 Conv2d와 BatchNorm레이어들을 이어줬음  
+                  
+#순전파 함수 # __init__에서 설정해뒀던 거 실제로 사용하는 부분.  
+    def forward(self,x):  
+        out = F.relu(self.bn1(self.conv1(x))) #conv1 거치고, relu함수 거치기  
+        out = self.bn2(self.conv2(out)) #그다음 conv2 거치기  
+        out += self.shortcut(x) # resnet의 핵심인 skip connection : H(x) = R(x) + x
+</code><button class="copy-code-button">Copy</button></pre></div><div><pre><code>#ResNet 클래스 정의  
+class ResNet(nn.Module):  
+    def __init__(self, block, num_blocks, num_classes = 10):  
+        super(ResNet, self).__init__() #ResNet의 부모클래스인 nn.Module의 __init__함수를 먼저 호출해서 사용.  
+        self.in_planes = 64 # 입력 채널 수 64        # 2D 컨볼루션레이어 설정  
+        self.conv1 = nn.Conv2d(3, 64, kernel_size = 3, stride = 1, padding = 1, bias = False) # 입력채널 수 3 / 출력채널 수 64 / kernel_size 3*3 필터(커널) 사용 / stride (커널로 훑을 때의 보폭) 1 / padding 패딩의 크기 1 / bias = False 바이어스(출력값을 조절하기 위해 사용되는  값) 를 사용하지 않겠다.  
+        # 배치정규화 설정  
+        self.bn1 = nn.BatchNorm2d(64) # 배치정규화를 위해 사용할 채널 수 = 이전 채널에서의 출력 채널 수 = 64        # 레이어블록 설정(각 블록은 앞서 정의한 BASIC BLOCK으로 구성될거임. 인자 block 자리에, BasicBlock이 들어갈거니까아아아~~)  
+        # _make_layer() : (블록의 종류, 출력 채널 수, 쌓을 블럭의 수, 레이어의 첫 블럭에서 사용할 stride의 값)  
+        self.layer1 = self._make_layer(block, 64, num_blocks[0], stride = 1) #  
+        self.layer2 = self._make_layer(block, 128, num_blocks[1], stride = 2)  
+        self.layer3 = self._make_layer(block, 256, num_blocks[2], stride = 2)  
+        # self._make_layer()에서 self는 현재 클래스의 인스턴스를 가리킴.  
+        # 클래스 예측값 계산  
+        self.linear = nn.Linear(512, num_classes) # 입력 채널 수 512, 출력 채널 수 num_classes        # _make_layer 함수 설정  
+    def _make_layer(self, block, planes, num_blocks, stride):  
+        strides = [stride] + [1] * (num_blocks -1) # stride 값 설정 # 첫 번째 블록의 stride는 지정된 값을 사용하고 이후 블럭들은 stride = 1이 된다.  
+        layers = [] # 블럭을 담을 빈 리스트 생성  
+        for stride in strides:  
+            layers.append(block(self.in_planes, planes, stride)) # 입력 채널 수 self.in_planes, 출력 채널 수 planes, 스트라이드 값 stride            self.in_planes = planes # 채널 수 변경해주기(다음 레이어를 위해)  
+        return nn.Sequential(*layers) # 생성한 블록들을 하나의 레이어로 묶어서 반환.  
+    # 순전파 함수 # __init__ 설정해뒀던거랑 _make_layer 함수 만든 거 실제로 사용하는 부분.  
+    def forward(self, x):  
+        out = F.relu(self.bn1(self.conv1(x)))  
+        out = self.layer1(out)  
+        out = self.layer2(out)  
+        out = self.layer3(out)  
+        out = self.layer4(out)  
+        out = F.avg_pool2d(out, 4) # 풀링층  
+        out = out.view(out.size(0),-1) # 텐서의 차원 변경  
+        out = self.linear(out) #완전 연결층  
+        return out
+</code><button class="copy-code-button">Copy</button></pre></div><div><pre><code># ResNet 18 함수 정의  
+def ResNet18():  
+    return ResNet(BasicBlock, [2,2,2,2])
+</code><button class="copy-code-button">Copy</button></pre></div><div><p dir="auto">데이터 불러오기</p></div><div><pre><code>import torchvision
 import torchvision.transforms as transforms
 
-  
 
 transform_train = transforms.Compose([
-
 &nbsp; &nbsp; transforms.RandomCrop(32, padding=4),
-
 &nbsp; &nbsp; transforms.RandomHorizontalFlip(),
-
 &nbsp; &nbsp; transforms.ToTensor(),
-
 ])
 
-  
 
 transform_test = transforms.Compose([
-
 &nbsp; &nbsp; transforms.ToTensor(),
-
 ])
 
   
-
 train_dataset = torchvision.datasets.CIFAR10(root='./data', train=True, download=True, transform=transform_train)
-
 test_dataset = torchvision.datasets.CIFAR10(root='./data', train=False, download=True, transform=transform_test)
 
-  
 
 train_loader = torch.utils.data.DataLoader(train_dataset, batch_size=128, shuffle=True, num_workers=2)
-
 test_loader = torch.utils.data.DataLoader(test_dataset, batch_size=100, shuffle=False, num_workers=2)
-</code><button class="copy-code-button">Copy</button></pre></div><div><pre><code>device = 'cuda'
 
-  
-
+</code><button class="copy-code-button">Copy</button></pre></div><div><p dir="auto">학습시키기</p></div><div><pre><code>device = 'cuda'
 net = ResNet18()
-
 net = net.to(device)
-
-  
-
 learning_rate = 0.1
-
 file_name = 'resnet18_cifar10.pth'
-
-  
-
 criterion = nn.CrossEntropyLoss()
-
 optimizer = optim.SGD(net.parameters(), lr=learning_rate, momentum=0.9, weight_decay=0.0002)
 
-  
-  
 
 def train(epoch):
-
 &nbsp; &nbsp; print('\n[ Train epoch: %d ]' % epoch)
-
 &nbsp; &nbsp; net.train()
-
 &nbsp; &nbsp; train_loss = 0
-
 &nbsp; &nbsp; correct = 0
-
 &nbsp; &nbsp; total = 0
 
-  
-
 &nbsp; &nbsp; for batch_idx, (inputs, targets) in enumerate(train_loader):
-
 &nbsp; &nbsp; &nbsp; &nbsp; inputs, targets = inputs.to(device), targets.to(device)
-
 &nbsp; &nbsp; &nbsp; &nbsp; optimizer.zero_grad()
 
-  
-
 &nbsp; &nbsp; &nbsp; &nbsp; outputs = net(inputs)
-
 &nbsp; &nbsp; &nbsp; &nbsp; loss = criterion(outputs, targets)
-
 &nbsp; &nbsp; &nbsp; &nbsp; loss.backward()
 
-  
-
 &nbsp; &nbsp; &nbsp; &nbsp; optimizer.step()
-
 &nbsp; &nbsp; &nbsp; &nbsp; train_loss += loss.item()
-
 &nbsp; &nbsp; &nbsp; &nbsp; _, predicted = outputs.max(1)
 
-  
-
 &nbsp; &nbsp; &nbsp; &nbsp; total += targets.size(0)
-
-&nbsp; &nbsp; &nbsp; &nbsp; current_correct = predicted.eq(targets).sum().item()
-
+&nbsp; &nbsp; &nbsp; &nbsp;  current_correct = predicted.eq(targets).sum().item()
 &nbsp; &nbsp; &nbsp; &nbsp; correct += current_correct
-
 &nbsp; &nbsp; &nbsp; &nbsp; if batch_idx % 100 == 0:
 
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; print('\nCurrent batch:', str(batch_idx))
-
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; print('Current batch average train accuracy:', current_correct / targets.size(0))
-
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; print('Current batch average train loss:', loss.item() / targets.size(0))
 
-  
-
 &nbsp; &nbsp; print('\nTotal average train accuarcy:', correct / total)
-
 &nbsp; &nbsp; print('Total average train loss:', train_loss / total)
 
-  
-  
 
 def test(epoch):
-
 &nbsp; &nbsp; print('\n[ Test epoch: %d ]' % epoch)
-
 &nbsp; &nbsp; net.eval()
-
 &nbsp; &nbsp; loss = 0
-
 &nbsp; &nbsp; correct = 0
-
 &nbsp; &nbsp; total = 0
 
   
-
 &nbsp; &nbsp; for batch_idx, (inputs, targets) in enumerate(test_loader):
-
 &nbsp; &nbsp; &nbsp; &nbsp; inputs, targets = inputs.to(device), targets.to(device)
-
 &nbsp; &nbsp; &nbsp; &nbsp; total += targets.size(0)
 
-  
 
 &nbsp; &nbsp; &nbsp; &nbsp; outputs = net(inputs)
-
 &nbsp; &nbsp; &nbsp; &nbsp; loss += criterion(outputs, targets).item()
 
-  
 
 &nbsp; &nbsp; &nbsp; &nbsp; _, predicted = outputs.max(1)
-
 &nbsp; &nbsp; &nbsp; &nbsp; correct += predicted.eq(targets).sum().item()
 
-  
 
 &nbsp; &nbsp; print('\nTotal average test accuarcy:', correct / total)
-
 &nbsp; &nbsp; print('Total average test loss:', loss / total)
 
-  
 
 &nbsp; &nbsp; state = {
-
 &nbsp; &nbsp; &nbsp; &nbsp; 'net': net.state_dict()
-
 &nbsp; &nbsp; }
-
 &nbsp; &nbsp; if not os.path.isdir('checkpoint'):
-
 &nbsp; &nbsp; &nbsp; &nbsp; os.mkdir('checkpoint')
-
 &nbsp; &nbsp; torch.save(state, './checkpoint/' + file_name)
-
 &nbsp; &nbsp; print('Model Saved!')
-</code><button class="copy-code-button">Copy</button></pre></div><div><pre><code>import time
 
-  
-  
+
+
+import time
 
 def adjust_learning_rate(optimizer, epoch):
-
 &nbsp; &nbsp; lr = learning_rate
-
 &nbsp; &nbsp; if epoch &gt;= 50:
-
 &nbsp; &nbsp; &nbsp; &nbsp; lr /= 10
-
 &nbsp; &nbsp; if epoch &gt;= 100:
-
 &nbsp; &nbsp; &nbsp; &nbsp; lr /= 10
-
+&nbsp; &nbsp; &nbsp; &nbsp; 
 &nbsp; &nbsp; for param_group in optimizer.param_groups:
-
 &nbsp; &nbsp; &nbsp; &nbsp; param_group['lr'] = lr
-
   
-
 start_time = time.time()
 
-  
-
 for epoch in range(0, 150):
-
 &nbsp; &nbsp; adjust_learning_rate(optimizer, epoch)
-
 &nbsp; &nbsp; train(epoch)
-
 &nbsp; &nbsp; test(epoch)
-
 &nbsp; &nbsp; print('\nTime elapsed:', time.time() - start_time)
+
 </code><button class="copy-code-button">Copy</button></pre></div><div><p dir="auto">양자화 공부<br>
 양자화 : 실수형 변수(floating-point type)를 정수형 변수(integer or fixed point)로 변환하는 과정<br>
 양자화 하는 이유 : 인공지능 모델에 큰 비트수의 자료형을 사용 -&gt; 학습 과정에서 계산량과 필요한 메모리 크기 등이 커지게 됨. -&gt; 학습을 시키기 위해 많은 리소스가 필요해지고, 추론도 오래 걸리는 문제가 발생. 양자화를 통하여 효과적인 모델 최적화를 할 수 있는데, float 타입을 int형으로 줄이면서 용량을 줄일 수 있고 bit 수를 줄임으로써 계산 복잡도도 줄일 수 있음<br>
@@ -374,7 +216,6 @@ pipeline(task, model, config, tokenizer, feature_extractor, framework, revision,
 -model : 어떤 모델을 사용할것인가? -&gt; 여기에서는 "meta-llama/Meta-Llama-3-8B-Instruct" 라는 hugging face에서 미리 가져온 모델을 사용.<br>
 -device map : 모델이 어디서(GPU 또는 CPU) 실행되어야할까? -&gt; 여기에서는 "auto" 로, 현재 기기에서 사용가능한 장소를 자동으로 감지하고, GPU가 있다면 이를 우선적으로 사용<br>
 -model_kwargs : 추가로 전달할 매개변수(예를 들어 특정 설정을 변경하는 경우 사용) -&gt; 여기에서는 {"quantization_config": quantization_config} 이라는 quantization(양자화) 에 대한 설정을 포함하구 있음.</p></div><div><pre><code>#준비
-
 !pip install bitsandbytes # 양자화 기법을 사용할 수 있게 해주는 파이썬 모듈 다운로드
 !pip install -U bitsandbytes
 from transformers import pipeline, BitsAndBytesConfig # BitsAndBytesConfig 허깅페이스에서 양자화를 위한 라이브러리
@@ -382,7 +223,6 @@ from transformers import pipeline, BitsAndBytesConfig # BitsAndBytesConfig 허�
   
 
 #허깅페이스 로그인("meta-llama/Meta-Llama-3-8B-Instruct"를 사용하기 위함)
-
 from huggingface_hub import login
 login("내 TOKEN")
 
@@ -397,7 +237,6 @@ pipe = pipeline("text-generation", "meta-llama/Meta-Llama-3-8B-Instruct", device
 
 
 #양자화 한 후 실행
-
 chat = [
 &nbsp; &nbsp; {"role": "system", "content": "You are a sassy, wise-cracking robot as imagined by Hollywood circa 1986."},
 &nbsp; &nbsp; {"role": "user", "content": "Hey, can you tell me any fun things to do in New York?"}
@@ -409,6 +248,7 @@ chat.append(
 )
 response = pipe(chat, max_new_tokens=512)
 print(response[0]['generated_text'][-1]['content'])
+
 </code><button class="copy-code-button">Copy</button></pre></div><div class="mod-footer"></div></div></div></div><div class="sidebar-right sidebar"><div class="sidebar-handle"></div><div class="sidebar-topbar"><div class="topbar-content"></div><div class="clickable-icon sidebar-collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="svg-icon"><path d="M21 3H3C1.89543 3 1 3.89543 1 5V19C1 20.1046 1.89543 21 3 21H21C22.1046 21 23 20.1046 23 19V5C23 3.89543 22.1046 3 21 3Z"></path><path d="M10 4V20"></path><path d="M4 7H7"></path><path d="M4 10H7"></path><path d="M4 13H7"></path></svg></div></div><div class="sidebar-content"><div class="graph-view-wrapper"><div class="sidebar-section-header">Interactive Graph</div><div class="graph-view-placeholder">
 		<div class="graph-view-container">
 			<div class="graph-icon graph-expand" role="button" aria-label="Expand" data-tooltip-position="top"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg></div>
