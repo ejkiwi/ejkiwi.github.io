@@ -1,5 +1,506 @@
-<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[ejkiwi.github.io]]></title><description><![CDATA[Obsidian digital garden]]></description><link>https://ejkiwi.github.io/</link><image><url>https://ejkiwi.github.io/lib/media/favicon.png</url><title>ejkiwi.github.io</title><link>https://ejkiwi.github.io/</link></image><generator>Webpage HTML Export plugin for Obsidian</generator><lastBuildDate>Tue, 26 Nov 2024 14:33:49 GMT</lastBuildDate><atom:link href="https://ejkiwi.github.io/lib/rss.xml" rel="self" type="application/rss+xml"/><pubDate>Tue, 26 Nov 2024 14:33:49 GMT</pubDate><ttl>60</ttl><dc:creator/><item><title><![CDATA[index]]></title><description><![CDATA[ 
- <br>]]></description><link>https://ejkiwi.github.io/index.html</link><guid isPermaLink="false">index.md</guid><pubDate>Tue, 23 Jul 2024 13:03:33 GMT</pubDate></item><item><title><![CDATA[20240813 모각코 활동 7회차]]></title><description><![CDATA[ 
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[ejkiwi.github.io]]></title><description><![CDATA[Obsidian digital garden]]></description><link>https://ejkiwi.github.io/</link><image><url>https://ejkiwi.github.io/lib/media/favicon.png</url><title>ejkiwi.github.io</title><link>https://ejkiwi.github.io/</link></image><generator>Webpage HTML Export plugin for Obsidian</generator><lastBuildDate>Tue, 26 Nov 2024 17:24:53 GMT</lastBuildDate><atom:link href="https://ejkiwi.github.io/lib/rss.xml" rel="self" type="application/rss+xml"/><pubDate>Tue, 26 Nov 2024 17:24:50 GMT</pubDate><ttl>60</ttl><dc:creator/><item><title><![CDATA[20240707 모각코 활동 1회차]]></title><description><![CDATA[ 
+ <br>오늘의 목표<br>
+1.모각코 활동 동안 공부할 주제 전체적으로 톺아보기<br>
+2.팀원들과 친해지기<br>파이토치<br>
+<br>python을 바탕으로 제작된, 딥러닝과  인공지능 분야에서 주로 활용되는 라이브러리
+<br>pytorch의 연산은 tensor를 기본으로 하여 작동
+<br>tensor : 파이토치의 기본 데이터 타입. 배열이나 행렬과 유사한 구조(다차원 배열)이다.
+<br>파이토치를 기반으로 구성된 모델은 학습을 위한 그래디언트를 자동으로 계산한다. -&gt; 자동 미분
+<br>그래디언트 : 벡터 미분의 결과 (=함수의 기울기, 각 변수에 대한 변화율)
+<br>선배님의 프로젝트<br>
+<br><a data-tooltip-position="top" aria-label="https://github.com/b-re-w/2024-1_BPL_STalk_Model_Research" rel="noopener nofollow" class="external-link" href="https://github.com/b-re-w/2024-1_BPL_STalk_Model_Research" target="_blank">2024-1_BPL_STalk_Model_Research</a>
+<br>CNN 모델<br>
+<br>2차원 데이터 (이미지 등)의 패턴을 인식하고 분석하는 데 사용되는 딥러닝 모델.
+<br>여러개의 층으로 구성됨.
+<br>인간의 시신경 구조를 모방한 구조임
+<br>이미지의 
+<br>RESNET 모델<br>
+<br>CNN 모델에 잔차 연결 개념을 도입한 것.
+<br>잔차 연결 : 각 층의 출력을 다음 층으로 직접 보내는 대신에, 입력을 더한 뒤 다음 층으로 전달하는 연결.
+]]></description><link>https://ejkiwi.github.io/2024_여름_모각코/20240707-모각코-활동-1회차.html</link><guid isPermaLink="false">2024_여름_모각코/20240707 모각코 활동 1회차.md</guid><pubDate>Mon, 15 Jul 2024 07:48:10 GMT</pubDate></item><item><title><![CDATA[20240709 모각코 활동 2회차]]></title><description><![CDATA[ 
+ <br>오늘의 목표<br>
+1.파이토치 공부하기 - youtube에 있는 파이토치 설명 강좌(<a rel="noopener nofollow" class="external-link" href="https://youtube.com/playlist?list=PLS8gIc2q83Oit-utRso2iblvt00fZOw85&amp;si=i0CZi4e5g_dVJ3dx" target="_blank">https://youtube.com/playlist?list=PLS8gIc2q83Oit-utRso2iblvt00fZOw85&amp;si=i0CZi4e5g_dVJ3dx</a>) 1,2,3강 들으며 공부<br>
+2.선배님의 프로젝트 코드 절반 분석하기 - whisper 부분<br>파이토치<br>
+al분야에서 google tensorflow와 함께 딥러닝 모델을 구축하고 학습하는 데 가장 많이 사용되고 있는 오픈 소스 기반의 딥러닝 프레임워크임.<br>
+<br>오픈소스 : 개방형 협업을 장려하는 소프트웨어 개발 모델
+<br>프레임워크 : 소프트웨어 개발에 있어 하나의 뼈대와 같은 역할을 하는 것으로, 목적에 필요한 것을 고민할 필요 없이 이용할 수 있도록 일괄로 가져다 쓰도록 만들어 놓은 구조화된 틀임.<br>
+텐서 : 파이토치의 기본 데이터 타입
+<br>배열이나 행렬과 유사한 자료 구조이다
+<br>일반적으로는 1차원 - 벡터 , 2차원 - 행렬, 3차원 이상 - 벡터 이지만, 파이토치에서는 입력과 출력 그리고 학습에 필요한모든 데이터들을 모두 텐서 데이터타입으로 정의하고 있다.
+<br>텐서의 속성으로는 모양,자료형,저장되는 위치가 있다
+<br>보통 저장되는 위치는 cpu인데, gpu를 사용할 수 있다면, .to("cuda")를 사용해서 텐서를 gpu로 이동시킬 수 있다.
+
+<br>gpu : 컴퓨터 그래픽을 처리하는 장치로 그래픽 카드를 구성하는 가장 중요한 핵심 요소.
+
+
+<br>1.파이썬의 리스트 데이터로부터 직접 텐서를 만들 수 있다.<br>
+- listdata = [[10,20],[30,40]] 	tensor1 = torch.Tensor(listdata)`
+<br>2.파이썬의 넘파이 데이터로부터 직접 텐서를 만들 수도 있다.(넘파이로만들어진건 보통 int로 생성되기때문에 원래 데이터가 float의 형태인 경우, 캐스팅해주는 작업이 필요하기도 하다.)
+<br>3.파이썬의 랜덤 데이터로부터 직접 텐서를 만들 수도 있다.<br>
+- tensor3 = torch.rand(2,2) -&gt; rand()메서드는 0~1사이의 균일 분포 랜덤값을 생성함 ( randn()메서드는 정규분포를 가지는 랜덤값을 생성 )
+<br>텐서를 넘파이로 바꿀 수도 있다.<br>
+- tensor.numpy()
+<br>인덱싱과 슬라이싱이 가능하다
+<br>elment-wise product 연산 
+<br>matrix multiplication 연산 (행렬곱)
+<br>텐서를 합칠 수 있다. Tensor Concatenate (dim=0 세로, dim=1 가로)<br>
+파이토치 딥러닝 모델 구조 :<br>
+1.데이터정의<br>
+- 기본 데이터타입인 TENSOR로 생성해야함.<br>
+- TensorDataset(x_train,y_train) : 텐서 데이터셋 생성<br>
+- DataLoader(dataset, batch_size, shuffle) : 미니 배치 학습과 데이터 셔플, 멀티 프로세싱 등을 간단하게 수행할 수 있음.<br>
+- 미니 배치 학습 : 전체 데이터를 n등분 하여 각각의 학습 데이터를 배치 방식으로 학습시키는 것.<br>
+- 데이터 셔플 : train데이터와test데이터 간의 동일한 분포를 가지도록 섞어는 것.<br>
+- 멀티 프로세싱 : 여러 작업을 별도의 프로세스를 생성 후 병렬처리를 하는 과정을 거치기 때문에 더 빠르게 결과를 얻을 수 있다.<br>
+2.모델구축<br>
+- nn.Module을 상속받는 class를 생성하여 정의하는 것이 일반적이다.<br>
+- 클래스 속 __init__함수에서 계층(신경망 모델을 구성하는)을 정의.<br>
+- 클래스 속 forward 함수에서 신경망에 데이터 전달하기를 수하고, 결과값을 리턴함<br>
+3.피드포워드<br>
+- 모델 학습을 위해서는 피드 포워드 계산값과 정답의 차이 계산이 필요  -&gt; 이 계산을 위해서는 손실함수와 옵티마이저가 필요함.<br>
+- 손실함수 : MSE 등<br>
+- 옵티마이저 : SDG, ADAM<br>
+4.손실함수계산<br>
+- nn.MSELoss(model(x_train),y_train) : 피드포워드 계산 값과 정답과의 오차 계산.<br>
+- 이 때, model에 데이터를 전달하면 model 클래스 안에 있는 forward()함수자동으로 forward()함수를 호출하기 때문에 우리가 따로 호출해줄 필요가 없다.<br>
+5.모델학습<br>
+-역전파 코드 : 학습이 진행됨에 따라서 모델 파라미터(가중치와 바이어스)를 업데이트하면서 최적화 시킨다<br>
+- optimizer.zero.grad()<br>
+- loss.backward()<br>
+- optimizer.step()<br>
+- 모델(model) : 각 층을 포함하고 있는 인공신경망 그 자체 (이를 레고처럼 순차적으로 쌓기 -&gt; CNN, RNN 등 다양한 모델 구축 가능)<br>
+- 3&gt;4&gt;5의 반복 -&gt; 딥러닝 학습<br>
+- 손실함수가 최소가 될 때까지 모델 파라미터(가중치, 바이어스) 값을 찾아감.
+<br>선배님 프로젝트 분석 - whisper<br>
+1.from faster_whisper import WhisperModel<br>
+2.def get_whisper() :  	 3.   model_size = "medium"  #@param ['tiny', 'base', 'small', 'medium', 'large', 'large-v2', 'large-v3'] 	 4.   compute_type = "int8"  #@param ['float16', 'int8']<br>
+5.   return WhisperModel(model_size, device=DEVICE, cpu_threads=12, compute_type=compute_type).transcribe<br>1: faster_whisper 에서 WhisperModel 모듈 불러오기<br>
+2: get_whisper 라는 이름의 함수 설정하기<br>
+3: model_size는 "medium"이다. model_size가 가질 수 있는 옵션으로는 "tiny","base","small","medium","large","large-v3" 이 있다. -&gt; model_size는 모델의 크기를 뜻한다.<br>
+4: compute_type은 "int8"이다. compute_type이 가질 수 있는 옵션으로는 "float16","int8"이 있다. -&gt; compute_type은 계산 유형을 뜻한다.<br>
+5: WhisperModel은 4가지의 매개변수를 사용하는데, 여기에서 model_size는 앞서 정한 크기와 같고, device는 모델이 실행될 장치를 지정한다. cpu_threads는 CPU의 스레드 수를 뜻한다. compute_type또한 앞서 정한 계산 유형과 같다. 이 때 .transcribe는 모델의 음성 인식 기능을 호출해서 음성을 텍스트로 변환해준다.]]></description><link>https://ejkiwi.github.io/2024_여름_모각코/20240709-모각코-활동-2회차.html</link><guid isPermaLink="false">2024_여름_모각코/20240709 모각코 활동 2회차.md</guid><pubDate>Mon, 15 Jul 2024 06:27:57 GMT</pubDate></item><item><title><![CDATA[20240716 모각코 활동 3회차]]></title><description><![CDATA[ 
+ <br>오늘의 목표<br>
+1.파이토치 공부하기  - 실습해보기<br>
+2.선배님의 프로젝트 코드 절반 분석하기 - resnet 부분<br>파이토치 실습<br>import torch #파이토치 불러오기
+from torch import nn #토치에서 nn 불러오기
+  
+
+#텐서 형태로 train데이터 가져오기
+x_train = torch.Tensor([1,2,3,4,5,6]).view(6,1)
+y_train = torch.Tensor([3,6,9,12,15,18]).view(6,1)
+
+  
+#MyNeuralNetwork 클래스 만들기. nn.Module이 부모클래스가 됨.
+class MyNeuralNetwork(nn.Module):
+&nbsp; def __init__(self):
+&nbsp; &nbsp; super().__init__()
+&nbsp; &nbsp; self.linear_relu_stack = nn.Sequential(nn.Linear(1,1))
+
+&nbsp; def forward(self, x):
+&nbsp; &nbsp; logits = self.linear_relu_stack(x)
+&nbsp; &nbsp; return logits
+
+
+#모델
+model = MyNeuralNetwork()
+#손실함수
+loss_function = nn.MSELoss()
+#옵티마이저
+optimizer = torch.optim.SGD(model.parameters(),lr=1e-2)
+
+nums_epoch = 2000
+
+
+#학습시키기
+for epoch in range(nums_epoch + 1):
+&nbsp; prediction = model(x_train)
+&nbsp; loss = loss_function(prediction, y_train)
+
+&nbsp; optimizer.zero_grad()
+&nbsp; loss.backward()
+&nbsp; optimizer.step()
+
+&nbsp; if epoch % 100 == 0:
+&nbsp; &nbsp; print('epoch = ', epoch, 'current loss = ', loss.item())
+<br>#예측하기
+x_test = torch.Tensor([8,9,10,11]).view(4,1)
+pred = model(x_test)
+pred
+<br>선배님의 프로젝트 코드<br>from huggingface_hub import hf_hub_download
+import wespeaker
+<br>from huggingface_hub import hf_hub_download<br>
+huggingface_hub 라이브러리를 통해서 hf_hub_download함수를 가져와준다.<br>
+hf_hub_download함수를 통해서 모델을 다운로드 할 수 있다.<br>
+기본적으로, 함수에는 repo_id와 repo_type을 인자로 넘겨준다. (revision - 특정 버전의 파일을 다운로드 하고 싶을 시. / local_dir 특정 위치에 저장하고 싶을 시.)<br>
+import wespeaker<br>
+wespeaker을 가져와준다.<br> def get_resnet152():
+    model_id = "Wespeaker/wespeaker-voxceleb-resnet152-LM"
+    model_name = model_id.replace("Wespeaker/wespeaker-", "").replace("-", "_")
+ 
+    root_dir = hf_hub_download(model_id, filename=model_name+".onnx").replace(model_name+".onnx", "")
+
+    import os
+    if not os.path.isfile(root_dir+"avg_model.pt"):
+        os.rename(hf_hub_download(model_id, filename=model_name+".pt"), root_dir+"avg_model.pt")
+    if not os.path.isfile(root_dir+"config.yaml"):
+        os.rename(hf_hub_download(model_id, filename=model_name+".yaml"), root_dir+"config.yaml")
+
+    resnet = wespeaker.load_model_local(root_dir)
+
+    #print("Compile model for the NPU")
+    #resnet.model = intel_npu_acceleration_library.compile(resnet.model)
+
+    def resnet152(ado, sample_rate=None):
+        if isinstance(ado, str):
+            return resnet.recognize(ado)
+        else:
+            return recognize(resnet, ado, sample_rate)
+
+    resnet152.__dict__['register'] = lambda *args, **kwargs: resnet.register(*args, **kwargs)
+
+    return resnet152
+<br>분석<br>
+def get_resnet152():<br>
+get_resnet 152 라는 이름의 함수를 정의<br>model_id = "Wespeaker/wespeaker-voxceleb-resnet152-LM"<br>
+model_id라는 변수에 "Wespeaker/wespeaker-voxceleb-resnet152-LM"를 지정. 아마  모델 아이디에 모델의 이름을 저장한 것일 것.<br>moldelname = model.id.replace("Wespeaker/wespeaker-",").replace("-", " ")<br>
+model_name이라는 변수를 만들어서, model_id를 약간 변형시킨 이름으로 지정해줌. "voxceleb_resnet152_LM"이 될 것.<br>root_dir = hf_hub_download(model_id, filename = model_name+" .onnx").replace(model_name+" .onnx", "")<br>
+hf_hub_download : huggingface_hub 라이브러리를 통해서 가져왔던 함수. 함수를 사용해서 모델 파일을 다운로드하고, 다운로드한 파일을 root_dir에 저장함.<br>import os<br>
+os 모듈을 가져옴<br>
+os 모듈 : 파일 및 디렉토리 작업, 프로세스 및 스레드 관리, 시스템 정보와 관련한 작업들을 수행할 수 있는 모듈이다.<br>if not os.path.isfile(root_dir+"avg_model.pt"):<br>
+os.rename(hf_hub_download(model_id, filename=model_name+".pt"), root_dir+"avg_model.pt")<br>
+만약 avg_model.pt이름을 가진 파일이 없다면, 모델의 pt파일을 다운로드 한 뒤 이름을 avg_model.pt로 바꾸어서 root_dir 변수에 저장함.<br>
+os.path.isfile(path) : path가 파일인 경우 true를 리턴, 아니면 false를 리턴.<br>
+os.rename : 파일 또는 폴더의 이름을 간단히 변경할 수 있다.<br>if not os.path.isfile(root_dir+"config.yaml"):<br>
+os.rename(hf_hub_download(model_id, filename=model_name+".yaml"), root_dir+"config.yaml")<br>
+앞 코드와 같은 느낌인데, 만약 config.yaml파일이 없으면 모델의 yaml파일을 다운로드 한 뒤 이름을 바꾸어서 root_dir변수에 저장함.<br>resnet = wespeaker.load_model_local(root_dir)<br>
+resnet이라는 변수를 지정해줄건데, wespeaker 라이브러리의 load_model_local 함수를 사용할거임. 이 때 root_dir에 있는 파일들을 불러오게 됨.<br>def resnet152(ado, sample_rate=None):<br>
+if isinstance(ado, str):<br>
+return resnet.recognize(ado)<br>
+else:<br>
+return recognize(resnet, ado, sample_rate) 	 resnet152라는 함수를 정의해주는데, 이 함수는 입력으로 ado를 받음.<br>
+instance(객체, 타입) : isinstance함수는 지정된 객체(여기에서는 ado)가 지정된 타입이면 true를 반환하고 아니면 false를 반환한다.<br>
+ado가 문자열이라면  resnet.recognize(ado)를 리턴하고<br>
+그렇지 않다면  recognize(resnet, ado, sample_rate)을 리턴함.<br>(recognize함수는 이전에 지정해둔 함수이다.)<br>def recognize(model, pcm, sample_rate):
+    q = extract_embedding(model, pcm, sample_rate)
+    best_score = 0.0
+    best_name = ''
+    for name, e in model.table.items():
+        score = model.cosine_similarity(q, e)
+        if best_score &lt; score:
+            best_score = score
+            best_name = name
+        del score
+        gc.collect()
+    return {'name': best_name, 'confidence': best_score}
+<br>resnet152.__dict__['register'] = lambda *args, **kwargs: resnet.register(*args, **kwargs)<br>
+resnet152라는 함수에 register라는 기능을 추가(대체?)<br>
+lambda함수를 통해서 resnet152에서 register메서드를 사용하려고 할 때, resnet객체의 register 메서드를 가져와서 사용하게 된다.<br>
+args, kwargs : 몇 개의 인자를 받아야 할지 정할 수 없을 때 args와 kwargs(keyword arguments)를 파라미터로 써줌. args 앞에 붙는  * 는 여러개의 인자를 묶어서 하나의 튜플로 묶어주고 이를 args에 할당해준다. kwargs 앞에 붙는 ** 는 여러개의 키워드 아규먼트들을 묶어서 딕셔너리로 만들어준다. <br>return resnet152<br>
+get_resnet152라는 함수는 resnet152를 반환함.<br>resnet152 = get_resnet152()
+print("INFO: ResNet152 Ready -", resnet152)
+<br>분석<br>
+resnet152 = get_resnet152()<br>
+get_resnet152함수를 가져와서 resnet152함수에 저장함<br>
+print("INFO: ResNet152 Ready -", resnet152)<br>
+모델이 준비되었다는 메시지를 출력한 뒤, resnet152를 출력함.]]></description><link>https://ejkiwi.github.io/2024_여름_모각코/20240716-모각코-활동-3회차.html</link><guid isPermaLink="false">2024_여름_모각코/20240716 모각코 활동 3회차.md</guid><pubDate>Tue, 30 Jul 2024 04:01:59 GMT</pubDate></item><item><title><![CDATA[20240723 모각코 활동 4회차]]></title><description><![CDATA[ 
+ <br>오늘의목표<br>
+1.cnn공부 - 정의와 구조 살펴보기<br>
+2.resnet공부 - 정의와 구조 살펴보기<br>딥 러닝 : 심층 신경망을 주로 다루는 ai분야. 심층 신경망은 신경망을 여러 계층으로 구성한 것.<br>
+기존 신경망의 큰 단점 : 입력 데이터의 구조 고려 안 함. -&gt; 이미지와 같은 공간적 구조를 가지는 데이터 다루기 적합하지 않음.<br>
+기존 신경망에서의 단점(공간적 구조 데이터 다루기 어려움)을 극복하기 위해 cnn 등장<br>CNN<br>
+합성곱 신경망<br>
+-2차원 구조를 고려하는 신경망<br>
+-가중치와 바이어스로 이루어진 뉴런으로 구성<br>
+- 입력데이터를 받고, 처리한 후 특정한 결과를 출력함.<br>
+-입력 계층에 들어온 미가공 이미지 데이터에 해당하는 클래스를 예측하는 것이 목적.<br>
+-예측된 클래스는 출력 계층의 결과 값 형태(클래스 점수 변환됨)로 출력됨.<br>
+-계층의 종류<br>
+1. 입력층<br>
+- 미가공 이미지 데이터를 받음.<br>
+2. 합성곱층<br>
+- 합성곱 연산을 수행함.<br>
+- 커널(n  m의 행렬)로 이미지(높이  너비)를 처음부터 끝까지 겹쳐 훑는다. 겹쳐지는 부분의 각 이미지와 원소의 값을 곱해서 모두 더한 값을 출력함.<br>
+- 스트라이드 : 커널이 입력을 훑는데, 이 때의 보폭을 뜻함.<br>
+- 이 때 출력되는 것(입력으로부터 커널을 사용하여 합성곱 연산을 통해 나온 결과)은 '출력 특성 맵(output feature map)' 이라 함.<br>
+- CNN에서는 합성곱 계층의 입출력 데이터를 특성 맵(feature map) 이라 함.<br>
+- <img alt="cnn 연산 방법" src="https://ejkiwi.github.io/lib/media/cnn1.png" referrerpolicy="no-referrer"><br>
+3.ReLU층<br>
+- 인공신경망에서 사용되는 활성화함수 f(x) = max(0, x) -&gt; 입력값이 0보다 크면 그 값을 그대로 출력하고, 0 이하면 0을 출력.<br>
+4. 풀링층<br>
+- 특성 맵을 다운샘플링하여 특성 맵의 크기를 줄임.<br>
+- 합성곱 연산과 유사함 (커널과 스트라이드 개념이 존재)<br>
+- 최대풀링 : 커널과 겹치는 영역 안에서 최대값을 추출<br>
+- 평균풀링 : 커널과 겹치는 영역 안에서 평균값을 추출<br>RESNET<br>
+CNN의 한 종류<br>
+-신경망의 깊이가 깊어짐에 따라 발생하는 훈련 문제를 해결하기 위해 '잔여학습'이라는 개념을 도입함.<br>
+- 훈련 문제 : 기존 모델들은 레이어를 깊게 쌓을수록 더 성능이 좋아질 것이라고 예상했지만 실제로는 20층 이상부터 성능이 낮아지는 현상이 발생.<br>
+- 잔여학습 : 스킵연결(입력값이 일정층들을 건너뛰어서 출력에 더할 수 있게 하는 역할) -&gt; 기존신경망은 k번째 층과 (i+1)번째 층의 연결로 이루어져있는데, resnet은 (i+r)층의 연결을 허용(shortcut connection).<br>
+- <img alt="ResNet 구조" src="https://ejkiwi.github.io/lib/media/resnet.png" referrerpolicy="no-referrer"><br>
+-최대 152개 층까지 쌓을 수 있게 됨.<br>
+<img alt="cnn2" src="https://ejkiwi.github.io/lib/media/cnn2.png" referrerpolicy="no-referrer">]]]></description><link>https://ejkiwi.github.io/2024_여름_모각코/20240723-모각코-활동-4회차.html</link><guid isPermaLink="false">2024_여름_모각코/20240723 모각코 활동 4회차.md</guid><pubDate>Tue, 23 Jul 2024 13:38:23 GMT</pubDate><enclosure url="https://ejkiwi.github.io/lib/media/cnn1.png" length="0" type="image/png"/><content:encoded>&lt;figure&gt;&lt;img src="https://ejkiwi.github.io/lib/media/cnn1.png"&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[20240730 모각코 활동 5회차]]></title><description><![CDATA[ 
+ <br>오늘의목표<br>
+1.cnn공부 - 합성곱 계층에서의filter, Padding에 대해 더 알아보기.<br>
+2.resnet공부 - Residual Block과 Skip-Connection 에 대해 더 깊이 알아보기<br>합성곱 계층에서의 filter<br>
+CNN에서 filter는 커널(n * m의 행렬)와 같은 의미이다. (mask라고도 불린다.)<br>
+filter를 사용하는 이유는 사진에서 feature(특징)를 뽑아내기 위함이다.<br>
+<br>입력 데이터의 전체 이미지에서, filter를 통해 천제 이미지를 순환하며, 특정 filter모양과 일치할수록 더 큰 값을 가지게 될 것인데, 이는 전체 이미지서 특정 filter와 유사한 모양을 가진 부분에 대한 feature들만 얻게 된다는 것을 의미한다. =&gt; 특정 filter에 부합하는 feature정보를 얻는 과정.
+<br>Padding<br>
+cnn구조에서, 합성곱층을 지나게 되면, 합성곱 연산으로 인해서 Feature Map의 크기는 입력데이터보다 크기가 작아지게 된다. 이렇게 크기가 작아지는것을 피하기 위해서 Padding 이라는 방법을 사용할 수 있다.<br>
+<br>zero padding : 입력 데이터(이미지) 주위를 0으로 둘러주는 padding의 방법이다.<br>
+<img alt="zero padding" src="https://ejkiwi.github.io/lib/media/zero_Padding.png" referrerpolicy="no-referrer">
+
+<br>P : padding layer의 수
+<br>n : 이미지의 크기가 n * n
+<br>f : 커널의 크기(filter의 크기)가  f * f
+<br>(n+2p) * (n+2p) : 패딩된 이미지의 크기
+<br>((n + 2p – f + 1) * (n + 2p – f + 1)) :  합성곱층을 지난 출력 이미지의 크기
+
+
+<br>padding이 필요한 이유
+
+<br>이미지 데이터의 축소를 막을 수 있다. -  여러번의 계산을 거쳐야 하는데 초반부터 이미지가 너무 작아져버린다면 학습을 별로 하지 못하고 끝나버릴 수 있기 때문에 padding을 통해 이미지의 크기를 조절해줘야한다.
+<br>모서리에 있는 중요한 정보를 충분히 활용할 수 있다. - padding을 사용하지 않는 경우, 모서를 학습할 기회가 적어지게 된다. 만약 중요한 정보가 모서리쪽에 있다면, 모델의 성능이 떨어지기 때문에 padding을 사용하여 모서리의 정보들도 충분히 학습할 수 있도록 해주어야 한다.<br>
+<img alt="패딩과 모서리~" src="https://ejkiwi.github.io/lib/media/CNN_Padding_Edge.png" referrerpolicy="no-referrer">
+
+
+<br>Valid Padding과 Same Padding : 각각 순서대로 패딩하지 않는 것, 입력데이터와 출력데이터가 동일하도록 하는 패딩을 뜻한다.
+<br>Residual Block 과 Skip-Connection<br>
+Residual Block은 층이 깊어지더라도 성능이 뒤떨어지지 않게 하기 위해 제시된 것.<br>
+Residual 은 "잔여" 라는 뜻을 가지고 있는데, x를 입력 H(x)를 x의 분포로 가정하면 residual은 최종으로 구하고자 하는 H(x)와 x의 차이로 볼 수 있다.<br>
+즉, Residual = R(x) = H(x) - x 가 되며 H(x) = R(x) + x 로 정리가능하다. <br>
+<br><img alt="residualblock" src="https://ejkiwi.github.io/lib/media/residual%20block.png" referrerpolicy="no-referrer">
+<br>위 신경망층에서는 F(x)r가 R(x)의 역할을 하기 때문에 Residual Block이라 불리게 된다.<br>
+Residual Block은 그레디언트 소실 문제를 약화시키고, 이에 따라 신경망의 깊이가 깊어져도 성능이 떨어지지 않게 되는 것.
+<br>그레디언트 소실 문제<br>
+- 신경망을 학습시는 과정에서 -&gt; 역전파 알고리즘을 통해 출력층에서 입력층으로 손실함수에 대한 그레디언트를 전파하고, 경사 하강법을 통해 이 그레디언트를 사용하여 각 파라미터를 수정하는 단계를 거치게 됨.<br>
+-  이 때 신경망의 하위층으로 진행될수록 그레디언트가 점점 작아지게 되는 문제가 그레디언트 소실 문제이다.<br>
+residual block에서는 x, x+1, x+2 층이 있다고 할 때, x+2층은 x+1층뿐만 아니라 x로부터도 정보를 받을 수 있게 된다. 따라서 역전파 알고리즘이 실행될 때 그레디언트가 작아지는것을 어느정도 막아주는 효과가 발생한다.<br>
+이러한 residual block의 방식을 하나의 합성곱층을 기준으로 살펴보았을 때,<br>
+한 층의 입력값을 출력값과 합쳐서 다음 층으로 넘겨주는 방식이 그 층의 입력값이 해당 층을 통과하지 않고 다음 층으로 넘어가는 것과 같기 때문에 Skip Connection이라 부르게 되는 것이다.<br>
+즉, Residual Block의 핵심은 Skip Connection이라 할 수 있다.
+]]></description><link>https://ejkiwi.github.io/2024_여름_모각코/20240730-모각코-활동-5회차.html</link><guid isPermaLink="false">2024_여름_모각코/20240730 모각코 활동 5회차.md</guid><pubDate>Wed, 31 Jul 2024 12:40:41 GMT</pubDate><enclosure url="https://ejkiwi.github.io/lib/media/zero_Padding.png" length="0" type="image/png"/><content:encoded>&lt;figure&gt;&lt;img src="https://ejkiwi.github.io/lib/media/zero_Padding.png"&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[20240806 모각코 활동 6회차]]></title><description><![CDATA[ 
+ <br>오늘의목표<br>
+CNN 실습 - MNIST 이미지 분류 ( RESNET은 7회차에 진행할 예정 )<br>import torch #pytorch 가져오기
+<br>데이터 가져오기<br>#데이터셋불러오고 텐서로 바꿔주기
+
+from torchvision import datasets #데이터셋 불러오고
+
+from torchvision.transforms import ToTensor #텐서로 바꿔주기
+
+  
+
+#datasets에서 MNIST 가져와서 훈련데이터와 테스트데이터 가져와주기.
+
+#datasets.MNIST(root - 데이터가 저장될 경로, train - train이 true 이면 train data이고 false면 test data, download - 데이터 없으면 인터넷에서 다운로드해줌 , transform - transform을 ToTensor로 지정해주지 않으면 텐서의 형식이 아닌, PIL이미지로 데이터가 가져와지게 된다)
+
+  
+
+train_data = datasets.MNIST(
+
+&nbsp; &nbsp; root = "data",
+
+&nbsp; &nbsp; train = True, #train data를 다운로드
+
+&nbsp; &nbsp; transform = ToTensor(),
+
+&nbsp; &nbsp; download = True
+
+)
+
+test_data = datasets.MNIST(
+
+&nbsp; &nbsp; root = 'data',
+
+&nbsp; &nbsp; train = False, #test data를 다운로드
+
+&nbsp; &nbsp; transform = ToTensor()
+
+)
+<br>데이터 확인하기<br>#학습데이터 확인
+
+print(train_data)
+
+print(train_data.data.size())
+
+# 데이터셋의 이름은 MNIST
+
+# 데이터의 수는 60000개
+
+# 훈련데이터
+
+# StandardTransform(데이터셋에 일관되게 적용되는 변환의 표준을 정의) -&gt; Transform: ToTensor() #이미지 데이터들을 모두 일관되게 텐서 형태로 변환하겠다는 것을 의미.
+
+
+#테스트데이터 확인
+
+print(test_data)
+
+print(test_data.data.size())
+
+#데이터의 수가 10000 인 것과 테스트데이터라는 것을 제외하면 나머지 속성은 학습데이터와 동일함.
+<br>#데이터 시각적으로 확인
+
+import matplotlib.pyplot as plt #시각적 확인을 위해 matplotlib을 사용.
+
+fig, ax = plt.subplots() # fig -&gt; 데이터가 담기는 프레임 / ax -&gt; 실제 데이터가 그려지는 캔버스
+
+ax.imshow(train_data.data[0], cmap='gray') #데이터의 모습
+
+
+
+#이미지 위에 각 픽셀 값을 표시해서 나타내보기
+
+for i in range(train_data.data[0].shape[0]): # i와j는 텍스트를 표시할 위치를 지정하기 위함.
+
+&nbsp; for j in range(train_data.data[0].shape[1]):
+
+&nbsp; &nbsp; c = 1 if train_data.data[0][i, j].item() &lt; 125 else 0 # 이미지의 각 픽셀 값( train_data.data[0][i,j].item() )이 125보다 작으면 c = 1 흰색을 사용, 크면 c = 0 검정 사용.
+
+&nbsp; &nbsp; ax.text(j, i, str(train_data.data[0][i, j].item()), color=(c, c, c), ha='center', va='center', fontsize=5) # text()를 사용하여 이미지 위에 텍스트 그리기
+
+  
+
+plt.title("%i" % train_data.targets[0])
+
+plt.show
+<br><img alt="mnist_1" src="https://ejkiwi.github.io/lib/media/MNIST.png" referrerpolicy="no-referrer"><br>데이터 준비하기<br>from torch.utils.data import DataLoader
+# DataLoader -&gt; &nbsp;데이터를 미니배치 형태로 만들어서 우리가 실제로 학습할 때 이용할 수 있도록 함.
+#DataLoader(dataset 데이터 , batch_size=1 한 번의 배치 안에 있는 샘플 사이즈, shuffle=False 데이터셋을 섞어서 데이터가 학습되는 순서를 바꿈, num_workers=0 동시에 처리하는 프로세서의 수. 하나 더 추가하면 20%정도 속도가 빨라짐.)
+#배치 학습 -&gt; 전체 데이터를 n등분 하여 학습.
+
+loaders = {
+
+&nbsp; &nbsp; 'train' : torch.utils.data.DataLoader(train_data,
+
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; batch_size=100,
+
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; shuffle=True,
+
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; num_workers=1),
+
+&nbsp; &nbsp; 'test' : torch.utils.data.DataLoader(test_data,
+
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;batch_size=100,
+
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;shuffle=True,
+
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;num_workers=1)
+
+}
+
+loaders
+<br>CNN 모델 설정하기<br>class CNN(torch.nn.Module):
+
+  
+
+&nbsp; def __init__(self):
+
+&nbsp; &nbsp; super(CNN, self).__init__()
+
+&nbsp; &nbsp; self.layer1 = torch.nn.Sequential(
+
+&nbsp; &nbsp; &nbsp; &nbsp; torch.nn.Conv2d(1, 16, kernel_size=5, stride=1, padding=2), #컨볼루션 레이어(합성곱층) #1차원(1개채널) 데이터를 받아 16개의 feature(16개의채널)로 나누겟다!!임.
+
+&nbsp; &nbsp; &nbsp; &nbsp; torch.nn.ReLU(), #ReLU층
+
+&nbsp; &nbsp; &nbsp; &nbsp; torch.nn.MaxPool2d(kernel_size=2, stride=2)) #풀링층
+
+&nbsp; &nbsp; self.layer2 = torch.nn.Sequential(
+
+&nbsp; &nbsp; &nbsp; &nbsp; torch.nn.Conv2d(16, 32, kernel_size=5, stride=1, padding=2),
+
+&nbsp; &nbsp; &nbsp; &nbsp; torch.nn.ReLU(),
+
+&nbsp; &nbsp; &nbsp; &nbsp; torch.nn.MaxPool2d(kernel_size=2, stride=2))
+&nbsp; &nbsp; &nbsp; &nbsp; 
+&nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; # layer 1, layer2 층까지는 이미지를 형상으로 분할하고 분석하는 부분
+&nbsp; &nbsp; &nbsp; &nbsp; # 다음 fc 층에서는 이미지를 분류 예측하는 부분.
+&nbsp; &nbsp; &nbsp; &nbsp; 
+
+&nbsp; &nbsp; self.fc = torch.nn.Linear(32 * 7 * 7, 10, bias=True) #32*7*7만큼의 입력을 linear레이어에 의해 계산되게 해서... 10개의 출력( MNIST 이미지를 0부터 9까지 분류해야하기때문 )이 나오도록 함.
+
+&nbsp; &nbsp; torch.nn.init.xavier_uniform_(self.fc.weight) # 신경망의 가중치를 초기화 ( 신경망의 가중치를 학습 전에 적절한 값으로 설정하는 과정 )
+
+
+
+&nbsp; &nbsp; # __init__에서는 필요한 레이어들을 정의내렸다고 볼 수 있음.
+&nbsp; &nbsp; # 아래 forward(얘가 실제적인 모델의 형태가 됨)에서 사용한다.
+
+&nbsp; def forward(self, x): #순전파 #순전파만 지정해주어도 pytorch에서는 역전파 과정을 매우 쉽게 할 수 있도록 해준다.
+
+&nbsp; &nbsp; out = self.layer1(x)
+
+&nbsp; &nbsp; out = self.layer2(out)
+
+&nbsp; &nbsp; out = out.view(out.size(0), -1) #  view() 함수는 텐서의 크기를 변경하는 데 사용 # 데이터를 완전 연결(fc) 층에 전달하기 위해 2차원 또는 3차원 텐서를 1차원 벡터로 평탄화 하는 과정이 필요함.
+&nbsp; &nbsp; out = self.fc(out)
+
+&nbsp; &nbsp; return out
+<br>model = CNN()
+
+model
+<br>CNN(<br>
+(layer1): Sequential(<br>
+(0): Conv2d(1, 16, kernel_size=(5, 5), stride=(1, 1), padding=(2, 2))<br>
+(1): ReLU()<br>
+(2): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)<br>
+)<br>
+(layer2): Sequential(<br>
+(0): Conv2d(16, 32, kernel_size=(5, 5), stride=(1, 1), padding=(2, 2))<br>
+(1): ReLU()<br>
+(2): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)<br>
+)<br>
+(fc): Linear(in_features=1568, out_features=10, bias=True)<br>
+)<br><br>학습하기<br>learning_rate = 0.01 # 파라미터를 얼마나 업데이트할 것인지를 결정. 학습률, step size. 너무 크지도 작지도 않아야 함.
+
+loss_func = torch.nn.CrossEntropyLoss() # 모델 예측과 실제값 간의 차이를 측정하는 손실함수.
+
+optimizer = &nbsp;torch.optim.Adam(model.parameters(), lr=learning_rate) # 손실함수를 통해 나온 을 최소화하기 위해 가중치를 업데이트하는 방법
+
+training_epochs = 10 # 전체 데이터셋을 몇 번 반복할 것인지 결정.
+<br># 반복의 횟수는 epoch과 batch의 크기에 따라 결정
+
+total_batch = len(loaders['train'])
+
+for epoch in range(training_epochs):
+
+&nbsp; avg_cost = 0
+
+&nbsp; for X, Y in loaders['train']:
+
+&nbsp; &nbsp; optimizer.zero_grad() # 학습에서, 역전파를 거칠 때 마다 각 .grad 값에 변화도가 저장이 되는데,  이어지는 다음 학습에서 .grad의 값을 0으로 초기화시켜주지 않으면 이전에 저장된 변화도 값이 다음 학습에 영향을 주기 때문에 원하는 방향으로 학습하기 힘들다. 그래서zero_grad를 통해 .grad 의 값들을 0으로 초기화시켜준다.
+
+&nbsp; &nbsp; pred = model(X) #순전파
+
+&nbsp; &nbsp; cost = loss_func(pred, Y) #손실함수계산
+
+&nbsp; &nbsp; cost.backward() #역전파
+
+&nbsp; &nbsp; optimizer.step() # 역전파 단계에서 수집된 변화도로 매개변수를 조정
+
+  
+
+&nbsp; &nbsp; avg_cost += cost / total_batch
+
+  
+
+&nbsp; print('[Epoch: {:&gt;4}] cost = {:&gt;.9}'.format(epoch + 1, avg_cost))
+&nbsp; # `epoch + 1` 값을 최소 4칸의 너비로 오른쪽 정렬하여 출력
+&nbsp; # `avg_cost` 값을 최소 9자리까지 나타내어 오른쪽 정렬하여 출력
+
+print('Learning Finished....&gt;_&lt;')
+<br>[Epoch: 1] cost = 0.0461711548<br>
+[Epoch: 2] cost = 0.0472225286<br>
+[Epoch: 3] cost = 0.0413064063<br>
+[Epoch: 4] cost = 0.0417594947<br>
+[Epoch: 5] cost = 0.0395734794<br>
+[Epoch: 6] cost = 0.0441303253<br>
+[Epoch: 7] cost = 0.0408433564<br>
+[Epoch: 8] cost = 0.043582622<br>
+[Epoch: 9] cost = 0.0441764817<br>
+[Epoch: 10] cost = 0.0412645154<br>
+Learning Finished....&gt;_&lt;]]></description><link>https://ejkiwi.github.io/2024_여름_모각코/20240806-모각코-활동-6회차.html</link><guid isPermaLink="false">2024_여름_모각코/20240806 모각코 활동 6회차.md</guid><pubDate>Wed, 07 Aug 2024 13:56:13 GMT</pubDate><enclosure url="https://ejkiwi.github.io/lib/media/MNIST.png" length="0" type="image/png"/><content:encoded>&lt;figure&gt;&lt;img src="https://ejkiwi.github.io/lib/media/MNIST.png"&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[20240813 모각코 활동 7회차]]></title><description><![CDATA[ 
  <br>오늘의목표<br>
 RESNET 실습 - CIFAR10 이미지 분류<br>
 양자화 공부<br>#필요한 모듈 불러오기
@@ -238,509 +739,7 @@ chat.append(
 response = pipe(chat, max_new_tokens=512)
 print(response[0]['generated_text'][-1]['content'])
 
-]]></description><link>https://ejkiwi.github.io/20240813-모각코-활동-7회차.html</link><guid isPermaLink="false">20240813 모각코 활동 7회차.md</guid><pubDate>Wed, 25 Sep 2024 07:11:10 GMT</pubDate></item><item><title><![CDATA[20240806 모각코 활동 6회차]]></title><description><![CDATA[ 
- <br>오늘의목표<br>
-CNN 실습 - MNIST 이미지 분류 ( RESNET은 7회차에 진행할 예정 )<br>import torch #pytorch 가져오기
-Copy<br>데이터 가져오기<br>#데이터셋불러오고 텐서로 바꿔주기
-
-from torchvision import datasets #데이터셋 불러오고
-
-from torchvision.transforms import ToTensor #텐서로 바꿔주기
-
-  
-
-#datasets에서 MNIST 가져와서 훈련데이터와 테스트데이터 가져와주기.
-
-#datasets.MNIST(root - 데이터가 저장될 경로, train - train이 true 이면 train data이고 false면 test data, download - 데이터 없으면 인터넷에서 다운로드해줌 , transform - transform을 ToTensor로 지정해주지 않으면 텐서의 형식이 아닌, PIL이미지로 데이터가 가져와지게 된다)
-
-  
-
-train_data = datasets.MNIST(
-
-&nbsp; &nbsp; root = "data",
-
-&nbsp; &nbsp; train = True, #train data를 다운로드
-
-&nbsp; &nbsp; transform = ToTensor(),
-
-&nbsp; &nbsp; download = True
-
-)
-
-test_data = datasets.MNIST(
-
-&nbsp; &nbsp; root = 'data',
-
-&nbsp; &nbsp; train = False, #test data를 다운로드
-
-&nbsp; &nbsp; transform = ToTensor()
-
-)
-Copy<br>데이터 확인하기<br>#학습데이터 확인
-
-print(train_data)
-
-print(train_data.data.size())
-
-# 데이터셋의 이름은 MNIST
-
-# 데이터의 수는 60000개
-
-# 훈련데이터
-
-# StandardTransform(데이터셋에 일관되게 적용되는 변환의 표준을 정의) -&gt; Transform: ToTensor() #이미지 데이터들을 모두 일관되게 텐서 형태로 변환하겠다는 것을 의미.
-
-
-#테스트데이터 확인
-
-print(test_data)
-
-print(test_data.data.size())
-
-#데이터의 수가 10000 인 것과 테스트데이터라는 것을 제외하면 나머지 속성은 학습데이터와 동일함.
-Copy<br>#데이터 시각적으로 확인
-
-import matplotlib.pyplot as plt #시각적 확인을 위해 matplotlib을 사용.
-
-fig, ax = plt.subplots() # fig -&gt; 데이터가 담기는 프레임 / ax -&gt; 실제 데이터가 그려지는 캔버스
-
-ax.imshow(train_data.data[0], cmap='gray') #데이터의 모습
-
-
-
-#이미지 위에 각 픽셀 값을 표시해서 나타내보기
-
-for i in range(train_data.data[0].shape[0]): # i와j는 텍스트를 표시할 위치를 지정하기 위함.
-
-&nbsp; for j in range(train_data.data[0].shape[1]):
-
-&nbsp; &nbsp; c = 1 if train_data.data[0][i, j].item() &lt; 125 else 0 # 이미지의 각 픽셀 값( train_data.data[0][i,j].item() )이 125보다 작으면 c = 1 흰색을 사용, 크면 c = 0 검정 사용.
-
-&nbsp; &nbsp; ax.text(j, i, str(train_data.data[0][i, j].item()), color=(c, c, c), ha='center', va='center', fontsize=5) # text()를 사용하여 이미지 위에 텍스트 그리기
-
-  
-
-plt.title("%i" % train_data.targets[0])
-
-plt.show
-Copy<br><img alt="mnist_1" src="https://ejkiwi.github.io/lib/media/MNIST.png" referrerpolicy="no-referrer"><br>데이터 준비하기<br>from torch.utils.data import DataLoader
-# DataLoader -&gt; &nbsp;데이터를 미니배치 형태로 만들어서 우리가 실제로 학습할 때 이용할 수 있도록 함.
-#DataLoader(dataset 데이터 , batch_size=1 한 번의 배치 안에 있는 샘플 사이즈, shuffle=False 데이터셋을 섞어서 데이터가 학습되는 순서를 바꿈, num_workers=0 동시에 처리하는 프로세서의 수. 하나 더 추가하면 20%정도 속도가 빨라짐.)
-#배치 학습 -&gt; 전체 데이터를 n등분 하여 학습.
-
-loaders = {
-
-&nbsp; &nbsp; 'train' : torch.utils.data.DataLoader(train_data,
-
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; batch_size=100,
-
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; shuffle=True,
-
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; num_workers=1),
-
-&nbsp; &nbsp; 'test' : torch.utils.data.DataLoader(test_data,
-
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;batch_size=100,
-
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;shuffle=True,
-
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;num_workers=1)
-
-}
-
-loaders
-Copy<br>CNN 모델 설정하기<br>class CNN(torch.nn.Module):
-
-  
-
-&nbsp; def __init__(self):
-
-&nbsp; &nbsp; super(CNN, self).__init__()
-
-&nbsp; &nbsp; self.layer1 = torch.nn.Sequential(
-
-&nbsp; &nbsp; &nbsp; &nbsp; torch.nn.Conv2d(1, 16, kernel_size=5, stride=1, padding=2), #컨볼루션 레이어(합성곱층) #1차원(1개채널) 데이터를 받아 16개의 feature(16개의채널)로 나누겟다!!임.
-
-&nbsp; &nbsp; &nbsp; &nbsp; torch.nn.ReLU(), #ReLU층
-
-&nbsp; &nbsp; &nbsp; &nbsp; torch.nn.MaxPool2d(kernel_size=2, stride=2)) #풀링층
-
-&nbsp; &nbsp; self.layer2 = torch.nn.Sequential(
-
-&nbsp; &nbsp; &nbsp; &nbsp; torch.nn.Conv2d(16, 32, kernel_size=5, stride=1, padding=2),
-
-&nbsp; &nbsp; &nbsp; &nbsp; torch.nn.ReLU(),
-
-&nbsp; &nbsp; &nbsp; &nbsp; torch.nn.MaxPool2d(kernel_size=2, stride=2))
-&nbsp; &nbsp; &nbsp; &nbsp; 
-&nbsp; &nbsp; &nbsp; &nbsp;
-&nbsp; &nbsp; &nbsp; &nbsp; # layer 1, layer2 층까지는 이미지를 형상으로 분할하고 분석하는 부분
-&nbsp; &nbsp; &nbsp; &nbsp; # 다음 fc 층에서는 이미지를 분류 예측하는 부분.
-&nbsp; &nbsp; &nbsp; &nbsp; 
-
-&nbsp; &nbsp; self.fc = torch.nn.Linear(32 * 7 * 7, 10, bias=True) #32*7*7만큼의 입력을 linear레이어에 의해 계산되게 해서... 10개의 출력( MNIST 이미지를 0부터 9까지 분류해야하기때문 )이 나오도록 함.
-
-&nbsp; &nbsp; torch.nn.init.xavier_uniform_(self.fc.weight) # 신경망의 가중치를 초기화 ( 신경망의 가중치를 학습 전에 적절한 값으로 설정하는 과정 )
-
-
-
-&nbsp; &nbsp; # __init__에서는 필요한 레이어들을 정의내렸다고 볼 수 있음.
-&nbsp; &nbsp; # 아래 forward(얘가 실제적인 모델의 형태가 됨)에서 사용한다.
-
-&nbsp; def forward(self, x): #순전파 #순전파만 지정해주어도 pytorch에서는 역전파 과정을 매우 쉽게 할 수 있도록 해준다.
-
-&nbsp; &nbsp; out = self.layer1(x)
-
-&nbsp; &nbsp; out = self.layer2(out)
-
-&nbsp; &nbsp; out = out.view(out.size(0), -1) #  view() 함수는 텐서의 크기를 변경하는 데 사용 # 데이터를 완전 연결(fc) 층에 전달하기 위해 2차원 또는 3차원 텐서를 1차원 벡터로 평탄화 하는 과정이 필요함.
-&nbsp; &nbsp; out = self.fc(out)
-
-&nbsp; &nbsp; return out
-Copy<br>model = CNN()
-
-model
-Copy<br>CNN(<br>
-(layer1): Sequential(<br>
-(0): Conv2d(1, 16, kernel_size=(5, 5), stride=(1, 1), padding=(2, 2))<br>
-(1): ReLU()<br>
-(2): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)<br>
-)<br>
-(layer2): Sequential(<br>
-(0): Conv2d(16, 32, kernel_size=(5, 5), stride=(1, 1), padding=(2, 2))<br>
-(1): ReLU()<br>
-(2): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)<br>
-)<br>
-(fc): Linear(in_features=1568, out_features=10, bias=True)<br>
-)<br><br>학습하기<br>learning_rate = 0.01 # 파라미터를 얼마나 업데이트할 것인지를 결정. 학습률, step size. 너무 크지도 작지도 않아야 함.
-
-loss_func = torch.nn.CrossEntropyLoss() # 모델 예측과 실제값 간의 차이를 측정하는 손실함수.
-
-optimizer = &nbsp;torch.optim.Adam(model.parameters(), lr=learning_rate) # 손실함수를 통해 나온 을 최소화하기 위해 가중치를 업데이트하는 방법
-
-training_epochs = 10 # 전체 데이터셋을 몇 번 반복할 것인지 결정.
-Copy<br># 반복의 횟수는 epoch과 batch의 크기에 따라 결정
-
-total_batch = len(loaders['train'])
-
-for epoch in range(training_epochs):
-
-&nbsp; avg_cost = 0
-
-&nbsp; for X, Y in loaders['train']:
-
-&nbsp; &nbsp; optimizer.zero_grad() # 학습에서, 역전파를 거칠 때 마다 각 .grad 값에 변화도가 저장이 되는데,  이어지는 다음 학습에서 .grad의 값을 0으로 초기화시켜주지 않으면 이전에 저장된 변화도 값이 다음 학습에 영향을 주기 때문에 원하는 방향으로 학습하기 힘들다. 그래서zero_grad를 통해 .grad 의 값들을 0으로 초기화시켜준다.
-
-&nbsp; &nbsp; pred = model(X) #순전파
-
-&nbsp; &nbsp; cost = loss_func(pred, Y) #손실함수계산
-
-&nbsp; &nbsp; cost.backward() #역전파
-
-&nbsp; &nbsp; optimizer.step() # 역전파 단계에서 수집된 변화도로 매개변수를 조정
-
-  
-
-&nbsp; &nbsp; avg_cost += cost / total_batch
-
-  
-
-&nbsp; print('[Epoch: {:&gt;4}] cost = {:&gt;.9}'.format(epoch + 1, avg_cost))
-&nbsp; # `epoch + 1` 값을 최소 4칸의 너비로 오른쪽 정렬하여 출력
-&nbsp; # `avg_cost` 값을 최소 9자리까지 나타내어 오른쪽 정렬하여 출력
-
-print('Learning Finished....&gt;_&lt;')
-Copy<br>[Epoch: 1] cost = 0.0461711548<br>
-[Epoch: 2] cost = 0.0472225286<br>
-[Epoch: 3] cost = 0.0413064063<br>
-[Epoch: 4] cost = 0.0417594947<br>
-[Epoch: 5] cost = 0.0395734794<br>
-[Epoch: 6] cost = 0.0441303253<br>
-[Epoch: 7] cost = 0.0408433564<br>
-[Epoch: 8] cost = 0.043582622<br>
-[Epoch: 9] cost = 0.0441764817<br>
-[Epoch: 10] cost = 0.0412645154<br>
-Learning Finished....&gt;_&lt;]]></description><link>https://ejkiwi.github.io/20240806-모각코-활동-6회차.html</link><guid isPermaLink="false">20240806 모각코 활동 6회차.md</guid><pubDate>Wed, 07 Aug 2024 13:56:13 GMT</pubDate><enclosure url="https://ejkiwi.github.io/lib/media/MNIST.png" length="0" type="image/png"/><content:encoded>&lt;figure&gt;&lt;img src="https://ejkiwi.github.io/lib/media/MNIST.png"&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[20240730 모각코 활동 5회차]]></title><description><![CDATA[ 
- <br>오늘의목표<br>
-1.cnn공부 - 합성곱 계층에서의filter, Padding에 대해 더 알아보기.<br>
-2.resnet공부 - Residual Block과 Skip-Connection 에 대해 더 깊이 알아보기<br>합성곱 계층에서의 filter<br>
-CNN에서 filter는 커널(n * m의 행렬)와 같은 의미이다. (mask라고도 불린다.)<br>
-filter를 사용하는 이유는 사진에서 feature(특징)를 뽑아내기 위함이다.<br>
-<br>입력 데이터의 전체 이미지에서, filter를 통해 천제 이미지를 순환하며, 특정 filter모양과 일치할수록 더 큰 값을 가지게 될 것인데, 이는 전체 이미지서 특정 filter와 유사한 모양을 가진 부분에 대한 feature들만 얻게 된다는 것을 의미한다. =&gt; 특정 filter에 부합하는 feature정보를 얻는 과정.
-<br>Padding<br>
-cnn구조에서, 합성곱층을 지나게 되면, 합성곱 연산으로 인해서 Feature Map의 크기는 입력데이터보다 크기가 작아지게 된다. 이렇게 크기가 작아지는것을 피하기 위해서 Padding 이라는 방법을 사용할 수 있다.<br>
-<br>zero padding : 입력 데이터(이미지) 주위를 0으로 둘러주는 padding의 방법이다.<br>
-<img alt="zero padding" src="https://ejkiwi.github.io/lib/media/zero_Padding.png" referrerpolicy="no-referrer">
-
-<br>P : padding layer의 수
-<br>n : 이미지의 크기가 n * n
-<br>f : 커널의 크기(filter의 크기)가  f * f
-<br>(n+2p) * (n+2p) : 패딩된 이미지의 크기
-<br>((n + 2p – f + 1) * (n + 2p – f + 1)) :  합성곱층을 지난 출력 이미지의 크기
-
-
-<br>padding이 필요한 이유
-
-<br>이미지 데이터의 축소를 막을 수 있다. -  여러번의 계산을 거쳐야 하는데 초반부터 이미지가 너무 작아져버린다면 학습을 별로 하지 못하고 끝나버릴 수 있기 때문에 padding을 통해 이미지의 크기를 조절해줘야한다.
-<br>모서리에 있는 중요한 정보를 충분히 활용할 수 있다. - padding을 사용하지 않는 경우, 모서를 학습할 기회가 적어지게 된다. 만약 중요한 정보가 모서리쪽에 있다면, 모델의 성능이 떨어지기 때문에 padding을 사용하여 모서리의 정보들도 충분히 학습할 수 있도록 해주어야 한다.<br>
-<img alt="패딩과 모서리~" src="https://ejkiwi.github.io/lib/media/CNN_Padding_Edge.png" referrerpolicy="no-referrer">
-
-
-<br>Valid Padding과 Same Padding : 각각 순서대로 패딩하지 않는 것, 입력데이터와 출력데이터가 동일하도록 하는 패딩을 뜻한다.
-<br>Residual Block 과 Skip-Connection<br>
-Residual Block은 층이 깊어지더라도 성능이 뒤떨어지지 않게 하기 위해 제시된 것.<br>
-Residual 은 "잔여" 라는 뜻을 가지고 있는데, x를 입력 H(x)를 x의 분포로 가정하면 residual은 최종으로 구하고자 하는 H(x)와 x의 차이로 볼 수 있다.<br>
-즉, Residual = R(x) = H(x) - x 가 되며 H(x) = R(x) + x 로 정리가능하다. <br>
-<br><img alt="residualblock" src="https://ejkiwi.github.io/lib/media/residual%20block.png" referrerpolicy="no-referrer">
-<br>위 신경망층에서는 F(x)r가 R(x)의 역할을 하기 때문에 Residual Block이라 불리게 된다.<br>
-Residual Block은 그레디언트 소실 문제를 약화시키고, 이에 따라 신경망의 깊이가 깊어져도 성능이 떨어지지 않게 되는 것.
-<br>그레디언트 소실 문제<br>
-- 신경망을 학습시는 과정에서 -&gt; 역전파 알고리즘을 통해 출력층에서 입력층으로 손실함수에 대한 그레디언트를 전파하고, 경사 하강법을 통해 이 그레디언트를 사용하여 각 파라미터를 수정하는 단계를 거치게 됨.<br>
--  이 때 신경망의 하위층으로 진행될수록 그레디언트가 점점 작아지게 되는 문제가 그레디언트 소실 문제이다.<br>
-residual block에서는 x, x+1, x+2 층이 있다고 할 때, x+2층은 x+1층뿐만 아니라 x로부터도 정보를 받을 수 있게 된다. 따라서 역전파 알고리즘이 실행될 때 그레디언트가 작아지는것을 어느정도 막아주는 효과가 발생한다.<br>
-이러한 residual block의 방식을 하나의 합성곱층을 기준으로 살펴보았을 때,<br>
-한 층의 입력값을 출력값과 합쳐서 다음 층으로 넘겨주는 방식이 그 층의 입력값이 해당 층을 통과하지 않고 다음 층으로 넘어가는 것과 같기 때문에 Skip Connection이라 부르게 되는 것이다.<br>
-즉, Residual Block의 핵심은 Skip Connection이라 할 수 있다.
-]]></description><link>https://ejkiwi.github.io/20240730-모각코-활동-5회차.html</link><guid isPermaLink="false">20240730 모각코 활동 5회차.md</guid><pubDate>Wed, 31 Jul 2024 12:40:41 GMT</pubDate><enclosure url="https://ejkiwi.github.io/lib/media/zero_Padding.png" length="0" type="image/png"/><content:encoded>&lt;figure&gt;&lt;img src="https://ejkiwi.github.io/lib/media/zero_Padding.png"&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[20240716 모각코 활동 3회차]]></title><description><![CDATA[ 
- <br>오늘의 목표<br>
-1.파이토치 공부하기  - 실습해보기<br>
-2.선배님의 프로젝트 코드 절반 분석하기 - resnet 부분<br>파이토치 실습<br>import torch #파이토치 불러오기
-from torch import nn #토치에서 nn 불러오기
-  
-
-#텐서 형태로 train데이터 가져오기
-x_train = torch.Tensor([1,2,3,4,5,6]).view(6,1)
-y_train = torch.Tensor([3,6,9,12,15,18]).view(6,1)
-
-  
-#MyNeuralNetwork 클래스 만들기. nn.Module이 부모클래스가 됨.
-class MyNeuralNetwork(nn.Module):
-&nbsp; def __init__(self):
-&nbsp; &nbsp; super().__init__()
-&nbsp; &nbsp; self.linear_relu_stack = nn.Sequential(nn.Linear(1,1))
-
-&nbsp; def forward(self, x):
-&nbsp; &nbsp; logits = self.linear_relu_stack(x)
-&nbsp; &nbsp; return logits
-
-
-#모델
-model = MyNeuralNetwork()
-#손실함수
-loss_function = nn.MSELoss()
-#옵티마이저
-optimizer = torch.optim.SGD(model.parameters(),lr=1e-2)
-
-nums_epoch = 2000
-
-
-#학습시키기
-for epoch in range(nums_epoch + 1):
-&nbsp; prediction = model(x_train)
-&nbsp; loss = loss_function(prediction, y_train)
-
-&nbsp; optimizer.zero_grad()
-&nbsp; loss.backward()
-&nbsp; optimizer.step()
-
-&nbsp; if epoch % 100 == 0:
-&nbsp; &nbsp; print('epoch = ', epoch, 'current loss = ', loss.item())
-Copy<br>#예측하기
-x_test = torch.Tensor([8,9,10,11]).view(4,1)
-pred = model(x_test)
-pred
-Copy<br>선배님의 프로젝트 코드<br>from huggingface_hub import hf_hub_download
-import wespeaker
-Copy<br>from huggingface_hub import hf_hub_download<br>
-huggingface_hub 라이브러리를 통해서 hf_hub_download함수를 가져와준다.<br>
-hf_hub_download함수를 통해서 모델을 다운로드 할 수 있다.<br>
-기본적으로, 함수에는 repo_id와 repo_type을 인자로 넘겨준다. (revision - 특정 버전의 파일을 다운로드 하고 싶을 시. / local_dir 특정 위치에 저장하고 싶을 시.)<br>
-import wespeaker<br>
-wespeaker을 가져와준다.<br> def get_resnet152():
-    model_id = "Wespeaker/wespeaker-voxceleb-resnet152-LM"
-    model_name = model_id.replace("Wespeaker/wespeaker-", "").replace("-", "_")
- 
-    root_dir = hf_hub_download(model_id, filename=model_name+".onnx").replace(model_name+".onnx", "")
-
-    import os
-    if not os.path.isfile(root_dir+"avg_model.pt"):
-        os.rename(hf_hub_download(model_id, filename=model_name+".pt"), root_dir+"avg_model.pt")
-    if not os.path.isfile(root_dir+"config.yaml"):
-        os.rename(hf_hub_download(model_id, filename=model_name+".yaml"), root_dir+"config.yaml")
-
-    resnet = wespeaker.load_model_local(root_dir)
-
-    #print("Compile model for the NPU")
-    #resnet.model = intel_npu_acceleration_library.compile(resnet.model)
-
-    def resnet152(ado, sample_rate=None):
-        if isinstance(ado, str):
-            return resnet.recognize(ado)
-        else:
-            return recognize(resnet, ado, sample_rate)
-
-    resnet152.__dict__['register'] = lambda *args, **kwargs: resnet.register(*args, **kwargs)
-
-    return resnet152
-Copy<br>분석<br>
-def get_resnet152():<br>
-get_resnet 152 라는 이름의 함수를 정의<br>model_id = "Wespeaker/wespeaker-voxceleb-resnet152-LM"<br>
-model_id라는 변수에 "Wespeaker/wespeaker-voxceleb-resnet152-LM"를 지정. 아마  모델 아이디에 모델의 이름을 저장한 것일 것.<br>moldelname = model.id.replace("Wespeaker/wespeaker-",").replace("-", " ")<br>
-model_name이라는 변수를 만들어서, model_id를 약간 변형시킨 이름으로 지정해줌. "voxceleb_resnet152_LM"이 될 것.<br>root_dir = hf_hub_download(model_id, filename = model_name+" .onnx").replace(model_name+" .onnx", "")<br>
-hf_hub_download : huggingface_hub 라이브러리를 통해서 가져왔던 함수. 함수를 사용해서 모델 파일을 다운로드하고, 다운로드한 파일을 root_dir에 저장함.<br>import os<br>
-os 모듈을 가져옴<br>
-os 모듈 : 파일 및 디렉토리 작업, 프로세스 및 스레드 관리, 시스템 정보와 관련한 작업들을 수행할 수 있는 모듈이다.<br>if not os.path.isfile(root_dir+"avg_model.pt"):<br>
-os.rename(hf_hub_download(model_id, filename=model_name+".pt"), root_dir+"avg_model.pt")<br>
-만약 avg_model.pt이름을 가진 파일이 없다면, 모델의 pt파일을 다운로드 한 뒤 이름을 avg_model.pt로 바꾸어서 root_dir 변수에 저장함.<br>
-os.path.isfile(path) : path가 파일인 경우 true를 리턴, 아니면 false를 리턴.<br>
-os.rename : 파일 또는 폴더의 이름을 간단히 변경할 수 있다.<br>if not os.path.isfile(root_dir+"config.yaml"):<br>
-os.rename(hf_hub_download(model_id, filename=model_name+".yaml"), root_dir+"config.yaml")<br>
-앞 코드와 같은 느낌인데, 만약 config.yaml파일이 없으면 모델의 yaml파일을 다운로드 한 뒤 이름을 바꾸어서 root_dir변수에 저장함.<br>resnet = wespeaker.load_model_local(root_dir)<br>
-resnet이라는 변수를 지정해줄건데, wespeaker 라이브러리의 load_model_local 함수를 사용할거임. 이 때 root_dir에 있는 파일들을 불러오게 됨.<br>def resnet152(ado, sample_rate=None):<br>
-if isinstance(ado, str):<br>
-return resnet.recognize(ado)<br>
-else:<br>
-return recognize(resnet, ado, sample_rate) 	 resnet152라는 함수를 정의해주는데, 이 함수는 입력으로 ado를 받음.<br>
-instance(객체, 타입) : isinstance함수는 지정된 객체(여기에서는 ado)가 지정된 타입이면 true를 반환하고 아니면 false를 반환한다.<br>
-ado가 문자열이라면  resnet.recognize(ado)를 리턴하고<br>
-그렇지 않다면  recognize(resnet, ado, sample_rate)을 리턴함.<br>(recognize함수는 이전에 지정해둔 함수이다.)<br>def recognize(model, pcm, sample_rate):
-    q = extract_embedding(model, pcm, sample_rate)
-    best_score = 0.0
-    best_name = ''
-    for name, e in model.table.items():
-        score = model.cosine_similarity(q, e)
-        if best_score &lt; score:
-            best_score = score
-            best_name = name
-        del score
-        gc.collect()
-    return {'name': best_name, 'confidence': best_score}
-Copy<br>resnet152.__dict__['register'] = lambda *args, **kwargs: resnet.register(*args, **kwargs)<br>
-resnet152라는 함수에 register라는 기능을 추가(대체?)<br>
-lambda함수를 통해서 resnet152에서 register메서드를 사용하려고 할 때, resnet객체의 register 메서드를 가져와서 사용하게 된다.<br>
-args, kwargs : 몇 개의 인자를 받아야 할지 정할 수 없을 때 args와 kwargs(keyword arguments)를 파라미터로 써줌. args 앞에 붙는  * 는 여러개의 인자를 묶어서 하나의 튜플로 묶어주고 이를 args에 할당해준다. kwargs 앞에 붙는 ** 는 여러개의 키워드 아규먼트들을 묶어서 딕셔너리로 만들어준다. <br>return resnet152<br>
-get_resnet152라는 함수는 resnet152를 반환함.<br>resnet152 = get_resnet152()
-print("INFO: ResNet152 Ready -", resnet152)
-Copy<br>분석<br>
-resnet152 = get_resnet152()<br>
-get_resnet152함수를 가져와서 resnet152함수에 저장함<br>
-print("INFO: ResNet152 Ready -", resnet152)<br>
-모델이 준비되었다는 메시지를 출력한 뒤, resnet152를 출력함.]]></description><link>https://ejkiwi.github.io/20240716-모각코-활동-3회차.html</link><guid isPermaLink="false">20240716 모각코 활동 3회차.md</guid><pubDate>Tue, 30 Jul 2024 04:01:59 GMT</pubDate></item><item><title><![CDATA[20240723 모각코 활동 4회차]]></title><description><![CDATA[ 
- <br>오늘의목표<br>
-1.cnn공부 - 정의와 구조 살펴보기<br>
-2.resnet공부 - 정의와 구조 살펴보기<br>딥 러닝 : 심층 신경망을 주로 다루는 ai분야. 심층 신경망은 신경망을 여러 계층으로 구성한 것.<br>
-기존 신경망의 큰 단점 : 입력 데이터의 구조 고려 안 함. -&gt; 이미지와 같은 공간적 구조를 가지는 데이터 다루기 적합하지 않음.<br>
-기존 신경망에서의 단점(공간적 구조 데이터 다루기 어려움)을 극복하기 위해 cnn 등장<br>CNN<br>
-합성곱 신경망<br>
--2차원 구조를 고려하는 신경망<br>
--가중치와 바이어스로 이루어진 뉴런으로 구성<br>
-- 입력데이터를 받고, 처리한 후 특정한 결과를 출력함.<br>
--입력 계층에 들어온 미가공 이미지 데이터에 해당하는 클래스를 예측하는 것이 목적.<br>
--예측된 클래스는 출력 계층의 결과 값 형태(클래스 점수 변환됨)로 출력됨.<br>
--계층의 종류<br>
-1. 입력층<br>
-- 미가공 이미지 데이터를 받음.<br>
-2. 합성곱층<br>
-- 합성곱 연산을 수행함.<br>
-- 커널(n  m의 행렬)로 이미지(높이  너비)를 처음부터 끝까지 겹쳐 훑는다. 겹쳐지는 부분의 각 이미지와 원소의 값을 곱해서 모두 더한 값을 출력함.<br>
-- 스트라이드 : 커널이 입력을 훑는데, 이 때의 보폭을 뜻함.<br>
-- 이 때 출력되는 것(입력으로부터 커널을 사용하여 합성곱 연산을 통해 나온 결과)은 '출력 특성 맵(output feature map)' 이라 함.<br>
-- CNN에서는 합성곱 계층의 입출력 데이터를 특성 맵(feature map) 이라 함.<br>
-- <img alt="cnn 연산 방법" src="https://ejkiwi.github.io/lib/media/cnn1.png" referrerpolicy="no-referrer"><br>
-3.ReLU층<br>
-- 인공신경망에서 사용되는 활성화함수 f(x) = max(0, x) -&gt; 입력값이 0보다 크면 그 값을 그대로 출력하고, 0 이하면 0을 출력.<br>
-4. 풀링층<br>
-- 특성 맵을 다운샘플링하여 특성 맵의 크기를 줄임.<br>
-- 합성곱 연산과 유사함 (커널과 스트라이드 개념이 존재)<br>
-- 최대풀링 : 커널과 겹치는 영역 안에서 최대값을 추출<br>
-- 평균풀링 : 커널과 겹치는 영역 안에서 평균값을 추출<br>RESNET<br>
-CNN의 한 종류<br>
--신경망의 깊이가 깊어짐에 따라 발생하는 훈련 문제를 해결하기 위해 '잔여학습'이라는 개념을 도입함.<br>
-- 훈련 문제 : 기존 모델들은 레이어를 깊게 쌓을수록 더 성능이 좋아질 것이라고 예상했지만 실제로는 20층 이상부터 성능이 낮아지는 현상이 발생.<br>
-- 잔여학습 : 스킵연결(입력값이 일정층들을 건너뛰어서 출력에 더할 수 있게 하는 역할) -&gt; 기존신경망은 k번째 층과 (i+1)번째 층의 연결로 이루어져있는데, resnet은 (i+r)층의 연결을 허용(shortcut connection).<br>
-- <img alt="ResNet 구조" src="https://ejkiwi.github.io/lib/media/resnet.png" referrerpolicy="no-referrer"><br>
--최대 152개 층까지 쌓을 수 있게 됨.<br>
-<img alt="cnn2" src="https://ejkiwi.github.io/lib/media/cnn2.png" referrerpolicy="no-referrer">]]]></description><link>https://ejkiwi.github.io/20240723-모각코-활동-4회차.html</link><guid isPermaLink="false">20240723 모각코 활동 4회차.md</guid><pubDate>Tue, 23 Jul 2024 13:38:23 GMT</pubDate><enclosure url="https://ejkiwi.github.io/lib/media/cnn1.png" length="0" type="image/png"/><content:encoded>&lt;figure&gt;&lt;img src="https://ejkiwi.github.io/lib/media/cnn1.png"&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[20240707 모각코 활동 1회차]]></title><description><![CDATA[ 
- <br>오늘의 목표<br>
-1.모각코 활동 동안 공부할 주제 전체적으로 톺아보기<br>
-2.팀원들과 친해지기<br>파이토치<br>
-<br>python을 바탕으로 제작된, 딥러닝과  인공지능 분야에서 주로 활용되는 라이브러리
-<br>pytorch의 연산은 tensor를 기본으로 하여 작동
-<br>tensor : 파이토치의 기본 데이터 타입. 배열이나 행렬과 유사한 구조(다차원 배열)이다.
-<br>파이토치를 기반으로 구성된 모델은 학습을 위한 그래디언트를 자동으로 계산한다. -&gt; 자동 미분
-<br>그래디언트 : 벡터 미분의 결과 (=함수의 기울기, 각 변수에 대한 변화율)
-<br>선배님의 프로젝트<br>
-<br><a data-tooltip-position="top" aria-label="https://github.com/b-re-w/2024-1_BPL_STalk_Model_Research" rel="noopener" class="external-link" href="https://github.com/b-re-w/2024-1_BPL_STalk_Model_Research" target="_blank">2024-1_BPL_STalk_Model_Research</a>
-<br>CNN 모델<br>
-<br>2차원 데이터 (이미지 등)의 패턴을 인식하고 분석하는 데 사용되는 딥러닝 모델.
-<br>여러개의 층으로 구성됨.
-<br>인간의 시신경 구조를 모방한 구조임
-<br>이미지의 
-<br>RESNET 모델<br>
-<br>CNN 모델에 잔차 연결 개념을 도입한 것.
-<br>잔차 연결 : 각 층의 출력을 다음 층으로 직접 보내는 대신에, 입력을 더한 뒤 다음 층으로 전달하는 연결.
-]]></description><link>20240707-모각코-활동-1회차.html</link><guid isPermaLink="false">20240707 모각코 활동 1회차.md</guid><pubDate>Mon, 15 Jul 2024 07:48:10 GMT</pubDate></item><item><title><![CDATA[20240709 모각코 활동 2회차]]></title><description><![CDATA[ 
- <br>오늘의 목표<br>
-1.파이토치 공부하기 - youtube에 있는 파이토치 설명 강좌(<a rel="noopener" class="external-link" href="https://youtube.com/playlist?list=PLS8gIc2q83Oit-utRso2iblvt00fZOw85&amp;si=i0CZi4e5g_dVJ3dx" target="_blank">https://youtube.com/playlist?list=PLS8gIc2q83Oit-utRso2iblvt00fZOw85&amp;si=i0CZi4e5g_dVJ3dx</a>) 1,2,3강 들으며 공부<br>
-2.선배님의 프로젝트 코드 절반 분석하기 - whisper 부분<br>파이토치<br>
-al분야에서 google tensorflow와 함께 딥러닝 모델을 구축하고 학습하는 데 가장 많이 사용되고 있는 오픈 소스 기반의 딥러닝 프레임워크임.<br>
-<br>오픈소스 : 개방형 협업을 장려하는 소프트웨어 개발 모델
-<br>프레임워크 : 소프트웨어 개발에 있어 하나의 뼈대와 같은 역할을 하는 것으로, 목적에 필요한 것을 고민할 필요 없이 이용할 수 있도록 일괄로 가져다 쓰도록 만들어 놓은 구조화된 틀임.<br>
-텐서 : 파이토치의 기본 데이터 타입
-<br>배열이나 행렬과 유사한 자료 구조이다
-<br>일반적으로는 1차원 - 벡터 , 2차원 - 행렬, 3차원 이상 - 벡터 이지만, 파이토치에서는 입력과 출력 그리고 학습에 필요한모든 데이터들을 모두 텐서 데이터타입으로 정의하고 있다.
-<br>텐서의 속성으로는 모양,자료형,저장되는 위치가 있다
-<br>보통 저장되는 위치는 cpu인데, gpu를 사용할 수 있다면, .to("cuda")를 사용해서 텐서를 gpu로 이동시킬 수 있다.
-
-<br>gpu : 컴퓨터 그래픽을 처리하는 장치로 그래픽 카드를 구성하는 가장 중요한 핵심 요소.
-
-
-<br>1.파이썬의 리스트 데이터로부터 직접 텐서를 만들 수 있다.<br>
-- listdata = [[10,20],[30,40]] 	tensor1 = torch.Tensor(listdata)`
-<br>2.파이썬의 넘파이 데이터로부터 직접 텐서를 만들 수도 있다.(넘파이로만들어진건 보통 int로 생성되기때문에 원래 데이터가 float의 형태인 경우, 캐스팅해주는 작업이 필요하기도 하다.)
-<br>3.파이썬의 랜덤 데이터로부터 직접 텐서를 만들 수도 있다.<br>
-- tensor3 = torch.rand(2,2) -&gt; rand()메서드는 0~1사이의 균일 분포 랜덤값을 생성함 ( randn()메서드는 정규분포를 가지는 랜덤값을 생성 )
-<br>텐서를 넘파이로 바꿀 수도 있다.<br>
-- tensor.numpy()
-<br>인덱싱과 슬라이싱이 가능하다
-<br>elment-wise product 연산 
-<br>matrix multiplication 연산 (행렬곱)
-<br>텐서를 합칠 수 있다. Tensor Concatenate (dim=0 세로, dim=1 가로)<br>
-파이토치 딥러닝 모델 구조 :<br>
-1.데이터정의<br>
-- 기본 데이터타입인 TENSOR로 생성해야함.<br>
-- TensorDataset(x_train,y_train) : 텐서 데이터셋 생성<br>
-- DataLoader(dataset, batch_size, shuffle) : 미니 배치 학습과 데이터 셔플, 멀티 프로세싱 등을 간단하게 수행할 수 있음.<br>
-- 미니 배치 학습 : 전체 데이터를 n등분 하여 각각의 학습 데이터를 배치 방식으로 학습시키는 것.<br>
-- 데이터 셔플 : train데이터와test데이터 간의 동일한 분포를 가지도록 섞어는 것.<br>
-- 멀티 프로세싱 : 여러 작업을 별도의 프로세스를 생성 후 병렬처리를 하는 과정을 거치기 때문에 더 빠르게 결과를 얻을 수 있다.<br>
-2.모델구축<br>
-- nn.Module을 상속받는 class를 생성하여 정의하는 것이 일반적이다.<br>
-- 클래스 속 __init__함수에서 계층(신경망 모델을 구성하는)을 정의.<br>
-- 클래스 속 forward 함수에서 신경망에 데이터 전달하기를 수하고, 결과값을 리턴함<br>
-3.피드포워드<br>
-- 모델 학습을 위해서는 피드 포워드 계산값과 정답의 차이 계산이 필요  -&gt; 이 계산을 위해서는 손실함수와 옵티마이저가 필요함.<br>
-- 손실함수 : MSE 등<br>
-- 옵티마이저 : SDG, ADAM<br>
-4.손실함수계산<br>
-- nn.MSELoss(model(x_train),y_train) : 피드포워드 계산 값과 정답과의 오차 계산.<br>
-- 이 때, model에 데이터를 전달하면 model 클래스 안에 있는 forward()함수자동으로 forward()함수를 호출하기 때문에 우리가 따로 호출해줄 필요가 없다.<br>
-5.모델학습<br>
--역전파 코드 : 학습이 진행됨에 따라서 모델 파라미터(가중치와 바이어스)를 업데이트하면서 최적화 시킨다<br>
-- optimizer.zero.grad()<br>
-- loss.backward()<br>
-- optimizer.step()<br>
-- 모델(model) : 각 층을 포함하고 있는 인공신경망 그 자체 (이를 레고처럼 순차적으로 쌓기 -&gt; CNN, RNN 등 다양한 모델 구축 가능)<br>
-- 3&gt;4&gt;5의 반복 -&gt; 딥러닝 학습<br>
-- 손실함수가 최소가 될 때까지 모델 파라미터(가중치, 바이어스) 값을 찾아감.
-<br>선배님 프로젝트 분석 - whisper<br>
-1.from faster_whisper import WhisperModel<br>
-2.def get_whisper() :  	 3.   model_size = "medium"  #@param ['tiny', 'base', 'small', 'medium', 'large', 'large-v2', 'large-v3'] 	 4.   compute_type = "int8"  #@param ['float16', 'int8']<br>
-5.   return WhisperModel(model_size, device=DEVICE, cpu_threads=12, compute_type=compute_type).transcribe<br>1: faster_whisper 에서 WhisperModel 모듈 불러오기<br>
-2: get_whisper 라는 이름의 함수 설정하기<br>
-3: model_size는 "medium"이다. model_size가 가질 수 있는 옵션으로는 "tiny","base","small","medium","large","large-v3" 이 있다. -&gt; model_size는 모델의 크기를 뜻한다.<br>
-4: compute_type은 "int8"이다. compute_type이 가질 수 있는 옵션으로는 "float16","int8"이 있다. -&gt; compute_type은 계산 유형을 뜻한다.<br>
-5: WhisperModel은 4가지의 매개변수를 사용하는데, 여기에서 model_size는 앞서 정한 크기와 같고, device는 모델이 실행될 장치를 지정한다. cpu_threads는 CPU의 스레드 수를 뜻한다. compute_type또한 앞서 정한 계산 유형과 같다. 이 때 .transcribe는 모델의 음성 인식 기능을 호출해서 음성을 텍스트로 변환해준다.]]></description><link>20240709-모각코-활동-2회차.html</link><guid isPermaLink="false">20240709 모각코 활동 2회차.md</guid><pubDate>Mon, 15 Jul 2024 06:27:57 GMT</pubDate></item><item><title><![CDATA[모.구.모.구 모각코 활동]]></title><description><![CDATA[ 
+]]></description><link>https://ejkiwi.github.io/2024_여름_모각코/20240813-모각코-활동-7회차.html</link><guid isPermaLink="false">2024_여름_모각코/20240813 모각코 활동 7회차.md</guid><pubDate>Wed, 25 Sep 2024 07:11:10 GMT</pubDate></item><item><title><![CDATA[모.구.모.구 모각코 활동]]></title><description><![CDATA[ 
  <br>팀 모각코 목표 : 1. 절대 포기하지 않기, 2. 모르는 거 그냥 넘어가지 않기<br>나의 모각코 활동 다짐 : 활동 계획을 완벽히 마무리 할 수 있도록 노력하겠습니다!<br>나의 모각코 활동 계획<br>
 <br>7월 7일
 
@@ -759,4 +758,6 @@ al분야에서 google tensorflow와 함께 딥러닝 모델을 구축하고 학�
 <br>RESNET 구조 공부하기
 
 
-]]></description><link>모.구.모.구-모각코-활동.html</link><guid isPermaLink="false">모.구.모.구 모각코 활동.md</guid><pubDate>Fri, 05 Jul 2024 08:47:48 GMT</pubDate></item></channel></rss>
+]]></description><link>https://ejkiwi.github.io/2024_여름_모각코/모.구.모.구-모각코-활동.html</link><guid isPermaLink="false">2024_여름_모각코/모.구.모.구 모각코 활동.md</guid><pubDate>Tue, 26 Nov 2024 14:45:13 GMT</pubDate></item><item><title><![CDATA[Obsidian template for using github.io]]></title><description><![CDATA[ 
+ <br>]]></description><link>https://ejkiwi.github.io/readme.html</link><guid isPermaLink="false">README.md</guid><pubDate>Wed, 26 Jun 2024 12:40:01 GMT</pubDate></item><item><title><![CDATA[index]]></title><description><![CDATA[ 
+ <br>]]></description><link>https://ejkiwi.github.io/index.html</link><guid isPermaLink="false">index.md</guid><pubDate>Tue, 23 Jul 2024 13:03:33 GMT</pubDate></item></channel></rss>
