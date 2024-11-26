@@ -1,4 +1,4 @@
 ---
-sticker: emoji//1f604
+sticker: emoji//1f439
 ---
 #### Main Page
