@@ -40,9 +40,9 @@
   "showRibbon": true,
   "deleteFileOption": "trash",
   "expandedSpaces": [
-    "/",
     "//docs/docs/lib/docs/lib/media",
-    "//docs/docs/lib"
+    "//docs/docs/lib",
+    "/"
   ],
   "expandFolderOnClick": true,
   "menuTriggerChar": "/",

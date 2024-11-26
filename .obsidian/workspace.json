@@ -74,7 +74,7 @@
             }
           },
           {
-            "id": "75c7c1e0a41d7f31",
+            "id": "71944ecf71e36a69",
             "type": "leaf",
             "state": {
               "type": "mk-path-view",
@@ -179,6 +179,9 @@
   },
   "active": "7a7d6dbad700326c",
   "lastOpenFiles": [
+    "docs/index.html",
+    "docs/readme.html",
+    "index.md",
     "20240707 모각코 활동 1회차.md",
     "20240813 모각코 활동 7회차.md",
     "20240806 모각코 활동 6회차.md",
@@ -195,7 +198,6 @@
     "docs/lib/styles/other-plugins.css",
     "Tags",
     "test.md",
-    "index.md",
     "README.md",
     "이름 없는 보드.md",
     "이름 없는 보드 1.md",
@@ -206,7 +208,6 @@
     "docs/lib/styles/global-variable-styles.css",
     "docs/lib/styles",
     "docs/lib/scripts/graph-data.js",
-    "docs/lib/scripts/minisearch.js",
     "docs/lib/media/favicon.png",
     "docs/lib/media/3d6c1bdc4d87cde4de67.svg",
     "docs/lib/media/874d8b8e340f75575caa.svg",

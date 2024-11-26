@@ -1,4 +1,5 @@
-<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[ejkiwi.github.io]]></title><description><![CDATA[Obsidian digital garden]]></description><link>https://ejkiwi.github.io/</link><image><url>https://ejkiwi.github.io/lib/media/favicon.png</url><title>ejkiwi.github.io</title><link>https://ejkiwi.github.io/</link></image><generator>Webpage HTML Export plugin for Obsidian</generator><lastBuildDate>Sat, 17 Aug 2024 15:49:14 GMT</lastBuildDate><atom:link href="https://ejkiwi.github.io/lib/rss.xml" rel="self" type="application/rss+xml"/><pubDate>Sat, 17 Aug 2024 15:49:13 GMT</pubDate><ttl>60</ttl><dc:creator/><item><title><![CDATA[20240813 모각코 활동 7회차]]></title><description><![CDATA[ 
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[ejkiwi.github.io]]></title><description><![CDATA[Obsidian digital garden]]></description><link>https://ejkiwi.github.io/</link><image><url>https://ejkiwi.github.io/lib/media/favicon.png</url><title>ejkiwi.github.io</title><link>https://ejkiwi.github.io/</link></image><generator>Webpage HTML Export plugin for Obsidian</generator><lastBuildDate>Tue, 26 Nov 2024 14:33:49 GMT</lastBuildDate><atom:link href="https://ejkiwi.github.io/lib/rss.xml" rel="self" type="application/rss+xml"/><pubDate>Tue, 26 Nov 2024 14:33:49 GMT</pubDate><ttl>60</ttl><dc:creator/><item><title><![CDATA[index]]></title><description><![CDATA[ 
+ <br>]]></description><link>https://ejkiwi.github.io/index.html</link><guid isPermaLink="false">index.md</guid><pubDate>Tue, 23 Jul 2024 13:03:33 GMT</pubDate></item><item><title><![CDATA[20240813 모각코 활동 7회차]]></title><description><![CDATA[ 
  <br>오늘의목표<br>
 RESNET 실습 - CIFAR10 이미지 분류<br>
 양자화 공부<br>#필요한 모듈 불러오기
@@ -7,7 +8,7 @@ import torch
 import torch.nn as nn #다양한 종류의 레이어 제공 -&gt; 모델 만들기 도우미!
 import torch.nn.functional as F #활성화 함수, 손실함수 등을 함수 형태로 제공.
 import torch.backends.cudnn as cudnn
-Copy<br>모델링<br>#BasicBlock 클래스 정의  
+<br>모델링<br>#BasicBlock 클래스 정의  
   
 class BasicBlock(nn.Module): # nn.Module 상속받기  
     def __init__(self, in_planes, planes, stride = 1):  
@@ -37,7 +38,7 @@ self.shortcut = nn.Sequential(
         out = F.relu(self.bn1(self.conv1(x))) #conv1 거치고, relu함수 거치기  
         out = self.bn2(self.conv2(out)) #그다음 conv2 거치기  
         out += self.shortcut(x) # resnet의 핵심인 skip connection : H(x) = R(x) + x
-Copy<br>#ResNet 클래스 정의  
+<br>#ResNet 클래스 정의  
 class ResNet(nn.Module):  
     def __init__(self, block, num_blocks, num_classes = 10):  
         super(ResNet, self).__init__() #ResNet의 부모클래스인 nn.Module의 __init__함수를 먼저 호출해서 사용.  
@@ -69,10 +70,10 @@ class ResNet(nn.Module):
         out = out.view(out.size(0),-1) # 텐서의 차원 변경  
         out = self.linear(out) #완전 연결층  
         return out
-Copy<br># ResNet 18 함수 정의  
+<br># ResNet 18 함수 정의  
 def ResNet18():  
     return ResNet(BasicBlock, [2,2,2,2])
-Copy<br>데이터 불러오기<br>import torchvision
+<br>데이터 불러오기<br>import torchvision
 import torchvision.transforms as transforms
 
 
@@ -95,7 +96,7 @@ test_dataset = torchvision.datasets.CIFAR10(root='./data', train=False, download
 train_loader = torch.utils.data.DataLoader(train_dataset, batch_size=128, shuffle=True, num_workers=2)
 test_loader = torch.utils.data.DataLoader(test_dataset, batch_size=100, shuffle=False, num_workers=2)
 
-Copy<br>학습시키기<br>device = 'cuda'
+<br>학습시키기<br>device = 'cuda'
 net = ResNet18()
 net = net.to(device)
 learning_rate = 0.1
@@ -191,7 +192,7 @@ for epoch in range(0, 150):
 &nbsp; &nbsp; test(epoch)
 &nbsp; &nbsp; print('\nTime elapsed:', time.time() - start_time)
 
-Copy<br>양자화 공부<br>
+<br>양자화 공부<br>
 양자화 : 실수형 변수(floating-point type)를 정수형 변수(integer or fixed point)로 변환하는 과정<br>
 양자화 하는 이유 : 인공지능 모델에 큰 비트수의 자료형을 사용 -&gt; 학습 과정에서 계산량과 필요한 메모리 크기 등이 커지게 됨. -&gt; 학습을 시키기 위해 많은 리소스가 필요해지고, 추론도 오래 걸리는 문제가 발생. 양자화를 통하여 효과적인 모델 최적화를 할 수 있는데, float 타입을 int형으로 줄이면서 용량을 줄일 수 있고 bit 수를 줄임으로써 계산 복잡도도 줄일 수 있음<br>
 Pipeline<br>
@@ -237,7 +238,7 @@ chat.append(
 response = pipe(chat, max_new_tokens=512)
 print(response[0]['generated_text'][-1]['content'])
 
-Copy]]></description><link>https://ejkiwi.github.io/20240813-모각코-활동-7회차.html</link><guid isPermaLink="false">20240813 모각코 활동 7회차.md</guid><pubDate>Sat, 17 Aug 2024 15:49:02 GMT</pubDate></item><item><title><![CDATA[20240806 모각코 활동 6회차]]></title><description><![CDATA[ 
+]]></description><link>https://ejkiwi.github.io/20240813-모각코-활동-7회차.html</link><guid isPermaLink="false">20240813 모각코 활동 7회차.md</guid><pubDate>Wed, 25 Sep 2024 07:11:10 GMT</pubDate></item><item><title><![CDATA[20240806 모각코 활동 6회차]]></title><description><![CDATA[ 
  <br>오늘의목표<br>
 CNN 실습 - MNIST 이미지 분류 ( RESNET은 7회차에 진행할 예정 )<br>import torch #pytorch 가져오기
 Copy<br>데이터 가져오기<br>#데이터셋불러오고 텐서로 바꿔주기
@@ -758,5 +759,4 @@ al분야에서 google tensorflow와 함께 딥러닝 모델을 구축하고 학�
 <br>RESNET 구조 공부하기
 
 
-]]></description><link>모.구.모.구-모각코-활동.html</link><guid isPermaLink="false">모.구.모.구 모각코 활동.md</guid><pubDate>Fri, 05 Jul 2024 08:47:48 GMT</pubDate></item><item><title><![CDATA[index]]></title><description><![CDATA[ 
- <br>]]></description><link>index.html</link><guid isPermaLink="false">index.md</guid><pubDate>Tue, 23 Jul 2024 13:03:33 GMT</pubDate></item></channel></rss>
+]]></description><link>모.구.모.구-모각코-활동.html</link><guid isPermaLink="false">모.구.모.구 모각코 활동.md</guid><pubDate>Fri, 05 Jul 2024 08:47:48 GMT</pubDate></item></channel></rss>
