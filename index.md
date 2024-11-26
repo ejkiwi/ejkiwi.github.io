@@ -1,4 +1,6 @@
 ---
-sticker: emoji//1f604
+sticker: emoji//1f439
 ---
-#### Main Page
+## 공부
+-  [[2024_여름_모각코]]
+- [[백준풀이]]
