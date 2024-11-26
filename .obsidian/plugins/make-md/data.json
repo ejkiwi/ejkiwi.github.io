@@ -40,9 +40,7 @@
   "showRibbon": true,
   "deleteFileOption": "trash",
   "expandedSpaces": [
-    "/",
-    "//docs",
-    "//백준풀이"
+    "/"
   ],
   "expandFolderOnClick": true,
   "menuTriggerChar": "/",
