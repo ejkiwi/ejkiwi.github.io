@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "백준풀이/백준풀이.md",
+                "file": "index.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "백준풀이"
+              "title": "index"
             }
           }
         ]
@@ -74,7 +74,7 @@
             }
           },
           {
-            "id": "e32d1a63caea2f1c",
+            "id": "2f8a3fcb6958a4d3",
             "type": "leaf",
             "state": {
               "type": "mk-path-view",
@@ -84,7 +84,7 @@
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 3
       }
     ],
     "direction": "horizontal",
@@ -179,16 +179,16 @@
   },
   "active": "8ef1f868ede0f495",
   "lastOpenFiles": [
-    "2024_여름_모각코/2024_여름_모각코.md",
-    "백준풀이/백준풀이.md",
-    "2024_여름_모각코/모.구.모.구 모각코 활동.md",
+    "2024_cnu학습동아리.md",
     "index.md",
+    "2024_여름_모각코/모.구.모.구 모각코 활동.md",
+    "백준풀이/백준풀이.md",
+    "2024_여름_모각코/2024_여름_모각코.md",
     "2024_여름_모각코/20240813 모각코 활동 7회차.md",
     "2024_여름_모각코/20240707 모각코 활동 1회차.md",
     "2024_여름_모각코/20240709 모각코 활동 2회차.md",
     "2024_여름_모각코/20240716 모각코 활동 3회차.md",
     "2024_여름_모각코/20240806 모각코 활동 6회차.md",
-    "Untitled.md",
     "2024_여름_모각코",
     "README.md",
     "이것무엇이냐고.md",
