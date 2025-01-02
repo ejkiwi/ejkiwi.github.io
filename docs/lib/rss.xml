@@ -1,5 +1,4 @@
-<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[ejkiwi.github.io]]></title><description><![CDATA[Obsidian digital garden]]></description><link>https://ejkiwi.github.io/</link><image><url>https://ejkiwi.github.io/lib/media/favicon.png</url><title>ejkiwi.github.io</title><link>https://ejkiwi.github.io/</link></image><generator>Webpage HTML Export plugin for Obsidian</generator><lastBuildDate>Thu, 02 Jan 2025 09:04:41 GMT</lastBuildDate><atom:link href="https://ejkiwi.github.io/lib/rss.xml" rel="self" type="application/rss+xml"/><pubDate>Thu, 02 Jan 2025 09:04:40 GMT</pubDate><ttl>60</ttl><dc:creator/><item><title><![CDATA[2024 cnu 2차 학습동아리]]></title><description><![CDATA[ 
- <br><a data-tooltip-position="top" aria-label="https://colab.research.google.com/drive/1n9Pjthb3W4q-MO891Ce_-y5Jh2uOw4uv?usp=sharing" rel="noopener nofollow" class="external-link" href="https://colab.research.google.com/drive/1n9Pjthb3W4q-MO891Ce_-y5Jh2uOw4uv?usp=sharing" target="_blank">2024 cnu 2차 학습동아리 실습코드</a>]]></description><link>https://ejkiwi.github.io/2024-cnu-2차-학습동아리/2024-cnu-2차-학습동아리.html</link><guid isPermaLink="false">2024 cnu 2차 학습동아리/2024 cnu 2차 학습동아리.md</guid><pubDate>Thu, 02 Jan 2025 09:04:05 GMT</pubDate></item><item><title><![CDATA[#1011]]></title><description><![CDATA[ 
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[ejkiwi.github.io]]></title><description><![CDATA[Obsidian digital garden]]></description><link>https://ejkiwi.github.io/</link><image><url>https://ejkiwi.github.io/lib/media/favicon.png</url><title>ejkiwi.github.io</title><link>https://ejkiwi.github.io/</link></image><generator>Webpage HTML Export plugin for Obsidian</generator><lastBuildDate>Thu, 02 Jan 2025 09:06:37 GMT</lastBuildDate><atom:link href="https://ejkiwi.github.io/lib/rss.xml" rel="self" type="application/rss+xml"/><pubDate>Thu, 02 Jan 2025 09:06:36 GMT</pubDate><ttl>60</ttl><dc:creator/><item><title><![CDATA[1011]]></title><description><![CDATA[ 
  <br>Fly me to the Alpha Centauri<br>입력 : 입력의 첫 줄에는 테스트케이스의 개수 T가 주어진다. 각각의 테스트 케이스에 대해 현재 위치 x 와 목표 위치 y 가 정수로 주어지며, x는 항상 y보다 작은 값을 갖는다. (0 ≤ x &lt; y &lt; 231)<br>
 출력 : 각 테스트 케이스에 대해 x지점으로부터 y지점까지 정확히 도달하는데 필요한 최소한의 공간이동 장치 작동 횟수를 출력한다.<br>case = []
 for i in range(int(input())):
@@ -36,7 +35,7 @@ for i in result:
 12 34 56 78 910 ,,,, -&gt; 횟수의 수  
 구간의 크기가 순서대로 1부터 20까지 있다고 하면, 그 구간에 따른 정답은  -&gt; 1 2 33 44 555 666 7777 8888이 됨.  
 * (예) 구간의 크기가 8이면 정답은 5가 됨. / 구간의 크기가 10이면 정답은 6이 됨.
-]]></description><link>https://ejkiwi.github.io/백준풀이/#1011.html</link><guid isPermaLink="false">백준풀이/#1011.md</guid><pubDate>Thu, 02 Jan 2025 08:39:47 GMT</pubDate></item><item><title><![CDATA[#1931]]></title><description><![CDATA[ 
+]]></description><link>https://ejkiwi.github.io/백준풀이/1011.html</link><guid isPermaLink="false">백준풀이/1011.md</guid><pubDate>Thu, 02 Jan 2025 08:39:47 GMT</pubDate></item><item><title><![CDATA[1931]]></title><description><![CDATA[ 
  <br>회의실 배정<br>입력 : 첫째 줄에 회의의 수 N(1 ≤ N ≤ 100,000)이 주어진다. 둘째 줄부터 N+1 줄까지 각 회의의 정보가 주어지는데 이것은 공백을 사이에 두고 회의의 시작시간과 끝나는 시간이 주어진다. 시작 시간과 끝나는 시간은 231-1보다 작거나 같은 자연수 또는 0이다.<br>
 출력 : 첫째 줄에 최대 사용할 수 있는 회의의 최대 개수를 출력한다.<br>import sys
 input = sys.stdin.readline
@@ -74,7 +73,7 @@ for _ in case[1::]:
 print(result)
 <br>
 <br>푼 방식은.. 주석과같다...~_~
-]]></description><link>https://ejkiwi.github.io/백준풀이/#1931.html</link><guid isPermaLink="false">백준풀이/#1931.md</guid><pubDate>Thu, 02 Jan 2025 08:57:47 GMT</pubDate></item><item><title><![CDATA[#14369]]></title><description><![CDATA[ 
+]]></description><link>https://ejkiwi.github.io/백준풀이/1931.html</link><guid isPermaLink="false">백준풀이/1931.md</guid><pubDate>Thu, 02 Jan 2025 08:57:47 GMT</pubDate></item><item><title><![CDATA[14369]]></title><description><![CDATA[ 
  <br>전화번호 수수께끼(Small)<br>입력 : 첫 줄에 테스트케이스의 개수 T가 주어진다. 각 테스트케이스에는 상대방이 제시한 스트링 S가 주어진다. S는 영어 대문자로만 이루어져 있다.<br>
 1≤&nbsp;T&nbsp;≤ 100이고, S의 길이는 3 이상 20 이하이다. 모든 테스트케이스에는 유일한 해답이 있다.<br>
 출력 : 각 줄에 테스트케이스 번호 x와 전화번호 y를 Case # x: y의 형태로 출력한다.<br>첫 시도 -&gt; 시간초과<br>ZERO = [1,0,0,0,0,0,1,1,0,0,0,0,0,0,1]
@@ -181,7 +180,8 @@ print("\n".join(answers))
 <br>그냥 아예 각 알파벳이 고유하게 가지고 있는 문자열을 비교해서 빼주는 방식으로 진행했다.<br>
 <br>["1", "O", "ONE"] 같은 경우 "O"가  "ZERO"에도 있고 "TWO"에도 있고 "FOUR" 에도 있기 때문에 문제가 될 거 같지만 애당초 "ZERO"는 유일한 "Z"에 의해 다 걸러지게 되고, 마찬가지로 "TWO"는 "W"에, "FOUR"는 "U"에 걸러지게 되므로 상관 없다.
 <br>from collections import Counter를 사용해서 시간을 줄였다.
-]]></description><link>https://ejkiwi.github.io/백준풀이/#14369.html</link><guid isPermaLink="false">백준풀이/#14369.md</guid><pubDate>Thu, 02 Jan 2025 08:54:49 GMT</pubDate></item><item><title><![CDATA[백준풀이]]></title><description><![CDATA[ 
+]]></description><link>https://ejkiwi.github.io/백준풀이/14369.html</link><guid isPermaLink="false">백준풀이/14369.md</guid><pubDate>Thu, 02 Jan 2025 08:54:49 GMT</pubDate></item><item><title><![CDATA[2024 cnu 2차 학습동아리]]></title><description><![CDATA[ 
+ <br><a data-tooltip-position="top" aria-label="https://colab.research.google.com/drive/1n9Pjthb3W4q-MO891Ce_-y5Jh2uOw4uv?usp=sharing" rel="noopener nofollow" class="external-link" href="https://colab.research.google.com/drive/1n9Pjthb3W4q-MO891Ce_-y5Jh2uOw4uv?usp=sharing" target="_blank">2024 cnu 2차 학습동아리 실습코드</a>]]></description><link>https://ejkiwi.github.io/2024-cnu-2차-학습동아리/2024-cnu-2차-학습동아리.html</link><guid isPermaLink="false">2024 cnu 2차 학습동아리/2024 cnu 2차 학습동아리.md</guid><pubDate>Thu, 02 Jan 2025 09:04:05 GMT</pubDate></item><item><title><![CDATA[백준풀이]]></title><description><![CDATA[ 
  <br><a data-tooltip-position="top" aria-label="https://solved.ac/profile/eonjikiwi" rel="noopener nofollow" class="external-link" href="https://solved.ac/profile/eonjikiwi" target="_blank">백준 프로필</a>]]></description><link>https://ejkiwi.github.io/백준풀이/백준풀이.html</link><guid isPermaLink="false">백준풀이/백준풀이.md</guid><pubDate>Thu, 02 Jan 2025 08:55:59 GMT</pubDate></item><item><title><![CDATA[index]]></title><description><![CDATA[ 
  <br><br>
 <br><a data-href="2024_여름_모각코" href="https://ejkiwi.github.io/2024_여름_모각코/2024_여름_모각코.html" class="internal-link" target="_self" rel="noopener nofollow">2024_여름_모각코</a>
