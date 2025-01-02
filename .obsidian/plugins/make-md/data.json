@@ -40,9 +40,7 @@
   "showRibbon": true,
   "deleteFileOption": "trash",
   "expandedSpaces": [
-    "/",
-    "//Tags",
-    "//2024_여름_모각코"
+    "/"
   ],
   "expandFolderOnClick": true,
   "menuTriggerChar": "/",

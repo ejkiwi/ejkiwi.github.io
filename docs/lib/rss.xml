@@ -1,12 +1,195 @@
-<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[ejkiwi.github.io]]></title><description><![CDATA[Obsidian digital garden]]></description><link>https://ejkiwi.github.io/</link><image><url>https://ejkiwi.github.io/lib/media/favicon.png</url><title>ejkiwi.github.io</title><link>https://ejkiwi.github.io/</link></image><generator>Webpage HTML Export plugin for Obsidian</generator><lastBuildDate>Wed, 01 Jan 2025 04:20:06 GMT</lastBuildDate><atom:link href="https://ejkiwi.github.io/lib/rss.xml" rel="self" type="application/rss+xml"/><pubDate>Wed, 01 Jan 2025 04:20:05 GMT</pubDate><ttl>60</ttl><dc:creator/><item><title><![CDATA[백준풀이]]></title><description><![CDATA[ 
- <br><a data-tooltip-position="top" aria-label="https://solved.ac/profile/eonjikiwi" rel="noopener nofollow" class="external-link" href="https://solved.ac/profile/eonjikiwi" target="_blank">백준 프로필</a>]]></description><link>https://ejkiwi.github.io/백준풀이/백준풀이.html</link><guid isPermaLink="false">백준풀이/백준풀이.md</guid><pubDate>Wed, 01 Jan 2025 04:19:31 GMT</pubDate></item><item><title><![CDATA[index]]></title><description><![CDATA[ 
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[ejkiwi.github.io]]></title><description><![CDATA[Obsidian digital garden]]></description><link>https://ejkiwi.github.io/</link><image><url>https://ejkiwi.github.io/lib/media/favicon.png</url><title>ejkiwi.github.io</title><link>https://ejkiwi.github.io/</link></image><generator>Webpage HTML Export plugin for Obsidian</generator><lastBuildDate>Thu, 02 Jan 2025 09:04:41 GMT</lastBuildDate><atom:link href="https://ejkiwi.github.io/lib/rss.xml" rel="self" type="application/rss+xml"/><pubDate>Thu, 02 Jan 2025 09:04:40 GMT</pubDate><ttl>60</ttl><dc:creator/><item><title><![CDATA[2024 cnu 2차 학습동아리]]></title><description><![CDATA[ 
+ <br><a data-tooltip-position="top" aria-label="https://colab.research.google.com/drive/1n9Pjthb3W4q-MO891Ce_-y5Jh2uOw4uv?usp=sharing" rel="noopener nofollow" class="external-link" href="https://colab.research.google.com/drive/1n9Pjthb3W4q-MO891Ce_-y5Jh2uOw4uv?usp=sharing" target="_blank">2024 cnu 2차 학습동아리 실습코드</a>]]></description><link>https://ejkiwi.github.io/2024-cnu-2차-학습동아리/2024-cnu-2차-학습동아리.html</link><guid isPermaLink="false">2024 cnu 2차 학습동아리/2024 cnu 2차 학습동아리.md</guid><pubDate>Thu, 02 Jan 2025 09:04:05 GMT</pubDate></item><item><title><![CDATA[#1011]]></title><description><![CDATA[ 
+ <br>Fly me to the Alpha Centauri<br>입력 : 입력의 첫 줄에는 테스트케이스의 개수 T가 주어진다. 각각의 테스트 케이스에 대해 현재 위치 x 와 목표 위치 y 가 정수로 주어지며, x는 항상 y보다 작은 값을 갖는다. (0 ≤ x &lt; y &lt; 231)<br>
+출력 : 각 테스트 케이스에 대해 x지점으로부터 y지점까지 정확히 도달하는데 필요한 최소한의 공간이동 장치 작동 횟수를 출력한다.<br>case = []
+for i in range(int(input())):
+    d, e = map(int,input().split())
+    case.append([d, e, e-d])
+
+result = []
+for i in case:
+    r = 0
+    count = 0
+    m = 0
+
+    while True:
+        m += 1
+        r += m
+        count += 1
+        if i[2] &lt;= r:
+            result.append(count)
+            break
+        r += m
+        count += 1
+        if i[2] &lt;= r:
+            result.append(count)
+            break
+
+for i in result:
+    print(i)
+<br>
+<br>r: 누적 이동 거리
+<br>count: 이동 횟수
+<br>m: 현재 단계에서 한 번에 이동할 수 있는 거리<br>
+이동 거리는 1부터 시작하며, 매 단계마다 1, 2, 3, ... 식으로 증가.(같은 거리만큼 두 번 반복)
+<br><br>11 22 33 44 55 66 77 88 99 1010 1111 1212 1313 1414 ,,, -&gt; 개수  
+12 34 56 78 910 ,,,, -&gt; 횟수의 수  
+구간의 크기가 순서대로 1부터 20까지 있다고 하면, 그 구간에 따른 정답은  -&gt; 1 2 33 44 555 666 7777 8888이 됨.  
+* (예) 구간의 크기가 8이면 정답은 5가 됨. / 구간의 크기가 10이면 정답은 6이 됨.
+]]></description><link>https://ejkiwi.github.io/백준풀이/#1011.html</link><guid isPermaLink="false">백준풀이/#1011.md</guid><pubDate>Thu, 02 Jan 2025 08:39:47 GMT</pubDate></item><item><title><![CDATA[#1931]]></title><description><![CDATA[ 
+ <br>회의실 배정<br>입력 : 첫째 줄에 회의의 수 N(1 ≤ N ≤ 100,000)이 주어진다. 둘째 줄부터 N+1 줄까지 각 회의의 정보가 주어지는데 이것은 공백을 사이에 두고 회의의 시작시간과 끝나는 시간이 주어진다. 시작 시간과 끝나는 시간은 231-1보다 작거나 같은 자연수 또는 0이다.<br>
+출력 : 첫째 줄에 최대 사용할 수 있는 회의의 최대 개수를 출력한다.<br>import sys
+input = sys.stdin.readline
+
+case = []
+for _ in range(int(input())):
+    a = list(map(int,input().split()))
+    case.append(a)
+case.sort(key=lambda x: (x[0], x[1]))
+
+CASE = []
+cAse = set()
+c = len(cAse)
+for _ in case: #어차피 시작시간도 같은데 끝시간이 더 긴건 필요업냠냠냠냠냠,,..
+    cAse.add(_[0])
+    if _[1] == _[0]: #시작하자마자끝나는건필요해...
+        CASE.append(_)
+    elif len(cAse) != c: #정렬한 뒤, 저장하는거니까... 시작시각이 같은 회의들 중 일찍끝나는것만 필요
+        c = len(cAse)
+        CASE.append(_)
+
+result = 1
+now = case[0]
+for _ in case[1::]:
+    if now[1] &gt; _[1]: #now보다 지금 _의 끝 시작이 더 작다? -&gt; 이녀석은 더 효율적인 회의임 얘 선택해야해.. 근데 회의 카운트 수를 높일 수는 없음.
+        now = _ #그냥 now를 더 좋은 회의로 바꾸는거임. 3 100, 4 5인 경우에 해당..
+
+    elif now[1] &lt;= _[0]: #근데..? _의 시작시간이..? now의 끝나는 시작과 같다? -&gt; 이건 바로 회의 수 추가mood ~~ 완전 그 느낌임...
+        if _[0] == _[1]: #시작시각과 끝 시각이 같은 경우.
+            result += 1 #무조건 추가
+        else:
+            result += 1 #추가하고
+            now = _ #현재 회의 바꾸고...
+
+print(result)
+<br>
+<br>푼 방식은.. 주석과같다...~_~
+]]></description><link>https://ejkiwi.github.io/백준풀이/#1931.html</link><guid isPermaLink="false">백준풀이/#1931.md</guid><pubDate>Thu, 02 Jan 2025 08:57:47 GMT</pubDate></item><item><title><![CDATA[#14369]]></title><description><![CDATA[ 
+ <br>전화번호 수수께끼(Small)<br>입력 : 첫 줄에 테스트케이스의 개수 T가 주어진다. 각 테스트케이스에는 상대방이 제시한 스트링 S가 주어진다. S는 영어 대문자로만 이루어져 있다.<br>
+1≤&nbsp;T&nbsp;≤ 100이고, S의 길이는 3 이상 20 이하이다. 모든 테스트케이스에는 유일한 해답이 있다.<br>
+출력 : 각 줄에 테스트케이스 번호 x와 전화번호 y를 Case # x: y의 형태로 출력한다.<br>첫 시도 -&gt; 시간초과<br>ZERO = [1,0,0,0,0,0,1,1,0,0,0,0,0,0,1]
+ONE =  [1,0,0,0,0,1,1,0,0,0,0,0,0,0,0]
+TWO =  [0,0,0,0,0,0,1,0,0,1,0,0,1,0,0]
+THREE =[2,0,0,1,0,0,0,1,0,1,0,0,0,0,0]
+FOUR = [0,1,0,0,0,0,1,1,0,0,1,0,0,0,0]
+FIVE = [1,1,0,0,1,0,0,0,0,0,0,1,0,0,0]
+SIX =  [0,0,0,0,1,0,0,0,1,0,0,0,0,1,0]
+SEVEN =[2,0,0,0,0,1,0,0,1,0,0,1,0,0,0]
+EIGHT =[1,0,1,1,1,0,0,0,0,1,0,0,0,0,0]
+NINE = [1,0,0,0,1,2,0,0,0,0,0,0,0,0,0]
+NUMBER = [ ["0",ZERO], ["1", ONE], ["2", TWO], ["3", THREE], ["4", FOUR], ["5", FIVE], ["6", SIX], ["7", SEVEN], ["8", EIGHT], ["9",NINE] ]
+ALPHABET = ['E', 'F', 'G', 'H', 'I', 'N', 'O', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Z']
+
+
+def CASE(TEXT, ALPHABET = ALPHABET):
+    result = []
+    for i in ALPHABET:
+        result.append(TEXT.count(i))
+    return result
+
+
+def CLEAR_NUMBER(NUMBER = NUMBER, case = []):
+    number = []
+    #전처리
+    for i in NUMBER:
+        detect = 0
+        for j in range(15):
+            if i[1][j] &gt; case[j]:
+                detect = 1
+                break
+        if detect == 0:
+            number.append(i)
+            case = [y-x for x,y in zip(i[1], case)]
+
+    return number, case
+
+
+def ANSWER(case, number = NUMBER):
+    answer = []
+    case = CASE(case)
+    while True:
+        if case == [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]:
+            break
+        number, case = CLEAR_NUMBER(number, case)
+        for i in number:
+            answer.append(i[0])
+
+    return answer
+
+answer = []
+for i in range(int(input())):
+    case = input()
+    a = ""
+    for j in sorted(ANSWER(case)):
+        a += j
+    answer.append(a)
+
+m = 1
+for i in answer:
+    print("Case "+"#"+str(m)+": "+i)
+    m += 1
+<br>'E', 'F', 'G', 'H', 'I', 'N', 'O', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Z' 를 차례대로 묶어서, 해당 알파벳이 있으면 1, 없으면 0을 매겨주었다. 그리고 주어진 case에서, 해당되는 알파벳 부분을 전체에서 빼주는 작업을<br>
+[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0] 이 될 때까지 반복해서<br>
+정답을 찾는 방법으로 작성했다.<br>
+<br>CLEAR_NUMBER 함수는 NUMBER 리스트를 순회하면서 각 숫자의 패턴과 case를 비교하는데, 매 숫자마다 15개의 값을 비교하고, 이를 매번 갱신하며 반복적으로 수행하는 점이 시간을 많이 잡아먹었고.. case가 0으로 수렴하는 과정에서 반복 횟수가 많아지고, 내부적으로 CLEAR_NUMBER를 여러 번 호출하므로 시간이 크게 소요되어서 시간초과가 났을 것이다.
+<br>네 번째 시도<br>from collections import Counter
+
+DIGITS = [
+    ["0", "Z", "ZERO"],
+    ["2", "W", "TWO"],
+    ["4", "U", "FOUR"],
+    ["6", "X", "SIX"],
+    ["8", "G", "EIGHT"],
+    ["3", "H", "THREE"],
+    ["5", "F", "FIVE"],
+    ["7", "V", "SEVEN"],
+    ["1", "O", "ONE"],
+    ["9", "I", "NINE"],
+]
+
+def solve_case(case):
+    case_count = Counter(case)
+    result = []
+
+    for digit, unique_char, word in DIGITS:
+        count = case_count[unique_char]
+        if count &gt; 0:
+            result.extend([digit] * count)
+            for char in word:
+                case_count[char] -= count
+
+    return "".join(sorted(result))
+
+# 입력 처리
+t = int(input())
+answers = []
+for i in range(t):
+    case = input().strip()
+    answers.append(f"Case #{i + 1}: {solve_case(case)}")
+
+print("\n".join(answers))
+<br>그냥 아예 각 알파벳이 고유하게 가지고 있는 문자열을 비교해서 빼주는 방식으로 진행했다.<br>
+<br>["1", "O", "ONE"] 같은 경우 "O"가  "ZERO"에도 있고 "TWO"에도 있고 "FOUR" 에도 있기 때문에 문제가 될 거 같지만 애당초 "ZERO"는 유일한 "Z"에 의해 다 걸러지게 되고, 마찬가지로 "TWO"는 "W"에, "FOUR"는 "U"에 걸러지게 되므로 상관 없다.
+<br>from collections import Counter를 사용해서 시간을 줄였다.
+]]></description><link>https://ejkiwi.github.io/백준풀이/#14369.html</link><guid isPermaLink="false">백준풀이/#14369.md</guid><pubDate>Thu, 02 Jan 2025 08:54:49 GMT</pubDate></item><item><title><![CDATA[백준풀이]]></title><description><![CDATA[ 
+ <br><a data-tooltip-position="top" aria-label="https://solved.ac/profile/eonjikiwi" rel="noopener nofollow" class="external-link" href="https://solved.ac/profile/eonjikiwi" target="_blank">백준 프로필</a>]]></description><link>https://ejkiwi.github.io/백준풀이/백준풀이.html</link><guid isPermaLink="false">백준풀이/백준풀이.md</guid><pubDate>Thu, 02 Jan 2025 08:55:59 GMT</pubDate></item><item><title><![CDATA[index]]></title><description><![CDATA[ 
  <br><br>
 <br><a data-href="2024_여름_모각코" href="https://ejkiwi.github.io/2024_여름_모각코/2024_여름_모각코.html" class="internal-link" target="_self" rel="noopener nofollow">2024_여름_모각코</a>
 <br><a data-href="백준풀이" href="https://ejkiwi.github.io/백준풀이/백준풀이.html" class="internal-link" target="_self" rel="noopener nofollow">백준풀이</a>
-<br><a data-tooltip-position="top" aria-label="https://colab.research.google.com/drive/1n9Pjthb3W4q-MO891Ce_-y5Jh2uOw4uv?usp=sharing" rel="noopener nofollow" class="external-link" href="https://colab.research.google.com/drive/1n9Pjthb3W4q-MO891Ce_-y5Jh2uOw4uv?usp=sharing" target="_blank">2024 cnu 2차 학습동아리 실습코드</a>
-<br><br>
+<br><a data-href="2024 cnu 2차 학습동아리" href="https://ejkiwi.github.io/2024-cnu-2차-학습동아리/2024-cnu-2차-학습동아리.html" class="internal-link" target="_self" rel="noopener nofollow">2024 cnu 2차 학습동아리</a>
+<br><br>사실이건아무것도작성한게없다...&gt;_&lt;<br>
 <br><a data-tooltip-position="top" aria-label="https://velog.io/@eonjikiwi/posts" rel="noopener nofollow" class="external-link" href="https://velog.io/@eonjikiwi/posts" target="_blank">ejkiwi_velog</a>
-]]></description><link>https://ejkiwi.github.io/index.html</link><guid isPermaLink="false">index.md</guid><pubDate>Tue, 31 Dec 2024 02:40:18 GMT</pubDate></item><item><title><![CDATA[2024_여름_모각코]]></title><description><![CDATA[ 
+]]></description><link>https://ejkiwi.github.io/index.html</link><guid isPermaLink="false">index.md</guid><pubDate>Thu, 02 Jan 2025 09:04:24 GMT</pubDate></item><item><title><![CDATA[2024_여름_모각코]]></title><description><![CDATA[ 
  <br>
 <br><a data-href="모.구.모.구 모각코 활동" href="https://ejkiwi.github.io/2024_여름_모각코/모.구.모.구-모각코-활동.html" class="internal-link" target="_self" rel="noopener nofollow">모.구.모.구 모각코 활동</a>
 <br><a data-href="20240707 모각코 활동 1회차" href="https://ejkiwi.github.io/2024_여름_모각코/20240707-모각코-활동-1회차.html" class="internal-link" target="_self" rel="noopener nofollow">20240707 모각코 활동 1회차</a>
