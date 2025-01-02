@@ -40,7 +40,10 @@
   "showRibbon": true,
   "deleteFileOption": "trash",
   "expandedSpaces": [
-    "/"
+    "/",
+    "//백준풀이",
+    "//2024 cnu 2차 학습동아리",
+    "//2024_여름_모각코"
   ],
   "expandFolderOnClick": true,
   "menuTriggerChar": "/",
