@@ -41,7 +41,10 @@
   "deleteFileOption": "trash",
   "expandedSpaces": [
     "//백준풀이",
-    "/"
+    "/",
+    "//2024_여름_모각코",
+    "//2025_겨울_모각코",
+    "//백준"
   ],
   "expandFolderOnClick": true,
   "menuTriggerChar": "/",
