@@ -1,3 +1,4 @@
 {
-  "newLinkFormat": "shortest"
+  "newLinkFormat": "shortest",
+  "alwaysUpdateLinks": true
 }
