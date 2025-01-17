@@ -1,4 +1,43 @@
-<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[ejkiwi.github.io]]></title><description><![CDATA[Obsidian digital garden]]></description><link>https://ejkiwi.github.io/</link><image><url>https://ejkiwi.github.io/lib/media/favicon.png</url><title>ejkiwi.github.io</title><link>https://ejkiwi.github.io/</link></image><generator>Webpage HTML Export plugin for Obsidian</generator><lastBuildDate>Thu, 09 Jan 2025 12:01:21 GMT</lastBuildDate><atom:link href="https://ejkiwi.github.io/lib/rss.xml" rel="self" type="application/rss+xml"/><pubDate>Thu, 09 Jan 2025 12:01:21 GMT</pubDate><ttl>60</ttl><dc:creator/><item><title><![CDATA[index]]></title><description><![CDATA[ 
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[ejkiwi.github.io]]></title><description><![CDATA[Obsidian digital garden]]></description><link>https://ejkiwi.github.io/</link><image><url>https://ejkiwi.github.io/lib/media/favicon.png</url><title>ejkiwi.github.io</title><link>https://ejkiwi.github.io/</link></image><generator>Webpage HTML Export plugin for Obsidian</generator><lastBuildDate>Fri, 17 Jan 2025 15:11:03 GMT</lastBuildDate><atom:link href="https://ejkiwi.github.io/lib/rss.xml" rel="self" type="application/rss+xml"/><pubDate>Fri, 17 Jan 2025 15:11:02 GMT</pubDate><ttl>60</ttl><dc:creator/><item><title><![CDATA[20250117 모각코 활동 2회차]]></title><description><![CDATA[ 
+ <br>오늘의 목표 : 자료구조 개념과 종류(리스트, 튜플, 집합, 딕셔너리) 공부 및 구현<br><br> 여러가지 자료를 저장할 수 있는 데이터 구조체 &nbsp;[ , , ]<br>
+<br>요소(value) : 리스트 내 데이터를 의미
+<br>인덱스(index) : 리스트 내 데이터의 주소
+<br>순서가 있는 데이터 구조 
+<br>수정 가능 (mutable).
+<br>중복된 값을 허용.
+<br>my_list = [1, 2, 3, 4]  # 리스트 생성
+my_list.append(5)       # 값 추가
+my_list[0] = 10         # 값 수정
+print(my_list)  # [10, 2, 3, 4, 5]
+<br><br><br>수정이 불가능한, 여러가지 자료를 저장할 수 있는 데이터 구조체 ( , , )<br>
+<br>순서가 있는 데이터 구조.
+<br>수정 불가능 (immutable).
+<br>중복된 값을 허용.
+<br>반복문에서 리스트보다 빠름
+<br>딕셔너리의 키가  될 수 있음
+<br>리스트와 튜플 서로 변환 가능
+<br>*&lt;주의&gt; 요소가 1개인 튜플은 요소의 끝에 반드시 쉼표(,) 추가
+<br>my_tuple = (1, 2, 3, 4)  # 튜플 생성
+# my_tuple[0] = 10  # 수정 불가능 (오류 발생)
+print(my_tuple[1])  # 2
+<br><br>고유한 값들을 순서 없이 저장할 수 있는 데이터 구조체 { , , }<br>
+<br>순서가 없는 데이터 구조 ( = 인덱스 접근 불가 )
+<br>중복된 값을 허용하지 않음.
+<br>수학의 집합 연산 가능 (합집합, 교집합 등).
+<br>리스트와 집합&nbsp;서로 변환 가능
+<br>my_set = {1, 2, 3, 3} # 중복된 값은 자동 제거
+my_set.add(4) # 값 추가
+print(my_set) # {1, 2, 3, 4}
+<br><br>키key를 기반으로 값value을 저장할 수 있는 데이터 구조체 { key:value, key:value, ..., key:value }<br>
+<br>키-값 (key-value) 쌍으로 데이터를 저장.
+<br>키는 중복될 수 없으나, 값은 중복 가능.
+<br>순서는 유지
+<br>key는 변수로 지정 가능
+<br>my_dict = {"name": "Alice", "age": 25}  # 딕셔너리 생성
+my_dict["age"] = 26  # 값 수정
+my_dict["city"] = "Seoul"  # 새 키-값 추가
+print(my_dict)  # {'name': 'Alice', 'age': 26, 'city': 'Seoul'}
+]]></description><link>https://ejkiwi.github.io/2025_겨울_모각코/20250117-모각코-활동-2회차.html</link><guid isPermaLink="false">2025_겨울_모각코/20250117 모각코 활동 2회차.md</guid><pubDate>Fri, 17 Jan 2025 15:10:14 GMT</pubDate></item><item><title><![CDATA[index]]></title><description><![CDATA[ 
  <br><br>
 <br><a data-href="백준" href="https://ejkiwi.github.io/백준/백준.html" class="internal-link" target="_self" rel="noopener nofollow">백준</a>
 <br><a data-href="2024_여름_모각코" href="https://ejkiwi.github.io/2024_여름_모각코/2024_여름_모각코.html" class="internal-link" target="_self" rel="noopener nofollow">2024_여름_모각코</a>
