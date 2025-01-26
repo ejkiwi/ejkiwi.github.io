@@ -1,11 +1,5 @@
-<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[ejkiwi.github.io]]></title><description><![CDATA[Obsidian digital garden]]></description><link>https://ejkiwi.github.io/</link><image><url>https://ejkiwi.github.io/lib/media/favicon.png</url><title>ejkiwi.github.io</title><link>https://ejkiwi.github.io/</link></image><generator>Webpage HTML Export plugin for Obsidian</generator><lastBuildDate>Sun, 26 Jan 2025 07:38:01 GMT</lastBuildDate><atom:link href="https://ejkiwi.github.io/lib/rss.xml" rel="self" type="application/rss+xml"/><pubDate>Sun, 26 Jan 2025 07:38:00 GMT</pubDate><ttl>60</ttl><dc:creator/><item><title><![CDATA[2025_겨울_모각코]]></title><description><![CDATA[ 
- <br>
-<br><a data-href="파샤샥 모각코 활동" href="https://ejkiwi.github.io/2025_겨울_모각코/파샤샥-모각코-활동.html" class="internal-link" target="_self" rel="noopener nofollow">파샤샥 모각코 활동</a>
-<br><a data-href="20250109 모각코 활동 1회차" href="https://ejkiwi.github.io/2025_겨울_모각코/20250109-모각코-활동-1회차.html" class="internal-link" target="_self" rel="noopener nofollow">20250109 모각코 활동 1회차</a>
-<br><a data-href="20250117 모각코 활동 2회차" href="https://ejkiwi.github.io/2025_겨울_모각코/20250117-모각코-활동-2회차.html" class="internal-link" target="_self" rel="noopener nofollow">20250117 모각코 활동 2회차</a>
-<br><a data-href="20250126 모각코 활동 3회차" href="https://ejkiwi.github.io/2025_겨울_모각코/20250126-모각코-활동-3회차.html" class="internal-link" target="_self" rel="noopener nofollow">20250126 모각코 활동 3회차</a>
-]]></description><link>https://ejkiwi.github.io/2025_겨울_모각코/2025_겨울_모각코.html</link><guid isPermaLink="false">2025_겨울_모각코/2025_겨울_모각코.md</guid><pubDate>Sun, 26 Jan 2025 07:37:46 GMT</pubDate></item><item><title><![CDATA[20250126 모각코 활동 3회차]]></title><description><![CDATA[ 
- <br>오늘의 목표 : 넘파이, 차트 공부 및 구현 (넘파이와 짱친되기)<br><br>Numerical Python : 파이썬에서 수치 계산을 빠르고 효율적으로 수행할 수 있도록 해주는 라이브러리.<br>
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[ejkiwi.github.io]]></title><description><![CDATA[Obsidian digital garden]]></description><link>https://ejkiwi.github.io/</link><image><url>https://ejkiwi.github.io/lib/media/favicon.png</url><title>ejkiwi.github.io</title><link>https://ejkiwi.github.io/</link></image><generator>Webpage HTML Export plugin for Obsidian</generator><lastBuildDate>Sun, 26 Jan 2025 08:15:45 GMT</lastBuildDate><atom:link href="https://ejkiwi.github.io/lib/rss.xml" rel="self" type="application/rss+xml"/><pubDate>Sun, 26 Jan 2025 08:15:44 GMT</pubDate><ttl>60</ttl><dc:creator/><item><title><![CDATA[20250126 모각코 활동 3회차]]></title><description><![CDATA[ 
+ <br>오늘의 목표 : 넘파이, 차트 공부 및 구현 (넘파이와 맷플롯립과 짱친되기)<br><br>Numerical Python : 파이썬에서 수치 계산을 빠르고 효율적으로 수행할 수 있도록 해주는 라이브러리.<br>
 ( ?라이브러리 : 자주 쓰이는 코드들을 묶어놓은 도구상자. ex - PyTorch는 AI 모델을 만들 때 쓰는 도구상자같은것... )<br><br>
 <br>빠른 연산 : C로 구현되어 있어 배열 연산 속도가 매우 빠르다
 <br>다차원 배열 지원
@@ -95,7 +89,119 @@ print(arr.T)
 # 1차원으로 펼치기
 flattened = arr.flatten()
 print(flattened)  # [1, 2, 3, 4]
-<br><img alt="배열 변환" src="https://ejkiwi.github.io/lib/media/numpy06.png" referrerpolicy="no-referrer">]]></description><link>https://ejkiwi.github.io/2025_겨울_모각코/20250126-모각코-활동-3회차.html</link><guid isPermaLink="false">2025_겨울_모각코/20250126 모각코 활동 3회차.md</guid><pubDate>Sun, 26 Jan 2025 07:37:22 GMT</pubDate><enclosure url="https://ejkiwi.github.io/lib/media/numpy01.png" length="0" type="image/png"/><content:encoded>&lt;figure&gt;&lt;img src="https://ejkiwi.github.io/lib/media/numpy01.png"&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[20250117 모각코 활동 2회차]]></title><description><![CDATA[ 
+<br><img alt="배열 변환" src="https://ejkiwi.github.io/lib/media/numpy06.png" referrerpolicy="no-referrer"><br><br>Python에서의 데이터 시각화를 위한 라이브러리<br><br>
+<br>다양한 시각화 제공 : 간단한 선 그래프, 막대 그래프, 히스토그램부터 복잡한 3D 그래프까지 다양한 시각화를 제공함.
+<br>보통 matplotlib.pyplot 모듈을 통해 그래프를 그림.
+<br>보통 import matplotlib.pyplot as plt plt라는 이름으로 불러옴.
+<br><br># 데이터  
+x = [0, 1, 2, 3, 4, 5]  
+y = [0, 2, 4, 6, 8, 10]  
+  
+# 선 그래프 시각화  
+plt.plot(x, y, label="y = 2x", color="blue", linestyle="--", marker="o")  
+plt.title("Line Plot Example")  # 그래프 제목  
+plt.xlabel("X-axis")  # x축 이름  
+plt.ylabel("Y-axis")  # y축 이름  
+plt.legend()  # 범례 추가  
+plt.show()  # 시각화
+<br><img alt="선 그래프" src="https://ejkiwi.github.io/lib/media/matplotlib01.png" referrerpolicy="no-referrer"><br><br># 데이터  
+x = [1, 2, 3, 4, 5]  
+y = [5, 7, 6, 8, 7]  
+sizes = [100, 200, 300, 400, 500]  
+  
+# 산점도 시각화  
+plt.scatter(x, y, s=sizes, color="green", alpha=0.6)  
+plt.title("Scatter Plot Example")  # 제목  
+plt.xlabel("X-axis")  # x축 이름  
+plt.ylabel("Y-axis")  # y축 이름  
+plt.show()  # 시각화
+<br><img alt="산점도 그래프" src="https://ejkiwi.github.io/lib/media/matplotlib02.png" referrerpolicy="no-referrer"><br><br># 데이터  
+categories = ['A', 'B', 'C', 'D']  
+values = [3, 7, 8, 5]  
+  
+# 막대 그래프 시각화  
+plt.bar(categories, values, color="orange")  
+plt.title("Bar Plot Example")  # 제목  
+plt.xlabel("Categories")  # x축 이름  
+plt.ylabel("Values")  # y축 이름  
+plt.show()  # 시각화
+<br><img alt="막대 그래프" src="https://ejkiwi.github.io/lib/media/matplotlib03.png" referrerpolicy="no-referrer"><br><br># 데이터  
+data = [1, 2, 2, 3, 3, 3, 4, 4, 4, 4, 5, 5, 6, 7, 8, 9, 10]  
+  
+# 히스토그램 시각화  
+plt.hist(data, bins=5, color="purple", alpha=0.7)  
+plt.title("Histogram Example")  # 제목  
+plt.xlabel("Value Ranges")  # x축 이름  
+plt.ylabel("Frequency")  # y축 이름  
+plt.show()  # 시각화
+<br><img alt="히스토그램" src="https://ejkiwi.github.io/lib/media/matplotlib04.png" referrerpolicy="no-referrer"><br><br># 데이터  
+data = [  
+    [2, 3, 5, 6, 8],  # Group 1  
+    [1, 4, 4, 5, 9],  # Group 2  
+    [3, 5, 7, 7, 10]  # Group 3  
+]  
+  
+# 박스 플롯 시각화  
+plt.boxplot(data, tick_labels=['Group 1', 'Group 2', 'Group 3'])  ## tick_labels -&gt; 이전에는 labels로 쓰임  
+plt.title("Box Plot Example")  # 제목  
+plt.ylabel("Values")  # y축 이름  
+plt.show()
+<br><img alt="박스 그래프" src="https://ejkiwi.github.io/lib/media/matplotlib05.png" referrerpolicy="no-referrer"><br><br># 데이터  
+labels = ['Apples', 'Bananas', 'Cherries', 'Mangoes']  
+sizes = [35, 25, 20, 20]  
+  
+# 파이 차트 시각화  
+plt.pie(sizes, labels=labels, autopct='%1.1f%%', startangle=140, colors=['red', 'yellow', 'pink', 'brown'])  
+plt.title("Pie Chart Example")  # 제목  
+plt.show()  # 시각화
+<br><img alt="원형 차트" src="https://ejkiwi.github.io/lib/media/matplotlib06.png" referrerpolicy="no-referrer"><br><br># 데이터  
+x = [1, 2, 3, 4, 5]  
+y1 = [1, 2, 4, 8, 16]  
+y2 = [1, 1, 2, 3, 5]  
+  
+# 면적 그래프 시각화  
+plt.fill_between(x, y1, color="skyblue", alpha=0.5, label="Area 1")  
+plt.fill_between(x, y2, color="lightgreen", alpha=0.7, label="Area 2")  
+plt.title("Area Plot Example")  # 제목  
+plt.xlabel("X-axis")  # x축 이름  
+plt.ylabel("Y-axis")  # y축 이름  
+plt.legend()  # 범례 추가  
+plt.show()  # 시각화
+<br><img alt="면적 그래프" src="https://ejkiwi.github.io/lib/media/matplotlib07.png" referrerpolicy="no-referrer"><br><br># 데이터  
+x = [1, 2, 3, 4, 5]  
+y1 = [2, 4, 6, 8, 10]  
+y2 = [1, 3, 5, 7, 9]  
+  
+# 다중 그래프 시각화  
+plt.subplot(1, 2, 1)  # ( 1행 2열 )plt.plot(x, y1, color="blue", marker="o")  # 첫 번째 그래프  
+plt.title("Graph 1")  # 첫 그래프 이름  
+  
+plt.subplot(1, 2, 2)  
+plt.plot(x, y2, color="red", linestyle="--")  # 두 번째 그래프  
+plt.title("Graph 2")  # 두 번째 그래프 이름  
+  
+plt.tight_layout()  # 간격 조정  
+plt.show()  # 시각화
+<br><img alt="다중 그래프" src="https://ejkiwi.github.io/lib/media/matplotlib08.png" referrerpolicy="no-referrer"><br><br># 데이터  
+categories = ['A', 'B', 'C']  
+group1 = [3, 5, 7]  
+group2 = [4, 6, 8]  
+  
+# 스택형 막대 그래프 시각화  
+plt.bar(categories, group1, label="Group 1", color="lightblue")  
+plt.bar(categories, group2, bottom=group1, label="Group 2", color="orange")  # 스택 쌓기  
+plt.title("Stacked Bar Plot Example")  # 제목  
+plt.xlabel("Categories")  # x축 이름  
+plt.ylabel("Values")  # y축 이름  
+plt.legend()  # 범례 추가  
+plt.show()  # 시각화
+<br><img alt="스택형 막대 그래프" src="https://ejkiwi.github.io/lib/media/matplotlib09.png" referrerpolicy="no-referrer">]]></description><link>https://ejkiwi.github.io/2025_겨울_모각코/20250126-모각코-활동-3회차.html</link><guid isPermaLink="false">2025_겨울_모각코/20250126 모각코 활동 3회차.md</guid><pubDate>Sun, 26 Jan 2025 08:15:20 GMT</pubDate><enclosure url="https://ejkiwi.github.io/lib/media/numpy01.png" length="0" type="image/png"/><content:encoded>&lt;figure&gt;&lt;img src="https://ejkiwi.github.io/lib/media/numpy01.png"&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[2025_겨울_모각코]]></title><description><![CDATA[ 
+ <br>
+<br><a data-href="파샤샥 모각코 활동" href="https://ejkiwi.github.io/2025_겨울_모각코/파샤샥-모각코-활동.html" class="internal-link" target="_self" rel="noopener nofollow">파샤샥 모각코 활동</a>
+<br><a data-href="20250109 모각코 활동 1회차" href="https://ejkiwi.github.io/2025_겨울_모각코/20250109-모각코-활동-1회차.html" class="internal-link" target="_self" rel="noopener nofollow">20250109 모각코 활동 1회차</a>
+<br><a data-href="20250117 모각코 활동 2회차" href="https://ejkiwi.github.io/2025_겨울_모각코/20250117-모각코-활동-2회차.html" class="internal-link" target="_self" rel="noopener nofollow">20250117 모각코 활동 2회차</a>
+<br><a data-href="20250126 모각코 활동 3회차" href="https://ejkiwi.github.io/2025_겨울_모각코/20250126-모각코-활동-3회차.html" class="internal-link" target="_self" rel="noopener nofollow">20250126 모각코 활동 3회차</a>
+]]></description><link>https://ejkiwi.github.io/2025_겨울_모각코/2025_겨울_모각코.html</link><guid isPermaLink="false">2025_겨울_모각코/2025_겨울_모각코.md</guid><pubDate>Sun, 26 Jan 2025 07:37:46 GMT</pubDate></item><item><title><![CDATA[20250117 모각코 활동 2회차]]></title><description><![CDATA[ 
  <br>오늘의 목표 : 자료구조 개념과 종류(리스트, 튜플, 집합, 딕셔너리) 공부 및 구현<br><br> 여러가지 자료를 저장할 수 있는 데이터 구조체 &nbsp;[ , , ]<br>
 <br>요소(value) : 리스트 내 데이터를 의미
 <br>인덱스(index) : 리스트 내 데이터의 주소
