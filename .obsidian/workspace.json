@@ -11,14 +11,12 @@
             "id": "25e71f449593b5f2",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "mk-space",
               "state": {
-                "file": "2025_겨울_모각코/20250117 모각코 활동 2회차.md",
-                "mode": "source",
-                "source": false
+                "path": "2025_겨울_모각코"
               },
               "icon": "lucide-file",
-              "title": "20250117 모각코 활동 2회차"
+              "title": "2025_겨울_모각코"
             }
           }
         ]
@@ -74,7 +72,7 @@
             }
           },
           {
-            "id": "66f2b19eacd7a5c4",
+            "id": "b1857af7851a1d1a",
             "type": "leaf",
             "state": {
               "type": "mk-path-view",
@@ -178,29 +176,29 @@
     }
   },
   "floating": {
-    "id": "2d2d78f91d2c9b7a",
+    "id": "81270c448efad4dd",
     "type": "floating",
     "children": [
       {
-        "id": "5c9ff6b2971248d4",
+        "id": "06fc8a3b28d8035d",
         "type": "window",
         "children": [
           {
-            "id": "98694587a0995c3d",
+            "id": "79215ee79694a0cd",
             "type": "tabs",
             "children": [
               {
-                "id": "bd0d439520c251db",
+                "id": "5692fa410528f597",
                 "type": "leaf",
                 "state": {
                   "type": "markdown",
                   "state": {
-                    "file": "2025_겨울_모각코/20250117 모각코 활동 2회차.md",
+                    "file": "2025_겨울_모각코/20250126 모각코 활동 3회차.md",
                     "mode": "source",
                     "source": false
                   },
                   "icon": "lucide-file",
-                  "title": "20250117 모각코 활동 2회차"
+                  "title": "20250126 모각코 활동 3회차"
                 }
               }
             ]
@@ -216,10 +214,25 @@
       }
     ]
   },
-  "active": "25e71f449593b5f2",
+  "active": "5692fa410528f597",
   "lastOpenFiles": [
+    "2025_겨울_모각코/20250126 모각코 활동 3회차.md",
+    "2024_여름_모각코/20240723 모각코 활동 4회차.md",
+    "docs/lib/media/numpy06.png",
+    "docs/lib/media/numpy05.png",
+    "docs/lib/media/numpy04.png",
+    "docs/lib/media/numpy03.png",
+    "docs/lib/media/numpy02.png",
+    "docs/lib/media/스크린샷 2025-01-26 163305.png",
+    "docs/lib/media/스크린샷 2025-01-26 163257.png",
+    "docs/lib/media/스크린샷 2025-01-26 163250.png",
+    "docs/lib/media/스크린샷 2025-01-26 163024.png",
+    "docs/lib/media/스크린샷 2025-01-26 163311.png",
     "2025_겨울_모각코/20250109 모각코 활동 1회차.md",
     "2025_겨울_모각코/20250117 모각코 활동 2회차.md",
+    "2024_여름_모각코/20240730 모각코 활동 5회차.md",
+    "2024_여름_모각코/20240806 모각코 활동 6회차.md",
+    "2024_여름_모각코/20240709 모각코 활동 2회차.md",
     "2025_겨울_모각코/파샤샥 모각코 활동.md",
     "백준/문제 1011.md",
     "백준/백준 풀이.md",
@@ -239,28 +252,14 @@
     "2025_겨울_모각코/20250108 모각코 활동 2회차.md",
     "2025_겨울_모각코/20250122 모각코 활동 3회차.md",
     "2025_겨울_모각코/20250129 모각코 활동 4회차.md",
-    "2025_겨울_모각코/20250205 모각코 활동 5회차.md",
-    "2025_겨울_모각코/20250212 모각코 활동 6회차.md",
-    "Vault.md",
     "2025_겨울_모각코",
-    "2024_여름_모각코/20240716 모각코 활동 3회차.md",
-    "2024_여름_모각코/20240723 모각코 활동 4회차.md",
-    "2024 cnu 2차 학습동아리/2024 cnu 2차 학습동아리.md",
     "2024 cnu 2차 학습동아리",
     "2024_여름_모각코",
     "docs/index.html",
     "docs/readme.html",
-    "docs/lib/media/MNIST.png",
-    "docs/lib/media/residual block.png",
-    "docs/lib/media/zero_Padding.png",
-    "docs/lib/media/CNN_Padding_Edge.png",
-    "docs/lib/media/o.jpg",
     "docs/lib/styles/other-plugins.css",
     "Tags",
     "docs/lib/search-index.json",
-    "docs/lib/metadata.json",
-    "docs/lib/media/favicon.png",
-    "docs/lib/media/3d6c1bdc4d87cde4de67.svg",
-    "docs/lib/media/874d8b8e340f75575caa.svg"
+    "docs/lib/metadata.json"
   ]
 }

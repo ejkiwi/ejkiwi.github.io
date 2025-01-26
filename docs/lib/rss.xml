@@ -1,4 +1,101 @@
-<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[ejkiwi.github.io]]></title><description><![CDATA[Obsidian digital garden]]></description><link>https://ejkiwi.github.io/</link><image><url>https://ejkiwi.github.io/lib/media/favicon.png</url><title>ejkiwi.github.io</title><link>https://ejkiwi.github.io/</link></image><generator>Webpage HTML Export plugin for Obsidian</generator><lastBuildDate>Fri, 17 Jan 2025 15:14:22 GMT</lastBuildDate><atom:link href="https://ejkiwi.github.io/lib/rss.xml" rel="self" type="application/rss+xml"/><pubDate>Fri, 17 Jan 2025 15:14:21 GMT</pubDate><ttl>60</ttl><dc:creator/><item><title><![CDATA[20250117 모각코 활동 2회차]]></title><description><![CDATA[ 
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[ejkiwi.github.io]]></title><description><![CDATA[Obsidian digital garden]]></description><link>https://ejkiwi.github.io/</link><image><url>https://ejkiwi.github.io/lib/media/favicon.png</url><title>ejkiwi.github.io</title><link>https://ejkiwi.github.io/</link></image><generator>Webpage HTML Export plugin for Obsidian</generator><lastBuildDate>Sun, 26 Jan 2025 07:38:01 GMT</lastBuildDate><atom:link href="https://ejkiwi.github.io/lib/rss.xml" rel="self" type="application/rss+xml"/><pubDate>Sun, 26 Jan 2025 07:38:00 GMT</pubDate><ttl>60</ttl><dc:creator/><item><title><![CDATA[2025_겨울_모각코]]></title><description><![CDATA[ 
+ <br>
+<br><a data-href="파샤샥 모각코 활동" href="https://ejkiwi.github.io/2025_겨울_모각코/파샤샥-모각코-활동.html" class="internal-link" target="_self" rel="noopener nofollow">파샤샥 모각코 활동</a>
+<br><a data-href="20250109 모각코 활동 1회차" href="https://ejkiwi.github.io/2025_겨울_모각코/20250109-모각코-활동-1회차.html" class="internal-link" target="_self" rel="noopener nofollow">20250109 모각코 활동 1회차</a>
+<br><a data-href="20250117 모각코 활동 2회차" href="https://ejkiwi.github.io/2025_겨울_모각코/20250117-모각코-활동-2회차.html" class="internal-link" target="_self" rel="noopener nofollow">20250117 모각코 활동 2회차</a>
+<br><a data-href="20250126 모각코 활동 3회차" href="https://ejkiwi.github.io/2025_겨울_모각코/20250126-모각코-활동-3회차.html" class="internal-link" target="_self" rel="noopener nofollow">20250126 모각코 활동 3회차</a>
+]]></description><link>https://ejkiwi.github.io/2025_겨울_모각코/2025_겨울_모각코.html</link><guid isPermaLink="false">2025_겨울_모각코/2025_겨울_모각코.md</guid><pubDate>Sun, 26 Jan 2025 07:37:46 GMT</pubDate></item><item><title><![CDATA[20250126 모각코 활동 3회차]]></title><description><![CDATA[ 
+ <br>오늘의 목표 : 넘파이, 차트 공부 및 구현 (넘파이와 짱친되기)<br><br>Numerical Python : 파이썬에서 수치 계산을 빠르고 효율적으로 수행할 수 있도록 해주는 라이브러리.<br>
+( ?라이브러리 : 자주 쓰이는 코드들을 묶어놓은 도구상자. ex - PyTorch는 AI 모델을 만들 때 쓰는 도구상자같은것... )<br><br>
+<br>빠른 연산 : C로 구현되어 있어 배열 연산 속도가 매우 빠르다
+<br>다차원 배열 지원
+
+<br>복잡한 데이터 표현이 가능해진다 ( 이미지 3D : 높이.너비.채널, 동영상 4D : 프레임 수.높이.너비.채널)
+<br>효율적인 연산이 가능해짐 -&gt; 100개의 2D이미지를 처한다고 쳤을 때, 일반 Python 리스트로는 구조가 복잡해지고 느려짐. 하지만 다차원 배열을 사용하면 연산이 단순하고 빨라짐.
+
+
+<br>다양한 함수
+<br>배열 연산이 간편 : 반복문 없이 배열 전체에 대해 한 번에 연산 수행 가능 ( 벡터화 연산 )
+<br>import numpy as np ( 보통은 np라는 이름으로 불러옴 )
+<br><br># 1D 배열
+a = np.array([1, 2, 3])
+
+# 2D 배열
+b = np.array([[1, 2, 3], [4, 5, 6]])
+
+# 0으로 채워진 배열
+c = np.zeros((3, 3))
+
+# 1로 채워진 배열
+d = np.ones((2, 4))
+
+# 임의의 숫자로 초기화된 배열
+e = np.full((2, 2), 7)
+
+# 연속된 숫자로 이루어진 배열
+f = np.arange(0, 10, 2)  # [0, 2, 4, 6, 8]
+
+# 균등 분할된 값
+g = np.linspace(0, 1, 5)  # [0. , 0.25, 0.5 , 0.75, 1.]
+<br><img alt="배열 생성" src="https://ejkiwi.github.io/lib/media/numpy01.png" referrerpolicy="no-referrer"><br><br>arr = np.array([[1, 2, 3], [4, 5, 6]])
+
+print(arr.shape)  # 배열 형태 (2, 3)
+print(arr.ndim)   # 차원 개수 (2D 배열이면 2)
+print(arr.size)   # 전체 요소 개수 (6)
+print(arr.dtype)  # 데이터 타입 (int32, float64 등)
+<br><img alt="배열 속성 확인" src="https://ejkiwi.github.io/lib/media/numpy02.png" referrerpolicy="no-referrer"><br><br>arr = np.array([[1, 2, 3], [4, 5, 6], [7, 8, 9]])
+
+# 특정 요소 접근
+print(arr[0, 1])  # 0번째 행, 1번째 열 (2)
+
+# 행, 열 슬라이싱
+print(arr[1, :])  # 1번째 행 전체 [4, 5, 6]
+print(arr[:, 2])  # 모든 행의 2번째 열 [3, 6, 9]
+
+# 범위 슬라이싱
+print(arr[0:2, 1:3])  # 첫 두 행의 1~2번째 열 [[2, 3], [5, 6]]
+<br><img alt="배열 인덱싱과 슬라이싱" src="https://ejkiwi.github.io/lib/media/numpy03.png" referrerpolicy="no-referrer"><br><br>x = np.array([1, 2, 3])
+y = np.array([4, 5, 6])
+
+# 요소별 연산
+print(x + y)  # [5, 7, 9]
+print(x * y)  # [4, 10, 18]
+print(x ** 2)  # [1, 4, 9]
+
+# 스칼라와 연산
+print(x + 10)  # [11, 12, 13]
+<br><img alt="배열 연산" src="https://ejkiwi.github.io/lib/media/numpy04.png" referrerpolicy="no-referrer"><br><br>arr = np.array([3, 1, 4, 2])
+
+# 합, 평균, 표준편차, 최댓값, 최솟값
+print(np.sum(arr))  # 10
+print(np.mean(arr))  # 2.5
+print(np.std(arr))  # 표준편차
+print(np.max(arr))  # 4
+print(np.min(arr))  # 1
+
+# 오름차순 정렬
+print(np.sort(arr)) # [1, 2, 3, 4]
+# 내림차순 정렬
+print(np.sort(arr)[::-1]) # [4, 3, 2, 1]
+<br><img alt="그 외 유용한 함수" src="https://ejkiwi.github.io/lib/media/numpy05.png" referrerpolicy="no-referrer"><br><br>arr = np.array([[1, 2], [3, 4]])
+
+# 배열 형태 변경
+reshaped = arr.reshape(4, 1)
+print(reshaped)
+# [[1]
+#  [2]
+#  [3]
+#  [4]]
+
+# 전치 (Transpose)
+print(arr.T)
+# [[1 3]
+#  [2 4]]
+
+# 1차원으로 펼치기
+flattened = arr.flatten()
+print(flattened)  # [1, 2, 3, 4]
+<br><img alt="배열 변환" src="https://ejkiwi.github.io/lib/media/numpy06.png" referrerpolicy="no-referrer">]]></description><link>https://ejkiwi.github.io/2025_겨울_모각코/20250126-모각코-활동-3회차.html</link><guid isPermaLink="false">2025_겨울_모각코/20250126 모각코 활동 3회차.md</guid><pubDate>Sun, 26 Jan 2025 07:37:22 GMT</pubDate><enclosure url="https://ejkiwi.github.io/lib/media/numpy01.png" length="0" type="image/png"/><content:encoded>&lt;figure&gt;&lt;img src="https://ejkiwi.github.io/lib/media/numpy01.png"&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[20250117 모각코 활동 2회차]]></title><description><![CDATA[ 
  <br>오늘의 목표 : 자료구조 개념과 종류(리스트, 튜플, 집합, 딕셔너리) 공부 및 구현<br><br> 여러가지 자료를 저장할 수 있는 데이터 구조체 &nbsp;[ , , ]<br>
 <br>요소(value) : 리스트 내 데이터를 의미
 <br>인덱스(index) : 리스트 내 데이터의 주소
@@ -37,12 +134,7 @@ print(my_set) # {1, 2, 3, 4}
 my_dict["age"] = 26  # 값 수정
 my_dict["city"] = "Seoul"  # 새 키-값 추가
 print(my_dict)  # {'name': 'Alice', 'age': 26, 'city': 'Seoul'}
-]]></description><link>https://ejkiwi.github.io/2025_겨울_모각코/20250117-모각코-활동-2회차.html</link><guid isPermaLink="false">2025_겨울_모각코/20250117 모각코 활동 2회차.md</guid><pubDate>Fri, 17 Jan 2025 15:14:09 GMT</pubDate></item><item><title><![CDATA[2025_겨울_모각코]]></title><description><![CDATA[ 
- <br>
-<br><a data-href="파샤샥 모각코 활동" href="https://ejkiwi.github.io/2025_겨울_모각코/파샤샥-모각코-활동.html" class="internal-link" target="_self" rel="noopener nofollow">파샤샥 모각코 활동</a>
-<br><a data-href="20250109 모각코 활동 1회차" href="https://ejkiwi.github.io/2025_겨울_모각코/20250109-모각코-활동-1회차.html" class="internal-link" target="_self" rel="noopener nofollow">20250109 모각코 활동 1회차</a>
-<br><a data-href="20250117 모각코 활동 2회차" href="https://ejkiwi.github.io/2025_겨울_모각코/20250117-모각코-활동-2회차.html" class="internal-link" target="_self" rel="noopener nofollow">20250117 모각코 활동 2회차</a>
-]]></description><link>https://ejkiwi.github.io/2025_겨울_모각코/2025_겨울_모각코.html</link><guid isPermaLink="false">2025_겨울_모각코/2025_겨울_모각코.md</guid><pubDate>Fri, 17 Jan 2025 15:12:08 GMT</pubDate></item><item><title><![CDATA[index]]></title><description><![CDATA[ 
+]]></description><link>https://ejkiwi.github.io/2025_겨울_모각코/20250117-모각코-활동-2회차.html</link><guid isPermaLink="false">2025_겨울_모각코/20250117 모각코 활동 2회차.md</guid><pubDate>Fri, 17 Jan 2025 15:14:09 GMT</pubDate></item><item><title><![CDATA[index]]></title><description><![CDATA[ 
  <br><br>
 <br><a data-href="백준" href="https://ejkiwi.github.io/백준/백준.html" class="internal-link" target="_self" rel="noopener nofollow">백준</a>
 <br><a data-href="2024_여름_모각코" href="https://ejkiwi.github.io/2024_여름_모각코/2024_여름_모각코.html" class="internal-link" target="_self" rel="noopener nofollow">2024_여름_모각코</a>
