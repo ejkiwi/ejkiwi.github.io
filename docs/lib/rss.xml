@@ -1,4 +1,163 @@
-<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[ejkiwi.github.io]]></title><description><![CDATA[Obsidian digital garden]]></description><link>https://ejkiwi.github.io/</link><image><url>https://ejkiwi.github.io/lib/media/favicon.png</url><title>ejkiwi.github.io</title><link>https://ejkiwi.github.io/</link></image><generator>Webpage HTML Export plugin for Obsidian</generator><lastBuildDate>Sun, 26 Jan 2025 08:15:45 GMT</lastBuildDate><atom:link href="https://ejkiwi.github.io/lib/rss.xml" rel="self" type="application/rss+xml"/><pubDate>Sun, 26 Jan 2025 08:15:44 GMT</pubDate><ttl>60</ttl><dc:creator/><item><title><![CDATA[20250126 모각코 활동 3회차]]></title><description><![CDATA[ 
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[ejkiwi.github.io]]></title><description><![CDATA[Obsidian digital garden]]></description><link>https://ejkiwi.github.io/</link><image><url>https://ejkiwi.github.io/lib/media/favicon.png</url><title>ejkiwi.github.io</title><link>https://ejkiwi.github.io/</link></image><generator>Webpage HTML Export plugin for Obsidian</generator><lastBuildDate>Sun, 02 Feb 2025 16:55:38 GMT</lastBuildDate><atom:link href="https://ejkiwi.github.io/lib/rss.xml" rel="self" type="application/rss+xml"/><pubDate>Sun, 02 Feb 2025 16:55:37 GMT</pubDate><ttl>60</ttl><dc:creator/><item><title><![CDATA[2025 cnu 동계 학습동아리]]></title><description><![CDATA[ 
+ <br>
+<br><a data-href="통통이들 학습 동아리 활동" href="https://ejkiwi.github.io/2025-cnu-동계-학습동아리/통통이들-학습-동아리-활동.html" class="internal-link" target="_self" rel="noopener nofollow">통통이들 학습 동아리 활동</a>
+<br><a data-href="1주차" href="https://ejkiwi.github.io/2025-cnu-동계-학습동아리/1주차.html" class="internal-link" target="_self" rel="noopener nofollow">1주차</a>
+]]></description><link>https://ejkiwi.github.io/2025-cnu-동계-학습동아리/2025-cnu-동계-학습동아리.html</link><guid isPermaLink="false">2025 cnu 동계 학습동아리/2025 cnu 동계 학습동아리.md</guid><pubDate>Sun, 26 Jan 2025 09:21:18 GMT</pubDate></item><item><title><![CDATA[통통이들 학습 동아리 활동]]></title><description><![CDATA[ 
+ <br>비록 미적짱은 되지 못했지만 확통짱은 될 수 있을것이야... \( •̀ ω •́ )/ ]]></description><link>https://ejkiwi.github.io/2025-cnu-동계-학습동아리/통통이들-학습-동아리-활동.html</link><guid isPermaLink="false">2025 cnu 동계 학습동아리/통통이들 학습 동아리 활동.md</guid><pubDate>Sun, 26 Jan 2025 09:21:00 GMT</pubDate></item><item><title><![CDATA[2025_겨울_모각코]]></title><description><![CDATA[ 
+ <br>
+<br><a data-href="파샤샥 모각코 활동" href="https://ejkiwi.github.io/2025_겨울_모각코/파샤샥-모각코-활동.html" class="internal-link" target="_self" rel="noopener nofollow">파샤샥 모각코 활동</a>
+<br><a data-href="20250109 모각코 활동 1회차" href="https://ejkiwi.github.io/2025_겨울_모각코/20250109-모각코-활동-1회차.html" class="internal-link" target="_self" rel="noopener nofollow">20250109 모각코 활동 1회차</a>
+<br><a data-href="20250117 모각코 활동 2회차" href="https://ejkiwi.github.io/2025_겨울_모각코/20250117-모각코-활동-2회차.html" class="internal-link" target="_self" rel="noopener nofollow">20250117 모각코 활동 2회차</a>
+<br><a data-href="20250126 모각코 활동 3회차" href="https://ejkiwi.github.io/2025_겨울_모각코/20250126-모각코-활동-3회차.html" class="internal-link" target="_self" rel="noopener nofollow">20250126 모각코 활동 3회차</a>
+<br><a data-href="20250202 모각코 활동 4회차" href="https://ejkiwi.github.io/2025_겨울_모각코/20250202-모각코-활동-4회차.html" class="internal-link" target="_self" rel="noopener nofollow">20250202 모각코 활동 4회차</a>
+]]></description><link>https://ejkiwi.github.io/2025_겨울_모각코/2025_겨울_모각코.html</link><guid isPermaLink="false">2025_겨울_모각코/2025_겨울_모각코.md</guid><pubDate>Sun, 02 Feb 2025 16:51:20 GMT</pubDate></item><item><title><![CDATA[20250202 모각코 활동 4회차]]></title><description><![CDATA[ 
+ <br>오늘의 목표 : Pandas 공부와 타이타닉 데이터 분석<br><br><br>
+<br>판다스(Pandas) : 파이썬에서의 데이터 분석과 처리를 위해 사용되는 라이브러리.
+<br>엑셀, CSV, SQL 같은 다양한 형식의 데이터를 쉽게 다룰 수 있음.
+<br>numpy기반으로 만들어져 빠르고 효율적임.
+<br><br>Series (1차원 데이터)<br>
+<br>리스트나 배열과 비슷하지만, 인덱스를 가질 수 있음.
+<br>data = pd.Series([10, 20, 30, 40], index=['A', 'B', 'C', 'D'])
+<br>DataFrame (2차원 데이터)<br>
+<br>표 형태의 데이터 구조로, 행과 열로 구성됨.
+<br>data = {'Name': ['Alice', 'Bob', 'Charlie'], 'Age': [25, 30, 35], 'Score': [85, 90, 95]}
+<br>데이터 불러오기<br>.read_csv('파일경로.csv')  # CSV 파일 불러오기
+.read_excel('파일경로.xlsx') # 엑셀 파일 불러오기
+<br><br>.info()  # 데이터 요약 정보
+.describe()  # 수치형 데이터 통계 요약 (이 때, include = 'object' 라는 파라미터를 넣어주면, 범주형 변수에 대한 통계정보를 볼 수 있음. )
+.shape  # (행, 열) 크기 확인
+.columns  # 컬럼(열) 이름 확인
+.dtypes  # 데이터 타입 확인 
+.isnull().sum()  # 결측치(NaN) 개수 확인
+.head()  # 상위 5개 행 출력
+.tail()  # 하위 5개 행 출력
+.dropna()  # 결측치가 하나라도 있는 행 삭제
+.
+.
+.
+등등...
+<br><br><br># 필요한 모듈 불러오기  
+import pandas as pd  
+import matplotlib.pyplot as plt  
+import seaborn as sns
+
+# 데이터 불러오기  
+df = sns.load_dataset('titanic')
+
+# 데이터 기본 정보 확인  
+print(df.info())  
+print(df.isnull().sum())  # 결측치 확인  
+  
+# 결측치 처리 (결측치가 하나라도 있는 행은 그냥 없애버릴것이다~!)  
+df = df.dropna()  
+df = df.reset_index(drop=True)  # 인덱스 정리
+<br>결과<br>&lt;class 'pandas.core.frame.DataFrame'&gt;
+RangeIndex: 891 entries, 0 to 890
+Data columns (total 15 columns):
+ #   Column       Non-Null Count  Dtype   
+---  ------       --------------  -----   
+ 0   survived     891 non-null    int64   
+ 1   pclass       891 non-null    int64   
+ 2   sex          891 non-null    object  
+ 3   age          714 non-null    float64 
+ 4   sibsp        891 non-null    int64   
+ 5   parch        891 non-null    int64   
+ 6   fare         891 non-null    float64 
+ 7   embarked     889 non-null    object  
+ 8   class        891 non-null    category
+ 9   who          891 non-null    object  
+ 10  adult_male   891 non-null    bool    
+ 11  deck         203 non-null    category
+ 12  embark_town  889 non-null    object  
+ 13  alive        891 non-null    object  
+ 14  alone        891 non-null    bool    
+dtypes: bool(2), category(2), float64(2), int64(4), object(5)
+memory usage: 80.7+ KB
+None
+survived         0
+pclass           0
+sex              0
+age            177
+sibsp            0
+parch            0
+fare             0
+embarked         2
+class            0
+who              0
+adult_male       0
+deck           688
+embark_town      2
+alive            0
+alone            0
+dtype: int64
+<br><br>print(df.describe())  
+print(df.describe(include = 'object'))  # 범주형 변수에 대한 통계정보
+<br>결과<br>         survived      pclass         age       sibsp       parch        fare
+count  182.000000  182.000000  182.000000  182.000000  182.000000  182.000000
+mean     0.675824    1.192308   35.623187    0.467033    0.478022   78.919735
+std      0.469357    0.516411   15.671615    0.645007    0.755869   76.490774
+min      0.000000    1.000000    0.920000    0.000000    0.000000    0.000000
+25%      0.000000    1.000000   24.000000    0.000000    0.000000   29.700000
+50%      1.000000    1.000000   36.000000    0.000000    0.000000   57.000000
+75%      1.000000    1.000000   47.750000    1.000000    1.000000   90.000000
+max      1.000000    3.000000   80.000000    3.000000    4.000000  512.329200
+         sex embarked  who  embark_town alive
+count    182      182  182          182   182
+unique     2        3    3            3     2
+top     male        S  man  Southampton   yes
+freq      94      115   87          115   123
+<br><br># 성별에 따른 생존률  
+print(df.groupby('sex')['survived'].mean() * 100)
+
+# 객실 등급에 따른 생존률  
+print(df.groupby('pclass')['survived'].mean() * 100)
+
+# 연령대별 생존률  
+print(df.groupby('age')['survived'].mean() * 100)
+<br>결과<br>sex
+female    93.181818
+male      43.617021
+Name: survived, dtype: float64
+
+pclass
+1    67.515924
+2    80.000000
+3    50.000000
+Name: survived, dtype: float64
+
+age
+0.92     100.000000
+1.00     100.000000
+2.00      33.333333
+3.00     100.000000
+4.00     100.000000
+            ...    
+64.00      0.000000
+65.00      0.000000
+70.00      0.000000
+71.00      0.000000
+80.00    100.000000
+Name: survived, Length: 63, dtype: float64
+<br><br>corr_data = df.select_dtypes(include=['number']).corr()  # 숫자형 데이터만 추출하여 상관관계 분석  
+  
+# 상관관계 시각화  
+plt.figure(figsize=(10, 6))  
+sns.heatmap(corr_data, annot=True, cmap='coolwarm', fmt=".2f", linewidths=0.5)  
+plt.title("heatmap - titanic data")  
+plt.show()
+<br><img alt="titanic1" src="https://ejkiwi.github.io/lib/media/titanicplot_1.png" referrerpolicy="no-referrer"><br># 주요 변수들간의 상관관계 시각화  
+sns.pairplot(df[['survived', 'age', 'sibsp', 'fare']])  
+plt.show()
+<br><img alt="titanic2" src="https://ejkiwi.github.io/lib/media/titanicplot_2.png" referrerpolicy="no-referrer">]]></description><link>https://ejkiwi.github.io/2025_겨울_모각코/20250202-모각코-활동-4회차.html</link><guid isPermaLink="false">2025_겨울_모각코/20250202 모각코 활동 4회차.md</guid><pubDate>Sun, 02 Feb 2025 16:50:57 GMT</pubDate><enclosure url="https://ejkiwi.github.io/lib/media/titanicplot_1.png" length="0" type="image/png"/><content:encoded>&lt;figure&gt;&lt;img src="https://ejkiwi.github.io/lib/media/titanicplot_1.png"&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[index]]></title><description><![CDATA[ 
+ <br><br>
+<br><a data-href="백준" href="https://ejkiwi.github.io/백준/백준.html" class="internal-link" target="_self" rel="noopener nofollow">백준</a>
+<br><a data-href="2024_여름_모각코" href="https://ejkiwi.github.io/2024_여름_모각코/2024_여름_모각코.html" class="internal-link" target="_self" rel="noopener nofollow">2024_여름_모각코</a>
+<br><a data-href="2024 cnu 2차 학습동아리" href="https://ejkiwi.github.io/2024-cnu-2차-학습동아리/2024-cnu-2차-학습동아리.html" class="internal-link" target="_self" rel="noopener nofollow">2024 cnu 2차 학습동아리</a>
+<br><a data-href="2025_겨울_모각코" href="https://ejkiwi.github.io/2025_겨울_모각코/2025_겨울_모각코.html" class="internal-link" target="_self" rel="noopener nofollow">2025_겨울_모각코</a>
+<br>
+<br><br>사실이건아무것도작성한게없다...&gt;_&lt;<br>
+<br><a data-tooltip-position="top" aria-label="https://velog.io/@eonjikiwi/posts" rel="noopener nofollow" class="external-link" href="https://velog.io/@eonjikiwi/posts" target="_blank">ejkiwi_velog</a>
+]]></description><link>https://ejkiwi.github.io/index.html</link><guid isPermaLink="false">index.md</guid><pubDate>Sun, 26 Jan 2025 08:51:25 GMT</pubDate></item><item><title><![CDATA[20250126 모각코 활동 3회차]]></title><description><![CDATA[ 
  <br>오늘의 목표 : 넘파이, 차트 공부 및 구현 (넘파이와 맷플롯립과 짱친되기)<br><br>Numerical Python : 파이썬에서 수치 계산을 빠르고 효율적으로 수행할 수 있도록 해주는 라이브러리.<br>
 ( ?라이브러리 : 자주 쓰이는 코드들을 묶어놓은 도구상자. ex - PyTorch는 AI 모델을 만들 때 쓰는 도구상자같은것... )<br><br>
 <br>빠른 연산 : C로 구현되어 있어 배열 연산 속도가 매우 빠르다
@@ -195,13 +354,7 @@ plt.xlabel("Categories")  # x축 이름
 plt.ylabel("Values")  # y축 이름  
 plt.legend()  # 범례 추가  
 plt.show()  # 시각화
-<br><img alt="스택형 막대 그래프" src="https://ejkiwi.github.io/lib/media/matplotlib09.png" referrerpolicy="no-referrer">]]></description><link>https://ejkiwi.github.io/2025_겨울_모각코/20250126-모각코-활동-3회차.html</link><guid isPermaLink="false">2025_겨울_모각코/20250126 모각코 활동 3회차.md</guid><pubDate>Sun, 26 Jan 2025 08:15:20 GMT</pubDate><enclosure url="https://ejkiwi.github.io/lib/media/numpy01.png" length="0" type="image/png"/><content:encoded>&lt;figure&gt;&lt;img src="https://ejkiwi.github.io/lib/media/numpy01.png"&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[2025_겨울_모각코]]></title><description><![CDATA[ 
- <br>
-<br><a data-href="파샤샥 모각코 활동" href="https://ejkiwi.github.io/2025_겨울_모각코/파샤샥-모각코-활동.html" class="internal-link" target="_self" rel="noopener nofollow">파샤샥 모각코 활동</a>
-<br><a data-href="20250109 모각코 활동 1회차" href="https://ejkiwi.github.io/2025_겨울_모각코/20250109-모각코-활동-1회차.html" class="internal-link" target="_self" rel="noopener nofollow">20250109 모각코 활동 1회차</a>
-<br><a data-href="20250117 모각코 활동 2회차" href="https://ejkiwi.github.io/2025_겨울_모각코/20250117-모각코-활동-2회차.html" class="internal-link" target="_self" rel="noopener nofollow">20250117 모각코 활동 2회차</a>
-<br><a data-href="20250126 모각코 활동 3회차" href="https://ejkiwi.github.io/2025_겨울_모각코/20250126-모각코-활동-3회차.html" class="internal-link" target="_self" rel="noopener nofollow">20250126 모각코 활동 3회차</a>
-]]></description><link>https://ejkiwi.github.io/2025_겨울_모각코/2025_겨울_모각코.html</link><guid isPermaLink="false">2025_겨울_모각코/2025_겨울_모각코.md</guid><pubDate>Sun, 26 Jan 2025 07:37:46 GMT</pubDate></item><item><title><![CDATA[20250117 모각코 활동 2회차]]></title><description><![CDATA[ 
+<br><img alt="스택형 막대 그래프" src="https://ejkiwi.github.io/lib/media/matplotlib09.png" referrerpolicy="no-referrer">]]></description><link>https://ejkiwi.github.io/2025_겨울_모각코/20250126-모각코-활동-3회차.html</link><guid isPermaLink="false">2025_겨울_모각코/20250126 모각코 활동 3회차.md</guid><pubDate>Sun, 26 Jan 2025 08:15:20 GMT</pubDate><enclosure url="https://ejkiwi.github.io/lib/media/numpy01.png" length="0" type="image/png"/><content:encoded>&lt;figure&gt;&lt;img src="https://ejkiwi.github.io/lib/media/numpy01.png"&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[20250117 모각코 활동 2회차]]></title><description><![CDATA[ 
  <br>오늘의 목표 : 자료구조 개념과 종류(리스트, 튜플, 집합, 딕셔너리) 공부 및 구현<br><br> 여러가지 자료를 저장할 수 있는 데이터 구조체 &nbsp;[ , , ]<br>
 <br>요소(value) : 리스트 내 데이터를 의미
 <br>인덱스(index) : 리스트 내 데이터의 주소
@@ -240,15 +393,7 @@ print(my_set) # {1, 2, 3, 4}
 my_dict["age"] = 26  # 값 수정
 my_dict["city"] = "Seoul"  # 새 키-값 추가
 print(my_dict)  # {'name': 'Alice', 'age': 26, 'city': 'Seoul'}
-]]></description><link>https://ejkiwi.github.io/2025_겨울_모각코/20250117-모각코-활동-2회차.html</link><guid isPermaLink="false">2025_겨울_모각코/20250117 모각코 활동 2회차.md</guid><pubDate>Fri, 17 Jan 2025 15:14:09 GMT</pubDate></item><item><title><![CDATA[index]]></title><description><![CDATA[ 
- <br><br>
-<br><a data-href="백준" href="https://ejkiwi.github.io/백준/백준.html" class="internal-link" target="_self" rel="noopener nofollow">백준</a>
-<br><a data-href="2024_여름_모각코" href="https://ejkiwi.github.io/2024_여름_모각코/2024_여름_모각코.html" class="internal-link" target="_self" rel="noopener nofollow">2024_여름_모각코</a>
-<br><a data-href="2024 cnu 2차 학습동아리" href="https://ejkiwi.github.io/2024-cnu-2차-학습동아리/2024-cnu-2차-학습동아리.html" class="internal-link" target="_self" rel="noopener nofollow">2024 cnu 2차 학습동아리</a>
-<br><a data-href="2025_겨울_모각코" href="https://ejkiwi.github.io/2025_겨울_모각코/2025_겨울_모각코.html" class="internal-link" target="_self" rel="noopener nofollow">2025_겨울_모각코</a>
-<br><br>사실이건아무것도작성한게없다...&gt;_&lt;<br>
-<br><a data-tooltip-position="top" aria-label="https://velog.io/@eonjikiwi/posts" rel="noopener nofollow" class="external-link" href="https://velog.io/@eonjikiwi/posts" target="_blank">ejkiwi_velog</a>
-]]></description><link>https://ejkiwi.github.io/index.html</link><guid isPermaLink="false">index.md</guid><pubDate>Thu, 09 Jan 2025 12:01:10 GMT</pubDate></item><item><title><![CDATA[20250109 모각코 활동 1회차]]></title><description><![CDATA[ 
+]]></description><link>https://ejkiwi.github.io/2025_겨울_모각코/20250117-모각코-활동-2회차.html</link><guid isPermaLink="false">2025_겨울_모각코/20250117 모각코 활동 2회차.md</guid><pubDate>Fri, 17 Jan 2025 15:14:09 GMT</pubDate></item><item><title><![CDATA[20250109 모각코 활동 1회차]]></title><description><![CDATA[ 
  <br>오늘의 목표 : 연산자, 조건문, 반복문, 함수 복습<br><br>수식 : 하나의 값으로 평가될 수 있는 표현. 수학적 관계를 나타내는 것이 아님. 연산자와&nbsp; 피연산자로 구성.<br>
 <br>연산자 : 어떤 연산을 나타내는 기호
 <br>피연산자 : 연산의 대상이 되는 숫자나 변수를 의미

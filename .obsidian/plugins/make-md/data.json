@@ -45,12 +45,11 @@
     "//docs/docs/lib",
     "//docs/docs/백준",
     "//docs/docs/2025_겨울_모각코",
+    "//docs/docs/lib/docs/lib/media",
+    "//2025_겨울_모각코",
     "//2024 cnu 2차 학습동아리",
     "//2024_여름_모각코",
-    "//2025_겨울_모각코",
-    "//백준",
-    "//docs",
-    "//docs/docs/lib/docs/lib/media"
+    "//git&github"
   ],
   "expandFolderOnClick": true,
   "menuTriggerChar": "/",
