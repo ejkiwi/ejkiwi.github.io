@@ -1,4 +1,102 @@
-<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[ejkiwi.github.io]]></title><description><![CDATA[Obsidian digital garden]]></description><link>https://ejkiwi.github.io/</link><image><url>https://ejkiwi.github.io/lib/media/favicon.png</url><title>ejkiwi.github.io</title><link>https://ejkiwi.github.io/</link></image><generator>Webpage HTML Export plugin for Obsidian</generator><lastBuildDate>Sun, 02 Feb 2025 16:55:38 GMT</lastBuildDate><atom:link href="https://ejkiwi.github.io/lib/rss.xml" rel="self" type="application/rss+xml"/><pubDate>Sun, 02 Feb 2025 16:55:37 GMT</pubDate><ttl>60</ttl><dc:creator/><item><title><![CDATA[2025 cnu 동계 학습동아리]]></title><description><![CDATA[ 
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[ejkiwi.github.io]]></title><description><![CDATA[Obsidian digital garden]]></description><link>https://ejkiwi.github.io/</link><image><url>https://ejkiwi.github.io/lib/media/favicon.png</url><title>ejkiwi.github.io</title><link>https://ejkiwi.github.io/</link></image><generator>Webpage HTML Export plugin for Obsidian</generator><lastBuildDate>Mon, 10 Feb 2025 10:19:27 GMT</lastBuildDate><atom:link href="https://ejkiwi.github.io/lib/rss.xml" rel="self" type="application/rss+xml"/><pubDate>Mon, 10 Feb 2025 10:19:26 GMT</pubDate><ttl>60</ttl><dc:creator/><item><title><![CDATA[20250209 모각코 활동 5회차]]></title><description><![CDATA[ 
+ <br>오늘의 목표 : 기계학습 구현<br><br><br>import pandas as pd  
+import matplotlib.pyplot as plt  
+  
+from sklearn.model_selection import train_test_split  
+from sklearn.preprocessing import StandardScaler  
+from sklearn.linear_model import LogisticRegression  
+  
+from sklearn.tree import DecisionTreeClassifier  
+from sklearn.tree import plot_tree
+<br><br># 데이터 다운로드  
+wine = pd.read_csv('https://bit.ly/wine_csv_data')
+<br># 데이터 구조 확인  
+print(wine.head())  # 처음 5개의 샘플  
+print(wine.info())  # 데이터프레임의 각 열의 데이터 타입과 누락된 데이터 확인  
+print(wine.describe())  # 통계 ( 평균, 표준편차, 최소, 최대, 중간값, 1사분위수, 3사분위수 )
+<br>   alcohol  sugar    pH  class<br>
+0      9.4    1.9  3.51    0.0<br>
+1      9.8    2.6  3.20    0.0<br>
+2      9.8    2.3  3.26    0.0<br>
+3      9.8    1.9  3.16    0.0<br>
+4      9.4    1.9  3.51    0.0<br>
+&lt;class 'pandas.core.frame.DataFrame'&gt;<br>
+RangeIndex: 6497 entries, 0 to 6496<br>
+Data columns (total 4 columns):<br><br><br> 0   alcohol  6497 non-null   float64<br>
+1   sugar    6497 non-null   float64<br>
+2   pH       6497 non-null   float64<br>
+3   class    6497 non-null   float64<br>
+dtypes: float64(4)<br>
+memory usage: 203.2 KB<br>
+None<br>
+alcohol        sugar           pH        class<br>
+count  6497.000000  6497.000000  6497.000000  6497.000000<br>
+mean     10.491801     5.443235     3.218501     0.753886<br>
+std       1.192712     4.757804     0.160787     0.430779<br>
+min       8.000000     0.600000     2.720000     0.000000<br>
+25%       9.500000     1.800000     3.110000     1.000000<br>
+50%      10.300000     3.000000     3.210000     1.000000<br>
+75%      11.300000     8.100000     3.320000     1.000000<br>
+max      14.900000    65.800000     4.010000     1.000000<br># 판다스 데이터 프레임 -&gt; 넘파이 배열  
+data = wine[['alcohol', 'sugar', 'pH']].to_numpy()  
+target = wine['class'].to_numpy()
+<br># 데이터 나누기  
+train_input, test_input, train_target, test_target = train_test_split(data, target, test_size=0.2, random_state=42)
+<br># 나눈 데이터 형태 확인  
+print(train_input.shape, test_input.shape)
+<br>(5197, 3) (1300, 3)<br># 데이터 전처리  
+ss = StandardScaler()  
+ss.fit(train_input)  
+  
+train_scaled = ss.transform(train_input)  
+test_scaled = ss.transform(test_input)
+<br><br>lr = LogisticRegression()  
+lr.fit(train_scaled, train_target)  
+  
+print(lr.score(train_scaled, train_target))  
+print(lr.score(test_scaled, test_target))  
+  
+print(lr.coef_, lr.intercept_)  # 로지스틱 회귀가 학습한 계수와 절편
+<br>0.7808350971714451 0.7776923076923077 <a data-href="0.51268071  1.67335441 -0.68775646" href="https://ejkiwi.github.io/0.51268071  1.67335441 -0.68775646" class="internal-link" target="_self" rel="noopener nofollow">0.51268071  1.67335441 -0.68775646</a> [1.81773456]`<br><br>dt = DecisionTreeClassifier(random_state=42)  
+dt.fit(train_scaled, train_target)  
+  
+print(dt.score(train_scaled, train_target))  
+print(dt.score(test_scaled, test_target))
+<br>0.996921300750433<br>
+0.8592307692307692<br># 훈련 결과 시각화  
+plt.figure(figsize=(10,7))  
+plot_tree(dt)  
+plt.show()
+<br><img alt="wine_plot1" src="https://ejkiwi.github.io/lib/media/wine_tree1.png" referrerpolicy="no-referrer"><br># 자세히 살펴보기  
+plt.figure(figsize=(10,7))  
+plot_tree(dt, max_depth=1, filled=True, feature_names=['alcohol', 'sugar', 'pH'])  
+plt.show()
+<br><img alt="wine_plot2" src="https://ejkiwi.github.io/lib/media/wine_tree2.png" referrerpolicy="no-referrer"><br># 가지치기  
+dt = DecisionTreeClassifier(max_depth=3, random_state=42)  
+dt.fit(train_scaled, train_target)  
+  
+print(dt.score(train_scaled, train_target))  
+print(dt.score(test_scaled, test_target))
+<br>0.8454877814123533<br>
+0.8415384615384616<br># 가지치고 난 뒤의 훈련 시각화  
+plt.figure(figsize=(20,15))  
+plot_tree(dt, filled=True, feature_names=['alcohol', 'sugar', 'pH'])  
+plt.show()
+<br><img alt="wine_plot3" src="https://ejkiwi.github.io/lib/media/wine_tree3.png" referrerpolicy="no-referrer"><br># 전처리 하기 전의 데이터들로 다시 훈련해보기  -&gt;  결과는 같을 것.  
+dt = DecisionTreeClassifier(max_depth=3, random_state=42)  
+dt.fit(train_input, train_target)  
+  
+print(dt.score(train_input, train_target))  
+print(dt.score(test_input, test_target))
+<br>0.8454877814123533<br>
+0.8415384615384616<br># 시각화 -&gt; 데이터를 전처리 하고 난 뒤에 훈련 한 것과 같은 트리를 갖지만, 특성값을 표준점수로 바꾸지 않았기 때문에 이해하기 더욱 쉬움.  
+plt.figure(figsize=(20,15))  
+plot_tree(dt, filled=True, feature_names=['alcohol', 'sugar', 'pH'])  
+plt.show()
+<br><img alt="wine_plot4" src="https://ejkiwi.github.io/lib/media/wine_tree4.png" referrerpolicy="no-referrer"><br># 특성 중요도  
+print(dt.feature_importances_)
+<br>[0.12345626 0.86862934 0.0079144 ]]]></description><link>https://ejkiwi.github.io/2025_겨울_모각코/20250209-모각코-활동-5회차.html</link><guid isPermaLink="false">2025_겨울_모각코/20250209 모각코 활동 5회차.md</guid><pubDate>Mon, 10 Feb 2025 10:18:54 GMT</pubDate><enclosure url="https://ejkiwi.github.io/lib/media/wine_tree1.png" length="0" type="image/png"/><content:encoded>&lt;figure&gt;&lt;img src="https://ejkiwi.github.io/lib/media/wine_tree1.png"&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[파샤샥 모각코 활동]]></title><description><![CDATA[ 
+ <br>'파사삭' ==  '파이썬 파사삭'<br>나의 모각코 활동 다짐 : 파이썬의 짱이 되겠다!!!!!!<br>팀 모각코 계획<br>]]></description><link>https://ejkiwi.github.io/2025_겨울_모각코/파샤샥-모각코-활동.html</link><guid isPermaLink="false">2025_겨울_모각코/파샤샥 모각코 활동.md</guid><pubDate>Mon, 10 Feb 2025 08:46:23 GMT</pubDate></item><item><title><![CDATA[2025 cnu 동계 학습동아리]]></title><description><![CDATA[ 
  <br>
 <br><a data-href="통통이들 학습 동아리 활동" href="https://ejkiwi.github.io/2025-cnu-동계-학습동아리/통통이들-학습-동아리-활동.html" class="internal-link" target="_self" rel="noopener nofollow">통통이들 학습 동아리 활동</a>
 <br><a data-href="1주차" href="https://ejkiwi.github.io/2025-cnu-동계-학습동아리/1주차.html" class="internal-link" target="_self" rel="noopener nofollow">1주차</a>
@@ -663,8 +761,7 @@ print("\n".join(answers))
 <br><a data-href="문제 14369" href="https://ejkiwi.github.io/백준/문제-14369.html" class="internal-link" target="_self" rel="noopener nofollow">문제 14369</a>
 <br><a data-href="문제 1931" href="https://ejkiwi.github.io/백준/문제-1931.html" class="internal-link" target="_self" rel="noopener nofollow">문제 1931</a>
 ]]></description><link>https://ejkiwi.github.io/백준/백준.html</link><guid isPermaLink="false">백준/백준.md</guid><pubDate>Sat, 04 Jan 2025 15:33:19 GMT</pubDate></item><item><title><![CDATA[백준 풀이]]></title><description><![CDATA[ 
- <br>🌱<a data-tooltip-position="top" aria-label="https://solved.ac/profile/eonjikiwi" rel="noopener nofollow" class="external-link" href="https://solved.ac/profile/eonjikiwi" target="_blank">백준 프로필</a>🌱<br>열심히 풀었던 문제들/ 왕큰 깨달음을 얻었던 문제들을 정리해놓았다!!!!!!!!!!!!!]]></description><link>https://ejkiwi.github.io/백준/백준-풀이.html</link><guid isPermaLink="false">백준/백준 풀이.md</guid><pubDate>Sat, 04 Jan 2025 15:28:47 GMT</pubDate></item><item><title><![CDATA[파샤샥 모각코 활동]]></title><description><![CDATA[ 
- <br>'파사삭' ==  '파이썬 파사삭'<br>나의 모각코 활동 다짐 : 파이썬의 짱이 되겠다!!!!!!<br>팀 모각코 계획<br>]]></description><link>https://ejkiwi.github.io/2025_겨울_모각코/파샤샥-모각코-활동.html</link><guid isPermaLink="false">2025_겨울_모각코/파샤샥 모각코 활동.md</guid><pubDate>Sat, 04 Jan 2025 15:14:24 GMT</pubDate></item><item><title><![CDATA[2024 cnu 2차 학습동아리]]></title><description><![CDATA[ 
+ <br>🌱<a data-tooltip-position="top" aria-label="https://solved.ac/profile/eonjikiwi" rel="noopener nofollow" class="external-link" href="https://solved.ac/profile/eonjikiwi" target="_blank">백준 프로필</a>🌱<br>열심히 풀었던 문제들/ 왕큰 깨달음을 얻었던 문제들을 정리해놓았다!!!!!!!!!!!!!]]></description><link>https://ejkiwi.github.io/백준/백준-풀이.html</link><guid isPermaLink="false">백준/백준 풀이.md</guid><pubDate>Sat, 04 Jan 2025 15:28:47 GMT</pubDate></item><item><title><![CDATA[2024 cnu 2차 학습동아리]]></title><description><![CDATA[ 
  <br><a data-tooltip-position="top" aria-label="https://colab.research.google.com/drive/1n9Pjthb3W4q-MO891Ce_-y5Jh2uOw4uv?usp=sharing" rel="noopener nofollow" class="external-link" href="https://colab.research.google.com/drive/1n9Pjthb3W4q-MO891Ce_-y5Jh2uOw4uv?usp=sharing" target="_blank">2024 cnu 2차 학습동아리 실습코드</a>]]></description><link>https://ejkiwi.github.io/2024-cnu-2차-학습동아리/2024-cnu-2차-학습동아리.html</link><guid isPermaLink="false">2024 cnu 2차 학습동아리/2024 cnu 2차 학습동아리.md</guid><pubDate>Thu, 02 Jan 2025 09:04:05 GMT</pubDate></item><item><title><![CDATA[2024_여름_모각코]]></title><description><![CDATA[ 
  <br>
 <br><a data-href="모.구.모.구 모각코 활동" href="https://ejkiwi.github.io/2024_여름_모각코/모.구.모.구-모각코-활동.html" class="internal-link" target="_self" rel="noopener nofollow">모.구.모.구 모각코 활동</a>
