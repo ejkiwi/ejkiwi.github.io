@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "index.md",
+                "file": "git&github/난이걸여태몰랏어.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "index"
+              "title": "난이걸여태몰랏어"
             }
           }
         ]
@@ -74,7 +74,7 @@
             }
           },
           {
-            "id": "e3eb77228e2e6b69",
+            "id": "38b368fc406753e5",
             "type": "leaf",
             "state": {
               "type": "mk-path-view",

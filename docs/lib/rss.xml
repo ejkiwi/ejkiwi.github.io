@@ -1,4 +1,12 @@
-<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[ejkiwi.github.io]]></title><description><![CDATA[Obsidian digital garden]]></description><link>https://ejkiwi.github.io/</link><image><url>https://ejkiwi.github.io/lib/media/favicon.png</url><title>ejkiwi.github.io</title><link>https://ejkiwi.github.io/</link></image><generator>Webpage HTML Export plugin for Obsidian</generator><lastBuildDate>Wed, 12 Feb 2025 17:58:55 GMT</lastBuildDate><atom:link href="https://ejkiwi.github.io/lib/rss.xml" rel="self" type="application/rss+xml"/><pubDate>Wed, 12 Feb 2025 17:58:54 GMT</pubDate><ttl>60</ttl><dc:creator/><item><title><![CDATA[20250209 모각코 활동 5회차]]></title><description><![CDATA[ 
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[ejkiwi.github.io]]></title><description><![CDATA[Obsidian digital garden]]></description><link>https://ejkiwi.github.io/</link><image><url>https://ejkiwi.github.io/lib/media/favicon.png</url><title>ejkiwi.github.io</title><link>https://ejkiwi.github.io/</link></image><generator>Webpage HTML Export plugin for Obsidian</generator><lastBuildDate>Fri, 14 Feb 2025 15:18:09 GMT</lastBuildDate><atom:link href="https://ejkiwi.github.io/lib/rss.xml" rel="self" type="application/rss+xml"/><pubDate>Fri, 14 Feb 2025 15:18:09 GMT</pubDate><ttl>60</ttl><dc:creator/><item><title><![CDATA[index]]></title><description><![CDATA[ 
+ <br><br>
+<br><a data-href="백준" href="https://ejkiwi.github.io/백준/백준.html" class="internal-link" target="_self" rel="noopener nofollow">백준</a>
+<br><a data-href="2024_여름_모각코" href="https://ejkiwi.github.io/2024_여름_모각코/2024_여름_모각코.html" class="internal-link" target="_self" rel="noopener nofollow">2024_여름_모각코</a>
+<br><a data-href="2024 cnu 2차 학습동아리" href="https://ejkiwi.github.io/2024-cnu-2차-학습동아리/2024-cnu-2차-학습동아리.html" class="internal-link" target="_self" rel="noopener nofollow">2024 cnu 2차 학습동아리</a>
+<br><a data-href="2025_겨울_모각코" href="https://ejkiwi.github.io/2025_겨울_모각코/2025_겨울_모각코.html" class="internal-link" target="_self" rel="noopener nofollow">2025_겨울_모각코</a>
+<br><br>사실이건아무것도작성한게없다...&gt;_&lt;<br>
+<br><a data-tooltip-position="top" aria-label="https://velog.io/@eonjikiwi/posts" rel="noopener nofollow" class="external-link" href="https://velog.io/@eonjikiwi/posts" target="_blank">ejkiwi_velog</a>
+]]></description><link>https://ejkiwi.github.io/index.html</link><guid isPermaLink="false">index.md</guid><pubDate>Fri, 14 Feb 2025 14:54:14 GMT</pubDate></item><item><title><![CDATA[20250209 모각코 활동 5회차]]></title><description><![CDATA[ 
  <br>오늘의 목표 : 기계학습 구현<br><br><br>import pandas as pd  
 import matplotlib.pyplot as plt  
   
@@ -248,16 +256,7 @@ plt.show()
 <br><img alt="titanic1" src="https://ejkiwi.github.io/lib/media/titanicplot_1.png" referrerpolicy="no-referrer"><br># 주요 변수들간의 상관관계 시각화  
 sns.pairplot(df[['survived', 'age', 'sibsp', 'fare']])  
 plt.show()
-<br><img alt="titanic2" src="https://ejkiwi.github.io/lib/media/titanicplot_2.png" referrerpolicy="no-referrer">]]></description><link>https://ejkiwi.github.io/2025_겨울_모각코/20250202-모각코-활동-4회차.html</link><guid isPermaLink="false">2025_겨울_모각코/20250202 모각코 활동 4회차.md</guid><pubDate>Sun, 02 Feb 2025 16:50:57 GMT</pubDate><enclosure url="https://ejkiwi.github.io/lib/media/titanicplot_1.png" length="0" type="image/png"/><content:encoded>&lt;figure&gt;&lt;img src="https://ejkiwi.github.io/lib/media/titanicplot_1.png"&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[index]]></title><description><![CDATA[ 
- <br><br>
-<br><a data-href="백준" href="https://ejkiwi.github.io/백준/백준.html" class="internal-link" target="_self" rel="noopener nofollow">백준</a>
-<br><a data-href="2024_여름_모각코" href="https://ejkiwi.github.io/2024_여름_모각코/2024_여름_모각코.html" class="internal-link" target="_self" rel="noopener nofollow">2024_여름_모각코</a>
-<br><a data-href="2024 cnu 2차 학습동아리" href="https://ejkiwi.github.io/2024-cnu-2차-학습동아리/2024-cnu-2차-학습동아리.html" class="internal-link" target="_self" rel="noopener nofollow">2024 cnu 2차 학습동아리</a>
-<br><a data-href="2025_겨울_모각코" href="https://ejkiwi.github.io/2025_겨울_모각코/2025_겨울_모각코.html" class="internal-link" target="_self" rel="noopener nofollow">2025_겨울_모각코</a>
-<br>
-<br><br>사실이건아무것도작성한게없다...&gt;_&lt;<br>
-<br><a data-tooltip-position="top" aria-label="https://velog.io/@eonjikiwi/posts" rel="noopener nofollow" class="external-link" href="https://velog.io/@eonjikiwi/posts" target="_blank">ejkiwi_velog</a>
-]]></description><link>https://ejkiwi.github.io/index.html</link><guid isPermaLink="false">index.md</guid><pubDate>Sun, 26 Jan 2025 08:51:25 GMT</pubDate></item><item><title><![CDATA[20250126 모각코 활동 3회차]]></title><description><![CDATA[ 
+<br><img alt="titanic2" src="https://ejkiwi.github.io/lib/media/titanicplot_2.png" referrerpolicy="no-referrer">]]></description><link>https://ejkiwi.github.io/2025_겨울_모각코/20250202-모각코-활동-4회차.html</link><guid isPermaLink="false">2025_겨울_모각코/20250202 모각코 활동 4회차.md</guid><pubDate>Sun, 02 Feb 2025 16:50:57 GMT</pubDate><enclosure url="https://ejkiwi.github.io/lib/media/titanicplot_1.png" length="0" type="image/png"/><content:encoded>&lt;figure&gt;&lt;img src="https://ejkiwi.github.io/lib/media/titanicplot_1.png"&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[20250126 모각코 활동 3회차]]></title><description><![CDATA[ 
  <br>오늘의 목표 : 넘파이, 차트 공부 및 구현 (넘파이와 맷플롯립과 짱친되기)<br><br>Numerical Python : 파이썬에서 수치 계산을 빠르고 효율적으로 수행할 수 있도록 해주는 라이브러리.<br>
 ( ?라이브러리 : 자주 쓰이는 코드들을 묶어놓은 도구상자. ex - PyTorch는 AI 모델을 만들 때 쓰는 도구상자같은것... )<br><br>
 <br>빠른 연산 : C로 구현되어 있어 배열 연산 속도가 매우 빠르다
