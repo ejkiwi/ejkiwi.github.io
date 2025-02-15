@@ -11,14 +11,12 @@
             "id": "6a86869c1c427cf9",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "mk-space",
               "state": {
-                "file": "2025_겨울_모각코/20250215 모각코 활동 6회차.md",
-                "mode": "source",
-                "source": false
+                "path": "2025_겨울_모각코"
               },
               "icon": "lucide-file",
-              "title": "20250215 모각코 활동 6회차"
+              "title": "2025_겨울_모각코"
             }
           }
         ]
@@ -177,47 +175,9 @@
       "webpage-html-export:Export Vault to HTML": false
     }
   },
-  "floating": {
-    "id": "30fdd6483bad83cc",
-    "type": "floating",
-    "children": [
-      {
-        "id": "1a39acfcbbe158dd",
-        "type": "window",
-        "children": [
-          {
-            "id": "3a5c8f6c8942dacd",
-            "type": "tabs",
-            "children": [
-              {
-                "id": "f6e44030360ff6e3",
-                "type": "leaf",
-                "state": {
-                  "type": "markdown",
-                  "state": {
-                    "file": "2025_겨울_모각코/20250215 모각코 활동 6회차.md",
-                    "mode": "source",
-                    "source": false
-                  },
-                  "icon": "lucide-file",
-                  "title": "20250215 모각코 활동 6회차"
-                }
-              }
-            ]
-          }
-        ],
-        "direction": "vertical",
-        "x": 270,
-        "y": 375,
-        "width": 800,
-        "height": 400,
-        "maximize": false,
-        "zoom": 0
-      }
-    ]
-  },
-  "active": "f6e44030360ff6e3",
+  "active": "6a86869c1c427cf9",
   "lastOpenFiles": [
+    "docs/2025_겨울_모각코/20250215-모각코-활동-6회차.html",
     "2025_겨울_모각코/20250215 모각코 활동 6회차.md",
     "무제.md",
     "docs/lib/media/6155340132a851f6089e.svg",
@@ -255,7 +215,6 @@
     "혼자 공부하는 머신러닝딥러닝/혼자 공부하는 머신러닝딥러닝.md",
     "혼자 공부하는 머신러닝딥러닝",
     "백준/백준.md",
-    "백준/문제 1931.md",
     "2025_겨울_모각코",
     "2024 cnu 2차 학습동아리",
     "2024_여름_모각코",
