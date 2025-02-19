@@ -45,7 +45,6 @@
     "//docs/docs/lib",
     "//docs/docs/백준",
     "//docs/docs/2025_겨울_모각코",
-    "//docs/docs/lib/docs/lib/media",
     "//2024 cnu 2차 학습동아리",
     "//2025_겨울_모각코",
     "//2024_여름_모각코",
@@ -53,7 +52,9 @@
     "//Tags",
     "//git&github",
     "//혼자 공부하는 머신러닝딥러닝",
-    "//2025 cnu 동계 학습동아리 (복습)"
+    "//2025 cnu 동계 학습동아리 (복습)",
+    "//docs",
+    "//docs/docs/lib/docs/lib/media"
   ],
   "expandFolderOnClick": true,
   "menuTriggerChar": "/",
