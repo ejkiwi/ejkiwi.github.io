@@ -1,9 +1,296 @@
-<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[ejkiwi.github.io]]></title><description><![CDATA[Obsidian digital garden]]></description><link>https://ejkiwi.github.io/</link><image><url>https://ejkiwi.github.io/lib/media/favicon.png</url><title>ejkiwi.github.io</title><link>https://ejkiwi.github.io/</link></image><generator>Webpage HTML Export plugin for Obsidian</generator><lastBuildDate>Tue, 29 Jul 2025 08:43:20 GMT</lastBuildDate><atom:link href="https://ejkiwi.github.io/lib/rss.xml" rel="self" type="application/rss+xml"/><pubDate>Tue, 29 Jul 2025 08:43:19 GMT</pubDate><ttl>60</ttl><dc:creator/><item><title><![CDATA[2025 cnu 동계 학습동아리 (복습)]]></title><description><![CDATA[ 
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[ejkiwi.github.io]]></title><description><![CDATA[Obsidian digital garden]]></description><link>https://ejkiwi.github.io/</link><image><url>https://ejkiwi.github.io/lib/media/favicon.png</url><title>ejkiwi.github.io</title><link>https://ejkiwi.github.io/</link></image><generator>Webpage HTML Export plugin for Obsidian</generator><lastBuildDate>Tue, 29 Jul 2025 09:26:01 GMT</lastBuildDate><atom:link href="https://ejkiwi.github.io/lib/rss.xml" rel="self" type="application/rss+xml"/><pubDate>Tue, 29 Jul 2025 09:26:00 GMT</pubDate><ttl>60</ttl><dc:creator/><item><title><![CDATA[20250718 모각코 활동 1회차]]></title><description><![CDATA[ 
+ <br>오늘의 목표<br>
+1.컴퓨터 구조 기본 개념과 디지털 논리 이해하기<br><br><br>중앙처리장치 (CPU)<br>
+<br>명령어 실행과 연산을 담당하는 핵심 부품
+<br>제어장치(Control Unit)와 산술논리장치(ALU)로 구성
+<br>레지스터를 통해 임시 데이터 저장
+<br>메모리 시스템<br>
+<br>주기억장치(RAM): 실행 중인 프로그램과 데이터 저장
+<br>보조기억장치(HDD, SSD): 영구적인 데이터 저장
+<br>캐시 메모리: CPU와 주기억장치 간의 속도 차이 보완
+<br>입출력 장치<br>
+<br>입력장치: 키보드, 마우스, 터치스크린 등
+<br>출력장치: 모니터, 프린터, 스피커 등
+<br>입출력 제어기를 통해 CPU와 통신
+<br><br>소프트웨어는 계층적 구조로 구성<br>시스템 소프트웨어<br>
+<br>운영체제(OS): 하드웨어 자원 관리 및 사용자 인터페이스 제공
+<br>컴파일러: 고급 언어를 기계어로 번역
+<br>어셈블러: 어셈블리어를 기계어로 번역
+<br>응용 소프트웨어<br>
+<br>사용자가 직접 사용하는 프로그램
+<br>워드프로세서, 웹브라우저, 게임 등
+<br><br><br>
+<br>0과 1로만 구성된 수 체계
+<br>컴퓨터에서 모든 정보를 표현하는 기본 단위
+<br>예: 1011₂ = 1×2³ + 0×2² + 1×2¹ + 1×2⁰ = 11₁₀
+<br><br>
+<br>0~7의 숫자로 구성
+<br>이진수 3자리를 8진수 1자리로 변환 가능
+<br>예: 123₈ = 1×8² + 2×8¹ + 3×8⁰ = 83₁₀
+<br><br>
+<br>0~9, A~F로 구성 (A=10, B=11, C=12, D=13, E=14, F=15)
+<br>이진수 4자리를 16진수 1자리로 변환 가능
+<br>메모리 주소 표현에 주로 사용
+<br>예: A3F₁₆ = 10×16² + 3×16¹ + 15×16⁰ = 2623₁₀
+<br><br>10진수 → 2진수: 2로 나누어 나머지를 역순으로 배열 2진수 → 16진수: 4자리씩 묶어서 변환<br>
+<br>1010 1100₂ =  AC₁₆
+<br><br><br>AND 게이트<br>
+<br>모든 입력이 1일 때만 출력이 1
+<br>진리표: A=0,B=0→0 | A=0,B=1→0 | A=1,B=0→0 | A=1,B=1→1
+<br>기호: D형 게이트 모양
+<br>OR 게이트<br>
+<br>하나 이상의 입력이 1이면 출력이 1
+<br>진리표: A=0,B=0→0 | A=0,B=1→1 | A=1,B=0→1 | A=1,B=1→1
+<br>기호: 곡선형 게이트 모양
+<br>NOT 게이트 (인버터)<br>
+<br>입력의 반대 값을 출력
+<br>진리표: A=0→1 | A=1→0
+<br>기호: 삼각형에 작은 원
+<br><br>XOR 게이트 (배타적 OR)<br>
+<br>입력이 서로 다를 때만 출력이 1
+<br>진리표: A=0,B=0→0 | A=0,B=1→1 | A=1,B=0→1 | A=1,B=1→0
+<br>덧셈 회로에서 자리올림 없는 합 구현
+<br>NAND 게이트<br>
+<br>AND 게이트의 출력을 NOT한 결과
+<br>범용 게이트: 모든 논리 함수 구현 가능
+<br>NOR 게이트<br>
+<br>OR 게이트의 출력을 NOT한 결과
+<br>범용 게이트: 모든 논리 함수 구현 가능
+<br><br><br>교환 법칙 (Commutative Law)<br>
+<br>A + B = B + A
+<br>A · B = B · A
+<br>결합 법칙 (Associative Law)<br>
+<br>(A + B) + C = A + (B + C)
+<br>(A · B) · C = A · (B · C)
+<br>분배 법칙 (Distributive Law)<br>
+<br>A · (B + C) = A·B + A·C
+<br>A + (B · C) = (A + B) · (A + C)
+<br>항등 법칙 (Identity Law)<br>
+<br>A + 0 = A
+<br>A · 1 = A
+<br>보수 법칙 (Complement Law)<br>
+<br>A + A' = 1
+<br>A · A' = 0
+<br><br>논리식의 부정을 간단히 하기 때문에 중요하다!<br>(A + B)' = A' · B'<br>
+<br>OR의 부정은 각각의 부정을 AND
+<br>(A · B)' = A' + B'<br>
+<br>AND의 부정은 각각의 부정을 OR
+<br><br><br>
+<br>출력이 현재 입력에만 의존
+<br>메모리 기능 없음
+<br>입력이 바뀌면 즉시 출력 변화
+<br><br>가산기 (Adder)<br>
+<br>반가산기(Half Adder): 2개의 1비트 수를 더함
+
+<br>입력: A, B / 출력: Sum, Carry
+<br>Sum = A ⊕ B, Carry = A · B
+
+
+<br>전가산기(Full Adder): 이전 자리올림까지 고려
+
+<br>입력: A, B, Cin / 출력: Sum, Cout
+
+
+<br>디코더 (Decoder)<br>
+<br>n비트 입력을 2ⁿ개의 출력선 중 하나를 선택
+<br>메모리 주소 디코딩에 사용
+<br>인코더 (Encoder)<br>
+<br>2ⁿ개의 입력선 중 하나를 n비트로 인코딩
+<br>키보드 입력 처리에 사용
+<br>멀티플렉서 (Multiplexer, MUX)<br>
+<br>여러 입력 중 하나를 선택하여 출력
+<br>선택신호에 따라 입력 경로 결정
+<br><br><br>
+<br>출력이 현재 입력과 이전 상태에 의존
+<br>메모리 기능 보유
+<br>클록 신호에 동기화되어 동작
+
+<br>컴퓨터에서 모든 동작의 타이밍을 맞춰주는 기준 신호
+<br>컴퓨터 부품들이 언제 동작해야 하는지 알려주는 시간 기준
+
+
+<br><br>플립플롭 (Flip-Flop)<br>
+<br>1비트 정보를 저장하는 기본 메모리 소자
+<br>클록 신호에 의해 상태 변화
+<br><br>카운터 (Counter)<br>
+<br>클록 펄스를 계수하는 회로
+<br>업카운터, 다운카운터, 링카운터 등
+<br>레지스터 (Register)<br>
+<br>여러 비트의 정보를 저장
+<br>시프트 레지스터: 데이터를 좌우로 이동
+<br>메모리<br>
+<br>대용량 데이터 저장을 위한 순차 회로
+<br>RAM, ROM 등의 기본 구조
+]]></description><link>https://ejkiwi.github.io/2025_여름_모각코/20250718-모각코-활동-1회차.html</link><guid isPermaLink="false">2025_여름_모각코/20250718 모각코 활동 1회차.md</guid><pubDate>Tue, 29 Jul 2025 09:14:10 GMT</pubDate></item><item><title><![CDATA[데이터 표현과 산술 연산]]></title><description><![CDATA[ 
+ <br>오늘의 목표<br>
+1.데이터 표현(정수, 실수, 문자) 이해하기<br>
+2.산술 연산을 위한 회로 설계 공부<br><br><br><br>특징<br>
+<br>0 이상의 양수만 표현
+<br>n비트로 0부터 2ⁿ-1까지 표현 가능
+<br>모든 비트가 크기를 나타냄
+<br>예시
+
+<br>0000₂ = 0₁₀
+<br>0101₂ = 5₁₀
+<br>1111₂ = 15₁₀
+
+
+<br><br><br>
+<br>최상위 비트(MSB)가 부호 비트 (0=양수, 1=음수)
+<br>나머지 비트가 크기를 나타냄
+<br>문제점 : 0이 두 개 (+0, -0), 연산이 복잡
+<br>예시 (4비트)
+
+<br>0011₂ = +3₁₀
+<br>1011₂ = -3₁₀
+
+
+<br><br>
+<br>양수의 모든 비트를 반전시켜 음수 표현
+<br>문제점 : 여전히 0이 두 개 존재
+<br>예시
+
+<br>+3: 0011₂
+<br>-3: 1100₂ (0011의 모든 비트 반전)
+
+
+<br><br>현재 가장 널리 사용되는 방식<br>계산 방법<br>
+<br>양수의 1의 보수를 구함 (모든 비트 반전)
+<br>1을 더함
+<br>
+<br>예시
+
+<br>+3: 0011₂
+<br>-3: 1100₂ + 1₂ = 1101₂
+
+
+<br>0이 하나만 존재
+<br>덧셈/뺄셈 회로가 동일
+<br>범위: -2ⁿ⁻¹ ~ 2ⁿ⁻¹-1
+<br>8비트 2의 보수 범위: -128 ~ +127
+<br><br>표현 가능한 범위를 벗어나는 경우<br>
+<br>부호 없는 정수: 자리올림이 발생하면 오버플로
+<br>부호 있는 정수: 부호가 바뀌면 오버플로
+<br><br><br>구성 요소<br>
+<br>부호(Sign): 1비트 (0=양수, 1=음수)
+<br>지수(Exponent): 8비트 (단정도), 11비트 (배정도)
+<br>가수(Mantissa/Significand): 23비트 (단정도), 52비트 (배정도)
+<br><br>형식: S EEEEEEEE MMMMMMMMMMMMMMMMMMMMMMM<br>
+<br>S: Sign bit (부호 비트) - 1비트
+<br>EEEEEEEE: Exponent (지수) - 8비트
+<br>MMMMMMMMMMMMMMMMMMMMMMM: Mantissa/Significand (가수) - 23비트
+<br>표현 방법<br>
+<br>실수를 이진 소수로 변환
+<br>정규화 (1.xxxxx × 2ᵏ 형태)
+<br>지수에 바이어스(127) 더함
+<br>가수에서 정수부 1 제거 (암묵적 1)
+<br>
+<br>예시: 12.75₁₀ 표현
+
+<br>12.75₁₀ = 1100.11₂
+<br>정규화: 1.10011 × 2³
+<br>지수: 3 + 127 = 130₁₀ = 10000010₂
+<br>가수: 10011000000000000000000₂
+<br>결과: 0 10000010 10011000000000000000000
+
+
+<br><br>
+<br>0: 지수와 가수가 모두 0
+<br>무한대(∞): 지수가 모두 1, 가수가 0
+<br>NaN: 지수가 모두 1, 가수가 0이 아님
+<br><br>
+<br>모든 실수를 정확히 표현할 수 없음
+<br>반올림 오차 발생 가능
+<br>예: 0.1₁₀을 이진수로 정확히 표현 불가
+<br><br><br>특징<br>
+<br>7비트 코드 (0~127)
+<br>128개 문자 표현
+<br>영어 알파벳, 숫자, 특수문자, 제어문자
+<br>주요 코드<br>
+<br>'0' ~ '9': 48 ~ 57 (30H ~ 39H)
+<br>'A' ~ 'Z': 65 ~ 90 (41H ~ 5AH)
+<br>'a' ~ 'z': 97 ~ 122 (61H ~ 7AH)
+<br>공백: 32 (20H)
+<br>줄바꿈(LF): 10 (0AH)
+<br>확장 ASCII<br>
+<br>8비트 사용 (0~255)
+<br>추가 128개 문자 (특수문자, 외국어 문자)
+<br><br>배경<br>
+<br>ASCII로는 전 세계 모든 문자 표현 불가
+<br>다국어 지원 필요
+<br>특징<br>
+<br>전 세계 모든 문자를 하나의 코드 체계로 통합
+<br>현재 약 150,000개 문자 수록
+<br>코드 포인트: U+0000 ~ U+10FFFF
+<br>인코딩 방식<br>
+<br>UTF-8: 가변 길이 (1~4바이트), ASCII 호환
+<br>UTF-16: 가변 길이 (2~4바이트)
+<br>UTF-32: 고정 길이 (4바이트)
+<br>UTF-8의 장점<br>
+<br>ASCII와 완전 호환
+<br>인터넷에서 가장 널리 사용
+<br>영어는 1바이트, 한글은 3바이트로 효율적
+<br><br><br>
+<br>CPU의 핵심 구성 요소
+<br>산술 연산(+, -, ×, ÷)과 논리 연산(AND, OR, NOT) 수행
+<br>비교 연산과 시프트 연산도 담당
+<br><br>입력<br>
+<br>A, B: 피연산자 (보통 32비트 또는 64비트)
+<br>제어 신호: 수행할 연산 지정
+<br>캐리 입력(Cin): 이전 연산의 자리올림
+<br>출력<br>
+<br>결과(Result): 연산 결과
+<br>플래그(Flags): 연산 상태 정보
+
+<br>Zero Flag (Z): 결과가 0일 때
+<br>Carry Flag (C): 자리올림 발생 시
+<br>Overflow Flag (V): 오버플로 발생 시
+<br>Negative Flag (N): 결과가 음수일 때
+
+
+<br><br>제어 신호 예시 (4비트)<br>
+<br>0000: A AND B
+<br>0001: A OR B
+<br>0010: A + B
+<br>0110: A - B
+<br>0111: A &lt; B인지 비교
+<br><br><br>기능: 2개의 1비트 수를 더함 입력: A, B 출력: Sum, Carry<br>논리식<br>
+<br>Sum = A ⊕ B (XOR)
+<br>Carry = A · B (AND)
+<br>진리표<br><br><br>기능: 2개의 1비트 수와 이전 자리올림을 더함 입력: A, B, Cin 출력: Sum, Cout<br>논리식<br>
+<br>Sum = A ⊕ B ⊕ Cin
+<br>Cout = A·B + Cin·(A ⊕ B)
+<br>구현 방법<br>
+<br>반가산기 2개를 연결하여 구성 가능
+<br><br><br>원리: A - B = A + (-B) = A + B의 2의 보수<br>구현 방법<br>
+<br>B의 모든 비트를 반전 (1의 보수)
+<br>가산기의 캐리 입력에 1을 넣음
+<br>A와 처리된 B를 가산기로 더함
+<br>장점<br>
+<br>덧셈기 회로를 그대로 활용
+<br>별도의 뺄셈 회로 불필요
+<br><br>구조<br>
+<br>덧셈기에 XOR 게이트 추가
+<br>제어 신호로 덧셈/뺄셈 선택
+<br>동작<br>
+<br>Sub = 0: 덧셈 모드 (B는 그대로 전달)
+<br>Sub = 1: 뺄셈 모드 (B는 반전되어 전달, Cin = 1)
+<br><br><br>시프트-덧셈 방법<br>
+<br>승수의 각 비트를 검사
+<br>1이면 피승수를 더하고, 0이면 건너뜀
+<br>매번 피승수를 왼쪽으로 시프트
+<br>부스 알고리즘 (Booth's Algorithm)<br>
+<br>부호 있는 정수의 효율적인 곱셈
+<br>연속된 1을 하나의 덧셈과 뺄셈으로 처리
+<br><br>복원 나눗셈 (Restoring Division)<br>
+<br>피제수에서 제수를 빼봄
+<br>결과가 음수면 복원하고 몫에 0
+<br>결과가 양수면 몫에 1
+<br>나머지를 왼쪽으로 시프트하고 반복
+]]></description><link>https://ejkiwi.github.io/2025_여름_모각코/20250721-모각코-활동-2회차.html</link><guid isPermaLink="false">2025_여름_모각코/20250721 모각코 활동 2회차.md</guid><pubDate>Tue, 29 Jul 2025 09:25:39 GMT</pubDate></item><item><title><![CDATA[2025 cnu 동계 학습동아리 (복습)]]></title><description><![CDATA[ 
  ]]></description><link>https://ejkiwi.github.io/2025-cnu-동계-학습동아리-(복습)/2025-cnu-동계-학습동아리-(복습).html</link><guid isPermaLink="false">2025 cnu 동계 학습동아리 (복습)/2025 cnu 동계 학습동아리 (복습).md</guid><pubDate>Tue, 29 Jul 2025 08:02:18 GMT</pubDate></item><item><title><![CDATA[통통이들 학습 동아리 활동]]></title><description><![CDATA[ 
  <br>비록 미적짱은 되지 못했지만 확통짱은 될 수 있을것이야... \( •̀ ω •́ )/ ]]></description><link>https://ejkiwi.github.io/2025-cnu-동계-학습동아리-(복습)/통통이들-학습-동아리-활동.html</link><guid isPermaLink="false">2025 cnu 동계 학습동아리 (복습)/통통이들 학습 동아리 활동.md</guid><pubDate>Tue, 29 Jul 2025 08:02:08 GMT</pubDate></item><item><title><![CDATA[2025_여름_모각코]]></title><description><![CDATA[ 
- ]]></description><link>https://ejkiwi.github.io/2025_여름_모각코/2025_여름_모각코.html</link><guid isPermaLink="false">2025_여름_모각코/2025_여름_모각코.md</guid><pubDate>Tue, 29 Jul 2025 07:30:22 GMT</pubDate></item><item><title><![CDATA[20250718 모각코 활동 1회차]]></title><description><![CDATA[ 
- ]]></description><link>https://ejkiwi.github.io/2025_여름_모각코/20250718-모각코-활동-1회차.html</link><guid isPermaLink="false">2025_여름_모각코/20250718 모각코 활동 1회차.md</guid><pubDate>Tue, 29 Jul 2025 07:32:20 GMT</pubDate></item><item><title><![CDATA[20250721 모각코 활동 2회차]]></title><description><![CDATA[ 
- ]]></description><link>https://ejkiwi.github.io/2025_여름_모각코/20250721-모각코-활동-2회차.html</link><guid isPermaLink="false">2025_여름_모각코/20250721 모각코 활동 2회차.md</guid><pubDate>Tue, 29 Jul 2025 07:34:55 GMT</pubDate></item><item><title><![CDATA[뿌가각 모각코 활동]]></title><description><![CDATA[ 
+ ]]></description><link>https://ejkiwi.github.io/2025_여름_모각코/2025_여름_모각코.html</link><guid isPermaLink="false">2025_여름_모각코/2025_여름_모각코.md</guid><pubDate>Tue, 29 Jul 2025 07:30:22 GMT</pubDate></item><item><title><![CDATA[뿌가각 모각코 활동]]></title><description><![CDATA[ 
  <br>뿌가각 = 모각코 뿌시기<br>나의 모각코 활동 다짐 : 컴퓨터구조를  뿌시겠다!!!!!!]]></description><link>https://ejkiwi.github.io/2025_여름_모각코/뿌가각-모각코-활동.html</link><guid isPermaLink="false">2025_여름_모각코/뿌가각 모각코 활동.md</guid><pubDate>Tue, 29 Jul 2025 07:34:15 GMT</pubDate></item><item><title><![CDATA[2025_겨울_모각코]]></title><description><![CDATA[ 
  <br>
 <br><a data-href="파샤샥 모각코 활동" href="https://ejkiwi.github.io/2025_겨울_모각코/파샤샥-모각코-활동.html" class="internal-link" target="_self" rel="noopener nofollow">파샤샥 모각코 활동</a>
@@ -631,195 +918,7 @@ print(my_set) # {1, 2, 3, 4}
 my_dict["age"] = 26  # 값 수정
 my_dict["city"] = "Seoul"  # 새 키-값 추가
 print(my_dict)  # {'name': 'Alice', 'age': 26, 'city': 'Seoul'}
-]]></description><link>https://ejkiwi.github.io/2025_겨울_모각코/20250117-모각코-활동-2회차.html</link><guid isPermaLink="false">2025_겨울_모각코/20250117 모각코 활동 2회차.md</guid><pubDate>Fri, 17 Jan 2025 15:14:09 GMT</pubDate></item><item><title><![CDATA[문제 1011]]></title><description><![CDATA[ 
- <br>Fly me to the Alpha Centauri<br>입력 : 입력의 첫 줄에는 테스트케이스의 개수 T가 주어진다. 각각의 테스트 케이스에 대해 현재 위치 x 와 목표 위치 y 가 정수로 주어지며, x는 항상 y보다 작은 값을 갖는다. (0 ≤ x &lt; y &lt; 231)<br>
-출력 : 각 테스트 케이스에 대해 x지점으로부터 y지점까지 정확히 도달하는데 필요한 최소한의 공간이동 장치 작동 횟수를 출력한다.<br>case = []
-for i in range(int(input())):
-    d, e = map(int,input().split())
-    case.append([d, e, e-d])
-
-result = []
-for i in case:
-    r = 0
-    count = 0
-    m = 0
-
-    while True:
-        m += 1
-        r += m
-        count += 1
-        if i[2] &lt;= r:
-            result.append(count)
-            break
-        r += m
-        count += 1
-        if i[2] &lt;= r:
-            result.append(count)
-            break
-
-for i in result:
-    print(i)
-<br>
-<br>r: 누적 이동 거리
-<br>count: 이동 횟수
-<br>m: 현재 단계에서 한 번에 이동할 수 있는 거리<br>
-이동 거리는 1부터 시작하며, 매 단계마다 1, 2, 3, ... 식으로 증가.(같은 거리만큼 두 번 반복)
-<br><br>11 22 33 44 55 66 77 88 99 1010 1111 1212 1313 1414 ,,, -&gt; 개수  
-12 34 56 78 910 ,,,, -&gt; 횟수의 수  
-구간의 크기가 순서대로 1부터 20까지 있다고 하면, 그 구간에 따른 정답은  -&gt; 1 2 33 44 555 666 7777 8888이 됨.  
-* (예) 구간의 크기가 8이면 정답은 5가 됨. / 구간의 크기가 10이면 정답은 6이 됨.
-]]></description><link>https://ejkiwi.github.io/백준/문제-1011.html</link><guid isPermaLink="false">백준/문제 1011.md</guid><pubDate>Thu, 02 Jan 2025 08:39:47 GMT</pubDate></item><item><title><![CDATA[문제 1931]]></title><description><![CDATA[ 
- <br>회의실 배정<br>입력 : 첫째 줄에 회의의 수 N(1 ≤ N ≤ 100,000)이 주어진다. 둘째 줄부터 N+1 줄까지 각 회의의 정보가 주어지는데 이것은 공백을 사이에 두고 회의의 시작시간과 끝나는 시간이 주어진다. 시작 시간과 끝나는 시간은 231-1보다 작거나 같은 자연수 또는 0이다.<br>
-출력 : 첫째 줄에 최대 사용할 수 있는 회의의 최대 개수를 출력한다.<br>import sys
-input = sys.stdin.readline
-
-case = []
-for _ in range(int(input())):
-    a = list(map(int,input().split()))
-    case.append(a)
-case.sort(key=lambda x: (x[0], x[1]))
-
-CASE = []
-cAse = set()
-c = len(cAse)
-for _ in case: #어차피 시작시간도 같은데 끝시간이 더 긴건 필요업냠냠냠냠냠,,..
-    cAse.add(_[0])
-    if _[1] == _[0]: #시작하자마자끝나는건필요해...
-        CASE.append(_)
-    elif len(cAse) != c: #정렬한 뒤, 저장하는거니까... 시작시각이 같은 회의들 중 일찍끝나는것만 필요
-        c = len(cAse)
-        CASE.append(_)
-
-result = 1
-now = case[0]
-for _ in case[1::]:
-    if now[1] &gt; _[1]: #now보다 지금 _의 끝 시작이 더 작다? -&gt; 이녀석은 더 효율적인 회의임 얘 선택해야해.. 근데 회의 카운트 수를 높일 수는 없음.
-        now = _ #그냥 now를 더 좋은 회의로 바꾸는거임. 3 100, 4 5인 경우에 해당..
-
-    elif now[1] &lt;= _[0]: #근데..? _의 시작시간이..? now의 끝나는 시작과 같다? -&gt; 이건 바로 회의 수 추가mood ~~ 완전 그 느낌임...
-        if _[0] == _[1]: #시작시각과 끝 시각이 같은 경우.
-            result += 1 #무조건 추가
-        else:
-            result += 1 #추가하고
-            now = _ #현재 회의 바꾸고...
-
-print(result)
-<br>
-<br>푼 방식은.. 주석과같다...~_~
-]]></description><link>https://ejkiwi.github.io/백준/문제-1931.html</link><guid isPermaLink="false">백준/문제 1931.md</guid><pubDate>Thu, 02 Jan 2025 08:57:47 GMT</pubDate></item><item><title><![CDATA[문제 14369]]></title><description><![CDATA[ 
- <br>전화번호 수수께끼(Small)<br>입력 : 첫 줄에 테스트케이스의 개수 T가 주어진다. 각 테스트케이스에는 상대방이 제시한 스트링 S가 주어진다. S는 영어 대문자로만 이루어져 있다.<br>
-1≤&nbsp;T&nbsp;≤ 100이고, S의 길이는 3 이상 20 이하이다. 모든 테스트케이스에는 유일한 해답이 있다.<br>
-출력 : 각 줄에 테스트케이스 번호 x와 전화번호 y를 Case # x: y의 형태로 출력한다.<br>첫 시도 -&gt; 시간초과<br>ZERO = [1,0,0,0,0,0,1,1,0,0,0,0,0,0,1]
-ONE =  [1,0,0,0,0,1,1,0,0,0,0,0,0,0,0]
-TWO =  [0,0,0,0,0,0,1,0,0,1,0,0,1,0,0]
-THREE =[2,0,0,1,0,0,0,1,0,1,0,0,0,0,0]
-FOUR = [0,1,0,0,0,0,1,1,0,0,1,0,0,0,0]
-FIVE = [1,1,0,0,1,0,0,0,0,0,0,1,0,0,0]
-SIX =  [0,0,0,0,1,0,0,0,1,0,0,0,0,1,0]
-SEVEN =[2,0,0,0,0,1,0,0,1,0,0,1,0,0,0]
-EIGHT =[1,0,1,1,1,0,0,0,0,1,0,0,0,0,0]
-NINE = [1,0,0,0,1,2,0,0,0,0,0,0,0,0,0]
-NUMBER = [ ["0",ZERO], ["1", ONE], ["2", TWO], ["3", THREE], ["4", FOUR], ["5", FIVE], ["6", SIX], ["7", SEVEN], ["8", EIGHT], ["9",NINE] ]
-ALPHABET = ['E', 'F', 'G', 'H', 'I', 'N', 'O', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Z']
-
-
-def CASE(TEXT, ALPHABET = ALPHABET):
-    result = []
-    for i in ALPHABET:
-        result.append(TEXT.count(i))
-    return result
-
-
-def CLEAR_NUMBER(NUMBER = NUMBER, case = []):
-    number = []
-    #전처리
-    for i in NUMBER:
-        detect = 0
-        for j in range(15):
-            if i[1][j] &gt; case[j]:
-                detect = 1
-                break
-        if detect == 0:
-            number.append(i)
-            case = [y-x for x,y in zip(i[1], case)]
-
-    return number, case
-
-
-def ANSWER(case, number = NUMBER):
-    answer = []
-    case = CASE(case)
-    while True:
-        if case == [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]:
-            break
-        number, case = CLEAR_NUMBER(number, case)
-        for i in number:
-            answer.append(i[0])
-
-    return answer
-
-answer = []
-for i in range(int(input())):
-    case = input()
-    a = ""
-    for j in sorted(ANSWER(case)):
-        a += j
-    answer.append(a)
-
-m = 1
-for i in answer:
-    print("Case "+"#"+str(m)+": "+i)
-    m += 1
-<br>'E', 'F', 'G', 'H', 'I', 'N', 'O', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Z' 를 차례대로 묶어서, 해당 알파벳이 있으면 1, 없으면 0을 매겨주었다. 그리고 주어진 case에서, 해당되는 알파벳 부분을 전체에서 빼주는 작업을<br>
-[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0] 이 될 때까지 반복해서<br>
-정답을 찾는 방법으로 작성했다.<br>
-<br>CLEAR_NUMBER 함수는 NUMBER 리스트를 순회하면서 각 숫자의 패턴과 case를 비교하는데, 매 숫자마다 15개의 값을 비교하고, 이를 매번 갱신하며 반복적으로 수행하는 점이 시간을 많이 잡아먹었고.. case가 0으로 수렴하는 과정에서 반복 횟수가 많아지고, 내부적으로 CLEAR_NUMBER를 여러 번 호출하므로 시간이 크게 소요되어서 시간초과가 났을 것이다.
-<br>네 번째 시도<br>from collections import Counter
-
-DIGITS = [
-    ["0", "Z", "ZERO"],
-    ["2", "W", "TWO"],
-    ["4", "U", "FOUR"],
-    ["6", "X", "SIX"],
-    ["8", "G", "EIGHT"],
-    ["3", "H", "THREE"],
-    ["5", "F", "FIVE"],
-    ["7", "V", "SEVEN"],
-    ["1", "O", "ONE"],
-    ["9", "I", "NINE"],
-]
-
-def solve_case(case):
-    case_count = Counter(case)
-    result = []
-
-    for digit, unique_char, word in DIGITS:
-        count = case_count[unique_char]
-        if count &gt; 0:
-            result.extend([digit] * count)
-            for char in word:
-                case_count[char] -= count
-
-    return "".join(sorted(result))
-
-# 입력 처리
-t = int(input())
-answers = []
-for i in range(t):
-    case = input().strip()
-    answers.append(f"Case #{i + 1}: {solve_case(case)}")
-
-print("\n".join(answers))
-<br>그냥 아예 각 알파벳이 고유하게 가지고 있는 문자열을 비교해서 빼주는 방식으로 진행했다.<br>
-<br>["1", "O", "ONE"] 같은 경우 "O"가  "ZERO"에도 있고 "TWO"에도 있고 "FOUR" 에도 있기 때문에 문제가 될 거 같지만 애당초 "ZERO"는 유일한 "Z"에 의해 다 걸러지게 되고, 마찬가지로 "TWO"는 "W"에, "FOUR"는 "U"에 걸러지게 되므로 상관 없다.
-<br>from collections import Counter를 사용해서 시간을 줄였다.
-]]></description><link>https://ejkiwi.github.io/백준/문제-14369.html</link><guid isPermaLink="false">백준/문제 14369.md</guid><pubDate>Thu, 02 Jan 2025 08:54:49 GMT</pubDate></item><item><title><![CDATA[백준]]></title><description><![CDATA[ 
- <br>
-<br><a data-href="문제 1011" href="https://ejkiwi.github.io/백준/문제-1011.html" class="internal-link" target="_self" rel="noopener nofollow">문제 1011</a>
-<br><a data-href="문제 14369" href="https://ejkiwi.github.io/백준/문제-14369.html" class="internal-link" target="_self" rel="noopener nofollow">문제 14369</a>
-<br><a data-href="문제 1931" href="https://ejkiwi.github.io/백준/문제-1931.html" class="internal-link" target="_self" rel="noopener nofollow">문제 1931</a>
-]]></description><link>https://ejkiwi.github.io/백준/백준.html</link><guid isPermaLink="false">백준/백준.md</guid><pubDate>Sat, 04 Jan 2025 15:33:19 GMT</pubDate></item><item><title><![CDATA[백준 풀이]]></title><description><![CDATA[ 
- <br>🌱<a data-tooltip-position="top" aria-label="https://solved.ac/profile/eonjikiwi" rel="noopener nofollow" class="external-link" href="https://solved.ac/profile/eonjikiwi" target="_blank">백준 프로필</a>🌱<br>열심히 풀었던 문제들/ 왕큰 깨달음을 얻었던 문제들을 정리해놓았다!!!!!!!!!!!!!]]></description><link>https://ejkiwi.github.io/백준/백준-풀이.html</link><guid isPermaLink="false">백준/백준 풀이.md</guid><pubDate>Sat, 04 Jan 2025 15:28:47 GMT</pubDate></item><item><title><![CDATA[2024 cnu 2차 학습동아리]]></title><description><![CDATA[ 
+]]></description><link>https://ejkiwi.github.io/2025_겨울_모각코/20250117-모각코-활동-2회차.html</link><guid isPermaLink="false">2025_겨울_모각코/20250117 모각코 활동 2회차.md</guid><pubDate>Fri, 17 Jan 2025 15:14:09 GMT</pubDate></item><item><title><![CDATA[2024 cnu 2차 학습동아리]]></title><description><![CDATA[ 
  <br><a data-tooltip-position="top" aria-label="https://colab.research.google.com/drive/1n9Pjthb3W4q-MO891Ce_-y5Jh2uOw4uv?usp=sharing" rel="noopener nofollow" class="external-link" href="https://colab.research.google.com/drive/1n9Pjthb3W4q-MO891Ce_-y5Jh2uOw4uv?usp=sharing" target="_blank">2024 cnu 2차 학습동아리 실습코드</a>]]></description><link>https://ejkiwi.github.io/2024-cnu-2차-학습동아리/2024-cnu-2차-학습동아리.html</link><guid isPermaLink="false">2024 cnu 2차 학습동아리/2024 cnu 2차 학습동아리.md</guid><pubDate>Thu, 02 Jan 2025 09:04:05 GMT</pubDate></item><item><title><![CDATA[2024_여름_모각코]]></title><description><![CDATA[ 
  <br>
 <br><a data-href="모.구.모.구 모각코 활동" href="https://ejkiwi.github.io/2024_여름_모각코/모.구.모.구-모각코-활동.html" class="internal-link" target="_self" rel="noopener nofollow">모.구.모.구 모각코 활동</a>
