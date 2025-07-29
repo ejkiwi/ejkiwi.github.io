@@ -1,32 +1,10 @@
-<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[ejkiwi.github.io]]></title><description><![CDATA[Obsidian digital garden]]></description><link>https://ejkiwi.github.io/</link><image><url>https://ejkiwi.github.io/lib/media/favicon.png</url><title>ejkiwi.github.io</title><link>https://ejkiwi.github.io/</link></image><generator>Webpage HTML Export plugin for Obsidian</generator><lastBuildDate>Wed, 19 Feb 2025 17:15:12 GMT</lastBuildDate><atom:link href="https://ejkiwi.github.io/lib/rss.xml" rel="self" type="application/rss+xml"/><pubDate>Wed, 19 Feb 2025 17:15:12 GMT</pubDate><ttl>60</ttl><dc:creator/><item><title><![CDATA[대표값]]></title><description><![CDATA[ 
- <br><br><br>주어진 데이터들의 가운데 값을 대표하는 값  <br>
-<br>모든 값을 더한 후 개수로 나누기
-<br><br>데이터가 평균을 중심으로 얼마나 퍼져 있는지를 나타내는 값<br>
-<br>평균에서 얼마나 떨어져 있는지를 제곱한 후 평균을 내는 방식으로 계산
-<br>평균에서 얼마나 떨어져 있는지 -&gt; 현재 값 - 평균 값
-<br>( 현재 값 - 평균 값 )들을 제곱한 후 모두 다 더해서 총 개수로 나누기
-<br><br>앞서 말한 분산 계산을 할 때, 데이터 중에서도 모든 데이터들을 다 사용해서 계산한 값을 모분산이라 함.<br><br>앞서 말한 분산 계산을 할 때, 데이터 중에서도 모든 데이터들을 다 사용하지 않고 일부 표본만 사용해서 구한 분산. ( 이 때는 데이터의 개수로 나누는게 아니라 데이터의 개수 + 1의 값만큼의 수로 나눈다. )<br>
-<br>대체 왜 이런것을 사용하는가? : 이렇게 하면 표본에서 모집단을 더 잘 추정할 수 있대... 그러하대...
-<br><br>데이터에서 가장 큰 값과 가장 작은 값의 차이<br><br>각 데이터가 평균에서 얼마나 떨어져 있는지를 절댓값으로 측정한 값.<br>
-<br>분산과 계산 방법은 거의 비슷한데 어떤 점이 다르냐면... 제곱이 아닌 절댓값을 사용한다는 것.
-<br><br>데이터의 분포가 좌우 대칭인지, 한쪽으로 치우쳐 있는지를 나타내는 값.<br>
-<br>왜도가 양수 = 데이터의 분포가 왼쪽으로 치우쳐 있음. ( 오른쪽 꼬리가 길다 )
-<br>왜도가 음수 = 데이터의 분포가 오른쪽으로 치우쳐 있음. ( 왼쪽 꼬리가 길다 )
-<br>왜도가 0 = 데이터의 분포가 완전히 대칭적임.
-<br><br>데이터의 분포가 얼마나 뾰족하거나 평평한지를 나타내는 값.<br>
-<br>첨도가 0보다 크다 = 뾰족한 분포 ( 꼭대기가 좁고 양 끝에 데터가 많다.. 극단적인 값들이 많다. )
-<br>첨도가 0보다 작다 = 평평한 분포( 골고루 퍼진 데이터 )
-<br>첨도가 0  이다 = 정규분포와 비슷한 분포
-<br><br>표본공간과 사건<br>확률<br>조건부 확률<br>독립 사건<br>베이즈 정리<br>]]></description><link>https://ejkiwi.github.io/2025-cnu-동계-학습동아리-(복습)/1회차.html</link><guid isPermaLink="false">2025 cnu 동계 학습동아리 (복습)/1회차.md</guid><pubDate>Wed, 19 Feb 2025 08:30:34 GMT</pubDate></item><item><title><![CDATA[이산형 분포]]></title><description><![CDATA[ 
- <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>]]></description><link>https://ejkiwi.github.io/2025-cnu-동계-학습동아리-(복습)/2회차.html</link><guid isPermaLink="false">2025 cnu 동계 학습동아리 (복습)/2회차.md</guid><pubDate>Wed, 19 Feb 2025 08:35:23 GMT</pubDate></item><item><title><![CDATA[2025 cnu 동계 학습동아리 (복습)]]></title><description><![CDATA[ 
- <br>
-<br><a data-href="통통이들 학습 동아리 활동" href="https://ejkiwi.github.io/2025-cnu-동계-학습동아리-(복습)/통통이들-학습-동아리-활동.html" class="internal-link" target="_self" rel="noopener nofollow">통통이들 학습 동아리 활동</a>
-<br><a data-href="1회차" href="https://ejkiwi.github.io/2025-cnu-동계-학습동아리-(복습)/1회차.html" class="internal-link" target="_self" rel="noopener nofollow">1회차</a>
-]]></description><link>https://ejkiwi.github.io/2025-cnu-동계-학습동아리-(복습)/2025-cnu-동계-학습동아리-(복습).html</link><guid isPermaLink="false">2025 cnu 동계 학습동아리 (복습)/2025 cnu 동계 학습동아리 (복습).md</guid><pubDate>Wed, 19 Feb 2025 08:32:31 GMT</pubDate></item><item><title><![CDATA[통통이들 학습 동아리 활동]]></title><description><![CDATA[ 
- <br>비록 미적짱은 되지 못했지만 확통짱은 될 수 있을것이야... \( •̀ ω •́ )/ <br>..<br>
-.....<br>
-.........<br>라고 결심했지만 열심히 놀아버려서<br>복습노트가 되엇다.<br>
-크허허....]]></description><link>https://ejkiwi.github.io/2025-cnu-동계-학습동아리-(복습)/통통이들-학습-동아리-활동.html</link><guid isPermaLink="false">2025 cnu 동계 학습동아리 (복습)/통통이들 학습 동아리 활동.md</guid><pubDate>Wed, 19 Feb 2025 07:34:17 GMT</pubDate></item><item><title><![CDATA[2025_겨울_모각코]]></title><description><![CDATA[ 
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[ejkiwi.github.io]]></title><description><![CDATA[Obsidian digital garden]]></description><link>https://ejkiwi.github.io/</link><image><url>https://ejkiwi.github.io/lib/media/favicon.png</url><title>ejkiwi.github.io</title><link>https://ejkiwi.github.io/</link></image><generator>Webpage HTML Export plugin for Obsidian</generator><lastBuildDate>Tue, 29 Jul 2025 08:43:20 GMT</lastBuildDate><atom:link href="https://ejkiwi.github.io/lib/rss.xml" rel="self" type="application/rss+xml"/><pubDate>Tue, 29 Jul 2025 08:43:19 GMT</pubDate><ttl>60</ttl><dc:creator/><item><title><![CDATA[2025 cnu 동계 학습동아리 (복습)]]></title><description><![CDATA[ 
+ ]]></description><link>https://ejkiwi.github.io/2025-cnu-동계-학습동아리-(복습)/2025-cnu-동계-학습동아리-(복습).html</link><guid isPermaLink="false">2025 cnu 동계 학습동아리 (복습)/2025 cnu 동계 학습동아리 (복습).md</guid><pubDate>Tue, 29 Jul 2025 08:02:18 GMT</pubDate></item><item><title><![CDATA[통통이들 학습 동아리 활동]]></title><description><![CDATA[ 
+ <br>비록 미적짱은 되지 못했지만 확통짱은 될 수 있을것이야... \( •̀ ω •́ )/ ]]></description><link>https://ejkiwi.github.io/2025-cnu-동계-학습동아리-(복습)/통통이들-학습-동아리-활동.html</link><guid isPermaLink="false">2025 cnu 동계 학습동아리 (복습)/통통이들 학습 동아리 활동.md</guid><pubDate>Tue, 29 Jul 2025 08:02:08 GMT</pubDate></item><item><title><![CDATA[2025_여름_모각코]]></title><description><![CDATA[ 
+ ]]></description><link>https://ejkiwi.github.io/2025_여름_모각코/2025_여름_모각코.html</link><guid isPermaLink="false">2025_여름_모각코/2025_여름_모각코.md</guid><pubDate>Tue, 29 Jul 2025 07:30:22 GMT</pubDate></item><item><title><![CDATA[20250718 모각코 활동 1회차]]></title><description><![CDATA[ 
+ ]]></description><link>https://ejkiwi.github.io/2025_여름_모각코/20250718-모각코-활동-1회차.html</link><guid isPermaLink="false">2025_여름_모각코/20250718 모각코 활동 1회차.md</guid><pubDate>Tue, 29 Jul 2025 07:32:20 GMT</pubDate></item><item><title><![CDATA[20250721 모각코 활동 2회차]]></title><description><![CDATA[ 
+ ]]></description><link>https://ejkiwi.github.io/2025_여름_모각코/20250721-모각코-활동-2회차.html</link><guid isPermaLink="false">2025_여름_모각코/20250721 모각코 활동 2회차.md</guid><pubDate>Tue, 29 Jul 2025 07:34:55 GMT</pubDate></item><item><title><![CDATA[뿌가각 모각코 활동]]></title><description><![CDATA[ 
+ <br>뿌가각 = 모각코 뿌시기<br>나의 모각코 활동 다짐 : 컴퓨터구조를  뿌시겠다!!!!!!]]></description><link>https://ejkiwi.github.io/2025_여름_모각코/뿌가각-모각코-활동.html</link><guid isPermaLink="false">2025_여름_모각코/뿌가각 모각코 활동.md</guid><pubDate>Tue, 29 Jul 2025 07:34:15 GMT</pubDate></item><item><title><![CDATA[2025_겨울_모각코]]></title><description><![CDATA[ 
  <br>
 <br><a data-href="파샤샥 모각코 활동" href="https://ejkiwi.github.io/2025_겨울_모각코/파샤샥-모각코-활동.html" class="internal-link" target="_self" rel="noopener nofollow">파샤샥 모각코 활동</a>
 <br><a data-href="20250109 모각코 활동 1회차" href="https://ejkiwi.github.io/2025_겨울_모각코/20250109-모각코-활동-1회차.html" class="internal-link" target="_self" rel="noopener nofollow">20250109 모각코 활동 1회차</a>
