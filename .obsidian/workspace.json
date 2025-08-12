@@ -11,14 +11,12 @@
             "id": "4d2c52c54ffdceea",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "mk-space",
               "state": {
-                "file": "2025_여름_모각코/20250808 모각코 활동 4회차.md",
-                "mode": "source",
-                "source": false
+                "path": "2025_여름_모각코"
               },
               "icon": "lucide-file",
-              "title": "20250808 모각코 활동 4회차"
+              "title": "2025_여름_모각코"
             }
           }
         ]
