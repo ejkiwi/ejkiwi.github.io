@@ -1,11 +1,204 @@
-<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[ejkiwi.github.io]]></title><description><![CDATA[Obsidian digital garden]]></description><link>https://ejkiwi.github.io/</link><image><url>https://ejkiwi.github.io/lib/media/favicon.png</url><title>ejkiwi.github.io</title><link>https://ejkiwi.github.io/</link></image><generator>Webpage HTML Export plugin for Obsidian</generator><lastBuildDate>Tue, 12 Aug 2025 17:54:27 GMT</lastBuildDate><atom:link href="https://ejkiwi.github.io/lib/rss.xml" rel="self" type="application/rss+xml"/><pubDate>Tue, 12 Aug 2025 17:54:27 GMT</pubDate><ttl>60</ttl><dc:creator/><item><title><![CDATA[2025_여름_모각코]]></title><description><![CDATA[ 
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[ejkiwi.github.io]]></title><description><![CDATA[Obsidian digital garden]]></description><link>https://ejkiwi.github.io/</link><image><url>https://ejkiwi.github.io/lib/media/favicon.png</url><title>ejkiwi.github.io</title><link>https://ejkiwi.github.io/</link></image><generator>Webpage HTML Export plugin for Obsidian</generator><lastBuildDate>Sun, 17 Aug 2025 15:51:48 GMT</lastBuildDate><atom:link href="https://ejkiwi.github.io/lib/rss.xml" rel="self" type="application/rss+xml"/><pubDate>Sun, 17 Aug 2025 15:51:47 GMT</pubDate><ttl>60</ttl><dc:creator/><item><title><![CDATA[2025_여름_모각코]]></title><description><![CDATA[ 
  <br>
 <br><a data-href="뿌가각 모각코 활동" href="https://ejkiwi.github.io/2025_여름_모각코/뿌가각-모각코-활동.html" class="internal-link" target="_self" rel="noopener nofollow">뿌가각 모각코 활동</a>
 <br><a data-href="20250109 모각코 활동 1회차" href="https://ejkiwi.github.io/2025_겨울_모각코/20250109-모각코-활동-1회차.html" class="internal-link" target="_self" rel="noopener nofollow">20250109 모각코 활동 1회차</a>
 <br><a data-href="20250721 모각코 활동 2회차" href="https://ejkiwi.github.io/2025_여름_모각코/20250721-모각코-활동-2회차.html" class="internal-link" target="_self" rel="noopener nofollow">20250721 모각코 활동 2회차</a>
 <br><a data-href="20250731 모각코 활동 3회차" href="https://ejkiwi.github.io/2025_여름_모각코/20250731-모각코-활동-3회차.html" class="internal-link" target="_self" rel="noopener nofollow">20250731 모각코 활동 3회차</a>
 <br><a data-href="20250808 모각코 활동 4회차" href="https://ejkiwi.github.io/2025_여름_모각코/20250808-모각코-활동-4회차.html" class="internal-link" target="_self" rel="noopener nofollow">20250808 모각코 활동 4회차</a>
-]]></description><link>https://ejkiwi.github.io/2025_여름_모각코/2025_여름_모각코.html</link><guid isPermaLink="false">2025_여름_모각코/2025_여름_모각코.md</guid><pubDate>Tue, 12 Aug 2025 17:54:14 GMT</pubDate></item><item><title><![CDATA[20250718 모각코 활동 1회차]]></title><description><![CDATA[ 
+<br><a data-href="20250810 모각코 활동 5회차" href="https://ejkiwi.github.io/2025_여름_모각코/20250810-모각코-활동-5회차.html" class="internal-link" target="_self" rel="noopener nofollow">20250810 모각코 활동 5회차</a>
+<br><a data-href="20250815 모각코 활동 6회차" href="https://ejkiwi.github.io/2025_여름_모각코/20250815-모각코-활동-6회차.html" class="internal-link" target="_self" rel="noopener nofollow">20250815 모각코 활동 6회차</a>
+]]></description><link>https://ejkiwi.github.io/2025_여름_모각코/2025_여름_모각코.html</link><guid isPermaLink="false">2025_여름_모각코/2025_여름_모각코.md</guid><pubDate>Sun, 17 Aug 2025 15:50:44 GMT</pubDate></item><item><title><![CDATA[메모리 시스템과 캐시]]></title><description><![CDATA[ 
+ <br>오늘의 목표 : 메모리 시스템 이해하기!<br><br><br><br><img alt="memory" src="https://ejkiwi.github.io/lib/media/memory.png" referrerpolicy="no-referrer"><br>(위 사진의 input sources는 안 다룰것이댜)<br><br><br>
+<br>용량: 32~64개 × 32/64비트 = 수백 바이트
+<br>속도: 1 클록 사이클
+<br>위치: CPU 내부
+<br>용도: 현재 작업 중인 데이터
+<br><br>
+<br>용량: 16KB ~ 64KB
+<br>속도: 1-2 클록 사이클
+<br>위치: CPU 코어 내부
+<br>특징: 명령어 캐시(I-Cache)와 데이터 캐시(D-Cache)로 분리
+<br><br>
+<br>용량: 256KB ~ 1MB
+<br>속도: 3-10 클록 사이클
+<br>위치: CPU 코어별 또는 공유
+<br>특징: 통합 캐시 (명령어 + 데이터)
+<br><br>
+<br>용량: 8MB ~ 32MB
+<br>속도: 10-20 클록 사이클
+<br>위치: 여러 코어가 공유
+<br>특징: 코어 간 데이터 공유 역할
+<br><br>
+<br>용량: 4GB ~ 128GB
+<br>속도: 100-300 클록 사이클
+<br>기술: DDR4, DDR5
+<br>특징: 휘발성, 프로그램 실행 공간
+<br><br>
+<br>SSD: 빠르지만 비쌈 (마이크로초 단위)
+<br>HDD: 느리지만 저렴 (밀리초 단위)
+<br>특징: 비휘발성, 영구 저장
+<br><br><br><br><br><br>
+<br>캐시 히트 (Cache Hit)
+<br>CPU → 캐시 확인 → 데이터 있음! → 빠른 반환
+      (1-10 사이클)
+<br>
+<br>캐시 미스 (Cache Miss)
+<br>CPU → 캐시 확인 → 데이터 없음 → 메인 메모리 접근 → 캐시 업데이트 → 반환
+      (100-300 사이클)
+<br><br>
+<br>캐시 라인 (Cache Line/Block)
+
+<br>캐시와 메모리 간 데이터 전송의 최소 단위
+<br>일반적으로 32바이트 ~ 128바이트
+<br>공간적 지역성 활용
+
+
+<br>태그 (Tag)
+
+<br>캐시 라인이 메모리의 어느 부분을 저장하고 있는지 식별
+<br>메모리 주소의 상위 비트들
+
+
+<br>유효 비트 (Valid Bit)
+
+<br>캐시 라인에 유효한 데이터가 있는지 표시
+<br>0: 무효, 1: 유효
+
+
+<br>캐시 교체 방식(정책)
+
+<br>LRU (Least Recently Used)
+
+<br>가장 오래 사용되지 않은 블록을 교체
+
+
+<br>FIFO (First In First Out)
+
+<br>가장 먼저 들어온 블록을 교체
+
+
+<br>Random
+
+<br>무작위로 블록 선택
+
+
+
+
+<br><br>
+<br>직접매핑 : 메모리의 각 블록이 캐시의 정확히 한 위치에만 매핑
+<br>완전 연관 매핑 : 메모리의 어떤 블록이라도 캐시의 어느 위치에나 저장 가능
+<br>집합 연관 매핑 : 캐시를 여러 집합(set)으로 나누고, 각 집합 내에서는 완전 연관
+]]></description><link>https://ejkiwi.github.io/2025_여름_모각코/20250808-모각코-활동-4회차.html</link><guid isPermaLink="false">2025_여름_모각코/20250808 모각코 활동 4회차.md</guid><pubDate>Sun, 17 Aug 2025 15:37:14 GMT</pubDate><enclosure url="https://ejkiwi.github.io/lib/media/memory.png" length="0" type="image/png"/><content:encoded>&lt;figure&gt;&lt;img src="https://ejkiwi.github.io/lib/media/memory.png"&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[캐시와 파이프라인]]></title><description><![CDATA[ 
+ <br>오늘의 목표 : 저번에 공부하던 캐시 부분 이어서 더 공부하기, 파이프라인 개념 공부하기 <br><br><br><br>
+<br>자주 쓰는 데이터가 있어서, 이걸 임시로 저장해두고 우다다 쓰고 싶을 때.
+<br>캐시 없는 상황에서의 명령어 실행은?
+
+<br>CPU의 대부분의 시간이 메모리를 기다리는 시간일 것이다( 명령어 가져오고(= 메모리 접근) 해석하고 실행하고 또 메모리접근해서 결과저장 ... )
+
+
+<br><br>파이프라인이란? -&gt; 캐시 성능을 극대화 하기 위한 CPU 설계 기법 : 동시에 일을 하게 시키는 것임<br><br>일1, 일2, 일3<br>
+시간1 -&gt; 일1 시작하자<br>
+시간2 -&gt; 일1 끝났다! 일2 시작하자<br>
+시간3 -&gt; 일2 끝났다!, 일3 시작하자<br>
+시간4 -&gt; 일3 끝났다!<br><br>일1, 일2, 일3<br>
+시간1 -&gt; 일1 시작하자,<br>
+시간1~ -&gt; 일2 시작하자, 일1 하는중<br>
+시간1~ -&gt; 일3 시작하자,  일2 하는중, 일1 끝났다.<br>
+시간2 -&gt; 일3 하는중, 일2 끝났다.<br>
+시간2~ -&gt; 일3 끝났다.<br>1. IF (Instruction Fetch): 명령어 가져오기
+2. ID (Instruction Decode): 명령어 해석 + 레지스터 읽기
+3. EX (Execute): ALU 연산 또는 주소 계산
+4. MEM (Memory): 메모리 접근 (lw/sw만)
+5. WB (Write Back): 결과를 레지스터에 저장
+<br>
+<br>IF 단계: 명령어 캐시 접근
+<br>MEM 단계: 메모리 접근 없음
+<br>-&gt; 따라서 캐시의 미스가 영향을 미치는 부분은 IF에서만...
+<br><br>
+<br>데이터 해저드 - 앞의 결과를 뒤에서 바로 써야 할 때
+
+<br>STALL, FORWARDING으로 해결가능
+<br>STALL:  뒤의 일을 잠시 대기시켰다가 앞에서 결과를 받고 그대로 사용
+<br>FORWARDING : MEM의 결과를 바로 EX로 전달하기
+
+
+<br>제어 해저드 - 분기할지 말지 모르겠을 때.
+
+<br>분기 결과를 알려면 EX 단계까지 가야하는데, 다음 명령어는 IF 단계에서 미리 가져와야 함. 근데?? 어떤 명령어를 가져올지 모르겠어!
+<br>항상 분기 안한다고 가정해서 순차적으로 계속 가져오거나 분기 예측기로 과거 패턴을 보고 예측하는 방식으로 해결
+
+
+<br><br><br><br>add $t0, $t1, $t2
+<br>
+<br>IF: 명령어 캐시 접근 (히트/미스 가능)
+<br>MEM: 메모리 접근 없음 (캐시 무관)
+<br>영향: IF에서 캐시 미스 시만 스톨
+<br><br>lw $t0, 4($s0)
+<br>
+<br>IF: 명령어 캐시 접근
+<br>MEM: 데이터 캐시 접근
+<br>영향: 두 번의 캐시 접근! 둘 다 미스 가능성
+<br><br>sw $t0, 4($s0)
+<br>
+<br>IF: 명령어 캐시 접근
+<br>MEM: 데이터 캐시 쓰기
+<br>특이점: Write 정책에 따라 다름
+]]></description><link>https://ejkiwi.github.io/2025_여름_모각코/20250810-모각코-활동-5회차.html</link><guid isPermaLink="false">2025_여름_모각코/20250810 모각코 활동 5회차.md</guid><pubDate>Sun, 17 Aug 2025 15:30:31 GMT</pubDate></item><item><title><![CDATA[가상 메모리]]></title><description><![CDATA[ 
+ <br>오늘의 목표 : 가상 메모리 공부하기<br><br>프로그램이 실제 RAM보다 큰 메모리 공간을 쓸 수 있게 해주는 기술 (디스크를 메모리처럼 활용)<br>
+-&gt; 작은 RAM으로도 큰 프로그램을 실행할 수 있게 해준다!!<br><br>
+<br>가상 메모리: 물리적 메모리보다 큰 메모리 공간을 프로그램에게 제공하는 기법
+<br>프로그램이 실제 물리 메모리 크기에 제약받지 않고 실행될 수 있도록 함
+<br>프로그램은 논리적 주소인 가상 주소를 사용하지만 실제 CPU는 당연히~ 물리적 주소에 접근을 하여야 한다. 이때 물리적 주소와 논리적 주소 사이에 상호 변환이 가능해야 하는데, 변환이 가능한 테이블을 운영체제가 제공해준다.
+<br>메모리 관리 하드웨어와 운영체제가 협력하여 구현
+<br><br>
+<br>메모리 용량 확장: 물리 메모리보다 큰 프로그램 실행 가능
+<br>메모리 보호: 프로세스 간 메모리 영역 분리
+<br>메모리 공유: 여러 프로세스가 동일한 코드/데이터 공유 가능
+<br>프로그래밍 단순화: 연속된 메모리 공간 제공
+<br><br><br>
+<br>가상 주소(Virtual Address): 프로그램이 사용하는 논리적 주소
+<br>물리 주소(Physical Address): 실제 메모리에서의 위치
+<br><br>가상 주소 → MMU(Memory Management Unit) → 물리 주소
+<br><br>
+<br>하드웨어 구성요소
+<br>가상 주소를 물리 주소로 변환
+<br>페이지 테이블을 참조하여 변환 수행
+<br><br><br>
+<br>페이지(Page): 가상 메모리를 일정한 크기로 나눈 단위 (보통 4KB)
+<br>프레임(Frame): 물리 메모리를 페이지와 같은 크기로 나눈 단위
+<br><br>
+<br>가상 페이지 번호 → 물리 프레임 번호 매핑
+<br>각 프로세스마다 별도의 페이지 테이블 존재
+<br><br>
+<br>Valid bit: 해당 페이지가 메모리에 있는지 표시
+<br>Protection bits: 읽기/쓰기/실행 권한
+<br>Reference bit: 최근에 접근했는지 표시
+<br>Modify bit: 페이지가 수정되었는지 표시
+<br><br><br>| Page Number (20비트) | Offset (12비트) |
+<br>
+<br>가상 주소에서 페이지 번호와 오프셋 추출
+<br>페이지 테이블에서 해당 페이지 번호로 프레임 번호 찾기
+<br>Valid bit 확인
+<br>프레임 번호 + 오프셋 → 물리 주소
+<br><br><br>
+<br>접근하려는 페이지가 물리 메모리에 없을 때
+<br>Valid bit가 0인 페이지에 접근할 때
+<br><br>
+<br>하드웨어가 페이지 폴트 예외 발생
+<br>OS의 페이지 폴트 핸들러 실행
+<br>보조 저장장치(디스크)에서 해당 페이지 로드
+<br>페이지 테이블 업데이트
+<br>프로그램 재실행
+<br><br><br>
+<br>물리 메모리보다 큰 프로그램 실행 가능
+<br>다중 프로그래밍 지원
+<br>메모리 보호 및 공유 기능
+<br>프로그래밍 편의성 증대
+<br><br>
+<br>주소 변환 오버헤드
+<br>페이지 폴트로 인한 성능 저하
+<br>복잡한 메모리 관리
+]]></description><link>https://ejkiwi.github.io/2025_여름_모각코/20250815-모각코-활동-6회차.html</link><guid isPermaLink="false">2025_여름_모각코/20250815 모각코 활동 6회차.md</guid><pubDate>Sun, 17 Aug 2025 15:49:59 GMT</pubDate></item><item><title><![CDATA[20250718 모각코 활동 1회차]]></title><description><![CDATA[ 
  <br>오늘의 목표<br>
 1.컴퓨터 구조 기본 개념과 디지털 논리 이해하기<br><br><img alt="computersystem" src="https://ejkiwi.github.io/lib/media/computersystem.png" referrerpolicy="no-referrer"><br><br>중앙처리장치 (CPU)<br>
 <br>명령어 실행과 연산을 담당하는 핵심 부품
@@ -215,88 +408,7 @@ PC ← PC + 4
 2. Decode: R-type, rs1=x2, rs2=x3, rd=x1, funct=ADD
 3. Execute: ALU_result ← Register[x2] + Register[x3]
 4. Write-back: Register[x1] ← ALU_result
-]]></description><link>https://ejkiwi.github.io/2025_여름_모각코/20250731-모각코-활동-3회차.html</link><guid isPermaLink="false">2025_여름_모각코/20250731 모각코 활동 3회차.md</guid><pubDate>Tue, 12 Aug 2025 17:24:13 GMT</pubDate><enclosure url="https://ejkiwi.github.io/lib/media/cpu.png" length="0" type="image/png"/><content:encoded>&lt;figure&gt;&lt;img src="https://ejkiwi.github.io/lib/media/cpu.png"&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[메모리 시스템과 캐시]]></title><description><![CDATA[ 
- <br><br><br><br><img alt="memory" src="https://ejkiwi.github.io/lib/media/memory.png" referrerpolicy="no-referrer"><br>(위 사진의 input sources는 안 다룰것이댜)<br><br><br>
-<br>용량: 32~64개 × 32/64비트 = 수백 바이트
-<br>속도: 1 클록 사이클
-<br>위치: CPU 내부
-<br>용도: 현재 작업 중인 데이터
-<br><br>
-<br>용량: 16KB ~ 64KB
-<br>속도: 1-2 클록 사이클
-<br>위치: CPU 코어 내부
-<br>특징: 명령어 캐시(I-Cache)와 데이터 캐시(D-Cache)로 분리
-<br><br>
-<br>용량: 256KB ~ 1MB
-<br>속도: 3-10 클록 사이클
-<br>위치: CPU 코어별 또는 공유
-<br>특징: 통합 캐시 (명령어 + 데이터)
-<br><br>
-<br>용량: 8MB ~ 32MB
-<br>속도: 10-20 클록 사이클
-<br>위치: 여러 코어가 공유
-<br>특징: 코어 간 데이터 공유 역할
-<br><br>
-<br>용량: 4GB ~ 128GB
-<br>속도: 100-300 클록 사이클
-<br>기술: DDR4, DDR5
-<br>특징: 휘발성, 프로그램 실행 공간
-<br><br>
-<br>SSD: 빠르지만 비쌈 (마이크로초 단위)
-<br>HDD: 느리지만 저렴 (밀리초 단위)
-<br>특징: 비휘발성, 영구 저장
-<br><br><br><br>
-<br>캐시 히트 (Cache Hit)
-<br>CPU → 캐시 확인 → 데이터 있음! → 빠른 반환
-      (1-10 사이클)
-<br>
-<br>캐시 미스 (Cache Miss)
-<br>CPU → 캐시 확인 → 데이터 없음 → 메인 메모리 접근 → 캐시 업데이트 → 반환
-      (100-300 사이클)
-<br><br>
-<br>캐시 라인 (Cache Line/Block)
-
-<br>캐시와 메모리 간 데이터 전송의 최소 단위
-<br>일반적으로 32바이트 ~ 128바이트
-<br>공간적 지역성 활용
-
-
-<br>태그 (Tag)
-
-<br>캐시 라인이 메모리의 어느 부분을 저장하고 있는지 식별
-<br>메모리 주소의 상위 비트들
-
-
-<br>유효 비트 (Valid Bit)
-
-<br>캐시 라인에 유효한 데이터가 있는지 표시
-<br>0: 무효, 1: 유효
-
-
-<br>캐시 교체 방식(정책)
-
-<br>LRU (Least Recently Used)
-
-<br>가장 오래 사용되지 않은 블록을 교체
-
-
-<br>FIFO (First In First Out)
-
-<br>가장 먼저 들어온 블록을 교체
-
-
-<br>Random
-
-<br>무작위로 블록 선택
-
-
-
-
-<br><br>
-<br>직접매핑 : 메모리의 각 블록이 캐시의 정확히 한 위치에만 매핑
-<br>완전 연관 매핑 : 메모리의 어떤 블록이라도 캐시의 어느 위치에나 저장 가능
-<br>집합 연관 매핑 : 캐시를 여러 집합(set)으로 나누고, 각 집합 내에서는 완전 연관
-]]></description><link>https://ejkiwi.github.io/2025_여름_모각코/20250808-모각코-활동-4회차.html</link><guid isPermaLink="false">2025_여름_모각코/20250808 모각코 활동 4회차.md</guid><pubDate>Tue, 12 Aug 2025 17:43:11 GMT</pubDate><enclosure url="https://ejkiwi.github.io/lib/media/memory.png" length="0" type="image/png"/><content:encoded>&lt;figure&gt;&lt;img src="https://ejkiwi.github.io/lib/media/memory.png"&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[데이터 표현과 산술 연산]]></title><description><![CDATA[ 
+]]></description><link>https://ejkiwi.github.io/2025_여름_모각코/20250731-모각코-활동-3회차.html</link><guid isPermaLink="false">2025_여름_모각코/20250731 모각코 활동 3회차.md</guid><pubDate>Tue, 12 Aug 2025 17:24:13 GMT</pubDate><enclosure url="https://ejkiwi.github.io/lib/media/cpu.png" length="0" type="image/png"/><content:encoded>&lt;figure&gt;&lt;img src="https://ejkiwi.github.io/lib/media/cpu.png"&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[데이터 표현과 산술 연산]]></title><description><![CDATA[ 
  <br>오늘의 목표<br>
 1.데이터 표현(정수, 실수, 문자) 이해하기<br>
 2.산술 연산을 위한 회로 설계 공부<br><br><br><br>특징<br>
