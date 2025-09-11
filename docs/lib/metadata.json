@@ -1,6 +1,6 @@
 {
   "vaultName": "ejkiwi.github.io",
-  "lastExport": 1755445907733,
+  "lastExport": 1757593003633,
   "pluginVersion": "1.8.01",
   "validBodyClasses": "publish css-settings-manager theme-light show-inline-title show-ribbon mk-readable-line mk-folder-lines mk-spaces-enabled mk-inline-context-enabled mk-flow-seamless",
   "useCustomHeadContent": false,
@@ -34,6 +34,20 @@
     "2025_여름_모각코/20250810 모각코 활동 5회차.md",
     "2025_여름_모각코/20250815 모각코 활동 6회차.md",
     "2025_여름_모각코/뿌가각 모각코 활동.md",
+    "백준/문제 1011.md",
+    "백준/문제 1931.md",
+    "백준/문제 14369.md",
+    "백준/백준.md",
+    "백준/백준 풀이.md",
+    "AI_study/궁금햇던거.md",
+    "AI_study/저는 진짜 몰랐어요..md",
+    "AI_study/토큰이라....md",
+    "AI_study/활성화 함수들과 최적화 알고리즘과 손실함수.md",
+    "AI_study/Class-Balanced Loss Based on Effective Number of Samples _ 김언지.pdf",
+    "git&github/난이걸여태몰랏어.md",
+    "git&github/명령어.md",
+    "git&github/버전 관리.md",
+    "git&github/git&github.md",
     "index.md",
     "lib/scripts/graph-wasm.wasm",
     "lib/fonts/94f2f163d4b698242fef.otf",
@@ -41,6 +55,8 @@
     "lib/fonts/2d5198822ab091ce4305.woff2",
     "lib/fonts/c8ba52b05a9ef10f4758.woff2",
     "lib/fonts/cb10ffd7684cd9836a05.woff2",
+    "lib/fonts/293fd13dbca5a3e450ef.woff2",
+    "lib/fonts/085cb93e613ba3d40d2b.woff2",
     "lib/fonts/b5f0f109bc88052d4000.woff2",
     "lib/fonts/cbe0ae49c52c920fd563.woff2",
     "lib/fonts/535a6cf662596b3bd6a6.woff2",
@@ -72,6 +88,8 @@
     "lib/fonts/2d5198822ab091ce4305.woff2",
     "lib/fonts/c8ba52b05a9ef10f4758.woff2",
     "lib/fonts/cb10ffd7684cd9836a05.woff2",
+    "lib/fonts/293fd13dbca5a3e450ef.woff2",
+    "lib/fonts/085cb93e613ba3d40d2b.woff2",
     "lib/fonts/b5f0f109bc88052d4000.woff2",
     "lib/fonts/cbe0ae49c52c920fd563.woff2",
     "lib/fonts/535a6cf662596b3bd6a6.woff2",
@@ -98,85 +116,85 @@
   ],
   "fileInfo": {
     "lib/scripts/graph-wasm.wasm": {
-      "modifiedTime": 1755445907733,
+      "modifiedTime": 1757593003633,
       "sourceSize": 23377,
       "exportedPath": "lib/scripts/graph-wasm.wasm",
       "dependencies": []
     },
     "lib/fonts/94f2f163d4b698242fef.otf": {
-      "modifiedTime": 1755445907733,
+      "modifiedTime": 1757593003633,
       "sourceSize": 66800,
       "exportedPath": "lib/fonts/94f2f163d4b698242fef.otf",
       "dependencies": []
     },
     "lib/fonts/72505e6a122c6acd5471.woff2": {
-      "modifiedTime": 1755445907733,
+      "modifiedTime": 1757593003633,
       "sourceSize": 104232,
       "exportedPath": "lib/fonts/72505e6a122c6acd5471.woff2",
       "dependencies": []
     },
     "lib/fonts/2d5198822ab091ce4305.woff2": {
-      "modifiedTime": 1755445907733,
+      "modifiedTime": 1757593003633,
       "sourceSize": 104332,
       "exportedPath": "lib/fonts/2d5198822ab091ce4305.woff2",
       "dependencies": []
     },
     "lib/fonts/c8ba52b05a9ef10f4758.woff2": {
-      "modifiedTime": 1755445907733,
+      "modifiedTime": 1757593003633,
       "sourceSize": 98868,
       "exportedPath": "lib/fonts/c8ba52b05a9ef10f4758.woff2",
       "dependencies": []
     },
     "lib/fonts/cb10ffd7684cd9836a05.woff2": {
-      "modifiedTime": 1755445907733,
+      "modifiedTime": 1757593003633,
       "sourceSize": 106876,
       "exportedPath": "lib/fonts/cb10ffd7684cd9836a05.woff2",
       "dependencies": []
     },
     "lib/fonts/b5f0f109bc88052d4000.woff2": {
-      "modifiedTime": 1755445907733,
+      "modifiedTime": 1757593003633,
       "sourceSize": 105804,
       "exportedPath": "lib/fonts/b5f0f109bc88052d4000.woff2",
       "dependencies": []
     },
     "lib/fonts/cbe0ae49c52c920fd563.woff2": {
-      "modifiedTime": 1755445907733,
+      "modifiedTime": 1757593003633,
       "sourceSize": 106108,
       "exportedPath": "lib/fonts/cbe0ae49c52c920fd563.woff2",
       "dependencies": []
     },
     "lib/fonts/535a6cf662596b3bd6a6.woff2": {
-      "modifiedTime": 1755445907733,
+      "modifiedTime": 1757593003633,
       "sourceSize": 111708,
       "exportedPath": "lib/fonts/535a6cf662596b3bd6a6.woff2",
       "dependencies": []
     },
     "lib/fonts/70cc7ff27245e82ad414.ttf": {
-      "modifiedTime": 1755445907733,
+      "modifiedTime": 1757593003633,
       "sourceSize": 192740,
       "exportedPath": "lib/fonts/70cc7ff27245e82ad414.ttf",
       "dependencies": []
     },
     "lib/fonts/454577c22304619db035.ttf": {
-      "modifiedTime": 1755445907733,
+      "modifiedTime": 1757593003633,
       "sourceSize": 161376,
       "exportedPath": "lib/fonts/454577c22304619db035.ttf",
       "dependencies": []
     },
     "lib/fonts/52ac8f3034507f1d9e53.ttf": {
-      "modifiedTime": 1755445907733,
+      "modifiedTime": 1757593003633,
       "sourceSize": 191568,
       "exportedPath": "lib/fonts/52ac8f3034507f1d9e53.ttf",
       "dependencies": []
     },
     "lib/fonts/05b618077343fbbd92b7.ttf": {
-      "modifiedTime": 1755445907733,
+      "modifiedTime": 1757593003633,
       "sourceSize": 155288,
       "exportedPath": "lib/fonts/05b618077343fbbd92b7.ttf",
       "dependencies": []
     },
     "lib/fonts/4bb6ac751d1c5478ff3a.woff2": {
-      "modifiedTime": 1755445907733,
+      "modifiedTime": 1757593003633,
       "sourceSize": 7876,
       "exportedPath": "lib/fonts/4bb6ac751d1c5478ff3a.woff2",
       "dependencies": []
@@ -194,85 +212,85 @@
       "dependencies": []
     },
     "lib/html/file-tree.html": {
-      "modifiedTime": 1755445907733,
-      "sourceSize": 13799,
+      "modifiedTime": 1757593003633,
+      "sourceSize": 20391,
       "exportedPath": "lib/html/file-tree.html",
       "dependencies": []
     },
     "lib/scripts/webpage.js": {
-      "modifiedTime": 1755445907733,
+      "modifiedTime": 1757593003633,
       "sourceSize": 47290,
       "exportedPath": "lib/scripts/webpage.js",
       "dependencies": []
     },
     "lib/scripts/graph-view.js": {
-      "modifiedTime": 1755445907733,
+      "modifiedTime": 1757593003633,
       "sourceSize": 15519,
       "exportedPath": "lib/scripts/graph-view.js",
       "dependencies": []
     },
     "lib/scripts/graph-wasm.js": {
-      "modifiedTime": 1755445907733,
+      "modifiedTime": 1757593003633,
       "sourceSize": 14021,
       "exportedPath": "lib/scripts/graph-wasm.js",
       "dependencies": []
     },
     "lib/scripts/graph-render-worker.js": {
-      "modifiedTime": 1755445907733,
+      "modifiedTime": 1757593003633,
       "sourceSize": 5179,
       "exportedPath": "lib/scripts/graph-render-worker.js",
       "dependencies": []
     },
     "lib/scripts/tinycolor.js": {
-      "modifiedTime": 1755445907733,
+      "modifiedTime": 1757593003633,
       "sourceSize": 29832,
       "exportedPath": "lib/scripts/tinycolor.js",
       "dependencies": []
     },
     "lib/scripts/pixi.js": {
-      "modifiedTime": 1755445907733,
+      "modifiedTime": 1757593003633,
       "sourceSize": 449509,
       "exportedPath": "lib/scripts/pixi.js",
       "dependencies": []
     },
     "lib/scripts/minisearch.js": {
-      "modifiedTime": 1755445907733,
+      "modifiedTime": 1757593003633,
       "sourceSize": 29422,
       "exportedPath": "lib/scripts/minisearch.js",
       "dependencies": []
     },
     "lib/media/favicon.png": {
-      "modifiedTime": 1755445907733,
+      "modifiedTime": 1757593003633,
       "sourceSize": 1105,
       "exportedPath": "lib/media/favicon.png",
       "dependencies": []
     },
     "lib/scripts/graph-data.js": {
-      "modifiedTime": 1755445907733,
-      "sourceSize": 2469,
+      "modifiedTime": 1757593003633,
+      "sourceSize": 3023,
       "exportedPath": "lib/scripts/graph-data.js",
       "dependencies": []
     },
     "lib/styles/obsidian.css": {
-      "modifiedTime": 1755445907733,
-      "sourceSize": 138359,
+      "modifiedTime": 1757593003633,
+      "sourceSize": 165838,
       "exportedPath": "lib/styles/obsidian.css",
       "dependencies": []
     },
     "lib/styles/global-variable-styles.css": {
-      "modifiedTime": 1755445907733,
+      "modifiedTime": 1757593003633,
       "sourceSize": 395,
       "exportedPath": "lib/styles/global-variable-styles.css",
       "dependencies": []
     },
     "lib/styles/main-styles.css": {
-      "modifiedTime": 1755445907733,
+      "modifiedTime": 1757593003633,
       "sourceSize": 23392,
       "exportedPath": "lib/styles/main-styles.css",
       "dependencies": []
     },
     "lib/styles/other-plugins.css": {
-      "modifiedTime": 1755445907733,
+      "modifiedTime": 1757593003633,
       "sourceSize": 165390,
       "exportedPath": "lib/styles/other-plugins.css",
       "dependencies": []
@@ -512,7 +530,7 @@
       "dependencies": []
     },
     "lib/media/6155340132a851f6089e.svg": {
-      "modifiedTime": 1755445907733,
+      "modifiedTime": 1757593003633,
       "sourceSize": 315,
       "exportedPath": "lib/media/6155340132a851f6089e.svg",
       "dependencies": []
@@ -587,6 +605,102 @@
       "modifiedTime": 1755445907733,
       "sourceSize": 3401,
       "exportedPath": "2025_여름_모각코/20250815-모각코-활동-6회차.html",
+      "dependencies": []
+    },
+    "백준/문제 1011.md": {
+      "modifiedTime": 1757593003633,
+      "sourceSize": 1607,
+      "exportedPath": "백준/문제-1011.html",
+      "dependencies": []
+    },
+    "백준/문제 1931.md": {
+      "modifiedTime": 1757593003633,
+      "sourceSize": 1825,
+      "exportedPath": "백준/문제-1931.html",
+      "dependencies": []
+    },
+    "백준/문제 14369.md": {
+      "modifiedTime": 1757593003633,
+      "sourceSize": 4278,
+      "exportedPath": "백준/문제-14369.html",
+      "dependencies": []
+    },
+    "백준/백준.md": {
+      "modifiedTime": 1757593003633,
+      "sourceSize": 206,
+      "exportedPath": "백준/백준.html",
+      "dependencies": []
+    },
+    "백준/백준 풀이.md": {
+      "modifiedTime": 1757593003633,
+      "sourceSize": 201,
+      "exportedPath": "백준/백준-풀이.html",
+      "dependencies": []
+    },
+    "AI_study/궁금햇던거.md": {
+      "modifiedTime": 1757593003633,
+      "sourceSize": 10804,
+      "exportedPath": "ai_study/궁금햇던거.html",
+      "dependencies": []
+    },
+    "AI_study/저는 진짜 몰랐어요..md": {
+      "modifiedTime": 1757593003633,
+      "sourceSize": 2534,
+      "exportedPath": "ai_study/저는-진짜-몰랐어요..html",
+      "dependencies": []
+    },
+    "AI_study/토큰이라....md": {
+      "modifiedTime": 1757593003633,
+      "sourceSize": 7107,
+      "exportedPath": "ai_study/토큰이라....html",
+      "dependencies": []
+    },
+    "AI_study/활성화 함수들과 최적화 알고리즘과 손실함수.md": {
+      "modifiedTime": 1757593003633,
+      "sourceSize": 7503,
+      "exportedPath": "ai_study/활성화-함수들과-최적화-알고리즘과-손실함수.html",
+      "dependencies": []
+    },
+    "AI_study/Class-Balanced Loss Based on Effective Number of Samples _ 김언지.pdf": {
+      "modifiedTime": 1757593003633,
+      "sourceSize": 1205186,
+      "exportedPath": "ai_study/class-balanced-loss-based-on-effective-number-of-samples-_-김언지.pdf",
+      "dependencies": []
+    },
+    "git&github/난이걸여태몰랏어.md": {
+      "modifiedTime": 1757593003633,
+      "sourceSize": 451,
+      "exportedPath": "git&github/난이걸여태몰랏어.html",
+      "dependencies": []
+    },
+    "git&github/명령어.md": {
+      "modifiedTime": 1757593003633,
+      "sourceSize": 1900,
+      "exportedPath": "git&github/명령어.html",
+      "dependencies": []
+    },
+    "git&github/버전 관리.md": {
+      "modifiedTime": 1757593003633,
+      "sourceSize": 4500,
+      "exportedPath": "git&github/버전-관리.html",
+      "dependencies": []
+    },
+    "git&github/git&github.md": {
+      "modifiedTime": 1757593003633,
+      "sourceSize": 159,
+      "exportedPath": "git&github/git&github.html",
+      "dependencies": []
+    },
+    "lib/fonts/293fd13dbca5a3e450ef.woff2": {
+      "modifiedTime": 1757593003633,
+      "sourceSize": 105924,
+      "exportedPath": "lib/fonts/293fd13dbca5a3e450ef.woff2",
+      "dependencies": []
+    },
+    "lib/fonts/085cb93e613ba3d40d2b.woff2": {
+      "modifiedTime": 1757593003633,
+      "sourceSize": 112184,
+      "exportedPath": "lib/fonts/085cb93e613ba3d40d2b.woff2",
       "dependencies": []
     }
   }

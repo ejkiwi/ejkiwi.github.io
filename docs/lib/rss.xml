@@ -1,4 +1,878 @@
-<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[ejkiwi.github.io]]></title><description><![CDATA[Obsidian digital garden]]></description><link>https://ejkiwi.github.io/</link><image><url>https://ejkiwi.github.io/lib/media/favicon.png</url><title>ejkiwi.github.io</title><link>https://ejkiwi.github.io/</link></image><generator>Webpage HTML Export plugin for Obsidian</generator><lastBuildDate>Sun, 17 Aug 2025 15:51:48 GMT</lastBuildDate><atom:link href="https://ejkiwi.github.io/lib/rss.xml" rel="self" type="application/rss+xml"/><pubDate>Sun, 17 Aug 2025 15:51:47 GMT</pubDate><ttl>60</ttl><dc:creator/><item><title><![CDATA[2025_여름_모각코]]></title><description><![CDATA[ 
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[ejkiwi.github.io]]></title><description><![CDATA[Obsidian digital garden]]></description><link>https://ejkiwi.github.io/</link><image><url>https://ejkiwi.github.io/lib/media/favicon.png</url><title>ejkiwi.github.io</title><link>https://ejkiwi.github.io/</link></image><generator>Webpage HTML Export plugin for Obsidian</generator><lastBuildDate>Thu, 11 Sep 2025 12:16:45 GMT</lastBuildDate><atom:link href="https://ejkiwi.github.io/lib/rss.xml" rel="self" type="application/rss+xml"/><pubDate>Thu, 11 Sep 2025 12:16:43 GMT</pubDate><ttl>60</ttl><dc:creator/><item><title><![CDATA[문제 1011]]></title><description><![CDATA[ 
+ <br>Fly me to the Alpha Centauri<br>입력 : 입력의 첫 줄에는 테스트케이스의 개수 T가 주어진다. 각각의 테스트 케이스에 대해 현재 위치 x 와 목표 위치 y 가 정수로 주어지며, x는 항상 y보다 작은 값을 갖는다. (0 ≤ x &lt; y &lt; 231)<br>
+출력 : 각 테스트 케이스에 대해 x지점으로부터 y지점까지 정확히 도달하는데 필요한 최소한의 공간이동 장치 작동 횟수를 출력한다.<br>case = []
+for i in range(int(input())):
+    d, e = map(int,input().split())
+    case.append([d, e, e-d])
+
+result = []
+for i in case:
+    r = 0
+    count = 0
+    m = 0
+
+    while True:
+        m += 1
+        r += m
+        count += 1
+        if i[2] &lt;= r:
+            result.append(count)
+            break
+        r += m
+        count += 1
+        if i[2] &lt;= r:
+            result.append(count)
+            break
+
+for i in result:
+    print(i)
+<br>
+<br>r: 누적 이동 거리
+<br>count: 이동 횟수
+<br>m: 현재 단계에서 한 번에 이동할 수 있는 거리<br>
+이동 거리는 1부터 시작하며, 매 단계마다 1, 2, 3, ... 식으로 증가.(같은 거리만큼 두 번 반복)
+<br><br>11 22 33 44 55 66 77 88 99 1010 1111 1212 1313 1414 ,,, -&gt; 개수  
+12 34 56 78 910 ,,,, -&gt; 횟수의 수  
+구간의 크기가 순서대로 1부터 20까지 있다고 하면, 그 구간에 따른 정답은  -&gt; 1 2 33 44 555 666 7777 8888이 됨.  
+* (예) 구간의 크기가 8이면 정답은 5가 됨. / 구간의 크기가 10이면 정답은 6이 됨.
+]]></description><link>https://ejkiwi.github.io/백준/문제-1011.html</link><guid isPermaLink="false">백준/문제 1011.md</guid><pubDate>Thu, 02 Jan 2025 08:39:47 GMT</pubDate></item><item><title><![CDATA[문제 1931]]></title><description><![CDATA[ 
+ <br>회의실 배정<br>입력 : 첫째 줄에 회의의 수 N(1 ≤ N ≤ 100,000)이 주어진다. 둘째 줄부터 N+1 줄까지 각 회의의 정보가 주어지는데 이것은 공백을 사이에 두고 회의의 시작시간과 끝나는 시간이 주어진다. 시작 시간과 끝나는 시간은 231-1보다 작거나 같은 자연수 또는 0이다.<br>
+출력 : 첫째 줄에 최대 사용할 수 있는 회의의 최대 개수를 출력한다.<br>import sys
+input = sys.stdin.readline
+
+case = []
+for _ in range(int(input())):
+    a = list(map(int,input().split()))
+    case.append(a)
+case.sort(key=lambda x: (x[0], x[1]))
+
+CASE = []
+cAse = set()
+c = len(cAse)
+for _ in case: #어차피 시작시간도 같은데 끝시간이 더 긴건 필요업냠냠냠냠냠,,..
+    cAse.add(_[0])
+    if _[1] == _[0]: #시작하자마자끝나는건필요해...
+        CASE.append(_)
+    elif len(cAse) != c: #정렬한 뒤, 저장하는거니까... 시작시각이 같은 회의들 중 일찍끝나는것만 필요
+        c = len(cAse)
+        CASE.append(_)
+
+result = 1
+now = case[0]
+for _ in case[1::]:
+    if now[1] &gt; _[1]: #now보다 지금 _의 끝 시작이 더 작다? -&gt; 이녀석은 더 효율적인 회의임 얘 선택해야해.. 근데 회의 카운트 수를 높일 수는 없음.
+        now = _ #그냥 now를 더 좋은 회의로 바꾸는거임. 3 100, 4 5인 경우에 해당..
+
+    elif now[1] &lt;= _[0]: #근데..? _의 시작시간이..? now의 끝나는 시작과 같다? -&gt; 이건 바로 회의 수 추가mood ~~ 완전 그 느낌임...
+        if _[0] == _[1]: #시작시각과 끝 시각이 같은 경우.
+            result += 1 #무조건 추가
+        else:
+            result += 1 #추가하고
+            now = _ #현재 회의 바꾸고...
+
+print(result)
+<br>
+<br>푼 방식은.. 주석과같다...~_~
+]]></description><link>https://ejkiwi.github.io/백준/문제-1931.html</link><guid isPermaLink="false">백준/문제 1931.md</guid><pubDate>Thu, 02 Jan 2025 08:57:47 GMT</pubDate></item><item><title><![CDATA[문제 14369]]></title><description><![CDATA[ 
+ <br>전화번호 수수께끼(Small)<br>입력 : 첫 줄에 테스트케이스의 개수 T가 주어진다. 각 테스트케이스에는 상대방이 제시한 스트링 S가 주어진다. S는 영어 대문자로만 이루어져 있다.<br>
+1≤&nbsp;T&nbsp;≤ 100이고, S의 길이는 3 이상 20 이하이다. 모든 테스트케이스에는 유일한 해답이 있다.<br>
+출력 : 각 줄에 테스트케이스 번호 x와 전화번호 y를 Case # x: y의 형태로 출력한다.<br>첫 시도 -&gt; 시간초과<br>ZERO = [1,0,0,0,0,0,1,1,0,0,0,0,0,0,1]
+ONE =  [1,0,0,0,0,1,1,0,0,0,0,0,0,0,0]
+TWO =  [0,0,0,0,0,0,1,0,0,1,0,0,1,0,0]
+THREE =[2,0,0,1,0,0,0,1,0,1,0,0,0,0,0]
+FOUR = [0,1,0,0,0,0,1,1,0,0,1,0,0,0,0]
+FIVE = [1,1,0,0,1,0,0,0,0,0,0,1,0,0,0]
+SIX =  [0,0,0,0,1,0,0,0,1,0,0,0,0,1,0]
+SEVEN =[2,0,0,0,0,1,0,0,1,0,0,1,0,0,0]
+EIGHT =[1,0,1,1,1,0,0,0,0,1,0,0,0,0,0]
+NINE = [1,0,0,0,1,2,0,0,0,0,0,0,0,0,0]
+NUMBER = [ ["0",ZERO], ["1", ONE], ["2", TWO], ["3", THREE], ["4", FOUR], ["5", FIVE], ["6", SIX], ["7", SEVEN], ["8", EIGHT], ["9",NINE] ]
+ALPHABET = ['E', 'F', 'G', 'H', 'I', 'N', 'O', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Z']
+
+
+def CASE(TEXT, ALPHABET = ALPHABET):
+    result = []
+    for i in ALPHABET:
+        result.append(TEXT.count(i))
+    return result
+
+
+def CLEAR_NUMBER(NUMBER = NUMBER, case = []):
+    number = []
+    #전처리
+    for i in NUMBER:
+        detect = 0
+        for j in range(15):
+            if i[1][j] &gt; case[j]:
+                detect = 1
+                break
+        if detect == 0:
+            number.append(i)
+            case = [y-x for x,y in zip(i[1], case)]
+
+    return number, case
+
+
+def ANSWER(case, number = NUMBER):
+    answer = []
+    case = CASE(case)
+    while True:
+        if case == [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]:
+            break
+        number, case = CLEAR_NUMBER(number, case)
+        for i in number:
+            answer.append(i[0])
+
+    return answer
+
+answer = []
+for i in range(int(input())):
+    case = input()
+    a = ""
+    for j in sorted(ANSWER(case)):
+        a += j
+    answer.append(a)
+
+m = 1
+for i in answer:
+    print("Case "+"#"+str(m)+": "+i)
+    m += 1
+<br>'E', 'F', 'G', 'H', 'I', 'N', 'O', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Z' 를 차례대로 묶어서, 해당 알파벳이 있으면 1, 없으면 0을 매겨주었다. 그리고 주어진 case에서, 해당되는 알파벳 부분을 전체에서 빼주는 작업을<br>
+[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0] 이 될 때까지 반복해서<br>
+정답을 찾는 방법으로 작성했다.<br>
+<br>CLEAR_NUMBER 함수는 NUMBER 리스트를 순회하면서 각 숫자의 패턴과 case를 비교하는데, 매 숫자마다 15개의 값을 비교하고, 이를 매번 갱신하며 반복적으로 수행하는 점이 시간을 많이 잡아먹었고.. case가 0으로 수렴하는 과정에서 반복 횟수가 많아지고, 내부적으로 CLEAR_NUMBER를 여러 번 호출하므로 시간이 크게 소요되어서 시간초과가 났을 것이다.
+<br>네 번째 시도<br>from collections import Counter
+
+DIGITS = [
+    ["0", "Z", "ZERO"],
+    ["2", "W", "TWO"],
+    ["4", "U", "FOUR"],
+    ["6", "X", "SIX"],
+    ["8", "G", "EIGHT"],
+    ["3", "H", "THREE"],
+    ["5", "F", "FIVE"],
+    ["7", "V", "SEVEN"],
+    ["1", "O", "ONE"],
+    ["9", "I", "NINE"],
+]
+
+def solve_case(case):
+    case_count = Counter(case)
+    result = []
+
+    for digit, unique_char, word in DIGITS:
+        count = case_count[unique_char]
+        if count &gt; 0:
+            result.extend([digit] * count)
+            for char in word:
+                case_count[char] -= count
+
+    return "".join(sorted(result))
+
+# 입력 처리
+t = int(input())
+answers = []
+for i in range(t):
+    case = input().strip()
+    answers.append(f"Case #{i + 1}: {solve_case(case)}")
+
+print("\n".join(answers))
+<br>그냥 아예 각 알파벳이 고유하게 가지고 있는 문자열을 비교해서 빼주는 방식으로 진행했다.<br>
+<br>["1", "O", "ONE"] 같은 경우 "O"가  "ZERO"에도 있고 "TWO"에도 있고 "FOUR" 에도 있기 때문에 문제가 될 거 같지만 애당초 "ZERO"는 유일한 "Z"에 의해 다 걸러지게 되고, 마찬가지로 "TWO"는 "W"에, "FOUR"는 "U"에 걸러지게 되므로 상관 없다.
+<br>from collections import Counter를 사용해서 시간을 줄였다.
+]]></description><link>https://ejkiwi.github.io/백준/문제-14369.html</link><guid isPermaLink="false">백준/문제 14369.md</guid><pubDate>Thu, 02 Jan 2025 08:54:49 GMT</pubDate></item><item><title><![CDATA[백준]]></title><description><![CDATA[ 
+ <br>
+<br><a data-href="문제 1011" href="https://ejkiwi.github.io/백준/문제-1011.html" class="internal-link" target="_self" rel="noopener nofollow">문제 1011</a>
+<br><a data-href="문제 14369" href="https://ejkiwi.github.io/백준/문제-14369.html" class="internal-link" target="_self" rel="noopener nofollow">문제 14369</a>
+<br><a data-href="문제 1931" href="https://ejkiwi.github.io/백준/문제-1931.html" class="internal-link" target="_self" rel="noopener nofollow">문제 1931</a>
+]]></description><link>https://ejkiwi.github.io/백준/백준.html</link><guid isPermaLink="false">백준/백준.md</guid><pubDate>Sat, 04 Jan 2025 15:33:19 GMT</pubDate></item><item><title><![CDATA[백준 풀이]]></title><description><![CDATA[ 
+ <br>🌱<a data-tooltip-position="top" aria-label="https://solved.ac/profile/eonjikiwi" rel="noopener nofollow" class="external-link" href="https://solved.ac/profile/eonjikiwi" target="_blank">백준 프로필</a>🌱<br>열심히 풀었던 문제들/ 왕큰 깨달음을 얻었던 문제들을 정리해놓았다!!!!!!!!!!!!!]]></description><link>https://ejkiwi.github.io/백준/백준-풀이.html</link><guid isPermaLink="false">백준/백준 풀이.md</guid><pubDate>Sat, 04 Jan 2025 15:28:47 GMT</pubDate></item><item><title><![CDATA[궁금햇던거]]></title><description><![CDATA[ 
+ <br><br>
+<br>잠재 벡터의 차원 -&gt; 잠재 공간에서 쓰는 축의 개수
+<br>2D latent space를 시각화했을 때, scatter plot의 한 점 한 점들이 2D latent vector에 해당한다.
+<br>사영은왜하는것이지?<br>
+-&gt; 우리 눈은 4차원부터는 그 공간을 시각화하여 표현하지 못한다.<br>
+-&gt;  4, 5, 6 ,,,, 차원의 잠재 벡터로 표현되어있는 벡터 공간을 시각화해서 보고싶으면 어떡해~<br>
+-&gt; 그 때는 차원을 줄이면 되지! 고차원을 저차원(1,2,3차원)으로 내리 꽃는 그 무드임
+<br><br><br>
+<br>변수의 종류에 따라 탐색 공간 정의 가능
+<br>변수의 개수에 따라 탐색 공간 차원이 정해짐
+<br>이산 변수 (예: binary)
+
+<br>변수 하나 → 차원 1의 공간 예: {0, 1}<br>
+
+<br>변수 두 개 → 차원 2의 공간 예: {0, 1}² = {(0,0), (0,1), (1,0), (1,1)}<br>
+
+<br>변수 n개 → 차원 n의 이산 공간 예: {0, 1}ⁿ<br>
+
+
+
+<br>연속 변수 (예: 실수)
+
+<br>변수 하나 → 차원 1의 공간 예: ℝ (실수직선)<br>
+
+<br>변수 두 개 → 차원 2의 공간 예: ℝ² (평면)<br>
+
+<br>변수 n개 → 차원 n의 연속 공간 예: ℝⁿ
+
+
+<br><br><br>
+<br>단어를 숫자로 특징 표현.
+<br>vector_size를 지정해 단어를 특정 차원의 의미 벡터로 표현.
+<br>예: vector_size = 5,  "이" → [0.1, -0.3, 0.5, 0.0, 0.2]
+<br><br><br>
+<br>n개의 단어 시퀀스를 입력으로 주고, 그 다음 단어를 예측하는 분류 문제로 처리함.
+
+<br>입력 예: "이", "것", "은"  ( 이 때 "이","것","은" 은 각각 5차원 벡터 -&gt; 총3*5matrix 가 입력으로 들어감)
+<br>출력 예: "첫"
+
+
+<br>출력은 단어장 크기만큼의 확률 벡터 (예: softmax로 17차원 출력)
+<br>정답(GT)은 예측 단어가 단어장 내에서 위치하고 있는 인덱스 (예: "첫"은 7번 인덱스)
+
+<br>출력 시퀀스의 인덱스가 아님!!
+<br>정답 단어는 보통 정답 단어는 보통 one-hot 벡터로 표현되며, 실제 학습에서는 one-hot 벡터에서 1이 적혀있는 인덱스 번호만으로도 정답을 표현 함
+
+
+<br>예측 결과에 대한 loss 함수는 CrossEntropyLoss 사용 (softmax + log loss)
+<br><br><br>
+<br>문장 앞부분처럼 앞에 단어가 부족할 때는 [START] 같은 특수 토큰으로 채움
+<br>예: 시퀀스 길이 = 3이면<br>
+[START], [START], "이" → 예측: "것"
+<br><br><br>
+<br>각 단어의 벡터는 모델이 학습 과정에서 계속 업데이트됨
+<br>즉, 임베딩은 단순히 고정된 변환이 아니라 의미를 학습하는 파라미터(weight matrix)임
+<br><br><br>
+<br>차원이 클수록 더 미묘하고 복잡한 의미를 표현할 수 있지만,
+<br>연산량 증가, 메모리 부담, 학습 시간 증가 등의 trade-off가 있음
+<br>일반적으로:
+
+<br>Word2Vec: 100~300차원
+<br>BERT: 768차원
+<br>GPT-3: 최대 12,288차원까지도 사용
+
+
+<br><br><br>
+<br>Transformer는 단어 순서를 알 수 없기 때문에 위치 정보(Position)를 따로 넣어줘야 함
+<br>이 위치 정보는 단어 임베딩 벡터와 같은 차원으로 만들어져 element-wise 덧셈 방식으로 추가함
+<br>예:<br>
+"이"의 임베딩 = [0.1, -0.3, 0.5, 0.0, 0.2]<br>
+위치 인코딩(Pos 0) = [0.01, 0.02, 0.03, 0.04, 0.05]<br>
+→ 최종 입력 벡터 = [0.11, -0.28, 0.53, 0.04, 0.25]<br>
+<br>벡터 차원 수는 그대로 유지되며, 단어 의미 + 위치 정보가 하나의 벡터에 담김
+<br><br><br>
+<br>벡터 전체는 의미를 잘 반영하지만,
+<br>각 인덱스가 “성별”이나 “감정” 같은 특정 의미를 갖는 건 보장되지 않음
+<br>이 차원별 의미를 해석하려는 것이 현재 활발한 연구 주제 중 하나임  
+
+<br>예: probing task, interpretable embeddings, disentangled representations 등
+
+
+<br><br><br><br><br><br>Decoder만 사용<br>
+<br>Encoder는 전체 입력을 한꺼번에 다 보고 처리 -&gt; gpt는 아니다~
+<br>앞 단어들만 보면서 오른쪽 단어를 예측하는! 순서대로 단어 예측하는 녀석
+<br>gpt의 출력은 ==다음 단어를 예측하는 Vocab size만큼의 확률 분포==<br>
+<br>
+(예: '것' 다음에 나올 단어가 '은'일 확률 등등)
+
+<br>
+"나는 그것"까지 입력 -&gt; 그러면 GPT는 "그 다음 단어가 뭐일지" 예측해야 함.<br>
+- 이 때, GPT는 자기가 알고 있는 모든 단어(=어휘집, Vocabulary) 중에서~~ "것", "은", "이다", "합니다", "좋아해요" 같은 모든 후보 단어에 대해 확률을 계산해.<br>
+출력을 Linear를 통해 원하는 차원으로 맞추어 줌
+
+<br>
+Transformer는 결국 숫자 벡터(예: 768차원)를 출력해줌 : 복잡한 의미를 담은 벡터를 뽑아줄 수는 있지만?
+
+<br>
+그러나? 우리가 원하는 건...<br>
+- (예)Classification: 단일 문장 분류<br>
+- (예)Entailment: 전제 → 가설 관계 추론<br>
+- (예)Similarity: 두 문장의 유사도<br>
+- (예)Multiple Choice: 지문과 보기들 중 정답 고르기<br>
+- =&gt; 요런것들이기 때문에, 그 복잡한 벡터를 우리가 원하는 형태, 즉 정답 클래스 수로 가공해줘야한다!<br>
+- =&gt; Linear Layer 선형층<br>
+특수토큰
+
+<br>
+기계 번역<img alt="GPT1" src="https://ejkiwi.github.io/lib/media/GPT1.png" referrerpolicy="no-referrer">
+
+<br>
+Decoder만 쓰는 GPT가 어캐 번역을 하지.. 라고 생각할 수 있겟으나!! 입력 안에 번역해줘~ 라는 토큰이 들어온다면 가능할 수 잇다아~
+
+<br>
+Auto-regressive generation
+
+<br>how are you &lt;to-fr&gt; : 입력 문장 (마지막 토큰&lt;to-fr&gt;이 작업 명령임)
+<br>Transformer-Decoder : 예측을 계산하는 모델 본체
+
+
+<br>Time step #1
+
+<br>지금까지의 입력을 보고, 첫 번째 단어의 위치인 Position 4 (즉, &lt;to-fr&gt; 바로 다음 위치)에 해당하는 단어를 예측.
+<br>"Comment"라는 단어 출력
+
+
+<br>Time step #2
+
+<br>현재 time step #1 에 해당하는 "Comment"까지 기억하고 있음.
+<br>그 다음 "allez-vous" 단어 예측, 출력
+
+
+
+
+<br>
+요약<img alt="GPT2" src="https://ejkiwi.github.io/lib/media/GPT2.png" referrerpolicy="no-referrer">
+
+<br>
+입력 : 긴 문서 내용 (예: 위키피디아 문장들) + &lt;summarize&gt; 토큰
+
+<br>
+출력 : 그 문서에 대한 요약문
+
+<br>
+&lt;summarize&gt; = "요약해줘"라는 신호
+
+<br><br>Encoder만 사용<br>
+<br>지피티니핑처럼 왼쪽 -&gt; 오른쪽 이렇게 한 방향만 바라보는 것이 아님.
+<br>양방향을 바라봄.
+<br>보통 한 단어를 768차원 벡터로 표현
+<br>pretraining<br>
+<br>Masked language model : 토큰의 15%를 masking처리, 그 자리에 들어갈 적절한 단어를 예측하며 훈련받음
+
+<br>(예) Let’s stick to [MASK] in this skit → [MASK] = improvisation
+
+
+<br>Next Sentence Prediction : 두 문장을 보고, 두 번째로 온 문장이 첫 번째 문장의 다음 문장이 진짜 맞을지!! 를 맞추며 훈련받음
+<br>FFNN + Softmax<br>
+<br>FFNN : 완전 연결층 feed forward neural network
+<br>벡터 → 의미 있는 값(확률)
+<br>[MASK]위치를 예측한 출력 벡터 V가 있다구 치며는
+
+<br>V는 문맥을 이해한 벡터이지만, 이게 그래서 먼 단어인지는 알 수 없음.
+<br>이 때, FFNN을 통과 : FFNN: 768차원 → vocab 크기 (예: 30,000개)
+
+<br>모든 단어들(vocab) 중에서 어떤 게 가장 어울리는지 점수 매김
+
+
+<br>FFNN을 통과한 V를 Softmax 함수에 넣어서 확률로 바꿈
+
+
+<br>fine-tuning과 cls 토큰<br>
+<br>
+[CLS]토큰 : 맨 앞 [CLS]의 출력 벡터는 전체 문장의 의미 요약 벡터가 됨.
+
+<br>[CLS] 벡터를 기반으로 결과를 내는 출력층만 새로 추가
+<br>그 전체를 새로운 태스크에 맞게 재학습 =&gt; fine-tuning
+
+
+<br>
+분류 작업에서의 fine-tuning<img alt="BERT1" src="https://ejkiwi.github.io/lib/media/BERT1.png" referrerpolicy="no-referrer">
+
+<br>
+Sentence Pair Classification<img alt="BERT2" src="https://ejkiwi.github.io/lib/media/BERT2.png" referrerpolicy="no-referrer">
+
+<br>
+핑크벡터들 : 텍스트 토큰 단위들
+
+<br>입력 텍스트의 토큰화 결과 ( 아직 임베딩 안 됨 )
+<br>아직 숫자로 바뀌기 전 순수한 단어/기호 상태
+
+
+<br>
+노랑벡터들 : 입력 임베딩 벡터들
+
+<br>BERT 인코더에 들어가기 직전 입력 준비 완료!
+<br>Eᵢ : 단어에 대한 임베딩
+
+<br>Token Embedding + Segment Embedding + Position Embedding
+
+
+<br>E[CLS]: [CLS] 토큰에 대한 입력 임베딩
+<br>E[SEP]: 문장 구분자에 대한 임베딩 
+
+<br>Sentence 1 + [SEP] + Sentence 2  : [SEP]을 통해 두 문장을 하나로 연결
+
+
+
+
+<br>
+초록벡터들 : 출력 벡터들
+
+<br>BERT인코더를 거친 후 나온 최종 출력 벡터들
+<br>C : BERT 출력 중 [CLS]에 해당하는 벡터 (문장쌍 전체 의미 요약)
+<br>T₁, T₂, ..., T'ₘ: 각 토큰의 출력 벡터 → 문맥을 고려한 의미 벡터
+
+<br>노랑 벡터에서처럼 단어의 고립된 의미가 아니라, 주변 문맥을 보고 의미가 조정된 결과
+
+
+
+
+<br>
+🔤 핑크색 = "텍스트" 단어 
+
+<br>
+🔢 노란색 = "벡터"로 바뀐 단어 (Embedding Layer 출력) 
+
+<br>
+🧠 초록색 = 문맥 고려한 최종 의미 벡터 (Encoder 출력)
+
+
+
+<br>
+Question Answering<img alt="BERT3" src="https://ejkiwi.github.io/lib/media/BERT3.png" referrerpolicy="no-referrer">
+
+<br>입력 : [CLS] 질문 토큰들 [SEP] 지문(답) 토큰들 [SEP] 
+<br>Start/End Span : 입력이 들어왔을 때,  어디부터 어디까지가 답일까?를 고르는 것.
+
+<br>각 토큰별로..
+
+<br>시작 위치일 확률 계산 하나
+<br>끝 위치일 확률 계산 하나
+<br>두 개의 linear layer 사용
+
+
+<br>softmax를 통해 확률 분포 만들기 -&gt; 가장 확률이 높은 시작/끝 고름
+
+
+
+
+<br>
+<br><br><br>
+<br>Word Embedding은 단순 숫자가 아니라 의미 표현 공간이라는 것!
+<br>Language Model이 분류 문제 구조로 작동한다는 것!
+<br>위치 인코딩 벡터는 단어 임베딩 벡터와 같은 차원으로 만들어져 element-wise 덧셈 방식으로 추가된다는 것!
+
+<br>임베딩 = "토큰을 숫자로 표현한 벡터"  (discrete → dense vector // 고차원 -&gt; 저차원) 
+<br>인코딩 = "어떤 정보(단어, 문장 등)를 벡터로 표현한 결과" (정보 구조 → 표현 벡터)
+<br>"위치"는 그 둘의 경계에 있는 예외 케이스라서 둘 다 쓰임... ( 위치 인코딩/임베딩 )
+
+
+<br>단어 임베딩 벡터는 단순히 고정된 변환이 아니라 의미를 학습하는 파라미터라는 것!
+]]></description><link>https://ejkiwi.github.io/ai_study/궁금햇던거.html</link><guid isPermaLink="false">AI_study/궁금햇던거.md</guid><pubDate>Thu, 11 Sep 2025 12:11:12 GMT</pubDate><enclosure url="https://ejkiwi.github.io/lib/media/GPT1.png" length="0" type="image/png"/><content:encoded>&lt;figure&gt;&lt;img src="https://ejkiwi.github.io/lib/media/GPT1.png"&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[저는 진짜 몰랐어요.]]></title><description><![CDATA[ 
+ <br><br>어디에서 학습할 것인가?<br>
+사용자의 데이터를 중앙 서버로 모아서 학습하지 않고, 개별 디바이스에서 모델을 학습하는 방식.<br>
+학습된 결과( 모델의 가중치나 업데이트 정보 )만 중앙 서버로 보내게 되는데, 이 때 중앙서버에서는 데이터를 취합 후 더 개선된 공통 모델을 생성하는 과정을 거침. 그리고 그 개선된 모델은 다시 사용자들에게 배포됨!!<br>
+<br>관련 개념 ( 어디에서 학습할 것인가? )
+
+<br>중앙 집중 학습 : 모든 데이터를 중앙 서버로 집합
+<br>분산 학습 : 모델 학습을 여러 서버에서 수행 후 결과를 병합
+<br>연합 전이 학습 : 연합학습 + 전이학습 -&gt; 서로 다른 기관  간 데이터를 공유하지 않고 협력 학습...?
+<br>스완슨 학습 : 블록체인 사용하여 중앙서버 없이 학습
+
+
+<br><br>어떻게 학습할 것인가?<br>
+특징을 자동으로 추출할 수 있도록 학습하는 과정을 뜻함. SELF FEATURE EXTRACT<br>
+데이터만 제공하면 그 데이터로부터 핵심 정보를 추출해낼 수 있고 기계 스스로 배워내는 학습 과정을 뜻함.<br>
+지도학습이될수도있구 비지도학습이될수도있구 자기지도학습이될수도있어 뭐 다.. 섞이는거지 어떻게 학습할 것인지에 대한 개념들이니까!!!!<br>
+<br>관련 개념 ( 어떻게 학습할 것인가? )
+
+<br>지도 학습 : 입력 데이터와 정답이 있는 상태 ( 사람이 직접 라벨을 떠먹여 줌. ) YES LABEL
+<br>비지도 학습 : 데이터의 라벨 없이 "패턴" 학습 ( 클러스터링 느낌 ) NO LABEL
+<br>자기지도 학습 : 데이터에서 일부 정보 숨기고 이를 예측하도록 학습 ( 데이터 자체에서 스스로 라벨을 "만들도록" 함 ) NO LABEL, GENERATE LABEL
+<br>전이 학습 : 미리 학습된 모델을 새로운 문제에 적용. RECYCLE
+
+
+<br><br>어떤 데이터를 다루는가?<br>
+<br>domain : 특정 데이터 소스 또는 모델이 작동하는 환경
+
+<br>이미지 vs 음성
+<br>domain shifts : 훈련은 A사용자의 이메일로 스팸 필터링을 했다가, 실제 사용은 B사용자의 이메일로 스팸 필터링을 하는 것.
+
+
+<br>task : 모델이 해결하거나 달성해야하는 문제 또는 목표 -&gt; 이 데이터를 가지고 무엇을 할 것인가?<br>
+domain adaptation?<br>
+diffusion model?<br>
+encoder-decoder -&gt; 입출력 크기를 같게.
+]]></description><link>https://ejkiwi.github.io/ai_study/저는-진짜-몰랐어요..html</link><guid isPermaLink="false">AI_study/저는 진짜 몰랐어요..md</guid><pubDate>Wed, 19 Mar 2025 12:00:00 GMT</pubDate></item><item><title><![CDATA[토큰이라...]]></title><description><![CDATA[ 
+ <br>Tokenization : 어디서 문장을 자를까? 정하기<br>
+<br>
+모든 글자 하나 하나를 자르기
+
+<br>run, running, runs 같은 단어들은 run이라는 공통된 형태임을 안다
+<br>새로운 단어 생겨도 알 수 잇잔냐
+<br>원래보다 입력 길이가 길잖아
+<br>단어를 한개한개 자르니까 단어 자체 의미를 바로 알기는 힘드러
+<br>
+
+
+<br>
+단어 단위로 자르기
+
+<br>단어 그 자체 의미가 보존되잖아
+<br>입력 시퀀스도 짤밪ㄶ아 -&gt; 계산량도 감소하구 속도도 빨라지구
+<br>단어 개많은 거 어캐 처리할것인데?
+<br>새로운 단어를 어캐 적응할건데?
+
+<br>-&gt; UNK
+
+
+<br>run runs running을 다 따로 해버리잖냐...
+
+
+<br>
+새 단어가 자주 등장하거나 다양한 입력을 다루려면 Character 단위가 좋고,  의미 단위를 명확히 다루고 싶으면 Word 단위가 좋은 것이다~~
+
+<br>UNK<br>
+<br>한 번은 본 적 있는 단어라면 인덱스가 배정되어있을 것이야. 이녀석을 어떻게 숫자로 표현해야할지 알 수 있을 것이라구.. 근데????  본 적 없는 단어는 뭐 알 수가 없잖냐!!!!!! 모델에 입력할수가 없다구.. 모델에 얘를 뭐 어캐 숫자로 바꾸어서 넣어줄건데!!!
+
+<br>-&gt; 이 때는 &lt;UNK&gt;로 처리하면 되는 것이야.
+<br>자주 나오지 않는 특별 단어는 요래 처리를 하면 돼. 그래서 이 입력 자체를 버리지 않구 따로 처리할 수 있게 해주는 것이야. 그럼 모델이 돌다가 멈추지 않겟지??
+<br>보통&lt;UNK&gt;는 0과 1같은 특별한 ID 숫자 번호를 준댕
+<br>ㄱ근데 이 UNK가 너무 많아져버리면??
+
+<br>이것이 이 UNK의 한계인것이야.
+<br>이게 너무 많으면 문장 의미 자체를 이해할 수 없게 되잖야.
+<br>어캐 해결해? -&gt;Subword Tokenization - Byte Pair Encoding 이 등장!
+
+
+
+
+<br>Subword Tokenization<br>
+알 고 리 즘<br>
+희귀 단어처리 위해서요 - 자주 등장하는 글자 쌍을 합쳐나가기<br>
+<br>처음에는 character단위로 시작
+<br>가장 많이 등장하는 글자 쌍 찾기
+<br>쌍 합쳐서 새 심볼 만들기
+<br>점점 더 큰 단위 만들기
+<br>~ 자연어를 컴퓨터에 넣으려면 전처리를 해야 하고, 그중 하나가 Tokenization이다.<br>
+~ 초기에 대표적으로 Word 단위 Tokenization을 사용했다.<br>
+~ 그런데 Word Tokenization 방식은 UNK(모르는 단어) 문제를 해결할 방법이 없었다.<br>
+~ 그래서 Character-level Tokenization도 시도했지만,  ➔ 글자 단위는 의미를 포착하기 어렵고 시퀀스가 너무 길어져서 힘들었다.<br>
+~ 이 문제를 궁극적으로 해결하려고,   "Subword Tokenization"이라는 새로운 방식이 등장했다!<br>
+~  그래서,  Subword Tokenization은 단순히 Word Tokenization에 딸려 있는 세부기법이 아니고, Word 방식, Character 방식과 나란히 독립적으로 존재하는 하나의 Tokenization 방법이다. <br>근데 이거 잘 쓸라면 첫 base vocab에 초ㅣ대한 다양한 글자가 이성야 할 거 아님?<br>
+근데 모든 unicode 다 넣기에는 개심각. 십삼만팔천개임@@@ 도롸이...<br>
+그래서 지피티니 투 같은 경우에는 처음 시작을 256개부터 시작해서... 현재는  삼만이천개~ 육만사천개 정도의 base vocab 임...<br>자 근데 이것을.... 숫자로 바까야할것아님..<br>
+<br>처음에는... 단어마다 고유 ID 배정하는 원 핫 벡터 방식을 사용함. ( 희소 표현 )
+
+<br>30,000차원 벡터 중 3456번째만 1, 나머지는 0<br>
+
+<br>너무 비효율적! (메모리 낭비 + 의미 없음)
+
+
+<br>그래서 그것 대신에Dense Vector(Word Embedding)로 변환하자는 아이디어가 생겻잖냐
+
+<br>"banking" → [0.12, -0.48, 0.23, ..., 0.04] (예: 768차원)
+<br>이 Vector가 바로 Word Vector(Word Embedding)
+
+<br>밀집되어 있고 (Dense)
+<br>의미를 담고 있다 (비슷한 의미면 가까운 벡터!)
+<br>word2vec
+
+<br>word embedding 구현 방법 중 하나.
+<br>banking이라는 단어가 있으면, 그 단어 혼자 의미를 가지는 게 아니라, "항상 banking 근처에 어떤 단어들이 등장했는가" 를 보고 그 패턴을 벡터에 새긴다라는 마인드를 가진 방법이다...!!
+<br><img alt="word2vec" src="https://ejkiwi.github.io/lib/media/word2vec.png" referrerpolicy="no-referrer">
+<br>저 사진에서.P(w문맥어(주변단어) | w중심어) 간의 확률을학습하는 과정 안에서 단어의 의미 벡터가 만들어 진 것.
+<br>주변 문맥으로 학습한 결과 =&gt; 단어 의미하는 의미 벡터 ( 얘는 주변 문맥을 잘 예측하는 방향으로 조정되었음. )
+<br>요즘에는 거의 Embedding을 학습하는 게 모델 학습 그 자체로서의 역할을 하도록 다른 모델에 포함시켜서 사용된다...!("Word2Vec은 단어를 의미 있는 벡터로 만드는 임베딩 학습기법이고, 이 결과를 다른 NLP Task를 수행하는 데 이용한다! -&gt; 지도학습! downstream task개념 기억나지?? downstream을 수행하기 위해서 다른 걸로 돌려버리잔아...!!!! ")
+<br>
+
+
+
+
+
+
+<br><br>물론! rnn이면 시간 순서를 기억하니 ㄱㅊ 할지도.. 긏만???<br>
+self-attention과 transformer는 어캐할것이냐??<br>
+이녀석들은 모든것들을 한 번 에!!! 처리를한다고!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!<br>그러면 뭐 apple이 love 앞ㅍ에나오ㅑㅅ는디뒤에나ㅗ왓는디저어캐아냐구<br>그래서!! token의 위치 정보 또한 숫자로 표현해서 데이터로 가지고 잇어야해!!!<br>
+필요한 것<br>
+<br>연속적으로 자연스럽게 변하는 값이 필요 ( 그냥 숫자 1 2 3 주면 부드럽게 순서 관계를 인식하기 어려움 )
+<br>멀어질수록 값이 달라지고 가까울수록 값이 비슷하게 나와야 함<br>
+<img alt="positional_encoding1" src="https://ejkiwi.github.io/lib/media/positional_encoding1.png" referrerpolicy="no-referrer">
+<br>
+<br>짝수 차원에는 sin 함수를, 홀수 차원에는 cos 함수 사용.
+<br>잘 보면 sin과cos에 들어가는 녀석들이 매우 복잡함
+
+<br>각 차원(frequency)이 다 다르게 움직이고,
+<br>Sin, Cos도 교차로 쓰고
+<br>주기도 다르게 걸어놨음.
+<br>갱장히..갱장히...머...어찌저찌... 저찌저ㅉㅣ 해서 멀어질수록 값이 달라지고 가까울수록 값이 비슷하게 나오도록 함수를 설계하셧대요 그 이상은... 이해포기
+
+
+<br><img alt="positional_encoding2" src="https://ejkiwi.github.io/lib/media/positional_encoding2.png" referrerpolicy="no-referrer"><br>"단어가 문장에서 나오는 순서" 그대로 Y축에 1줄씩 차곡차곡 올라간 것...<br>
+그리고 y 축에는 단어 순서에 대한 의미를 가진 벡터가 들어감....<br>
+벡터 1번째 칸~ 128번째 칸 까지<br>
+<br>단어를 의미 임베딩(Embedding)한다 (ex: students → [벡터]
+<br>단어 순서(Positional Encoding) 벡터를 만든다 (0번 단어용 벡터, 1번 단어용 벡터 등)
+<br>두 벡터를 더한다 (Element-wise Sum) 의미 + 순서 둘 다 반영된 최종 벡터 완성
+<br>Transformer Encoder로 넣는다|(Self-Attention 계산 시작!)
+]]></description><link>https://ejkiwi.github.io/ai_study/토큰이라....html</link><guid isPermaLink="false">AI_study/토큰이라....md</guid><pubDate>Thu, 11 Sep 2025 12:15:32 GMT</pubDate><enclosure url="https://ejkiwi.github.io/lib/media/word2vec.png" length="0" type="image/png"/><content:encoded>&lt;figure&gt;&lt;img src="https://ejkiwi.github.io/lib/media/word2vec.png"&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[활성화 함수]]></title><description><![CDATA[ 
+ <br><br>뉴런이 출력할 값을 변환 -&gt; 비선형성 추가 -&gt; 신경망은 복잡한 패턴 학습 가능<br><br><img alt="ReLU1" src="https://ejkiwi.github.io/lib/media/ReLU1.png" referrerpolicy="no-referrer"><br>
+<br>입력이 0보다 크면 그대로 출력, 0 이하면 0 출력
+<br>비선형 함수로 딥러닝에서 가장 많이 사용됨
+<br>Gradient Vanishing 문제 완화 → 역전파 시 기울기가 0이 되는 문제가 적음
+<br>계산량이 적음 → 곱셈 연산 없이 비교만 하면 됨!
+<br>=================================
+<br>음수 입력은 항상 0으로 출력되기 때문에, 뉴런이 완전히 죽어버릴 수도 있음.
+
+<br>이걸 해결하기 위해 변형된 ReLU들이 등장
+
+<br>Leaky ReLU : x&lt;0일 때도 작은 기울기(α)를 유지.
+
+<br>보통 α = 0.01 정도로 설정
+<br>음수 영역을 조금이라도 학습할 수 있도록 함.
+
+
+<br>PReLU : α를 고정된 값이 아니라 학습 가능하게 만든 것
+
+
+
+
+<br><img alt="ReLU2" src="https://ejkiwi.github.io/lib/media/ReLU2.png" referrerpolicy="no-referrer"><br><br><img alt="sigmoid" src="https://ejkiwi.github.io/lib/media/sigmoid.png" referrerpolicy="no-referrer"><br>
+<br>출력 범위: (0,1)
+
+<br>값이 0~1 사이로 정규화되어 확률처럼 해석할 수 있음
+
+
+<br>이진 분류(Binary Classification)에 사용 → YES/NO 같은 문제에서 확률을 예측할 때 유용
+
+<br>값 하나를 입력받아서(x) 하나의 값만 출력 
+
+
+<br>==================================
+<br>Gradient Vanishing 문제
+
+<br>시그모이드 함수는 미분하면 최대값이 0.25
+
+
+<br>역전파(Backpropagation)애서 기울기를 전파하고, 이를 이용해서 가중치를 업데이트하는데, 기울기가 너무 작아지면 가중치가 거의 업데이트되지 않아서 학습이 잘 안됨.
+
+
+<br>출력 값이 0이나 1에 가까워질수록 기울기가 0에 가까워짐
+
+<br>네트워크가 깊어질수록 학습이 어려움 → 그래서 최근에는 거의 안 쓴다.
+
+
+<br><br><img alt="softmax" src="https://ejkiwi.github.io/lib/media/softmax.png" referrerpolicy="no-referrer"><br>
+<br>시그모이드의 자식
+<br>로지스틱 함수(시그모이드함수)의 다차원 일반화
+
+<br>다차원 일반화? : 여러개의 클래스에 적용 가능
+<br>여러 개의 입력값 (x1,x2,x3,...)을 받아서 각 클래스별 확률을 출력
+<br>출력 값의 총합이 항상 1 → 확률 분포처럼 해석 가능
+
+
+<br>각 클래스에 대한 상대적인 확률 계산
+
+<br>값이 클수록 확률이 높게 나옴 (ex: 고양이, 개, 말 중에서 하나를 예측)
+
+
+<br>다중 클래스 분류(Multi-class Classification)에 사용
+
+<br>여러 개의 클래스를 예측해야 할 때, 각각의 확률을 출력
+
+
+<br>==================================
+<br>한 클래스의 확률이 높아지면, 나머지 확률이 급격히 줄어듦
+
+<br>큰 값이 들어오면 출력이 급격히 한쪽으로 치우칠 수 있음.
+
+
+<br>Cross-Entropy Loss와 함께 사용해야 안정적인 학습 가능
+
+<br>단순한 MSE 같은 손실 함수를 쓰면 학습이 어렵다.
+
+
+<br><img alt="sigmoid_softmax" src="https://ejkiwi.github.io/lib/media/sigmoid_softmax.png" referrerpolicy="no-referrer"><br><br><img alt="Tanh1" src="https://ejkiwi.github.io/lib/media/Tanh1.png" referrerpolicy="no-referrer"><br>
+<br>시그모이드의 자식
+<br>로지스틱(시그모이드) 함수를 평행이동하고 상수 곱한것과 동일
+<br>출력 범위: (-1,1)
+
+<br>시그모이드와 비슷하지만, 출력값이 영점을 중심으로 대칭
+<br>평균이 0에 가까워서 Gradient Vanishing 문제 완화
+
+
+<br>은닉층에서 주로 사용됨
+
+<br>시그모이드보다 더 나은 성능을 보임
+
+
+<br>=================================
+<br>여전히 Gradient Vanishing 문제 존재
+
+<br>값이 -1 또는 1에 가까워지면, 미분값이 0에 가까워짐
+<br>깊은 네트워크에서는 사용하기 어려움 → 요즘은 ReLU 계열을 더 많이 쓴다.
+
+
+<br><img alt="Tanh2" src="https://ejkiwi.github.io/lib/media/Tanh2.png" referrerpolicy="no-referrer"><br><br>OPTIMIZER<br>
+손실 최소화를 위해 가중치 업데이트를 하는 데 사용<br><br>
+<br>확률적 경사 하강법
+<br>가중치를 업데이트할 때, 전체 데이터가 아니라 일부만 사용
+
+<br>계산 속도를 빠르게 하기 위해 배치(Batch) 단위로 업데이트
+
+
+<br>SGD는 랜덤 샘플을 사용하기 때문에 최적값 주변에서 흔들리는 경향이 있음
+
+<br>이걸 해결하기 위해 Momentum, Nesterov Accelerated Gradient (NAG) 같은 기법 추가
+
+
+<br>⚠️
+<br>지역 최소값(Local Minima)에 빠질 수 있음
+<br>학습 속도가 느릴 수 있음
+
+<br>기울기 방향이 항상 최선이 아니기 때문에 최적값에 도달하는데 오래 걸릴 수도 있음
+
+
+<br>진동(Loss값이 계속 크게 왔다 갔다 하는 현상) 발생
+<br><br>
+<br>SGD 개선냥이
+<br>속도(velocity) 개념을 도입해서, 이전 기울기의 영향을 일부 유지
+<br>β(보통 0.9) 값이 클수록 이전 방향을 더 강하게 유지
+<br>기울기가 갑자기 바뀌더라도 부드럽게 이동 가능 → 진동(oscillation) 감소
+<br>⚠️
+<br>Overshooting 문제 : 너무 빠르게 이동가능해버려서 최적점을 지나칠수도있잖아! 라는 문제.
+<br><br>
+<br>Momentum 개선냥이
+<br>미리 계산한 위치에서 기울기를 보고 더 정확한 방향으로 이동 -&gt;  현 위치에서 앞으로의 위치도 미리 계산한 후 보정
+<br>Overshooting 문제 개선
+<br><br>
+<br>SGD 개선냥이
+<br>각각의 파라미터에 대해 적응적인 학습률(learning rate) 적용
+<br>기울기가 크면 학습률을 줄이고, 기울기가 작으면 학습률을 증가
+
+<br>약간의 브레이크와 엑셀 느낌임.
+<br>학습률 ? : 가중치를 업데이트할 때 변화하는 크기를 결정하는 하이퍼파라미터.
+
+<br>모델이 얼마나 빠르게 또는 천천히 학습할지를 조절하는 중요한 요소
+
+
+
+
+<br>Gradient Vanishing 문제를 해결하는 데 도움
+<br><br>
+<br>Momentum + RMSprop을 결합한 방식
+
+<br>모멘텀을 사용해서 빠르게 최적화하면서도, 적응적으로 학습률을 조정함
+<br>Momentum -&gt; 빠르게 최적화 가능
+<br>RMSprop -&gt; 적응적으로 학습률 조정
+
+
+<br>각각의 가중치에 대해 다른 학습률을 적용
+
+<br>변화가 큰 가중치는 학습률을 낮추고, 변화가 작은 가중치는 학습률을 높임
+
+
+<br>SGD보다 빠르게 수렴할 가능성이 높음
+
+<br>그래서 딥러닝에서 가장 많이 사용됨
+
+
+<br>⚠️
+<br>메모리를 많이 사용
+
+<br>1차(moment)와 2차(moment) 모멘텀을 모두 저장해야 해서 SGD보다 메모리를 더 씀
+
+
+<br>일반화 성능이 떨어질 수 있다.
+
+<br>너무 빠르게 수렴해서 오히려 최적해를 잘 못 찾을 수도 있음
+
+
+<br><br>출력층에서 모델이 얼마나 잘못 예측했는지 평가하는 함수<br>
+모델의 예측값과 실제 정답(Label) 사이의 차이를 계산.<br>
+손실 함수의 값이 클수록 예측이 많이 틀린 것<br>
+손실 함수의 값이 **작을수록 예측이 잘 된 것<br><br><br>
+<br>평균 제곱 오차
+<br>예측값 y^와 실제값 y의 차이를 제곱한 후 평균을 구함.
+<br>오차가 클수록 더 큰 패널티를 줌 (제곱이기 때문)
+<br>미분이 부드럽고, 계산이 쉬움.
+<br><br>
+<br>예측 값과 실제값 사이의 평균 절대 차이를 측정하는 방법
+<br><br>
+<br>mse + mae
+<br>오차가 작을 때는 MSE처럼 동작하고,  
+<br>오차가 클 때는 MAE처럼 동작해서 이상치에 덜 민감
+<br><br><br>]]></description><link>https://ejkiwi.github.io/ai_study/활성화-함수들과-최적화-알고리즘과-손실함수.html</link><guid isPermaLink="false">AI_study/활성화 함수들과 최적화 알고리즘과 손실함수.md</guid><pubDate>Thu, 11 Sep 2025 12:03:19 GMT</pubDate><enclosure url="https://ejkiwi.github.io/lib/media/ReLU1.png" length="0" type="image/png"/><content:encoded>&lt;figure&gt;&lt;img src="https://ejkiwi.github.io/lib/media/ReLU1.png"&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[난이걸여태몰랏어]]></title><description><![CDATA[ 
+ <br><br>사용하고 싶은 문서의 경로로 이동한 후에, 그곳에서 git 명령어를 사용하면 되는것이었다!!!!<br><br>
+<br>터미널에서 경로 이동
+<br>Git 초기화 ( 말이 그냥 초기화지 그냥 Git을 사용할 준비를 하는 것. )<br>
+git init
+<br>사용할 파일 준비 : 작업할 파일이나 문서를 저장소에 추가
+<br>커밋
+<br>]]></description><link>https://ejkiwi.github.io/git&amp;github/난이걸여태몰랏어.html</link><guid isPermaLink="false">git&amp;github/난이걸여태몰랏어.md</guid><pubDate>Wed, 19 Feb 2025 07:29:36 GMT</pubDate></item><item><title><![CDATA[명령어]]></title><description><![CDATA[ 
+ <br><br><br>
+<br>on branch main : 현재 main 브랜치에 존재함.
+<br>No commits yet : 아직 커밋한 파일이 없음.
+<br>nothing to commit : 현재 커밋할 파일이 없다.
+<br>working tree clean : 작업 트리도 수정 사항 없이 깨끗하다.
+<br>untracked files : 아직 한 번도 버전 관리가 안 된 파일 ( 한 번도 커밋되어본 적 없고 스테이지에도 올라오지 않은 파일 ) 
+
+<br>tracked files : 한 번 커밋하기 시작한 파일 ( 계속 추적해서 변경사항이 존재하게 됨 ) 
+
+
+<br>Changes to be committed : 앞으로 커밋될 것.
+
+<br>new file : 새로운 파일
+<br>modified : 수정되었다.
+
+
+<br><br>
+<br>"warning: LF will be eplaced by CRLF in ~" 이라는 경고메시지가 나타나는데, 스테이징이 안 된것은 아님.<br>
+( 윈도우의 줄 바꿈 문자와 리눅스의 줄 바꿈 문자는 다름 -&gt;  윈도우에서 문서를 저장하면 줄이 바뀌는 자리에 눈에 보이지 않는 CR문자와 LF문자가 삽입됨 -&gt; 깃에서는 텍스트 문서의 CRLF문자를 LF문자로 자동 변환해서 커밋할 것이라는 의미임 )
+<br><br><br>
+<br>-m :  커밋 메시지 추가( "-m" 을 입력하고 그 뒤에 메시지 입력 )
+<br>-a : git add를 함께 진행하겠음을 의미.
+<br>-am : git add를 하고, 커밋 메시지 추가
+<br><br>
+<br>커밋 해시 ( (HEAD -&gt; MAIN) : 최신 버전이라는 뜻 )
+<br>작성자
+<br>버전 만든 날짜
+<br>커밋 메시지
+<br><br>
+<br>-- stat : 커밋과 관련한 파일까지 함께 살펴보기
+<br><br>
+<br>
+
+<br>: 삭제됨
+
+
+<br>
+
+<br>: 추가됨
+
+
+]]></description><link>https://ejkiwi.github.io/git&amp;github/명령어.html</link><guid isPermaLink="false">git&amp;github/명령어.md</guid><pubDate>Sun, 05 Jan 2025 08:42:52 GMT</pubDate></item><item><title><![CDATA[버전 관리]]></title><description><![CDATA[ 
+ <br><br>눈에 보이는 디렉터리.<br>
+파일 수정, 저장 등의 작업을 하는 디렉터리.<br><br>버전으로 만들어질 파일이 대기하는 곳 ( = staging area )<br><br>( 저장소 )<br>
+스테이지에서 대기하고 있던 파일들을 버전으로 만들어 저장하는 곳.<br><br>로컬 저장소<br>
+내 컴퓨터 안에서 관리되는 git저장소<br>
+( 내가 작업하고 잇는 공간 ex -&gt; 저번에 다이브 홈피 만들 때 인텔리제이에서 작업햇자나 그 공간임 )<br><br>원격 저장소( git push 하면 올라가는 그 곳 )를 의미함.<br>
+" 내가 포크fork 하여 클론clone 한 원격 저장소 "<br>
+<br>내 로컬 저장소와 연결된 저장소를 뜻함.
+<br>내가 푸시push 하는 원격 저장소를 뜻함.
+<br>내 포크fork 라고 해도 됨.
+<br><br>원본 저장소를 의미함<br>
+" 내가 포크fork한 레포의 원본 제작자 저장소 "<br>
+<br>어떤 프로젝트를 포크fork 했을 때, 내 레포지토리의 원본이 되는 저장소를 뜻함.
+<br>원본 프로젝트의 저장소를 뜻하는것임.
+<br><br><br>새로운 버전 생성<br>
+스테이지 -&gt; 저장소<br><br>로컬에서 원격 저장소로 변경 사항을 업로드.<br>
+로컬에서 작업한 것을 원격 저장소와 동기화 하는 것.<br><br>두 개의 브랜치를 하나로 합치는 것.<br>
+0. ex)<br>
+<br>develop 브랜치로 이동
+<br>브랜치 merge ( 여기까지는 로컬에서만 반영 )
+<br>merge 완료 후 push해서 원격에도 반영
+<br><br>만약 시현언니와 내가 홈페이지의 같은 부분을 서로 다르게 수정했다면 어떻게 될까??? -&gt; git은 어떤 코드가 맞는지 판단할만큼 똑똑이가 아니다.<br>
+-&gt; 고로 내 코드가 덮어씌워지거나 시현언니의 코드가 덮어씌워질 수 있다 이말이다!!<br><br>
+<br>git status를 통해 충돌 난 파일을 확인하자
+<br>수동으로 충돌 해결 후 수정해야한다. ( 구분선 으로 충돌된 두 코드를 확인할 수 있을것 )
+<br>최종 수정본 다시 git에 반영
+<br><br>
+<br>pull origin을 통해 항상 최신 상태를 유지하자.
+<br>작업 시 브랜치를 너무 오래 따로 두지 말고, 자주 동기화하자.
+<br>다른 사람이 작업하는 부분은 피해서 작업하자.
+<br><br>한 디렉터리 안에서 버전 관리를 하지 않을 파일이나 디렉터리가 있을 시, .gitignore파일을 안에다가 파일이나 디렉터리이름 또는 파일 확장자를 입력해두면 입력해둔 것들을 버전 관리에서 제외할 수 있다.<br><br><br>내 로컬 저장소에서 origin이나 upstream 레포의 최신 변경사항 가져오기<br><br>원격 저장소의 최신 변경 사항 로컬 브랜치에 반영<br><br>로컬 브랜치를 원격 저장소 상태로 초기화<br><br><br>협업을 위한 브랜치 관리 방법론<br><br>최종 배포를 위한 브랜치<br><br>개발용 브랜치 - 실제 작업<br>
+develop에서 수정한 후 main으로 병합해야 한다.<br><br>develop에서 갈라져 나온 브랜치<br>
+기능 개발이 목적<br><br>develop에서 갈라져 나온 브랜치<br>
+이번 출시 버전 준비가 목적<br><br>버그 수정하는 브랜치<br><br>
+<br>develop브랜치로 이동
+<br>새로운 기능 추가를 위해 feature 브랜치 생성 ( 그냥 바로 develop 브랜치에서 수정해도 되긴 함)
+<br>변경 사항을 커밋하고 develop에 병합  ( 그냥 바로 develop 브랜치에서 수정해도 되긴 함)
+<br>develop 브랜치를 main으로 병합
+<br><br>git 저장소 안에 또 다른 git 저장소를 포함하는 기능<br>
+하나의 프로젝트에서 다른 프로젝트를 독립적인 버전 관리 상태로 유지하고 싶을 때...!!! 사용한다다다다다다다<br>
+??? 경험해본 적 없어서 아직 모르겟ㄸ]]></description><link>https://ejkiwi.github.io/git&amp;github/버전-관리.html</link><guid isPermaLink="false">git&amp;github/버전 관리.md</guid><pubDate>Wed, 19 Feb 2025 07:31:49 GMT</pubDate></item><item><title><![CDATA[git&github]]></title><description><![CDATA[ 
+ ]]></description><link>https://ejkiwi.github.io/git&amp;github/git&amp;github.html</link><guid isPermaLink="false">git&amp;github/git&amp;github.md</guid><pubDate>Sun, 05 Jan 2025 06:55:01 GMT</pubDate></item><item><title><![CDATA[2025_여름_모각코]]></title><description><![CDATA[ 
  <br>
 <br><a data-href="뿌가각 모각코 활동" href="https://ejkiwi.github.io/2025_여름_모각코/뿌가각-모각코-활동.html" class="internal-link" target="_self" rel="noopener nofollow">뿌가각 모각코 활동</a>
 <br><a data-href="20250109 모각코 활동 1회차" href="https://ejkiwi.github.io/2025_겨울_모각코/20250109-모각코-활동-1회차.html" class="internal-link" target="_self" rel="noopener nofollow">20250109 모각코 활동 1회차</a>
