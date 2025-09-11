@@ -1,4 +1,16 @@
-<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[ejkiwi.github.io]]></title><description><![CDATA[Obsidian digital garden]]></description><link>https://ejkiwi.github.io/</link><image><url>https://ejkiwi.github.io/lib/media/favicon.png</url><title>ejkiwi.github.io</title><link>https://ejkiwi.github.io/</link></image><generator>Webpage HTML Export plugin for Obsidian</generator><lastBuildDate>Thu, 11 Sep 2025 12:16:45 GMT</lastBuildDate><atom:link href="https://ejkiwi.github.io/lib/rss.xml" rel="self" type="application/rss+xml"/><pubDate>Thu, 11 Sep 2025 12:16:43 GMT</pubDate><ttl>60</ttl><dc:creator/><item><title><![CDATA[문제 1011]]></title><description><![CDATA[ 
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[ejkiwi.github.io]]></title><description><![CDATA[Obsidian digital garden]]></description><link>https://ejkiwi.github.io/</link><image><url>https://ejkiwi.github.io/lib/media/favicon.png</url><title>ejkiwi.github.io</title><link>https://ejkiwi.github.io/</link></image><generator>Webpage HTML Export plugin for Obsidian</generator><lastBuildDate>Thu, 11 Sep 2025 12:19:56 GMT</lastBuildDate><atom:link href="https://ejkiwi.github.io/lib/rss.xml" rel="self" type="application/rss+xml"/><pubDate>Thu, 11 Sep 2025 12:19:56 GMT</pubDate><ttl>60</ttl><dc:creator/><item><title><![CDATA[AI_study]]></title><description><![CDATA[ 
+ ]]></description><link>https://ejkiwi.github.io/ai_study/ai_study.html</link><guid isPermaLink="false">AI_study/AI_study.md</guid><pubDate>Thu, 11 Sep 2025 12:19:15 GMT</pubDate></item><item><title><![CDATA[index]]></title><description><![CDATA[ 
+ <br><br>
+<br><a data-href="백준" href="https://ejkiwi.github.io/백준/백준.html" class="internal-link" target="_self" rel="noopener nofollow">백준</a>
+<br><a data-href="2024_여름_모각코" href="https://ejkiwi.github.io/2024_여름_모각코/2024_여름_모각코.html" class="internal-link" target="_self" rel="noopener nofollow">2024_여름_모각코</a>
+<br><a data-href="2024 cnu 2차 학습동아리" href="https://ejkiwi.github.io/2024-cnu-2차-학습동아리/2024-cnu-2차-학습동아리.html" class="internal-link" target="_self" rel="noopener nofollow">2024 cnu 2차 학습동아리</a>
+<br><a data-href="2025_겨울_모각코" href="https://ejkiwi.github.io/2025_겨울_모각코/2025_겨울_모각코.html" class="internal-link" target="_self" rel="noopener nofollow">2025_겨울_모각코</a>
+<br><a data-href="2025_여름_모각코" href="https://ejkiwi.github.io/2025_여름_모각코/2025_여름_모각코.html" class="internal-link" target="_self" rel="noopener nofollow">2025_여름_모각코</a>
+<br><a data-href="git&amp;github" href="https://ejkiwi.github.io/git&amp;github/git&amp;github.html" class="internal-link" target="_self" rel="noopener nofollow">git&amp;github</a>
+<br><a data-href="AI_study" href="https://ejkiwi.github.io/ai_study/ai_study.html" class="internal-link" target="_self" rel="noopener nofollow">AI_study</a>
+<br><br>사실이건아무것도작성한게없다...&gt;_&lt;<br>
+<br><a data-tooltip-position="top" aria-label="https://velog.io/@eonjikiwi/posts" rel="noopener nofollow" class="external-link" href="https://velog.io/@eonjikiwi/posts" target="_blank">ejkiwi_velog</a>
+]]></description><link>https://ejkiwi.github.io/index.html</link><guid isPermaLink="false">index.md</guid><pubDate>Thu, 11 Sep 2025 12:19:39 GMT</pubDate></item><item><title><![CDATA[문제 1011]]></title><description><![CDATA[ 
  <br>Fly me to the Alpha Centauri<br>입력 : 입력의 첫 줄에는 테스트케이스의 개수 T가 주어진다. 각각의 테스트 케이스에 대해 현재 위치 x 와 목표 위치 y 가 정수로 주어지며, x는 항상 y보다 작은 값을 갖는다. (0 ≤ x &lt; y &lt; 231)<br>
 출력 : 각 테스트 케이스에 대해 x지점으로부터 y지점까지 정확히 도달하는데 필요한 최소한의 공간이동 장치 작동 횟수를 출력한다.<br>case = []
 for i in range(int(input())):
@@ -1597,15 +1609,7 @@ a='abcde'=&gt;문자열
 <br>데이터로부터 패턴을 학습해서 예측하는 과정.
 
 
-]]></description><link>https://ejkiwi.github.io/2025_겨울_모각코/20250215-모각코-활동-6회차.html</link><guid isPermaLink="false">2025_겨울_모각코/20250215 모각코 활동 6회차.md</guid><pubDate>Sat, 15 Feb 2025 17:02:59 GMT</pubDate></item><item><title><![CDATA[index]]></title><description><![CDATA[ 
- <br><br>
-<br><a data-href="백준" href="https://ejkiwi.github.io/백준/백준.html" class="internal-link" target="_self" rel="noopener nofollow">백준</a>
-<br><a data-href="2024_여름_모각코" href="https://ejkiwi.github.io/2024_여름_모각코/2024_여름_모각코.html" class="internal-link" target="_self" rel="noopener nofollow">2024_여름_모각코</a>
-<br><a data-href="2024 cnu 2차 학습동아리" href="https://ejkiwi.github.io/2024-cnu-2차-학습동아리/2024-cnu-2차-학습동아리.html" class="internal-link" target="_self" rel="noopener nofollow">2024 cnu 2차 학습동아리</a>
-<br><a data-href="2025_겨울_모각코" href="https://ejkiwi.github.io/2025_겨울_모각코/2025_겨울_모각코.html" class="internal-link" target="_self" rel="noopener nofollow">2025_겨울_모각코</a>
-<br><br>사실이건아무것도작성한게없다...&gt;_&lt;<br>
-<br><a data-tooltip-position="top" aria-label="https://velog.io/@eonjikiwi/posts" rel="noopener nofollow" class="external-link" href="https://velog.io/@eonjikiwi/posts" target="_blank">ejkiwi_velog</a>
-]]></description><link>https://ejkiwi.github.io/index.html</link><guid isPermaLink="false">index.md</guid><pubDate>Fri, 14 Feb 2025 14:54:14 GMT</pubDate></item><item><title><![CDATA[20250209 모각코 활동 5회차]]></title><description><![CDATA[ 
+]]></description><link>https://ejkiwi.github.io/2025_겨울_모각코/20250215-모각코-활동-6회차.html</link><guid isPermaLink="false">2025_겨울_모각코/20250215 모각코 활동 6회차.md</guid><pubDate>Sat, 15 Feb 2025 17:02:59 GMT</pubDate></item><item><title><![CDATA[20250209 모각코 활동 5회차]]></title><description><![CDATA[ 
  <br>오늘의 목표 : 기계학습 구현<br><br><br>import pandas as pd  
 import matplotlib.pyplot as plt  
   
