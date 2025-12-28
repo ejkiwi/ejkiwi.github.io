@@ -1,0 +1,561 @@
+<!DOCTYPE html> <html><head>
+		<title>궁금햇던것들 모음</title>
+		<base href="../">
+		<meta id="root-path" root-path="../">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes, minimum-scale=1.0, maximum-scale=5.0">
+		<meta charset="UTF-8">
+		<meta name="description" content="ejkiwi.github.io - 궁금햇던것들 모음">
+		<meta property="og:title" content="궁금햇던것들 모음">
+		<meta property="og:description" content="ejkiwi.github.io - 궁금햇던것들 모음">
+		<meta property="og:type" content="website">
+		<meta property="og:url" content="https://ejkiwi.github.io/ai_study/궁금햇던것들-모음.html">
+		<meta property="og:image" content="https://ejkiwi.github.io/lib/media/GPT1.png">
+		<meta property="og:site_name" content="ejkiwi.github.io">
+		<link rel="alternate" type="application/rss+xml" title="RSS Feed" href="https://ejkiwi.github.io/lib/rss.xml"><script async="" id="webpage-script" src="lib/scripts/webpage.js" onload="this.onload=null;this.setAttribute(&quot;loaded&quot;, &quot;true&quot;)"></script><script type="module" async="" id="graph-view-script" src="lib/scripts/graph-view.js"></script><script async="" id="graph-wasm-script" src="lib/scripts/graph-wasm.js" onload="this.onload=null;this.setAttribute(&quot;loaded&quot;, &quot;true&quot;)"></script><script async="" id="graph-render-worker-script" src="lib/scripts/graph-render-worker.js" onload="this.onload=null;this.setAttribute(&quot;loaded&quot;, &quot;true&quot;)"></script><script async="" id="tinycolor-script" src="lib/scripts/tinycolor.js" onload="this.onload=null;this.setAttribute(&quot;loaded&quot;, &quot;true&quot;)"></script><script async="" id="pixi-script" src="https://cdnjs.cloudflare.com/ajax/libs/pixi.js/7.4.0/pixi.min.js" onload="this.onload=null;this.setAttribute(&quot;loaded&quot;, &quot;true&quot;)"></script><script async="" id="minisearch-script" src="https://cdn.jsdelivr.net/npm/minisearch@6.3.0/dist/umd/index.min.js" onload="this.onload=null;this.setAttribute(&quot;loaded&quot;, &quot;true&quot;)"></script><link rel="icon" href="lib/media/favicon.png"><script async="" id="graph-data-script" src="lib/scripts/graph-data.js" onload="this.onload=null;this.setAttribute(&quot;loaded&quot;, &quot;true&quot;)"></script><style>body{--line-width:40em;--line-width-adaptive:40em;--file-line-width:40em;--sidebar-width:min(20em, 80vw);--collapse-arrow-size:11px;--tree-horizontal-spacing:0.6em;--tree-vertical-spacing:0.6em;--sidebar-margin:12px}.sidebar{height:100%;min-width:calc(var(--sidebar-width) + var(--divider-width-hover));max-width:calc(var(--sidebar-width) + var(--divider-width-hover));font-size:14px;z-index:10;position:relative;overflow:hidden;transition:min-width ease-in-out,max-width ease-in-out;transition-duration:.2s;contain:size}.sidebar-left{left:0}.sidebar-right{right:0}.sidebar.is-collapsed{min-width:0;max-width:0}body.floating-sidebars .sidebar{position:absolute}.sidebar-content{height:100%;min-width:calc(var(--sidebar-width) - var(--divider-width-hover));top:0;padding:var(--sidebar-margin);padding-top:4em;line-height:var(--line-height-tight);background-color:var(--background-secondary);transition:background-color,border-right,border-left,box-shadow;transition-duration:var(--color-fade-speed);transition-timing-function:ease-in-out;position:absolute;display:flex;flex-direction:column}.sidebar:not(.is-collapsed) .sidebar-content{min-width:calc(max(100%,var(--sidebar-width)) - 3px);max-width:calc(max(100%,var(--sidebar-width)) - 3px)}.sidebar-left .sidebar-content{left:0;border-top-right-radius:var(--radius-l);border-bottom-right-radius:var(--radius-l)}.sidebar-right .sidebar-content{right:0;border-top-left-radius:var(--radius-l);border-bottom-left-radius:var(--radius-l)}.sidebar:has(.sidebar-content:empty):has(.topbar-content:empty){display:none}.sidebar-topbar{height:2em;width:var(--sidebar-width);top:var(--sidebar-margin);padding-inline:var(--sidebar-margin);z-index:1;position:fixed;display:flex;align-items:center;transition:width ease-in-out;transition-duration:inherit}.sidebar.is-collapsed .sidebar-topbar{width:calc(2.3em + var(--sidebar-margin) * 2)}.sidebar .sidebar-topbar.is-collapsed{width:0}.sidebar-left .sidebar-topbar{left:0}.sidebar-right .sidebar-topbar{right:0}.topbar-content{overflow:hidden;overflow:clip;width:100%;height:100%;display:flex;align-items:center;transition:inherit}.sidebar.is-collapsed .topbar-content{width:0;transition:inherit}.clickable-icon.sidebar-collapse-icon{background-color:transparent;color:var(--icon-color-focused);padding:0!important;margin:0!important;height:100%!important;width:2.3em!important;margin-inline:0.14em!important;position:absolute}.sidebar-left .clickable-icon.sidebar-collapse-icon{transform:rotateY(180deg);right:var(--sidebar-margin)}.sidebar-right .clickable-icon.sidebar-collapse-icon{transform:rotateY(180deg);left:var(--sidebar-margin)}.clickable-icon.sidebar-collapse-icon svg.svg-icon{width:100%;height:100%}.sidebar-section-header{margin:0 0 1em 0;text-transform:uppercase;letter-spacing:.06em;font-weight:600}body{transition:background-color var(--color-fade-speed) ease-in-out}.webpage-container{display:flex;flex-direction:row;height:100%;width:100%;align-items:stretch;justify-content:center}.document-container{opacity:1;flex-basis:100%;max-width:100%;width:100%;height:100%;display:flex;flex-direction:column;align-items:center;transition:opacity .2s ease-in-out;contain:inline-size}.hide{opacity:0;transition:opacity .2s ease-in-out}.document-container>.markdown-preview-view{margin:var(--sidebar-margin);margin-bottom:0;width:100%;width:-webkit-fill-available;width:-moz-available;width:fill-available;background-color:var(--background-primary);transition:background-color var(--color-fade-speed) ease-in-out;border-top-right-radius:var(--window-radius,var(--radius-m));border-top-left-radius:var(--window-radius,var(--radius-m));overflow-x:hidden!important;overflow-y:auto!important;display:flex!important;flex-direction:column!important;align-items:center!important;contain:inline-size}.document-container>.markdown-preview-view>.markdown-preview-sizer{padding-bottom:80vh!important;width:100%!important;max-width:var(--line-width)!important;flex-basis:var(--line-width)!important;transition:background-color var(--color-fade-speed) ease-in-out;contain:inline-size}.markdown-rendered img:not([width]),.view-content img:not([width]){max-width:100%;outline:0}.document-container>.view-content.embed{display:flex;padding:1em;height:100%;width:100%;align-items:center;justify-content:center}.document-container>.view-content.embed>*{max-width:100%;max-height:100%;object-fit:contain}:has(> :is(.math,table)){overflow-x:auto!important}.document-container>.view-content{overflow-x:auto;contain:content;padding:0;margin:0;height:100%}.scroll-highlight{position:absolute;width:100%;height:100%;pointer-events:none;z-index:1000;background-color:hsla(var(--color-accent-hsl),.25);opacity:0;padding:1em;inset:50%;translate:-50% -50%;border-radius:var(--radius-s)}</style><script defer="">async function loadIncludes(){if("file:"!=location.protocol){let e=document.querySelectorAll("include");for(let t=0;t<e.length;t++){let o=e[t],l=o.getAttribute("src");try{const e=await fetch(l);if(!e.ok){console.log("Could not include file: "+l),o?.remove();continue}let t=await e.text(),n=document.createRange().createContextualFragment(t),i=Array.from(n.children);for(let e of i)e.classList.add("hide"),e.style.transition="opacity 0.5s ease-in-out",setTimeout((()=>{e.classList.remove("hide")}),10);o.before(n),o.remove(),console.log("Included file: "+l)}catch(e){o?.remove(),console.log("Could not include file: "+l,e);continue}}}else{if(document.querySelectorAll("include").length>0){var e=document.createElement("div");e.id="error",e.textContent="Web server exports must be hosted on an http / web server to be viewed correctly.",e.style.position="fixed",e.style.top="50%",e.style.left="50%",e.style.transform="translate(-50%, -50%)",e.style.fontSize="1.5em",e.style.fontWeight="bold",e.style.textAlign="center",document.body.appendChild(e),document.querySelector(".document-container")?.classList.remove("hide")}}}document.addEventListener("DOMContentLoaded",(()=>{loadIncludes()}));let isFileProtocol="file:"==location.protocol;function waitLoadScripts(e,t){let o=e.map((e=>document.getElementById(e+"-script"))),l=0;!function e(){let n=o[l];l++,n&&"true"!=n.getAttribute("loaded")||l<o.length&&e(),l<o.length?n.addEventListener("load",e):t()}()}</script><link rel="stylesheet" href="lib/styles/obsidian.css"><link rel="preload" href="lib/styles/other-plugins.css" as="style" onload="this.onload=null;this.rel='stylesheet'"><noscript><link rel="stylesheet" href="lib/styles/other-plugins.css"></noscript><link rel="preload" href="lib/styles/global-variable-styles.css" as="style" onload="this.onload=null;this.rel='stylesheet'"><noscript><link rel="stylesheet" href="lib/styles/global-variable-styles.css"></noscript><link rel="preload" href="lib/styles/main-styles.css" as="style" onload="this.onload=null;this.rel='stylesheet'"><noscript><link rel="stylesheet" href="lib/styles/main-styles.css"></noscript></head><body class="publish css-settings-manager theme-light show-inline-title show-ribbon mk-readable-line mk-folder-lines mk-spaces-enabled mk-inline-context-enabled mk-flow-seamless"><script defer="">let theme=localStorage.getItem("theme")||(window.matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light");"dark"==theme?(document.body.classList.add("theme-dark"),document.body.classList.remove("theme-light")):(document.body.classList.add("theme-light"),document.body.classList.remove("theme-dark")),window.innerWidth<480?document.body.classList.add("is-phone"):window.innerWidth<768?document.body.classList.add("is-tablet"):window.innerWidth<1024?document.body.classList.add("is-small-screen"):document.body.classList.add("is-large-screen")</script><div class="webpage-container workspace"><div class="sidebar-left sidebar"><div class="sidebar-handle"></div><div class="sidebar-topbar"><div class="topbar-content"><label class="theme-toggle-container" for="theme_toggle"><input class="theme-toggle-input" type="checkbox" id="theme_toggle"><div class="toggle-background"></div></label></div><div class="clickable-icon sidebar-collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="svg-icon"><path d="M21 3H3C1.89543 3 1 3.89543 1 5V19C1 20.1046 1.89543 21 3 21H21C22.1046 21 23 20.1046 23 19V5C23 3.89543 22.1046 3 21 3Z"></path><path d="M10 4V20"></path><path d="M4 7H7"></path><path d="M4 10H7"></path><path d="M4 13H7"></path></svg></div></div><div class="sidebar-content"><div class="search-input-container"><input enterkeyhint="search" type="search" spellcheck="false" placeholder="Search..." style="border-radius:10px; border-width: 0px;"><div class="search-input-clear-button" aria-label="Clear search"></div></div><include src="lib/html/file-tree.html"></include></div><script defer="">let ls = document.querySelector(".sidebar-left"); ls.classList.add("is-collapsed"); if (window.innerWidth > 768) ls.classList.remove("is-collapsed"); ls.style.setProperty("--sidebar-width", localStorage.getItem("sidebar-left-width"));</script></div><div class="document-container markdown-reading-view hide"><div class="markdown-preview-view markdown-rendered allow-fold-headings allow-fold-lists is-readable-line-width"><style id="MJX-CHTML-styles">mjx-container[jax="CHTML"] { line-height: 0; }
+mjx-container [space="1"] { margin-left: 0.111em; }
+mjx-container [space="2"] { margin-left: 0.167em; }
+mjx-container [space="3"] { margin-left: 0.222em; }
+mjx-container [space="4"] { margin-left: 0.278em; }
+mjx-container [space="5"] { margin-left: 0.333em; }
+mjx-container [rspace="1"] { margin-right: 0.111em; }
+mjx-container [rspace="2"] { margin-right: 0.167em; }
+mjx-container [rspace="3"] { margin-right: 0.222em; }
+mjx-container [rspace="4"] { margin-right: 0.278em; }
+mjx-container [rspace="5"] { margin-right: 0.333em; }
+mjx-container [size="s"] { font-size: 70.7%; }
+mjx-container [size="ss"] { font-size: 50%; }
+mjx-container [size="Tn"] { font-size: 60%; }
+mjx-container [size="sm"] { font-size: 85%; }
+mjx-container [size="lg"] { font-size: 120%; }
+mjx-container [size="Lg"] { font-size: 144%; }
+mjx-container [size="LG"] { font-size: 173%; }
+mjx-container [size="hg"] { font-size: 207%; }
+mjx-container [size="HG"] { font-size: 249%; }
+mjx-container [width="full"] { width: 100%; }
+mjx-box { display: inline-block; }
+mjx-block { display: block; }
+mjx-itable { display: inline-table; }
+mjx-row { display: table-row; }
+mjx-row > * { display: table-cell; }
+mjx-mtext { display: inline-block; }
+mjx-mstyle { display: inline-block; }
+mjx-merror { display: inline-block; color: red; background-color: yellow; }
+mjx-mphantom { visibility: hidden; }
+mjx-assistive-mml { top: 0px; left: 0px; clip: rect(1px, 1px, 1px, 1px); user-select: none; position: absolute !important; padding: 1px 0px 0px !important; border: 0px !important; display: block !important; width: auto !important; overflow: hidden !important; }
+mjx-assistive-mml[display="block"] { width: 100% !important; }
+mjx-math { display: inline-block; text-align: left; line-height: 0; text-indent: 0px; font-style: normal; font-weight: normal; font-size: 100%; letter-spacing: normal; border-collapse: collapse; overflow-wrap: normal; word-spacing: normal; white-space: nowrap; direction: ltr; padding: 1px 0px; }
+mjx-container[jax="CHTML"][display="true"] { display: block; text-align: center; margin: 1em 0px; }
+mjx-container[jax="CHTML"][display="true"][width="full"] { display: flex; }
+mjx-container[jax="CHTML"][display="true"] mjx-math { padding: 0px; }
+mjx-container[jax="CHTML"][justify="left"] { text-align: left; }
+mjx-container[jax="CHTML"][justify="right"] { text-align: right; }
+mjx-mn { display: inline-block; text-align: left; }
+mjx-c { display: inline-block; }
+mjx-utext { display: inline-block; padding: 0.75em 0px 0.2em; }
+mjx-mo { display: inline-block; text-align: left; }
+mjx-stretchy-h { display: inline-table; width: 100%; }
+mjx-stretchy-h > * { display: table-cell; width: 0px; }
+mjx-stretchy-h > * > mjx-c { display: inline-block; transform: scaleX(1); }
+mjx-stretchy-h > * > mjx-c::before { display: inline-block; width: initial; }
+mjx-stretchy-h > mjx-ext { overflow: clip visible; width: 100%; }
+mjx-stretchy-h > mjx-ext > mjx-c::before { transform: scaleX(500); }
+mjx-stretchy-h > mjx-ext > mjx-c { width: 0px; }
+mjx-stretchy-h > mjx-beg > mjx-c { margin-right: -0.1em; }
+mjx-stretchy-h > mjx-end > mjx-c { margin-left: -0.1em; }
+mjx-stretchy-v { display: inline-block; }
+mjx-stretchy-v > * { display: block; }
+mjx-stretchy-v > mjx-beg { height: 0px; }
+mjx-stretchy-v > mjx-end > mjx-c { display: block; }
+mjx-stretchy-v > * > mjx-c { transform: scaleY(1); transform-origin: left center; overflow: hidden; }
+mjx-stretchy-v > mjx-ext { display: block; height: 100%; box-sizing: border-box; border: 0px solid transparent; overflow: visible clip; }
+mjx-stretchy-v > mjx-ext > mjx-c::before { width: initial; box-sizing: border-box; }
+mjx-stretchy-v > mjx-ext > mjx-c { transform: scaleY(500) translateY(0.075em); overflow: visible; }
+mjx-mark { display: inline-block; height: 0px; }
+mjx-c::before { display: block; width: 0px; }
+.MJX-TEX { font-family: MJXZERO, MJXTEX; }
+.TEX-B { font-family: MJXZERO, MJXTEX-B; }
+.TEX-I { font-family: MJXZERO, MJXTEX-I; }
+.TEX-MI { font-family: MJXZERO, MJXTEX-MI; }
+.TEX-BI { font-family: MJXZERO, MJXTEX-BI; }
+.TEX-S1 { font-family: MJXZERO, MJXTEX-S1; }
+.TEX-S2 { font-family: MJXZERO, MJXTEX-S2; }
+.TEX-S3 { font-family: MJXZERO, MJXTEX-S3; }
+.TEX-S4 { font-family: MJXZERO, MJXTEX-S4; }
+.TEX-A { font-family: MJXZERO, MJXTEX-A; }
+.TEX-C { font-family: MJXZERO, MJXTEX-C; }
+.TEX-CB { font-family: MJXZERO, MJXTEX-CB; }
+.TEX-FR { font-family: MJXZERO, MJXTEX-FR; }
+.TEX-FRB { font-family: MJXZERO, MJXTEX-FRB; }
+.TEX-SS { font-family: MJXZERO, MJXTEX-SS; }
+.TEX-SSB { font-family: MJXZERO, MJXTEX-SSB; }
+.TEX-SSI { font-family: MJXZERO, MJXTEX-SSI; }
+.TEX-SC { font-family: MJXZERO, MJXTEX-SC; }
+.TEX-T { font-family: MJXZERO, MJXTEX-T; }
+.TEX-V { font-family: MJXZERO, MJXTEX-V; }
+.TEX-VB { font-family: MJXZERO, MJXTEX-VB; }
+mjx-stretchy-v mjx-c, mjx-stretchy-h mjx-c { font-family: MJXZERO, MJXTEX-S1, MJXTEX-S4, MJXTEX, MJXTEX-A !important; }
+@font-face { font-family: MJXZERO; src: url("lib/fonts/mathjax_zero.woff") format("woff"); }
+@font-face { font-family: MJXTEX; src: url("lib/fonts/mathjax_main-regular.woff") format("woff"); }
+@font-face { font-family: MJXTEX-B; src: url("lib/fonts/mathjax_main-bold.woff") format("woff"); }
+@font-face { font-family: MJXTEX-I; src: url("lib/fonts/mathjax_math-italic.woff") format("woff"); }
+@font-face { font-family: MJXTEX-MI; src: url("lib/fonts/mathjax_main-italic.woff") format("woff"); }
+@font-face { font-family: MJXTEX-BI; src: url("lib/fonts/mathjax_math-bolditalic.woff") format("woff"); }
+@font-face { font-family: MJXTEX-S1; src: url("lib/fonts/mathjax_size1-regular.woff") format("woff"); }
+@font-face { font-family: MJXTEX-S2; src: url("lib/fonts/mathjax_size2-regular.woff") format("woff"); }
+@font-face { font-family: MJXTEX-S3; src: url("lib/fonts/mathjax_size3-regular.woff") format("woff"); }
+@font-face { font-family: MJXTEX-S4; src: url("lib/fonts/mathjax_size4-regular.woff") format("woff"); }
+@font-face { font-family: MJXTEX-A; src: url("lib/fonts/mathjax_ams-regular.woff") format("woff"); }
+@font-face { font-family: MJXTEX-C; src: url("lib/fonts/mathjax_calligraphic-regular.woff") format("woff"); }
+@font-face { font-family: MJXTEX-CB; src: url("lib/fonts/mathjax_calligraphic-bold.woff") format("woff"); }
+@font-face { font-family: MJXTEX-FR; src: url("lib/fonts/mathjax_fraktur-regular.woff") format("woff"); }
+@font-face { font-family: MJXTEX-FRB; src: url("lib/fonts/mathjax_fraktur-bold.woff") format("woff"); }
+@font-face { font-family: MJXTEX-SS; src: url("lib/fonts/mathjax_sansserif-regular.woff") format("woff"); }
+@font-face { font-family: MJXTEX-SSB; src: url("lib/fonts/mathjax_sansserif-bold.woff") format("woff"); }
+@font-face { font-family: MJXTEX-SSI; src: url("lib/fonts/mathjax_sansserif-italic.woff") format("woff"); }
+@font-face { font-family: MJXTEX-SC; src: url("lib/fonts/mathjax_script-regular.woff") format("woff"); }
+@font-face { font-family: MJXTEX-T; src: url("lib/fonts/mathjax_typewriter-regular.woff") format("woff"); }
+@font-face { font-family: MJXTEX-V; src: url("lib/fonts/mathjax_vector-regular.woff") format("woff"); }
+@font-face { font-family: MJXTEX-VB; src: url("lib/fonts/mathjax_vector-bold.woff") format("woff"); }
+mjx-c.mjx-c31::before { padding: 0.666em 0.5em 0px 0px; content: "1"; }
+mjx-c.mjx-c30::before { padding: 0.666em 0.5em 0.022em 0px; content: "0"; }
+mjx-c.mjx-cF7::before { padding: 0.537em 0.778em 0.036em 0px; content: "÷"; }
+mjx-c.mjx-c34::before { padding: 0.677em 0.5em 0px 0px; content: "4"; }
+mjx-c.mjx-c2248::before { padding: 0.483em 0.778em 0px 0px; content: "≈"; }
+</style><div class="markdown-preview-sizer markdown-preview-section"><h1 class="page-title heading inline-title" id="궁금햇던것들 모음"><p dir="auto">궁금햇던것들 모음</p></h1><div class="el-h3 heading-wrapper"><h3 data-heading="latent space( embedding space )" dir="auto" class="heading" id="latent_space(_embedding_space_)"><div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div>latent space( embedding space )</h3><div class="heading-children"><div class="el-ol"><ol>
+<li data-line="0" dir="auto"><div class="list-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div>그냥 수학적으로 정의된 좌표계... 긍까 빈 도화지 같은 것.
+<ul>
+<li data-line="1" dir="auto">학습을 통해 <strong>가중치 행렬</strong>이 “점(벡터)을 찍는 규칙”을 배워서, 그 규칙에 따라 latent space에 점을 찍을 수 있게 되는데,,,, 그렇게 해서?? 그 공간에 <strong>의미 있는 분포</strong>가 형성된다.</li>
+<li data-line="2" dir="auto">우리가 보는 PCA, t-SNE 그림은 <strong>고차원 latent space에 찍힌 점들을 2D/3D로 투영한 그림자</strong>일 뿐, 원본 공간을 직접 볼 수는 없음.<br>
+</li>
+</ul>
+</li>
+<li data-line="4" dir="auto"><div class="list-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div>Latent vector = hidden state = embedding
+<ul>
+<li data-line="5" dir="auto">모두 같은 성격의 값: 입력이 들어왔을 때 모델이 계산해내는 <strong>고차원 벡터 표현</strong>. ( 압축한 값 )</li>
+<li data-line="6" dir="auto">이 벡터가 latent space 위의 **한 점(point)이 됨.</li>
+<li data-line="7" dir="auto">forward pass 중에 계산되며, 특별히 저장되지는 않고 다음 연산으로 넘어가 버림.</li>
+<li data-line="8" dir="auto">우리가 시각화할 때는 이 중간 값을 <strong>추출해서 저장</strong>한 뒤 차원 축소 기법(PCA 등)으로 찍는 거고!!!<br>
+</li>
+</ul>
+</li>
+<li data-line="10" dir="auto"><div class="list-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div><strong>가중치 행렬과의 관계</strong>
+<ul>
+<li data-line="11" dir="auto">가중치 행렬 자체가 공간은 아님.</li>
+<li data-line="12" dir="auto">대신 <mark><strong>입력을 latent space 안의 점으로 어디에 찍을지에 대한 규칙</strong></mark>을 정의</li>
+<li data-line="13" dir="auto">학습이란, 이 가중치 행렬들을 조정해서 공간 위 점들의 패턴이 의미 있게 되도록 만드는 과정이다.<br>
+</li>
+</ul>
+</li>
+<li data-line="15" dir="auto"><div class="list-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div>가중치 vs 파라미터
+<ul>
+<li data-line="16" dir="auto">파라미터 = 학습 가능한 값 전체 </li>
+<li data-line="17" dir="auto">가중치는 파라미터에 속함</li>
+</ul>
+</li>
+</ol></div><div class="el-hr"><hr></div></div></div><div class="el-h2 heading-wrapper"><h2 data-heading="사영?" dir="auto" class="heading" id="사영?"><div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div>사영?</h2><div class="heading-children"><div class="el-ul"><ul>
+<li data-line="0" dir="auto">잠재 벡터의 차원 -&gt; 잠재 공간에서 쓰는 축의 개수</li>
+<li data-line="1" dir="auto">2D latent space를 시각화했을 때, scatter plot의 한 점 한 점들이 2D latent vector에 해당한다.</li>
+<li data-line="2" dir="auto">사영은왜하는것이지?<br>
+-&gt; 우리 눈은 4차원부터는 그 공간을 시각화하여 표현하지 못한다.<br>
+-&gt;  4, 5, 6 ,,,, 차원의 잠재 벡터로 표현되어있는 벡터 공간을 시각화해서 보고싶으면 어떡해~<br>
+-&gt; 그 때는 차원을 줄이면 되지! 고차원을 저차원(1,2,3차원)으로 내리 꽃는 그 무드임</li>
+</ul></div><div class="el-hr"><hr></div></div></div><div class="el-h2 heading-wrapper"><h2 data-heading="탐색 공간" dir="auto" class="heading" id="탐색_공간"><div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div>탐색 공간</h2><div class="heading-children"><div class="el-ul"><ul>
+<li data-line="0" dir="auto">변수의 <mark>종류에</mark> 따라 탐색 공간 정의 가능</li>
+<li data-line="1" dir="auto">변수의 <mark>개수에</mark> 따라 탐색 공간 차원이 정해짐</li>
+<li data-line="2" dir="auto"><div class="list-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div><strong>이산 변수 (예: binary)</strong>
+<ul>
+<li data-line="3" dir="auto">변수 하나 → 차원 1의 공간 예: {0, 1}</li>
+<li data-line="4" dir="auto">변수 두 개 → 차원 2의 공간 예: {0, 1}² = {(0,0), (0,1), (1,0), (1,1)}</li>
+<li data-line="5" dir="auto">변수 n개 → 차원 n의 이산 공간 예: {0, 1}ⁿ<br>
+</li>
+</ul>
+</li>
+<li data-line="7" dir="auto"><div class="list-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div><strong>연속 변수 (예: 실수)</strong>
+<ul>
+<li data-line="8" dir="auto">변수 하나 → 차원 1의 공간 예: ℝ (실수직선)</li>
+<li data-line="9" dir="auto">변수 두 개 → 차원 2의 공간 예: ℝ² (평면)</li>
+<li data-line="10" dir="auto">변수 n개 → 차원 n의 연속 공간 예: ℝⁿ</li>
+</ul>
+</li>
+</ul></div><div class="el-hr"><hr></div></div></div><div class="el-h2 heading-wrapper"><h2 data-heading="단어 임베딩" dir="auto" class="heading" id="단어_임베딩"><div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div>단어 임베딩</h2><div class="heading-children"><div class="el-ul"><ul>
+<li data-line="0" dir="auto">단어를 숫자로 특징 표현.</li>
+<li data-line="1" dir="auto">vector_size를 지정해 단어를 특정 차원의 의미 벡터로 표현.</li>
+<li data-line="2" dir="auto">예: <code>vector_size = 5</code>,  <code>"이"</code> → <code>[0.1, -0.3, 0.5, 0.0, 0.2]</code></li>
+</ul></div><div class="el-hr"><hr></div></div></div><div class="el-h2 heading-wrapper"><h2 data-heading="단어 예측(Language Modeling)의 구조" dir="auto" class="heading" id="단어_예측(Language_Modeling)의_구조"><div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div>단어 예측(Language Modeling)의 구조</h2><div class="heading-children"><div class="el-ul"><ul>
+<li data-line="0" dir="auto"><div class="list-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div>n개의 단어 시퀀스를 입력으로 주고, 그 <mark>다음 단어를 예측하는 분류 문제</mark>로 처리함.
+<ul>
+<li data-line="1" dir="auto">입력 예: <code>"이", "것", "은"</code>  ( 이 때 "이","것","은" 은 각각 5차원 벡터 -&gt; 총<code>3*5</code>matrix 가 입력으로 들어감)</li>
+<li data-line="2" dir="auto">출력 예: <code>"첫"</code></li>
+</ul>
+</li>
+<li data-line="3" dir="auto">출력은 <strong>단어장 크기</strong>만큼의 <strong>확률 벡터</strong> (예: softmax로 17차원 출력)</li>
+<li data-line="4" dir="auto"><div class="list-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div>정답(GT)은 예측 단어가 단어장 내에서 위치하고 있는 인덱스 (예: <code>"첫"</code>은 7번 인덱스)
+<ul>
+<li data-line="5" dir="auto"><mark>출력 시퀀스의 인덱스가 아님!!</mark></li>
+<li data-line="6" dir="auto">정답 단어는 보통 정답 단어는 보통 <strong>one-hot 벡터</strong>로 표현되며, 실제 학습에서는 one-hot 벡터에서 1이 적혀있는 인덱스 번호만으로도 정답을 표현 함</li>
+</ul>
+</li>
+<li data-line="7" dir="auto">예측 결과에 대한 loss 함수는 CrossEntropyLoss 사용 (softmax + log loss)</li>
+</ul></div><div class="el-hr"><hr></div></div></div><div class="el-h2 heading-wrapper"><h2 data-heading="시작 위치 처리 (START 토큰)" dir="auto" class="heading" id="시작_위치_처리_(START_토큰)"><div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div>시작 위치 처리 (START 토큰)</h2><div class="heading-children"><div class="el-ul"><ul>
+<li data-line="0" dir="auto">문장 앞부분처럼 앞에 단어가 부족할 때는 <code>[START]</code> 같은 특수 토큰으로 채움</li>
+<li data-line="1" dir="auto">예: 시퀀스 길이 = 3이면<br>
+<code>[START], [START], "이"</code> → 예측: <code>"것"</code></li>
+</ul></div><div class="el-hr"><hr></div></div></div><div class="el-h2 heading-wrapper"><h2 data-heading="임베딩도 학습되는 파라미터!!" dir="auto" class="heading" id="임베딩도_학습되는_파라미터!!"><div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div>임베딩도 학습되는 파라미터!!</h2><div class="heading-children"><div class="el-ul"><ul>
+<li data-line="0" dir="auto">각 단어의 벡터는 모델이 학습 과정에서 계속 업데이트됨</li>
+<li data-line="1" dir="auto">즉, 임베딩은 단순히 고정된 변환이 아니라 의미를 학습하는 파라미터(weight matrix)임</li>
+</ul></div><div class="el-hr"><hr></div></div></div><div class="el-h2 heading-wrapper"><h2 data-heading="벡터의 차원 수가 의미하는 바" dir="auto" class="heading" id="벡터의_차원_수가_의미하는_바"><div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div>벡터의 차원 수가 의미하는 바</h2><div class="heading-children"><div class="el-ul"><ul>
+<li data-line="0" dir="auto">차원이 클수록 더 미묘하고 복잡한 의미를 표현할 수 있지만,</li>
+<li data-line="1" dir="auto">연산량 증가, 메모리 부담, 학습 시간 증가 등의 trade-off가 있음</li>
+<li data-line="2" dir="auto"><div class="list-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div>일반적으로:
+<ul>
+<li data-line="3" dir="auto">Word2Vec: 100~300차원</li>
+<li data-line="4" dir="auto">BERT: 768차원</li>
+<li data-line="5" dir="auto">GPT-3: 최대 12,288차원까지도 사용</li>
+</ul>
+</li>
+</ul></div><div class="el-hr"><hr></div></div></div><div class="el-h2 heading-wrapper"><h2 data-heading="포지셔널 인코딩(Positional Encoding)" dir="auto" class="heading" id="포지셔널_인코딩(Positional_Encoding)"><div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div>포지셔널 인코딩(Positional Encoding)</h2><div class="heading-children"><div class="el-ul"><ul>
+<li data-line="0" dir="auto">Transformer는 단어 순서를 알 수 없기 때문에 위치 정보(Position)를 따로 넣어줘야 함</li>
+<li data-line="1" dir="auto">이 위치 정보는 단어 <mark>임베딩 벡터와 같은 차원</mark>으로 만들어져 element-wise <mark>덧셈</mark> 방식으로 추가함</li>
+</ul></div><div class="el-p"><p dir="auto">예:<br>
+"이"의 임베딩 = <code>[0.1, -0.3, 0.5, 0.0, 0.2]</code><br>
+위치 인코딩(Pos 0) = <code>[0.01, 0.02, 0.03, 0.04, 0.05]</code><br>
+→ 최종 입력 벡터 = <code>[0.11, -0.28, 0.53, 0.04, 0.25]</code></p></div><div class="el-ul"><ul>
+<li data-line="0" dir="auto">벡터 차원 수는 그대로 유지되며, 단어 의미 + 위치 정보가 하나의 벡터에 담김</li>
+</ul></div><div class="el-hr"><hr></div></div></div><div class="el-h2 heading-wrapper"><h2 data-heading="임베딩 벡터의 각 차원의 의미는 해석 불가" dir="auto" class="heading" id="임베딩_벡터의_각_차원의_의미는_해석_불가"><div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div>임베딩 벡터의 각 차원의 의미는 해석 불가</h2><div class="heading-children"><div class="el-ul"><ul>
+<li data-line="0" dir="auto">벡터 전체는 의미를 잘 반영하지만,</li>
+<li data-line="1" dir="auto">각 인덱스가 “성별”이나 “감정” 같은 특정 의미를 갖는 건 보장되지 않음</li>
+<li data-line="2" dir="auto"><div class="list-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div>이 차원별 의미를 해석하려는 것이 현재 활발한 연구 주제 중 하나임  
+<ul>
+<li data-line="3" dir="auto">예: probing task, interpretable embeddings, disentangled representations 등</li>
+</ul>
+</li>
+</ul></div><div class="el-hr"><hr></div></div></div><div class="el-h2 heading-wrapper"><h2 data-heading="GPT 와 BERT" dir="auto" class="heading" id="GPT_와_BERT"><div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div>GPT 와 BERT</h2><div class="heading-children"><div class="el-h3 heading-wrapper"><h3 data-heading="TRANSFORMER" dir="auto" class="heading" id="TRANSFORMER"><div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div>TRANSFORMER</h3><div class="heading-children"><div class="el-table" dir="ltr" style="overflow-x: auto;"><table>
+<thead>
+<tr>
+<th dir="ltr">구성 요소</th>
+<th dir="ltr">하는 일</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td dir="ltr"><strong>Encoder</strong></td>
+<td dir="ltr">전체 입력을 한 번에 다 보고, 이해하는 역할</td>
+</tr>
+<tr>
+<td dir="ltr"><strong>Decoder</strong></td>
+<td dir="ltr">입력 내용을 바탕으로, <strong>출력을 한 단어씩 생성</strong>하는 역할</td>
+</tr>
+</tbody>
+</table></div></div></div><div class="el-h3 heading-wrapper"><h3 data-heading="GPT" dir="auto" class="heading" id="GPT"><div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div>GPT</h3><div class="heading-children"><div class="el-p"><p dir="auto"><strong>Decoder만 사용</strong></p></div><div class="el-ul"><ul>
+<li data-line="0" dir="auto">Encoder는 전체 입력을 한꺼번에 다 보고 처리 -&gt; gpt는 아니다~</li>
+<li data-line="1" dir="auto">앞 단어들만 보면서 오른쪽 단어를 예측하는! 순서대로 단어 예측하는 녀석</li>
+</ul></div><div class="el-p"><p dir="auto"><strong>gpt의 출력은 ==다음 단어를 예측하는 Vocab size만큼의 확률 분포</strong>==</p></div><div class="el-ul"><ul>
+<li data-line="0" dir="auto">
+<p>(예: '것' 다음에 나올 단어가 '은'일 확률 등등)</p>
+</li>
+<li data-line="1" dir="auto"><div class="list-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div>
+<p>"나는 그것"까지 입력 -&gt; 그러면 GPT는 "<strong>그 다음 단어</strong>가 뭐일지" 예측해야 함.</p>
+<ul>
+<li data-line="2" dir="auto">이 때, GPT는 자기가 알고 있는 <strong>모든 단어(=어휘집, Vocabulary)</strong> 중에서~~ "것", "은", "이다", "합니다", "좋아해요" 같은 <strong>모든 후보 단어에 대해 확률</strong>을 계산해.<br>
+<strong>출력을 Linear를 통해 원하는 차원으로 맞추어 줌</strong></li>
+</ul>
+</li>
+<li data-line="4" dir="auto">
+<p>Transformer는 결국 숫자 벡터(예: 768차원)를 출력해줌 : 복잡한 의미를 담은 벡터를 뽑아줄 수는 있지만?</p>
+</li>
+<li data-line="5" dir="auto"><div class="list-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div>
+<p>그러나? 우리가 원하는 건...</p>
+<ul>
+<li data-line="6" dir="auto">(예)<strong>Classification</strong>: 단일 문장 분류</li>
+<li data-line="7" dir="auto">(예)<strong>Entailment</strong>: 전제 → 가설 관계 추론</li>
+<li data-line="8" dir="auto">(예)<strong>Similarity</strong>: 두 문장의 유사도</li>
+<li data-line="9" dir="auto">(예)<strong>Multiple Choice</strong>: 지문과 보기들 중 정답 고르기</li>
+<li data-line="10" dir="auto"><div class="list-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div>=&gt; 요런것들이기 때문에, 그 복잡한 벡터를 우리가 원하는 형태, 즉 정답 클래스 수로 가공해줘야한다!
+<ul>
+<li data-line="11" dir="auto">=&gt; Linear Layer 선형층<br>
+특수토큰</li>
+</ul>
+</li>
+</ul>
+</li>
+<li data-line="13" dir="auto">
+<p>기계 번역<img alt="GPT1" src="https://ejkiwi.github.io/lib/media/GPT1.png" referrerpolicy="no-referrer"></p>
+</li>
+<li data-line="14" dir="auto">
+<p>Decoder만 쓰는 GPT가 어캐 번역을 하지.. 라고 생각할 수 있겟으나!! 입력 안에 번역해줘~ 라는 토큰이 들어온다면 가능할 수 잇다아~</p>
+</li>
+<li data-line="15" dir="auto"><div class="list-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div>
+<p>Auto-regressive generation</p>
+<ul>
+<li data-line="16" dir="auto">how are you <code>&lt;to-fr&gt;</code> : 입력 문장 (마지막 토큰<code>&lt;to-fr&gt;</code>이 작업 명령임)</li>
+<li data-line="17" dir="auto">Transformer-Decoder : 예측을 계산하는 모델 본체</li>
+</ul>
+<ol>
+<li data-line="18" dir="auto"><div class="list-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div>Time step #1
+<ul>
+<li data-line="19" dir="auto">지금까지의 입력을 보고, 첫 번째 단어의 위치인 Position 4 (즉, <code>&lt;to-fr&gt;</code> 바로 다음 위치)에 해당하는 단어를 예측.</li>
+<li data-line="20" dir="auto">"Comment"라는 단어 출력</li>
+</ul>
+</li>
+<li data-line="21" dir="auto"><div class="list-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div>Time step #2
+<ul>
+<li data-line="22" dir="auto">현재 time step #1 에 해당하는 "Comment"까지 기억하고 있음.</li>
+<li data-line="23" dir="auto">그 다음 "allez-vous" 단어 예측, 출력</li>
+</ul>
+</li>
+</ol>
+</li>
+<li data-line="25" dir="auto">
+<p>요약<img alt="GPT2" src="https://ejkiwi.github.io/lib/media/GPT2.png" referrerpolicy="no-referrer"></p>
+</li>
+<li data-line="26" dir="auto">
+<p>입력 : 긴 문서 내용 (예: 위키피디아 문장들) + <strong><code>&lt;summarize&gt;</code></strong> 토큰</p>
+</li>
+<li data-line="27" dir="auto">
+<p>출력 : 그 문서에 대한 요약문</p>
+</li>
+<li data-line="28" dir="auto">
+<p><code>&lt;summarize&gt;</code> = "요약해줘"라는 신호</p>
+</li>
+</ul></div></div></div><div class="el-h3 heading-wrapper"><h3 data-heading="BERT" dir="auto" class="heading" id="BERT"><div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div>BERT</h3><div class="heading-children"><div class="el-p"><p dir="auto"><strong>Encoder만 사용</strong></p></div><div class="el-ul"><ul>
+<li data-line="0" dir="auto">지피티니핑처럼 왼쪽 -&gt; 오른쪽 이렇게 한 방향만 바라보는 것이 아님.</li>
+<li data-line="1" dir="auto">양방향을 바라봄.</li>
+<li data-line="2" dir="auto"><strong>보통 한 단어를 768차원 벡터로 표현</strong></li>
+</ul></div><div class="el-p"><p dir="auto"><strong>pretraining</strong></p></div><div class="el-ul"><ul>
+<li data-line="0" dir="auto"><div class="list-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div>Masked language model : 토큰의 15%를 masking처리, 그 자리에 들어갈 적절한 단어를 예측하며 훈련받음
+<ul>
+<li data-line="1" dir="auto">(예) <code>Let’s stick to [MASK] in this skit → [MASK] = improvisation</code></li>
+</ul>
+</li>
+<li data-line="2" dir="auto">Next Sentence Prediction : 두 문장을 보고, 두 번째로 온 문장이 첫 번째 문장의 다음 문장이 진짜 맞을지!! 를 맞추며 훈련받음</li>
+</ul></div><div class="el-p"><p dir="auto"><strong>FFNN + Softmax</strong></p></div><div class="el-ul"><ul>
+<li data-line="0" dir="auto">FFNN : 완전 연결층 feed forward neural network</li>
+<li data-line="1" dir="auto">벡터 → 의미 있는 값(확률)</li>
+<li data-line="2" dir="auto"><div class="list-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div><code>[MASK]</code>위치를 예측한 출력 벡터 <code>V</code>가 있다구 치며는
+<ul>
+<li data-line="3" dir="auto"><code>V</code>는 문맥을 이해한 벡터이지만, 이게 그래서 먼 단어인지는 알 수 없음.</li>
+<li data-line="4" dir="auto"><div class="list-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div>이 때, FFNN을 통과 : <code>FFNN: 768차원 → vocab 크기 (예: 30,000개)</code>
+<ul>
+<li data-line="5" dir="auto">모든 단어들(vocab) 중에서 어떤 게 가장 어울리는지 점수 매김</li>
+</ul>
+</li>
+<li data-line="6" dir="auto">FFNN을 통과한 V를 Softmax 함수에 넣어서 확률로 바꿈</li>
+</ul>
+</li>
+</ul></div><div class="el-p"><p dir="auto"><strong>fine-tuning과 cls 토큰</strong></p></div><div class="el-ul"><ul>
+<li data-line="0" dir="auto"><div class="list-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div>
+<p><code>[CLS]</code>토큰 : 맨 앞 <code>[CLS]</code>의 출력 벡터는 전체 문장의 의미 요약 벡터가 됨.</p>
+<ul>
+<li data-line="1" dir="auto"><code>[CLS]</code> 벡터를 기반으로 결과를 내는 <strong>출력층만 새로 추가</strong></li>
+<li data-line="2" dir="auto">그 전체를 <strong>새로운 태스크에 맞게 재학습</strong> =&gt; <strong>fine-tuning</strong></li>
+</ul>
+</li>
+<li data-line="3" dir="auto">
+<p>분류 작업에서의 fine-tuning<img alt="BERT1" src="https://ejkiwi.github.io/lib/media/BERT1.png" referrerpolicy="no-referrer"></p>
+</li>
+<li data-line="4" dir="auto"><div class="list-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div>
+<p>Sentence Pair Classification<img alt="BERT2" src="https://ejkiwi.github.io/lib/media/BERT2.png" referrerpolicy="no-referrer"></p>
+<ul>
+<li data-line="5" dir="auto"><div class="list-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div>
+<p>핑크벡터들 : 텍스트 토큰 단위들</p>
+<ul>
+<li data-line="6" dir="auto">입력 텍스트의 토큰화 결과 ( 아직 임베딩 안 됨 )</li>
+<li data-line="7" dir="auto">아직 숫자로 바뀌기 전 순수한 단어/기호 상태</li>
+</ul>
+</li>
+<li data-line="8" dir="auto"><div class="list-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div>
+<p>노랑벡터들 : 입력 임베딩 벡터들</p>
+<ul>
+<li data-line="9" dir="auto">BERT 인코더에 들어가기 직전 입력 준비 완료!</li>
+<li data-line="10" dir="auto"><div class="list-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div>Eᵢ : 단어에 대한 임베딩
+<ul>
+<li data-line="11" dir="auto">Token Embedding + Segment Embedding + Position Embedding</li>
+</ul>
+</li>
+<li data-line="12" dir="auto"><code>E[CLS]</code>: <code>[CLS]</code> 토큰에 대한 입력 임베딩</li>
+<li data-line="13" dir="auto"><div class="list-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div><code>E[SEP]</code>: 문장 구분자에 대한 임베딩 
+<ul>
+<li data-line="14" dir="auto">Sentence 1 + <code>[SEP]</code> + Sentence 2  : <code>[SEP]</code>을 통해 두 문장을 하나로 연결</li>
+</ul>
+</li>
+</ul>
+</li>
+<li data-line="15" dir="auto"><div class="list-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div>
+<p>초록벡터들 : 출력 벡터들</p>
+<ul>
+<li data-line="16" dir="auto">BERT인코더를 거친 후 나온 최종 출력 벡터들</li>
+<li data-line="17" dir="auto"><code>C</code> : BERT 출력 중 <code>[CLS]</code>에 해당하는 벡터 (문장쌍 전체 의미 요약)</li>
+<li data-line="18" dir="auto"><div class="list-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div><code>T₁</code>, <code>T₂</code>, ..., <code>T'ₘ</code>: 각 토큰의 출력 벡터 → 문맥을 고려한 의미 벡터
+<ul>
+<li data-line="19" dir="auto">노랑 벡터에서처럼 단어의 고립된 의미가 아니라, 주변 문맥을 보고 의미가 조정된 결과</li>
+</ul>
+</li>
+</ul>
+</li>
+<li data-line="21" dir="auto">
+<p>🔤 <strong>핑크색</strong> = "텍스트" 단어 </p>
+</li>
+<li data-line="22" dir="auto">
+<p>🔢 <strong>노란색</strong> = "벡터"로 바뀐 단어 (Embedding Layer 출력) </p>
+</li>
+<li data-line="23" dir="auto">
+<p>🧠 <strong>초록색</strong> = 문맥 고려한 최종 의미 벡터 (Encoder 출력)</p>
+</li>
+</ul>
+</li>
+<li data-line="24" dir="auto"><div class="list-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div>
+<p>Question Answering<img alt="BERT3" src="https://ejkiwi.github.io/lib/media/BERT3.png" referrerpolicy="no-referrer"></p>
+<ul>
+<li data-line="25" dir="auto">입력 : <code>[CLS] 질문 토큰들 [SEP] 지문(답) 토큰들 [SEP]</code> </li>
+<li data-line="26" dir="auto"><div class="list-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div>Start/End Span : 입력이 들어왔을 때,  어디부터 어디까지가 답일까?를 고르는 것.
+<ul>
+<li data-line="27" dir="auto"><div class="list-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div>각 토큰별로..
+<ul>
+<li data-line="28" dir="auto">시작 위치일 확률 계산 하나</li>
+<li data-line="29" dir="auto">끝 위치일 확률 계산 하나</li>
+<li data-line="30" dir="auto">두 개의 linear layer 사용</li>
+</ul>
+</li>
+<li data-line="31" dir="auto">softmax를 통해 확률 분포 만들기 -&gt; 가장 확률이 높은 시작/끝 고름</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul></div></div></div></div></div><div class="el-h2 heading-wrapper"><h2 data-heading="연합학습" dir="auto" class="heading" id="연합학습"><div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div>연합학습</h2><div class="heading-children"><div class="el-p"><p dir="auto"><em>어디에서 학습할 것인가?</em><br>
+사용자의 데이터를 중앙 서버로 모아서 학습하지 않고, <strong>개별 디바이스에서 모델을 학습</strong>하는 방식.<br>
+학습된 결과( 모델의 가중치나 업데이트 정보 )만 중앙 서버로 보내게 되는데, 이 때 중앙서버에서는 데이터를 취합 후 더 개선된 공통 모델을 생성하는 과정을 거침. 그리고 그 개선된 모델은 다시 사용자들에게 배포됨!!</p></div><div class="el-ul"><ul>
+<li data-line="0" dir="auto"><div class="list-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div>관련 개념 ( 어디에서 학습할 것인가? )
+<ul>
+<li data-line="1" dir="auto">중앙 집중 학습 : 모든 데이터를 중앙 서버로 집합</li>
+<li data-line="2" dir="auto">분산 학습 : 모델 학습을 여러 서버에서 수행 후 결과를 병합</li>
+<li data-line="3" dir="auto">연합 전이 학습 : 연합학습 + 전이학습 -&gt; 서로 다른 기관  간 데이터를 공유하지 않고 협력 학습...?</li>
+<li data-line="4" dir="auto">스완슨 학습 : 블록체인 사용하여 중앙서버 없이 학습</li>
+</ul>
+</li>
+</ul></div></div></div><div class="el-h2 heading-wrapper"><h2 data-heading="표현학습 ( = 특징학습 = representation learning )" dir="auto" class="heading" id="표현학습_(_=_특징학습_=_representation_learning_)"><div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div>표현학습 ( = 특징학습 = representation learning )</h2><div class="heading-children"><div class="el-p"><p dir="auto"><em>어떻게 학습할 것인가?</em><br>
+<strong>특징</strong>을 자동으로 추출할 수 있도록 학습하는 과정을 뜻함. <mark>SELF FEATURE EXTRACT</mark><br>
+데이터만 제공하면 그 데이터로부터 핵심 정보를 추출해낼 수 있고 기계 스스로 배워내는 학습 과정을 뜻함.<br>
+<em>지도학습이될수도있구 비지도학습이될수도있구 자기지도학습이될수도있어 뭐 다.. 섞이는거지 어떻게 학습할 것인지에 대한 개념들이니까!!!!</em></p></div><div class="el-ul"><ul>
+<li data-line="0" dir="auto"><div class="list-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div>관련 개념 ( 어떻게 학습할 것인가? )
+<ul>
+<li data-line="1" dir="auto">지도 학습 : 입력 데이터와 정답이 있는 상태 ( 사람이 직접 라벨을 떠먹여 줌. ) <mark>YES LABEL</mark></li>
+<li data-line="2" dir="auto">비지도 학습 : 데이터의 라벨 없이 "패턴" 학습 ( 클러스터링 느낌 ) <mark>NO LABEL</mark></li>
+<li data-line="3" dir="auto">자기지도 학습 : 데이터에서 일부 정보 숨기고 이를 예측하도록 학습 ( 데이터 자체에서 스스로 라벨을 "만들도록" 함 ) <mark>NO LABEL, GENERATE LABEL</mark></li>
+<li data-line="4" dir="auto">전이 학습 : 미리 학습된 모델을 새로운 문제에 적용. <mark>RECYCLE</mark></li>
+</ul>
+</li>
+</ul></div><div class="el-h5 heading-wrapper"><h5 data-heading="도메인? domain" dir="auto" class="heading" id="도메인?_domain"><div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div>도메인? domain</h5><div class="heading-children"><div class="el-p"><p dir="auto"><em>어떤 데이터를 다루는가?</em></p></div><div class="el-ul"><ul>
+<li data-line="0" dir="auto"><div class="list-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div>domain : 특정 데이터 소스 또는 모델이 작동하는 환경
+<ul>
+<li data-line="1" dir="auto">이미지 vs 음성</li>
+<li data-line="2" dir="auto">domain shifts : 훈련은 A사용자의 이메일로 스팸 필터링을 했다가, 실제 사용은 B사용자의 이메일로 스팸 필터링을 하는 것.</li>
+</ul>
+</li>
+<li data-line="3" dir="auto">task : 모델이 해결하거나 달성해야하는 문제 또는 목표 -&gt; 이 데이터를 가지고 무엇을 할 것인가?<br>
+<strong>domain adaptation?</strong><br>
+diffusion model?<br>
+encoder-decoder -&gt; 입출력 크기를 같게.</li>
+</ul></div><div class="el-hr"><hr></div></div></div></div></div><div class="el-h2 heading-wrapper"><h2 data-heading="batch" dir="auto" class="heading" id="batch"><div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div>batch</h2><div class="heading-children"><div class="el-p"><p dir="auto">가중치를 한 번 업데이트 할 때 동시에 사용하는 독립적인 데이터 샘플(llm에서는 문장의 개수)</p></div><div class="el-table" dir="ltr" style="overflow-x: auto;"><table>
+<thead>
+<tr>
+<th dir="ltr"><strong>구분</strong></th>
+<th dir="ltr"><strong>전체 배치 (Full-Batch)</strong></th>
+<th dir="ltr"><strong>미니 배치 (Mini-Batch)</strong></th>
+<th dir="ltr"><strong>확률적 경사 하강 (SGD)</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td dir="ltr"><strong>Batch Size (M)</strong></td>
+<td dir="ltr">10 (전체 데이터셋)</td>
+<td dir="ltr">4 (임의 지정)</td>
+<td dir="ltr">1 (샘플 1개)</td>
+</tr>
+<tr>
+<td dir="ltr"><strong>입력 데이터</strong></td>
+<td dir="ltr">문장 10개 전체</td>
+<td dir="ltr">문장 4개씩 묶음</td>
+<td dir="ltr">문장 1개씩</td>
+</tr>
+<tr>
+<td dir="ltr"><strong>입력 Shape</strong></td>
+<td dir="auto">(10, 5, 512)</td>
+<td dir="auto">(4, 5, 512)</td>
+<td dir="auto">(1, 5, 512)</td>
+</tr>
+<tr>
+<td dir="ltr"><strong>경사 계산</strong></td>
+<td dir="ltr">10개 문장의 손실 평균</td>
+<td dir="ltr">4개 문장의 손실 평균</td>
+<td dir="ltr">1개 문장의 손실</td>
+</tr>
+<tr>
+<td dir="ltr"><strong>가중치 업데이트 (1 Epoch 당)</strong></td>
+<td dir="ltr"><strong>1회</strong></td>
+<td dir="ltr"><span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML"><mjx-math class="MJX-TEX"><mjx-mn class="mjx-n"><mjx-c class="mjx-c31"></mjx-c><mjx-c class="mjx-c30"></mjx-c></mjx-mn><mjx-mo class="mjx-n" space="3"><mjx-c class="mjx-cF7"></mjx-c></mjx-mo><mjx-mn class="mjx-n" space="3"><mjx-c class="mjx-c34"></mjx-c></mjx-mn><mjx-mo class="mjx-n" space="4"><mjx-c class="mjx-c2248"></mjx-c></mjx-mo></mjx-math></mjx-container></span> <strong>3회</strong> (4개, 4개, 2개)</td>
+<td dir="ltr"><strong>10회</strong></td>
+</tr>
+<tr>
+<td dir="ltr"><strong>경사 특징</strong></td>
+<td dir="ltr">가장 안정적이고 정확함</td>
+<td dir="ltr">적당한 노이즈와 안정성을 가짐</td>
+<td dir="ltr">노이즈가 가장 심함</td>
+</tr>
+</tbody>
+</table></div></div></div><div class="el-h2 heading-wrapper"><h2 data-heading="배치 정규화" dir="auto" class="heading" id="배치_정규화"><div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div>배치 정규화</h2><div class="heading-children"><div class="el-pre"><pre><code data-line="0">배치 1 [ 값1, 값2, 값3 ]
+배치 2 [ 값1, 값2, 값3 ]
+배치 3 [ 값1, 값2, 값3 ]
+		 ↓    ↓    ↓   각 열마다 정규화
+		 
+		 
+# Batch Norm 없을 때:
+배치1(나는): [0.1, 100.0, 0.2]
+배치2(너는): [0.2, 120.0, 0.3]
+배치3(내가): [0.15, 110.0, 0.25]
+# 문제: 차원2(100.0, 120.0, 110.0)가 너무 큰 값 → 이 차원에 "치중"됨
+→ 이 차원의 "비중(가중치)"이 너무 큼
+→ 다른 차원들의 영향력이 무시됨
+
+# Batch Norm 후:
+배치1(나는): [-1.0, -1.0, -1.0]
+배치2(너는): [ 1.0, 1.0, 1.0]
+배치3(내가): [ 0.0, 0.0, 0.0]
+# 해결: 모든 차원이 비슷한 범위
+→ 어떤 차원에도 "치중"되지 않음
+→ 모든 차원의 "비중(가중치)"이 균형있게 됨
+→ 모든 차원이 공평하게 기여함
+</code><button class="copy-code-button"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon lucide-copy"><rect x="8" y="8" width="14" height="14" rx="2" ry="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path></svg></button></pre></div><div class="el-p"><p dir="auto">배치1의 값1, 배치2의 값1, 배치3의 값<br>
+-&gt; 평균 0<br>
+-&gt; 분산1로<br>
+맞춰주는 것.</p></div></div></div><div class="el-h2 heading-wrapper"><h2 data-heading="+ 레이어 정규화" dir="auto" class="heading" id="+_레이어_정규화"><div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div>+ 레이어 정규화</h2><div class="heading-children"><div class="el-pre"><pre><code data-line="0">배치 1 [ 값1, 값2, 값3 ]  ← 이 3개를 정규화
+배치 2 [ 값1, 값2, 값3 ]  ← 이 3개를 정규화
+배치 3 [ 값1, 값2, 값3 ]  ← 이 3개를 정규화
+	   ←─────────────→ 각 행마다 정규화
+</code><button class="copy-code-button"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon lucide-copy"><rect x="8" y="8" width="14" height="14" rx="2" ry="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path></svg></button></pre></div><div class="el-hr"><hr></div></div></div><div class="el-h2 heading-wrapper"><h2 data-heading="깨달음의공간!" dir="auto" class="heading" id="깨달음의공간!"><div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div>깨달음의공간!</h2><div class="heading-children"><div class="el-ul"><ul>
+<li data-line="0" dir="auto">Word Embedding은 단순 숫자가 아니라 <mark>의미 표현 공간</mark>이라는 것!</li>
+<li data-line="1" dir="auto">Language Model이 <mark>분류 문제</mark> 구조로 작동한다는 것!</li>
+<li data-line="2" dir="auto"><div class="list-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div>위치 인코딩 벡터는 단어 임베딩 벡터와 <mark>같은 차원</mark>으로 만들어져 element-wise <mark>덧셈</mark> 방식으로 추가된다는 것!
+<ul>
+<li data-line="3" dir="auto">임베딩 = "토큰을 숫자로 표현한 벡터"  (discrete → dense vector // 고차원 -&gt; 저차원) </li>
+<li data-line="4" dir="auto">인코딩 = "어떤 정보(단어, 문장 등)를 벡터로 표현한 결과" (정보 구조 → 표현 벡터)</li>
+<li data-line="5" dir="auto">"위치"는 그 둘의 경계에 있는 예외 케이스라서 둘 다 쓰임... ( 위치 인코딩/임베딩 )</li>
+</ul>
+</li>
+<li data-line="6" dir="auto">단어 임베딩 벡터는 단순히 고정된 변환이 아니라 <mark>의미를 학습하는 파라미터</mark>라는 것!</li>
+<li data-line="7" dir="auto"><div class="list-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div>layer norm
+<ul>
+<li data-line="8" dir="auto">batch norm은 텐서가 있다고 하면 세로로 정규화 하고</li>
+<li data-line="9" dir="auto">layer norm은 텐서가 있다고 하면 가로로 정규화 하는 느낌<br>
+(n, m) 텐서가 있다면...!</li>
+<li data-line="11" dir="auto">Batch Norm: 각 m 특성마다 n 샘플의 평균/분산으로 정규화</li>
+<li data-line="12" dir="auto">Layer Norm: 각 n개의 샘플마다 m 특성의 평균/분산으로 정규화</li>
+</ul>
+</li>
+</ul></div><div class="el-hr"><hr></div><div class="el-p"><p dir="auto">LLM의 임베딩 공간 =&gt; LATENT SPACE</p></div><div class="mod-footer mod-ui"></div></div></div></div></div></div><div class="sidebar-right sidebar"><div class="sidebar-handle"></div><div class="sidebar-topbar"><div class="topbar-content"></div><div class="clickable-icon sidebar-collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="svg-icon"><path d="M21 3H3C1.89543 3 1 3.89543 1 5V19C1 20.1046 1.89543 21 3 21H21C22.1046 21 23 20.1046 23 19V5C23 3.89543 22.1046 3 21 3Z"></path><path d="M10 4V20"></path><path d="M4 7H7"></path><path d="M4 10H7"></path><path d="M4 13H7"></path></svg></div></div><div class="sidebar-content"><div class="graph-view-wrapper"><div class="sidebar-section-header">Interactive Graph</div><div class="graph-view-placeholder">
+		<div class="graph-view-container">
+			<div class="graph-icon graph-expand" role="button" aria-label="Expand" data-tooltip-position="top"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg></div>
+			<canvas id="graph-canvas" class="hide" width="512px" height="512px"></canvas>
+		</div>
+		</div></div><div class="tree-container mod-root nav-folder tree-item outline-tree" data-depth="0"><div class="tree-header"><span class="sidebar-section-header">Table Of Contents</span></div><div class="tree-scroll-area tree-item-children nav-folder-children"><div class="tree-item mod-tree-folder nav-folder mod-collapsible is-collapsed" style="display: none;"></div><div class="tree-item" data-depth="1"><a class="tree-link" href="ai_study\궁금햇던것들-모음.html#궁금햇던것들 모음"><div class="tree-item-contents heading-link" heading-name="궁금햇던것들 모음"><span class="tree-item-title">궁금햇던것들 모음</span></div></a><div class="tree-item-children nav-folder-children"><div class="tree-item" data-depth="3"><a class="tree-link" href="ai_study\궁금햇던것들-모음.html#latent_space(_embedding_space_)"><div class="tree-item-contents heading-link" heading-name="latent space( embedding space )"><span class="tree-item-title">latent space( embedding space )</span></div></a><div class="tree-item-children nav-folder-children"></div></div><div class="tree-item" data-depth="2"><a class="tree-link" href="ai_study\궁금햇던것들-모음.html#사영?"><div class="tree-item-contents heading-link" heading-name="사영?"><span class="tree-item-title">사영?</span></div></a><div class="tree-item-children nav-folder-children"></div></div><div class="tree-item" data-depth="2"><a class="tree-link" href="ai_study\궁금햇던것들-모음.html#탐색_공간"><div class="tree-item-contents heading-link" heading-name="탐색 공간"><span class="tree-item-title">탐색 공간</span></div></a><div class="tree-item-children nav-folder-children"></div></div><div class="tree-item" data-depth="2"><a class="tree-link" href="ai_study\궁금햇던것들-모음.html#단어_임베딩"><div class="tree-item-contents heading-link" heading-name="단어 임베딩"><span class="tree-item-title">단어 임베딩</span></div></a><div class="tree-item-children nav-folder-children"></div></div><div class="tree-item" data-depth="2"><a class="tree-link" href="ai_study\궁금햇던것들-모음.html#단어_예측(Language_Modeling)의_구조"><div class="tree-item-contents heading-link" heading-name="단어 예측(Language Modeling)의 구조"><span class="tree-item-title">단어 예측(Language Modeling)의 구조</span></div></a><div class="tree-item-children nav-folder-children"></div></div><div class="tree-item" data-depth="2"><a class="tree-link" href="ai_study\궁금햇던것들-모음.html#시작_위치_처리_(START_토큰)"><div class="tree-item-contents heading-link" heading-name="시작 위치 처리 (START 토큰)"><span class="tree-item-title">시작 위치 처리 (START 토큰)</span></div></a><div class="tree-item-children nav-folder-children"></div></div><div class="tree-item" data-depth="2"><a class="tree-link" href="ai_study\궁금햇던것들-모음.html#임베딩도_학습되는_파라미터!!"><div class="tree-item-contents heading-link" heading-name="임베딩도 학습되는 파라미터!!"><span class="tree-item-title">임베딩도 학습되는 파라미터!!</span></div></a><div class="tree-item-children nav-folder-children"></div></div><div class="tree-item" data-depth="2"><a class="tree-link" href="ai_study\궁금햇던것들-모음.html#벡터의_차원_수가_의미하는_바"><div class="tree-item-contents heading-link" heading-name="벡터의 차원 수가 의미하는 바"><span class="tree-item-title">벡터의 차원 수가 의미하는 바</span></div></a><div class="tree-item-children nav-folder-children"></div></div><div class="tree-item" data-depth="2"><a class="tree-link" href="ai_study\궁금햇던것들-모음.html#포지셔널_인코딩(Positional_Encoding)"><div class="tree-item-contents heading-link" heading-name="포지셔널 인코딩(Positional Encoding)"><span class="tree-item-title">포지셔널 인코딩(Positional Encoding)</span></div></a><div class="tree-item-children nav-folder-children"></div></div><div class="tree-item" data-depth="2"><a class="tree-link" href="ai_study\궁금햇던것들-모음.html#임베딩_벡터의_각_차원의_의미는_해석_불가"><div class="tree-item-contents heading-link" heading-name="임베딩 벡터의 각 차원의 의미는 해석 불가"><span class="tree-item-title">임베딩 벡터의 각 차원의 의미는 해석 불가</span></div></a><div class="tree-item-children nav-folder-children"></div></div><div class="tree-item mod-collapsible" data-depth="2"><a class="tree-link" href="ai_study\궁금햇던것들-모음.html#GPT_와_BERT"><div class="tree-item-contents heading-link" heading-name="GPT 와 BERT"><div class="collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div><span class="tree-item-title">GPT 와 BERT</span></div></a><div class="tree-item-children nav-folder-children"><div class="tree-item" data-depth="3"><a class="tree-link" href="ai_study\궁금햇던것들-모음.html#TRANSFORMER"><div class="tree-item-contents heading-link" heading-name="TRANSFORMER"><span class="tree-item-title">TRANSFORMER</span></div></a><div class="tree-item-children nav-folder-children"></div></div><div class="tree-item" data-depth="3"><a class="tree-link" href="ai_study\궁금햇던것들-모음.html#GPT"><div class="tree-item-contents heading-link" heading-name="GPT"><span class="tree-item-title">GPT</span></div></a><div class="tree-item-children nav-folder-children"></div></div><div class="tree-item" data-depth="3"><a class="tree-link" href="ai_study\궁금햇던것들-모음.html#BERT"><div class="tree-item-contents heading-link" heading-name="BERT"><span class="tree-item-title">BERT</span></div></a><div class="tree-item-children nav-folder-children"></div></div></div></div><div class="tree-item" data-depth="2"><a class="tree-link" href="ai_study\궁금햇던것들-모음.html#연합학습"><div class="tree-item-contents heading-link" heading-name="연합학습"><span class="tree-item-title">연합학습</span></div></a><div class="tree-item-children nav-folder-children"></div></div><div class="tree-item mod-collapsible" data-depth="2"><a class="tree-link" href="ai_study\궁금햇던것들-모음.html#표현학습_(_=_특징학습_=_representation_learning_)"><div class="tree-item-contents heading-link" heading-name="표현학습 ( = 특징학습 = representation learning )"><div class="collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div><span class="tree-item-title">표현학습 ( = 특징학습 = representation learning )</span></div></a><div class="tree-item-children nav-folder-children"><div class="tree-item" data-depth="5"><a class="tree-link" href="ai_study\궁금햇던것들-모음.html#도메인?_domain"><div class="tree-item-contents heading-link" heading-name="도메인? domain"><span class="tree-item-title">도메인? domain</span></div></a><div class="tree-item-children nav-folder-children"></div></div></div></div><div class="tree-item" data-depth="2"><a class="tree-link" href="ai_study\궁금햇던것들-모음.html#batch"><div class="tree-item-contents heading-link" heading-name="batch"><span class="tree-item-title">batch</span></div></a><div class="tree-item-children nav-folder-children"></div></div><div class="tree-item" data-depth="2"><a class="tree-link" href="ai_study\궁금햇던것들-모음.html#배치_정규화"><div class="tree-item-contents heading-link" heading-name="배치 정규화"><span class="tree-item-title">배치 정규화</span></div></a><div class="tree-item-children nav-folder-children"></div></div><div class="tree-item" data-depth="2"><a class="tree-link" href="ai_study\궁금햇던것들-모음.html#+_레이어_정규화"><div class="tree-item-contents heading-link" heading-name="+ 레이어 정규화"><span class="tree-item-title"><span>- 
+
+<span>레이어 정규화</span></span></span></div></a><div class="tree-item-children nav-folder-children"></div></div><div class="tree-item" data-depth="2"><a class="tree-link" href="ai_study\궁금햇던것들-모음.html#깨달음의공간!"><div class="tree-item-contents heading-link" heading-name="깨달음의공간!"><span class="tree-item-title">깨달음의공간!</span></div></a><div class="tree-item-children nav-folder-children"></div></div></div></div></div></div></div><script defer="">let rs = document.querySelector(".sidebar-right"); rs.classList.add("is-collapsed"); if (window.innerWidth > 768) rs.classList.remove("is-collapsed"); rs.style.setProperty("--sidebar-width", localStorage.getItem("sidebar-right-width"));</script></div></div></body></html>

@@ -8,31 +8,18 @@
         "type": "tabs",
         "children": [
           {
-            "id": "4d2c52c54ffdceea",
-            "type": "leaf",
-            "state": {
-              "type": "mk-space",
-              "state": {
-                "path": "2024 cnu 2차 학습동아리"
-              },
-              "icon": "lucide-file",
-              "title": "2024 cnu 2차 학습동아리"
-            }
-          },
-          {
             "id": "0ba4dba5300385f0",
             "type": "leaf",
             "state": {
               "type": "mk-space",
               "state": {
-                "path": "docs"
+                "path": "AI_study"
               },
               "icon": "lucide-file",
-              "title": "docs"
+              "title": "AI_study"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -86,7 +73,7 @@
             }
           },
           {
-            "id": "7072b95bf62c454a",
+            "id": "fe3a9709c0571168",
             "type": "leaf",
             "state": {
               "type": "mk-path-view",
@@ -100,7 +87,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 315.5
   },
   "right": {
     "id": "b8b53b513e17a2f3",
@@ -190,8 +177,56 @@
       "webpage-html-export:Export Vault to HTML": false
     }
   },
-  "active": "0ba4dba5300385f0",
+  "floating": {
+    "id": "9389f67ddce138d6",
+    "type": "floating",
+    "children": [
+      {
+        "id": "15fe1c7044e8a236",
+        "type": "window",
+        "children": [
+          {
+            "id": "a709ec5db6187b45",
+            "type": "tabs",
+            "children": [
+              {
+                "id": "ba7b0b58ba7197dd",
+                "type": "leaf",
+                "state": {
+                  "type": "markdown",
+                  "state": {
+                    "file": "index.md",
+                    "mode": "source",
+                    "source": false
+                  },
+                  "icon": "lucide-file",
+                  "title": "index"
+                }
+              }
+            ]
+          }
+        ],
+        "direction": "vertical",
+        "x": 270,
+        "y": 375,
+        "width": 800,
+        "height": 400,
+        "maximize": false,
+        "zoom": 0
+      }
+    ]
+  },
+  "active": "ba7b0b58ba7197dd",
   "lastOpenFiles": [
+    "2025-26_동계_모각코/20251216 모각코 활동 0회차.md",
+    "2025_겨울_모각코.md",
+    "2025-26_동계_모각코/강낭콩자반슨 모각코 활동.md",
+    "2025-26_동계_모각코/2025-26_동계_모각코.md",
+    "2025-26_동계_모각코",
+    "AI_study/무제.md",
+    "AI_study/Membership Inference Attack.md",
+    "AI_study/뭔차이지.md",
+    "AI_study/watermarking.md",
     "docs/ai_study/ai_study.html",
     "AI_study/AI_study.md",
     "docs/git&github/버전-관리.html",
@@ -202,8 +237,6 @@
     "docs/ai_study/활성화-함수들과-최적화-알고리즘과-손실함수.html",
     "docs/ai_study/토큰이라....html",
     "docs/ai_study/저는-진짜-몰랐어요..html",
-    "docs/ai_study/궁금햇던거.html",
-    "docs/ai_study",
     "docs/lib/media/positional_encoding2.png",
     "docs/lib/media/positional_encoding1.png",
     "docs/lib/media/word2vec.png",
@@ -214,29 +247,22 @@
     "docs/lib/media/BERT3.png",
     "docs/lib/media/BERT2.png",
     "docs/lib/media/BERT1.png",
-    "AI_study/궁금햇던거.md",
+    "AI_study/궁금햇던것들 모음.md",
     "AI_study/토큰이라....md",
     "AI_study/저는 진짜 몰랐어요..md",
     "AI_study/활성화 함수들과 최적화 알고리즘과 손실함수.md",
-    "2025_여름_모각코/20250810 모각코 활동 5회차.md",
-    "2025_여름_모각코/20250815 모각코 활동 6회차.md",
-    "2025_여름_모각코/20250808 모각코 활동 4회차.md",
-    "2025_여름_모각코/20250731 모각코 활동 3회차.md",
-    "2025_여름_모각코/20250721 모각코 활동 2회차.md",
-    "2025_여름_모각코/20250718 모각코 활동 1회차.md",
-    "2025_여름_모각코/뿌가각 모각코 활동.md",
-    "2025_여름_모각코/2025_여름_모각코.md",
+    "2025_하계_모각코/20250810 모각코 활동 5회차.md",
+    "2025_하계_모각코/20250815 모각코 활동 6회차.md",
+    "2025_하계_모각코/20250808 모각코 활동 4회차.md",
+    "2025_하계_모각코/20250731 모각코 활동 3회차.md",
+    "2025_하계_모각코/20250721 모각코 활동 2회차.md",
+    "2025_하계_모각코/20250718 모각코 활동 1회차.md",
+    "2025_하계_모각코/뿌가각 모각코 활동.md",
+    "2025_하계_모각코/2025_하계_모각코.md",
     "2025_여름_모각코.md",
     "컴프3/Lec01.md",
     "논문읽기/논문읽기.md",
     "논문읽기/What How and When Should Object Detectors Update in Continually Changing Test Domains (CVPR 2024).md",
-    "2025 cnu 동계 학습동아리 (복습)/2회차.md",
-    "2025_겨울_모각코/20250215 모각코 활동 6회차.md",
-    "2025_겨울_모각코/20250209 모각코 활동 5회차.md",
-    "2025_겨울_모각코/20250202 모각코 활동 4회차.md",
-    "git&github/무제 파일.md",
-    "2025_겨울_모각코/20250109 모각코 활동 1회차.md",
-    "2025_겨울_모각코/20250126 모각코 활동 3회차.md",
-    "2024_여름_모각코/20240723 모각코 활동 4회차.md"
+    "2025 cnu 동계 학습동아리 (복습)/2회차.md"
   ]
 }
