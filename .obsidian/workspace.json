@@ -182,25 +182,21 @@
     "type": "floating",
     "children": [
       {
-        "id": "15fe1c7044e8a236",
+        "id": "e5294d3666ea1803",
         "type": "window",
         "children": [
           {
-            "id": "a709ec5db6187b45",
+            "id": "11c79a34f94da2f8",
             "type": "tabs",
             "children": [
               {
-                "id": "ba7b0b58ba7197dd",
+                "id": "6a429c7dcd5f9f6e",
                 "type": "leaf",
                 "state": {
-                  "type": "markdown",
-                  "state": {
-                    "file": "index.md",
-                    "mode": "source",
-                    "source": false
-                  },
+                  "type": "empty",
+                  "state": {},
                   "icon": "lucide-file",
-                  "title": "index"
+                  "title": "새 탭"
                 }
               }
             ]
@@ -216,27 +212,28 @@
       }
     ]
   },
-  "active": "ba7b0b58ba7197dd",
+  "active": "fe3a9709c0571168",
   "lastOpenFiles": [
+    "docs/ai_study/뭔차이지.html",
+    "docs/ai_study/궁금햇던것들-모음.html",
+    "docs/2025-26_동계_모각코/강낭콩자반슨-모각코-활동.html",
+    "docs/2025-26_동계_모각코/20251216-모각코-활동-0회차.html",
+    "docs/2025-26_동계_모각코/2025-26_동계_모각코.html",
+    "docs/2025-26_동계_모각코",
+    "docs/2025_하계_모각코/뿌가각-모각코-활동.html",
+    "docs/2025_하계_모각코/2025_하계_모각코.html",
+    "docs/2025_하계_모각코/20250815-모각코-활동-6회차.html",
+    "docs/2025_하계_모각코/20250810-모각코-활동-5회차.html",
+    "docs/2025_하계_모각코/20250808-모각코-활동-4회차.html",
     "2025-26_동계_모각코/20251216 모각코 활동 0회차.md",
     "2025_겨울_모각코.md",
     "2025-26_동계_모각코/강낭콩자반슨 모각코 활동.md",
     "2025-26_동계_모각코/2025-26_동계_모각코.md",
-    "2025-26_동계_모각코",
     "AI_study/무제.md",
     "AI_study/Membership Inference Attack.md",
     "AI_study/뭔차이지.md",
     "AI_study/watermarking.md",
-    "docs/ai_study/ai_study.html",
     "AI_study/AI_study.md",
-    "docs/git&github/버전-관리.html",
-    "docs/git&github/난이걸여태몰랏어.html",
-    "docs/git&github/명령어.html",
-    "docs/git&github/git&github.html",
-    "docs/git&github",
-    "docs/ai_study/활성화-함수들과-최적화-알고리즘과-손실함수.html",
-    "docs/ai_study/토큰이라....html",
-    "docs/ai_study/저는-진짜-몰랐어요..html",
     "docs/lib/media/positional_encoding2.png",
     "docs/lib/media/positional_encoding1.png",
     "docs/lib/media/word2vec.png",
@@ -262,7 +259,6 @@
     "2025_여름_모각코.md",
     "컴프3/Lec01.md",
     "논문읽기/논문읽기.md",
-    "논문읽기/What How and When Should Object Detectors Update in Continually Changing Test Domains (CVPR 2024).md",
-    "2025 cnu 동계 학습동아리 (복습)/2회차.md"
+    "논문읽기/What How and When Should Object Detectors Update in Continually Changing Test Domains (CVPR 2024).md"
   ]
 }
