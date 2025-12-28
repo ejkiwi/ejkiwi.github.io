@@ -1,4 +1,18 @@
-<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[ejkiwi.github.io]]></title><description><![CDATA[Obsidian digital garden]]></description><link>https://ejkiwi.github.io/</link><image><url>https://ejkiwi.github.io/lib/media/favicon.png</url><title>ejkiwi.github.io</title><link>https://ejkiwi.github.io/</link></image><generator>Webpage HTML Export plugin for Obsidian</generator><lastBuildDate>Sun, 28 Dec 2025 16:11:25 GMT</lastBuildDate><atom:link href="https://ejkiwi.github.io/lib/rss.xml" rel="self" type="application/rss+xml"/><pubDate>Sun, 28 Dec 2025 16:11:23 GMT</pubDate><ttl>60</ttl><dc:creator/><item><title><![CDATA[2024_하계_모각코]]></title><description><![CDATA[ 
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[ejkiwi.github.io]]></title><description><![CDATA[Obsidian digital garden]]></description><link>https://ejkiwi.github.io/</link><image><url>https://ejkiwi.github.io/lib/media/favicon.png</url><title>ejkiwi.github.io</title><link>https://ejkiwi.github.io/</link></image><generator>Webpage HTML Export plugin for Obsidian</generator><lastBuildDate>Sun, 28 Dec 2025 16:17:58 GMT</lastBuildDate><atom:link href="https://ejkiwi.github.io/lib/rss.xml" rel="self" type="application/rss+xml"/><pubDate>Sun, 28 Dec 2025 16:17:57 GMT</pubDate><ttl>60</ttl><dc:creator/><item><title><![CDATA[나의 2025-26 동계 모각코 목표와 계획은...]]></title><description><![CDATA[ 
+ <br><br>주제는! 자기지도학습 논문 구현 스터디이다.<br>2025 2학기, 학술동아리에서 자기지도학습 강의를 진행했었다.<br>
+나름 공부해서 직접 rotation기반의 자기지도학습을 직접 구현하며 교육자료를 만들었지만!<br>
+끝나고 나니 부족한 부분도 많았고 아쉬운 부분이 한두개가 아니었다는 것~!<br>
+그 때 급하게 읽었던 논문 자료들도 제대로 다시 읽어보고, 코드도 대거 수정해서 보기 좋게 예쁘게 만들어보며 제대로 공부해보려 한다!<br>이번 모각코 활동을 통해서<br>
+<br>자기지도학습관련 논문들을 제대로 읽고, 이해하기
+<br>기존 교육자료 코드를 더 깔끔하고 확장 가능한 구조로 리팩토링
+<br>다양한 ssl방법론을 비교실험 할 수 있도록 개선
+<br>성능도 좀 더 높여보기
+<br>아래는 회차별 계획이다<br>]]></description><link>https://ejkiwi.github.io/2025-26_동계_모각코/20251216-모각코-활동-0회차.html</link><guid isPermaLink="false">2025-26_동계_모각코/20251216 모각코 활동 0회차.md</guid><pubDate>Sun, 28 Dec 2025 16:17:38 GMT</pubDate></item><item><title><![CDATA[모각코 팀 : 강낭콩자반슨]]></title><description><![CDATA[ 
+ <br><br>나의 모각코 활동 다짐 : 할수있는만큼 제대로 끝내자!<br>목표<br>
+<br>자기지도학습관련 논문들을 다시 제대로 읽고, 이해하기
+<br>기존 교육자료 코드를 더 깔끔하고 확장 가능한 구조로 리팩토링 (다양한 ssl방법론을 비교실험 할 수 있도록 개선할 것이다)
+<br>성능높이기
+]]></description><link>https://ejkiwi.github.io/2025-26_동계_모각코/강낭콩자반슨-모각코-활동.html</link><guid isPermaLink="false">2025-26_동계_모각코/강낭콩자반슨 모각코 활동.md</guid><pubDate>Sun, 28 Dec 2025 16:16:20 GMT</pubDate></item><item><title><![CDATA[2024_하계_모각코]]></title><description><![CDATA[ 
  <br>
 <br><a data-href="모.구.모.구 모각코 활동" href="https://ejkiwi.github.io/2024_하계_모각코/모.구.모.구-모각코-활동.html" class="internal-link" target="_self" rel="noopener nofollow">모.구.모.구 모각코 활동</a>
 <br><a data-href="20240707 모각코 활동 1회차" href="https://ejkiwi.github.io/2024_하계_모각코/20240707-모각코-활동-1회차.html" class="internal-link" target="_self" rel="noopener nofollow">20240707 모각코 활동 1회차</a>
@@ -1366,9 +1380,7 @@ PC ← PC + 4
 <br><a data-href="AI_study" href="https://ejkiwi.github.io/ai_study/ai_study.html" class="internal-link" target="_self" rel="noopener nofollow">AI_study</a>
 <br><br>사실이건아무것도작성한게없다...&gt;_&lt;<br>
 <br><a data-tooltip-position="top" aria-label="https://velog.io/@eonjikiwi/posts" rel="noopener nofollow" class="external-link" href="https://velog.io/@eonjikiwi/posts" target="_blank">ejkiwi_velog</a>
-]]></description><link>https://ejkiwi.github.io/index.html</link><guid isPermaLink="false">index.md</guid><pubDate>Sun, 28 Dec 2025 16:11:08 GMT</pubDate></item><item><title><![CDATA[2025 cnu 동계 학습동아리 (복습)]]></title><description><![CDATA[ 
- ]]></description><link>https://ejkiwi.github.io/2025-cnu-동계-학습동아리-(복습)/2025-cnu-동계-학습동아리-(복습).html</link><guid isPermaLink="false">2025 cnu 동계 학습동아리 (복습)/2025 cnu 동계 학습동아리 (복습).md</guid><pubDate>Tue, 29 Jul 2025 08:02:18 GMT</pubDate></item><item><title><![CDATA[통통이들 학습 동아리 활동]]></title><description><![CDATA[ 
- <br>비록 미적짱은 되지 못했지만 확통짱은 될 수 있을것이야... \( •̀ ω •́ )/ ]]></description><link>https://ejkiwi.github.io/2025-cnu-동계-학습동아리-(복습)/통통이들-학습-동아리-활동.html</link><guid isPermaLink="false">2025 cnu 동계 학습동아리 (복습)/통통이들 학습 동아리 활동.md</guid><pubDate>Tue, 29 Jul 2025 08:02:08 GMT</pubDate></item><item><title><![CDATA[2024-25_동계_모각코]]></title><description><![CDATA[ 
+]]></description><link>https://ejkiwi.github.io/index.html</link><guid isPermaLink="false">index.md</guid><pubDate>Sun, 28 Dec 2025 16:11:08 GMT</pubDate></item><item><title><![CDATA[2024-25_동계_모각코]]></title><description><![CDATA[ 
  <br>
 <br><a data-href="파샤샥 모각코 활동" href="https://ejkiwi.github.io/2024-25_동계_모각코/파샤샥-모각코-활동.html" class="internal-link" target="_self" rel="noopener nofollow">파샤샥 모각코 활동</a>
 <br><a data-href="20250109 모각코 활동 1회차" href="https://ejkiwi.github.io/2024-25_동계_모각코/20250109-모각코-활동-1회차.html" class="internal-link" target="_self" rel="noopener nofollow">20250109 모각코 활동 1회차</a>
@@ -1988,15 +2000,7 @@ print(dt.feature_importances_)
 
 ]]></description><link>https://ejkiwi.github.io/2024-25_동계_모각코/20250215-모각코-활동-6회차.html</link><guid isPermaLink="false">2024-25_동계_모각코/20250215 모각코 활동 6회차.md</guid><pubDate>Sat, 15 Feb 2025 17:02:59 GMT</pubDate></item><item><title><![CDATA[파샤샥 모각코 활동]]></title><description><![CDATA[ 
  <br>'파사삭' ==  '파이썬 파사삭'<br>나의 모각코 활동 다짐 : 파이썬의 짱이 되겠다!!!!!!<br>팀 모각코 계획<br>]]></description><link>https://ejkiwi.github.io/2024-25_동계_모각코/파샤샥-모각코-활동.html</link><guid isPermaLink="false">2024-25_동계_모각코/파샤샥 모각코 활동.md</guid><pubDate>Mon, 10 Feb 2025 08:46:23 GMT</pubDate></item><item><title><![CDATA[2025-26_동계_모각코]]></title><description><![CDATA[ 
- ]]></description><link>https://ejkiwi.github.io/2025-26_동계_모각코/2025-26_동계_모각코.html</link><guid isPermaLink="false">2025-26_동계_모각코/2025-26_동계_모각코.md</guid><pubDate>Sun, 28 Dec 2025 14:17:05 GMT</pubDate></item><item><title><![CDATA[나의 2025-26 동계 모각코 목표와 계획은...]]></title><description><![CDATA[ 
- <br><br>주제는! 자기지도학습 논문 구현 스터디이다.<br>2025 2학기, 학술동아리에서 자기지도학습 강의를 진행했었다.<br>
-나름 공부해서 직접 rotation기반의 자기지도학습을 직접 구현하며 교육자료를 만들었지만! 끝나고 나니 부족한 부분도 많았고 아쉬운 부분이 한두개가 아니었다는 것~<br>이번 모각코 활동을 통해서<br>
-<br>자기지도학습관련 논문들을 제대로 읽고, 이해하기
-<br>기존 교육자료 코드를 더 깔끔하고 확장 가능한 구조로 리팩토링
-<br>다양한 ssl방법론을 비교실험 할 수 있도록 개선
-<br>성능도 좀 더 높여보기
-<br>]]></description><link>https://ejkiwi.github.io/2025-26_동계_모각코/20251216-모각코-활동-0회차.html</link><guid isPermaLink="false">2025-26_동계_모각코/20251216 모각코 활동 0회차.md</guid><pubDate>Sun, 28 Dec 2025 15:47:59 GMT</pubDate></item><item><title><![CDATA[모각코 팀 : 강낭콩자반슨]]></title><description><![CDATA[ 
- <br><br>나의 모각코 활동 다짐 : 자기지도학습 교육자료 개선 프로젝트<br>모각코 계획<br>]]></description><link>https://ejkiwi.github.io/2025-26_동계_모각코/강낭콩자반슨-모각코-활동.html</link><guid isPermaLink="false">2025-26_동계_모각코/강낭콩자반슨 모각코 활동.md</guid><pubDate>Sun, 28 Dec 2025 14:53:54 GMT</pubDate></item><item><title><![CDATA[궁금햇던것들 모음]]></title><description><![CDATA[ 
+ ]]></description><link>https://ejkiwi.github.io/2025-26_동계_모각코/2025-26_동계_모각코.html</link><guid isPermaLink="false">2025-26_동계_모각코/2025-26_동계_모각코.md</guid><pubDate>Sun, 28 Dec 2025 14:17:05 GMT</pubDate></item><item><title><![CDATA[궁금햇던것들 모음]]></title><description><![CDATA[ 
  <br><br>
 <br>그냥 수학적으로 정의된 좌표계... 긍까 빈 도화지 같은 것.
 
