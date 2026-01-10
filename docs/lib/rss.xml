@@ -1,4 +1,53 @@
-<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[ejkiwi.github.io]]></title><description><![CDATA[Obsidian digital garden]]></description><link>https://ejkiwi.github.io/</link><image><url>https://ejkiwi.github.io/lib/media/favicon.png</url><title>ejkiwi.github.io</title><link>https://ejkiwi.github.io/</link></image><generator>Webpage HTML Export plugin for Obsidian</generator><lastBuildDate>Sun, 28 Dec 2025 16:17:58 GMT</lastBuildDate><atom:link href="https://ejkiwi.github.io/lib/rss.xml" rel="self" type="application/rss+xml"/><pubDate>Sun, 28 Dec 2025 16:17:57 GMT</pubDate><ttl>60</ttl><dc:creator/><item><title><![CDATA[나의 2025-26 동계 모각코 목표와 계획은...]]></title><description><![CDATA[ 
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[ejkiwi.github.io]]></title><description><![CDATA[Obsidian digital garden]]></description><link>https://ejkiwi.github.io/</link><image><url>https://ejkiwi.github.io/lib/media/favicon.png</url><title>ejkiwi.github.io</title><link>https://ejkiwi.github.io/</link></image><generator>Webpage HTML Export plugin for Obsidian</generator><lastBuildDate>Sat, 10 Jan 2026 13:17:00 GMT</lastBuildDate><atom:link href="https://ejkiwi.github.io/lib/rss.xml" rel="self" type="application/rss+xml"/><pubDate>Sat, 10 Jan 2026 13:16:59 GMT</pubDate><ttl>60</ttl><dc:creator/><item><title><![CDATA[20260110 모각코 활동 1회차]]></title><description><![CDATA[ 
+ <br>오늘의 목표 : 기존 작성 코드 분석하고 내가 뭘 해야할지 생각해보기<br><br><br>핵심 특징:<br>
+<br>Unlabeled 데이터의 경우 각 이미지를 0°, 90°, 180°, 270° 회전하여 4배로 증강
+<br>회전 각도(0-3)를 레이블로 사용하여 Pretext Task 학습
+<br>Labeled/Unlabeled 데이터 분할을 위한 캐싱 메커니즘으로 구현함
+<br><br>백본 (Backbone):<br>
+<br>ResNet-18 기반
+<br>CIFAR-10에 맞게 첫 번째 Conv 레이어 수정 (kernel_size=3, stride=1)
+<br>MaxPool 레이어 제거
+<br>512차원 임베딩 출력
+<br>분류기 (Classifiers):<br>
+<br>classifier: Downstream task용 10-way 분류기 (CIFAR-10 클래스)
+<br>rotation_classifier: Pretext task용 4-way 분류기 (회전 각도)
+<br>동작 방식:<br>
+<br>is_pretext 플래그에 따라 사용할 분류기 결정
+<br>체크포인트에서 가중치 로드 기능 제공 (from_checkpoint)
+<br><br>주요 기능:<br>
+<br>_train_one_epoch: 1 에포크 학습 수행
+<br>_evaluate: 검증/테스트 데이터로 평가
+<br>train: 전체 학습 루프 (early stopping, checkpoint 관리)
+<br>test: 최종 테스트 수행
+<br>체크포인트 관리:<br>
+<br>검증 손실 기준으로 상위 K개 모델 저장 (save_top_k)
+<br>Early stopping (patience 파라미터)
+<br>학습 진행 상황을 tqdm으로 시각화
+<br><br><br>
+<br>Labeled 데이터 (10%)만 사용
+<br>50 에포크 학습, learning rate = 1e-3
+<br>CIFAR-10 클래스 직접 예측
+<br><br>A. Pretext Task (회전 예측)<br>
+4. Unlabeled 데이터 (90%) 사용<br>
+5. 30 에포크 학습, learning rate = 1e-3<br>
+6. 이미지 회전 각도(0°, 90°, 180°, 270°) 예측<br>
+7. 백본 네트워크가 시각적 표현 학습<br>B. Downstream Task (분류)<br>
+8. Pretext에서 학습한 백본 사용<br>
+9. Labeled 데이터 (10%)로 Fine-tuning<br>
+10. 30 에포크 학습, learning rate = 1e-4<br>
+11. CIFAR-10 클래스 예측<br><br><br>
+<br>명확한 구조: 데이터, 모델, 학습이 잘 분리되어 있음
+<br>재사용 가능하게 함 : Dataset과 Trainer 클래스가 일반화되어 있음
+<br>효율적인 데이터 관리: 데이터 분할 일관성 보장
+<br>실용적인 기능: 체크포인트 관리, early stopping, 진행 상황 시각화
+<br><br><br><br><br>
+<br>모듈화: dataset, model, trainer를 별도 파일로 분리
+<br>설정 파일: config.yaml 생성 및 적용
+<br>프로젝트 구조: src/, configs/, experiments/ 디렉토리 구성
+<br>데이터 증강: transform pipeline 개선
+<br>학습 안정화: learning rate scheduler 추가
+<br><br>아직 확장성과 유지보수성 측면에서 개선의 여지가 있어보인다! 2회차에서는 코드를 모듈화하고 설정 관리를 체계화하여 더 나은 구조로 발전시켜보면 좋을 거 같다.<br>
+이를 통해 앞으로 SimCLR, MAE 등 다양한 자기지도학습 방법론을 쉽게 추가하고 비교 실험할 수 있는 기반을 마련하는것이 내 목표이당]]></description><link>https://ejkiwi.github.io/2025-26_동계_모각코/20260110-모각코-활동-1회차.html</link><guid isPermaLink="false">2025-26_동계_모각코/20260110 모각코 활동 1회차.md</guid><pubDate>Sat, 10 Jan 2026 13:16:40 GMT</pubDate></item><item><title><![CDATA[나의 2025-26 동계 모각코 목표와 계획은...]]></title><description><![CDATA[ 
  <br><br>주제는! 자기지도학습 논문 구현 스터디이다.<br>2025 2학기, 학술동아리에서 자기지도학습 강의를 진행했었다.<br>
 나름 공부해서 직접 rotation기반의 자기지도학습을 직접 구현하며 교육자료를 만들었지만!<br>
 끝나고 나니 부족한 부분도 많았고 아쉬운 부분이 한두개가 아니었다는 것~!<br>
