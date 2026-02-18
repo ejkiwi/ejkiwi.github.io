@@ -1,4 +1,42 @@
-<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[ejkiwi.github.io]]></title><description><![CDATA[Obsidian digital garden]]></description><link>https://ejkiwi.github.io/</link><image><url>https://ejkiwi.github.io/lib/media/favicon.png</url><title>ejkiwi.github.io</title><link>https://ejkiwi.github.io/</link></image><generator>Webpage HTML Export plugin for Obsidian</generator><lastBuildDate>Sat, 10 Jan 2026 13:17:00 GMT</lastBuildDate><atom:link href="https://ejkiwi.github.io/lib/rss.xml" rel="self" type="application/rss+xml"/><pubDate>Sat, 10 Jan 2026 13:16:59 GMT</pubDate><ttl>60</ttl><dc:creator/><item><title><![CDATA[20260110 모각코 활동 1회차]]></title><description><![CDATA[ 
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[ejkiwi.github.io]]></title><description><![CDATA[Obsidian digital garden]]></description><link>https://ejkiwi.github.io/</link><image><url>https://ejkiwi.github.io/lib/media/favicon.png</url><title>ejkiwi.github.io</title><link>https://ejkiwi.github.io/</link></image><generator>Webpage HTML Export plugin for Obsidian</generator><lastBuildDate>Wed, 18 Feb 2026 06:42:13 GMT</lastBuildDate><atom:link href="https://ejkiwi.github.io/lib/rss.xml" rel="self" type="application/rss+xml"/><pubDate>Wed, 18 Feb 2026 06:42:11 GMT</pubDate><ttl>60</ttl><dc:creator/><item><title><![CDATA[회고]]></title><description><![CDATA[ 
+ <br><br><a data-tooltip-position="top" aria-label="https://colab.research.google.com/drive/1n9Pjthb3W4q-MO891Ce_-y5Jh2uOw4uv?usp=sharing" rel="noopener nofollow" class="external-link" href="https://colab.research.google.com/drive/1n9Pjthb3W4q-MO891Ce_-y5Jh2uOw4uv?usp=sharing" target="_blank">2024 cnu 2차 학습동아리 실습코드</a><br><br>24년 여름방학 모각코(모여서 각자 코딩) 활동에서 처음 만나 각자 인공지능 기초 공부를 진행했었는데, 이번에는 한 단계 더 나아가 실제로 음성 데이터를 다루는 인공지능 모델을 직접 구현해보자는 목표를 가지고 또 참여하게 되었다.<br><br>
+<br>최종 목표: 여러 최적화 방법을 도입하여 성능을 높인 음성 분류 모델 구현
+<br>세부 목표:
+
+<br>음성 데이터 전처리 방법 익히기
+<br>CNN, ResNet 등 다양한 딥러닝 모델 실습
+<br>모델 성능 최적화 기법 학습 및 적용
+<br>최대한 높은 정확도 달성
+
+
+<br><br><br>원본 음성 → 전처리 → MFCC 변환 → Zero Padding → 모델 입력
+<br><br>
+<br>CNN: 기본적인 합성곱 신경망
+<br>ResNet: Skip Connection으로 깊은 네트워크 학습 가능
+<br><br>
+<br>데이터 증강
+<br>적절한 손실 함수와 옵티마이저 선택
+<br>정규화 기법 (Dropout, Batch Normalization)
+<br>하이퍼파라미터 튜닝
+<br><br>
+<br>레이블 인코딩 문제 해결
+<br>과적합 문제 인식 및 대응
+
+<br>문제: 훈련 데이터에서는 잘 작동하지만 실제 정확도 3%  
+<br>해결: 모델 구조 변경, 정규화 기법 적용, 하이퍼파라미터 조정
+
+
+<br>PyTorch 버전 호환성 문제 해결
+<br>레이블 인코딩 문제
+
+<br>문제: 문자열 레이블로 인한 훈련 오류
+<br>해결: 레이블 매핑 딕셔너리 생성하여 숫자로 변환
+
+
+<br><br>지금 생각해보면 예제 코드에 많이 의존했던 점이 아쉽다. 좀 더 스스로 구현해보고 싶었지만 역량이 많이 부족했던 것 같다.<br>
+실습 활동을 하면서 생각보다 오류가 많이 났고, 생각보다 스스로 그 오류를 해결할 수 있는 힘이 있음을 느낄 수 있었다. 그동안 인공지능 공부가 내가 하기에 엄청 어렵다는 생각에 주저했으나 그동안 내 의지의 문제였던 것 같다.]]></description><link>https://ejkiwi.github.io/2024-cnu-2차-학습동아리/회고.html</link><guid isPermaLink="false">2024 cnu 2차 학습동아리/회고.md</guid><pubDate>Fri, 16 Jan 2026 07:12:08 GMT</pubDate></item><item><title><![CDATA[2025 cnu 동계 학습동아리 (복습)]]></title><description><![CDATA[ 
+ ]]></description><link>https://ejkiwi.github.io/2025-cnu-동계-학습동아리-(복습)/2025-cnu-동계-학습동아리-(복습).html</link><guid isPermaLink="false">2025 cnu 동계 학습동아리 (복습)/2025 cnu 동계 학습동아리 (복습).md</guid><pubDate>Tue, 29 Jul 2025 08:02:18 GMT</pubDate></item><item><title><![CDATA[통통이들 학습 동아리 활동]]></title><description><![CDATA[ 
+ <br>비록 미적짱은 되지 못했지만 확통짱은 될 수 있을것이야... \( •̀ ω •́ )/ ]]></description><link>https://ejkiwi.github.io/2025-cnu-동계-학습동아리-(복습)/통통이들-학습-동아리-활동.html</link><guid isPermaLink="false">2025 cnu 동계 학습동아리 (복습)/통통이들 학습 동아리 활동.md</guid><pubDate>Tue, 29 Jul 2025 08:02:08 GMT</pubDate></item><item><title><![CDATA[20260110 모각코 활동 1회차]]></title><description><![CDATA[ 
  <br>오늘의 목표 : 기존 작성 코드 분석하고 내가 뭘 해야할지 생각해보기<br><br><br>핵심 특징:<br>
 <br>Unlabeled 데이터의 경우 각 이미지를 0°, 90°, 180°, 270° 회전하여 4배로 증강
 <br>회전 각도(0-3)를 레이블로 사용하여 Pretext Task 학습
@@ -47,7 +85,333 @@
 <br>데이터 증강: transform pipeline 개선
 <br>학습 안정화: learning rate scheduler 추가
 <br><br>아직 확장성과 유지보수성 측면에서 개선의 여지가 있어보인다! 2회차에서는 코드를 모듈화하고 설정 관리를 체계화하여 더 나은 구조로 발전시켜보면 좋을 거 같다.<br>
-이를 통해 앞으로 SimCLR, MAE 등 다양한 자기지도학습 방법론을 쉽게 추가하고 비교 실험할 수 있는 기반을 마련하는것이 내 목표이당]]></description><link>https://ejkiwi.github.io/2025-26_동계_모각코/20260110-모각코-활동-1회차.html</link><guid isPermaLink="false">2025-26_동계_모각코/20260110 모각코 활동 1회차.md</guid><pubDate>Sat, 10 Jan 2026 13:16:40 GMT</pubDate></item><item><title><![CDATA[나의 2025-26 동계 모각코 목표와 계획은...]]></title><description><![CDATA[ 
+이를 통해 앞으로 SimCLR, MAE 등 다양한 자기지도학습 방법론을 쉽게 추가하고 비교 실험할 수 있는 기반을 마련하는것이 내 목표이당]]></description><link>https://ejkiwi.github.io/2025-26_동계_모각코/20260110-모각코-활동-1회차.html</link><guid isPermaLink="false">2025-26_동계_모각코/20260110 모각코 활동 1회차.md</guid><pubDate>Wed, 11 Feb 2026 05:48:58 GMT</pubDate></item><item><title><![CDATA[SSL Rotation Prediction — 코드 리팩토링]]></title><description><![CDATA[ 
+ <br><br>
+<br>대상 원본: dAiv_ssl_rotation_resnet18.ipynb
+<br>리팩토링 결과물: src/, configs/, experiments/
+<br><br><br>기존 코드는 Jupyter Notebook 단일 파일(dAiv_ssl_rotation_resnet18.ipynb)에 데이터 로딩, 모델 정의, 학습 루프, 실험 실행이 모두 섞여있었다. 이를 모듈화된 Python 패키지 구조로 분리해보았다!!<br>
+<br>데이터 / 모델 / 학습 로직을 독립 모듈로 분리
+<br>모든 하이퍼파라미터를 config.yaml 단일 파일에서 관리
+<br>기존 학습 로직 보존: 체크포인트 저장, Early Stopping 동작 변경 없음
+<br><br><br><br>SSL-paper-study/
+└── dAiv_ssl_rotation_resnet18.ipynb &nbsp; # 모든 코드가 단일 노트북에 존재
+<br><br>SSL-paper-study/
+├── src/
+│ &nbsp; ├── __init__.py &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;# 패키지 공개 API 정의
+│ &nbsp; ├── dataset.py &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; # DataType, CIFAR10Dataset, get_transforms()
+│ &nbsp; ├── model.py &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; # Model (ResNet18 기반)
+│ &nbsp; └── trainer.py &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; # Trainer (scheduler 인자 추가)
+├── configs/
+│ &nbsp; └── config.yaml &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;# 전체 하이퍼파라미터 관리
+├── experiments/
+│ &nbsp; └── train.py &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; # 실험 실행 진입점
+└── dAiv_ssl_rotation_resnet18.ipynb &nbsp; # 원본 유지 (수정 없음)
+<br><br><br><br>노트북의 DataType Enum과 CIFAR10Dataset 클래스를 그대로 옮기고, get_transforms() 함수를 새로 추가했다.<br>이전된 내용 (변경 없음)<br>
+<br>DataType Enum: LABELED_TRAIN, UNLABELED_TRAIN, UNLABELED_VALID, VALID, TEST
+<br>CIFAR10Dataset: seed=42 고정 분할, rotation label 자동 생성, transform 외부 주입 구조
+<br>신규 추가: get_transforms()<br>def get_transforms(
+    img_size: Tuple[int, int],
+    mean: List[float],
+    std: List[float],
+    augment: bool = False,
+) -&gt; transforms.Compose:
+<br><br><br>노트북의 Model 클래스를 변경 없이 그대로 이전했다.<br>
+<br>ResNet18 backbone (CIFAR-10 적합 수정: conv1 3×3, maxpool → Identity)
+<br>is_pretext 플래그로 rotation_classifier / classifier 분기
+<br>Model.from_checkpoint() 클래스 메서드로 가중치 로드
+<br><br><br>노트북의 Trainer 클래스를 이전하고 train() 메서드에 scheduler 인자를 추가했다.<br>변경 사항<br># 변경 전
+def train(self, train_loader, valid_loader, optimizer, epochs, ...):
+
+# 변경 후
+def train(self, train_loader, valid_loader, optimizer, epochs, ...,
+          scheduler: Optional[torch.optim.lr_scheduler._LRScheduler] = None):
+<br>scheduler가 주어지면 매 epoch 종료 후 scheduler.step() 자동 호출:<br>train_loss = self._train_one_epoch(...)
+valid_loss, valid_acc = self._evaluate(...)
+
+if scheduler is not None:
+    scheduler.step()   # ← 추가
+<br>보존된 내용 (변경 없음)<br>
+<br>_train_one_epoch() / _evaluate() 학습·평가 로직
+<br>patience 기반 Early Stopping
+<br><br><br>패키지 단독 임포트가 가능하도록 고쳤다.<br>from .dataset import DataType, CIFAR10Dataset, get_transforms
+from .model import Model
+from .trainer import Trainer
+
+__all__ = ["DataType", "CIFAR10Dataset", "get_transforms", "Model", "Trainer"]
+<br><br><br>모든 하이퍼파라미터를 계층 구조로 관리한다. experiments/train.py에 하드코딩된 값은 없다.<br>config.yaml
+├── data &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;: root, img_size, mean/std, split 비율
+├── batch_size &nbsp; &nbsp;: labeled / unlabeled / valid
+├── device &nbsp; &nbsp; &nbsp; &nbsp;: GPU 인덱스 (-1이면 CPU)
+├── pretrained &nbsp; &nbsp;: HuggingFace Hub repo_id / file_name
+├── supervised &nbsp; &nbsp;: lr, weight_decay, epochs, patience, save_top_k, save_path, scheduler
+└── self_supervised
+&nbsp; &nbsp; ├── pretext &nbsp; : (위와 동일 구조)
+&nbsp; &nbsp; └── downstream: (위와 동일 구조)
+<br>각 학습 단계의 scheduler 블록 구조:<br>scheduler:
+  enabled: false          # true로 변경하면 즉시 적용
+  type: "CosineAnnealingLR"
+  T_max: 50               # 생성자에 그대로 전달되는 파라미터
+<br><br><br>노트북의 실험 순서를 그대로 유지하며 전체 실험을 실행하는 진입점 스크립트다.<br>실행 흐름<br>1. config.yaml 로드
+2. device 설정
+3. Dataset / DataLoader 생성
+&nbsp; &nbsp;└─ labeled_loader만 augment=True, 나머지는 augment=False
+4. Supervised 학습 (scheduler 포함)
+5. SSL Pretext 학습 (HuggingFace Hub 사전학습 가중치 로드 → scheduler 포함)
+6. SSL Downstream 학습 (Pretext 최적 체크포인트 로드 → scheduler 포함)
+7. 두 모델 테스트 결과 출력
+<br>핵심: 동적 Scheduler 생성<br>def build_scheduler(optimizer, sch_cfg):
+    sch_cls = getattr(torch.optim.lr_scheduler, sch_cfg["type"])
+    kwargs  = {k: v for k, v in sch_cfg.items() if k not in ("enabled", "type")}
+    return sch_cls(optimizer, **kwargs)
+<br>type 필드만 교체하면 StepLR, OneCycleLR 등 어떤 scheduler로도 전환 가능하다.<br>실행 방법<br># 프로젝트 루트에서 실행
+python experiments/train.py
+python experiments/train.py --config configs/config.yaml
+<br><br><br>
+<br>dAiv_ssl_rotation_resnet18.ipynb — 원본 노트북 무수정
+<br>CIFAR10Dataset의 seed=42 데이터 분할 로직
+<br>Trainer의 체크포인트 저장 / Early Stopping 동작
+<br>Model 아키텍처 (backbone, classifier, rotation_classifier)
+]]></description><link>https://ejkiwi.github.io/2025-26_동계_모각코/20260116-모각코-활동-2회차.html</link><guid isPermaLink="false">2025-26_동계_모각코/20260116 모각코 활동 2회차.md</guid><pubDate>Wed, 18 Feb 2026 06:30:25 GMT</pubDate></item><item><title><![CDATA[20260123 모각코 활동 3회차]]></title><description><![CDATA[ 
+ <br>SimcCLR논문 읽기.<br>시각적 표현의 대조 학습을 위한 간단한 프레임워크<br><a rel="noopener nofollow" class="external-link" href="https://arxiv.org/pdf/2002.05709" target="_blank">https://arxiv.org/pdf/2002.05709</a><br>자기지도학습 - 라벨 없이도 좋은 이미지 표현을 학습하기위한 방법들 중 한 방식으로서 나온 아이디어<br>같은 이미지를 두 번 다르게 변형<br>
+같은 이미지에서 나온 두 버전 → 비슷하게<br>
+다른 이미지에서 나온 두 버전 → 다르게<br>초록 분석<br>
+“This paper presents SimCLR: a simple framework for contrastive learning of visual representations.” 이 논문은 SimCLR을 제안합니다: 시각적 표현의 대조 학습을 위한 간단한 프레임워크<br>
+#SimCLR #contrastivelearning #simple <br>
+논문의 contribution은 “간단하면서도 효과적인” 방법!<br>“We simplify recently proposed contrastive self-supervised learning algorithms without requiring specialized architectures or a memory bank.” 우리는 최근 제안된 대조 자기지도학습 알고리즘들을 단순화했으며, 특수한 구조나 메모리 뱅크가 필요없습니다.<br>
+기존 방법의 문제점 지적 ∙ Specialized architectures: 특별히 설계된 복잡한 네트워크 ∙ Memory bank: 이전 데이터를 저장하는 큰 메모리 (MoCo, InstDisc 등이 사용) - 이전에 계산한 feature들을 저장해두는 큰 저장소. 메모리 많이 먹고 구현 복잡함 ∙ SimCLR은 이런 거 없이도 잘 된다란 말임<br>“In order to understand what enables the contrastive prediction tasks to learn useful representations, we systematically study the major components of our framework.” 대조 예측 과제가 유용한 표현을 학습하게 만드는 요인을 이해하기 위해, 우리는 프레임워크의 주요 구성 요소들을 체계적으로 연구했습니다.<br>
+∙ 이 논문의 방법론적 기여… 단순히 “이게 잘 되더라”가 아니라 → “왜 잘 되는지“ 분석<br>
+∙ “systematically study” = Ablation study (소거 실험)를 많이 했다는 뜻 → 이 논문의 강점! 각 구성요소의 영향을 실험으로 증명 ( Ablation study : )<br>“We show that (1) composition of data augmentations plays a critical role…, (2) introducing a learnable nonlinear transformation… substantially improves…, and (3) contrastive learning benefits from larger batch sizes and more training steps…”<br>
+우리는 다음을 보였습니다:<br>
+1. 데이터 증강의 조합이 중요한 역할을 함<br>
+2. 학습 가능한 비선형 변환을 도입하면 성능이 크게 향상됨<br>
+3. 대조 학습은 큰 배치 크기와 더 많은 학습 단계로부터 이득을 봄<br>
+이 논문의 핵심 기여 3가지를 미리 요약! 발견 (1): 데이터 증강 ∙ “composition” = 여러 개를 조합하는 것 ∙ Critical role = 매우 중요함 ∙ 특히 crop + color distortion 조합 발견 (2): Projection head ∙ “nonlinear transformation” = MLP (비선형 신경망) ∙ “between representation and loss” = 표현 h와 손실 함수 사이에 삽입 ∙ Substantially improves = 엄청 좋아짐 (실제로 10%+ 향상) 발견 (3): 학습 설정 ∙ Larger batch sizes = 4096 이상 ∙ More training steps = 1000 epochs ∙ “compared to supervised learning” = 지도학습보다 더 필요함<br>“By combining these findings, we are able to considerably outperform previous methods for self-supervised and semi-supervised learning on ImageNet.” 이러한 발견들을 결합하여, 우리는 ImageNet에서 자기지도학습과 준지도학습에 대한 이전 방법들을 크게 능가할 수 있었습니다. 평가 데이터셋 ImageNet (가장 널리 쓰이는 벤치마크)으로 두 가지 세팅에서 테스트: ∙ Self-supervised: 라벨 전혀 안 씀 ∙ Semi-supervised: 라벨 조금만 씀 (1%, 10%)<br>
+(구체적 성능) “A linear classifier trained on self-supervised representations learned by SimCLR achieves 76.5% top-1 accuracy, which is a 7% relative improvement over previous state-of-the-art, matching the performance of a supervised ResNet-50.” SimCLR이 학습한 자기지도 표현에 선형 분류기를 학습시키면 76.5% top-1 정확도를 달성하며, 이는 이전 최고 성능 대비 7% 상대적 향상이고, 지도학습 ResNet-50의 성능과 동등합니다. Linear evaluation 학습된 feature를 고정 (freeze)하고 그 위에 간단한 선형 분류기만 학습하는건데 Feature의 품질을 측정하는 표준 방법임 ∙ “matching supervised ResNet-50” ∙ 엄청난 의미! 라벨 없이도 지도학습과 같은 성능!<br>(Semi-supervised 성능) “When fine-tuned on only 1% of the labels, we achieve 85.8% top-5 accuracy, outperforming AlexNet with 100× fewer labels.” 한글: 라벨의 1%만으로 fine-tuning 했을 때, 우리는 85.8% top-5 정확도를 달성하며, 이는 100배 적은 라벨로 AlexNet을 능가합니다. ∙ 1% labels = ImageNet의 1%만 라벨 사용 ∙ Top-5 accuracy = 상위 5개 예측 중 정답이 있으면 맞음 ∙ AlexNet: 100% 라벨 필요 ∙ SimCLR: 1% 라벨로 더 좋은 성능 ∙ 라벨링 비용을 100배 줄일 수 있다! 왜 AlexNet과 비교? ∙ AlexNet은 2012년 ImageNet 우승 모델이어가지고 딥러닝 역사에서 중요한 baseline이엇음.]]></description><link>https://ejkiwi.github.io/2025-26_동계_모각코/20260123-모각코-활동-3회차.html</link><guid isPermaLink="false">2025-26_동계_모각코/20260123 모각코 활동 3회차.md</guid><pubDate>Wed, 18 Feb 2026 03:17:56 GMT</pubDate></item><item><title><![CDATA[20260130 모각코 활동 4회차]]></title><description><![CDATA[ 
+ ]]></description><link>https://ejkiwi.github.io/2025-26_동계_모각코/20260130-모각코-활동-4회차.html</link><guid isPermaLink="false">2025-26_동계_모각코/20260130 모각코 활동 4회차.md</guid><pubDate>Wed, 11 Feb 2026 05:47:35 GMT</pubDate></item><item><title><![CDATA[MAE (Masked Autoencoders Are Scalable Vision Learners)]]></title><description><![CDATA[ 
+ <br><br><a rel="noopener nofollow" class="external-link" href="https://arxiv.org/abs/2111.06377" target="_blank">https://arxiv.org/abs/2111.06377</a><br>자기지도학습 - 이미지의 일부를 가리고 복원하는 방식으로 표현을 학습하는 방법<br><br><br>"This paper shows that masked autoencoders (MAE) are scalable self-supervised learners for computer vision." 이 논문은 마스크 오토인코더(MAE)가 컴퓨터 비전에서 확장 가능한 자기지도학습 모델임을 보입니다. #MAE #maskedautoencoder #scalable 핵심 키워드는 "scalable" — SimCLR이 "simple"을 강조했다면, MAE는 "크게 키워도 잘 된다"는 확장성을 강조함<br>"Our MAE approach is simple: we mask random patches of the input image and reconstruct the missing pixels." 우리의 접근법은 단순합니다: 입력 이미지의 랜덤 패치를 마스킹하고 빠진 픽셀을 복원합니다. NLP의 BERT와 유사한 발상 — BERT는 단어를 마스킹하고 예측, MAE는 이미지 패치를 마스킹하고 복원. 개념적으로는 단순하지만 구현에서 핵심적인 설계 선택들이 있음<br>"First, we develop an asymmetric encoder-decoder architecture... Second, we find that masking a high proportion of the input image, e.g., 75%, yields a nontrivial and meaningful self-supervisory task." 두 가지 핵심 설계:<br>
+<br>비대칭 인코더-디코더: 인코더는 보이는 패치만 처리 (마스크 토큰 없음), 디코더는 가볍게
+<br>높은 마스킹 비율(75%): 이미지 중복성이 높기 때문에, 쉬운 task가 되지 않으려면 많이 가려야 함
+<br><br><br><br>논문이 이 질문에 직접 답하는 게 인상적임. 세 가지 이유를 제시:<br>아키텍처 차이 — 기존엔 CNN이 주류라 마스크 토큰 같은 개념을 삽입하기 어려웠음. ViT 등장으로 해결됨<br>정보 밀도 차이 ← 이게 핵심!<br>
+<br>언어: 단어 하나하나가 semantic하게 밀도 높음. 몇 개만 가려도 어려운 task
+<br>이미지: 공간적 중복성이 매우 높음. 옆 픽셀에서 쉽게 추측 가능
+<br>→ 해결책: 아주 많이 가리기 (75%)
+<br>디코더의 역할 차이<br>
+<br>BERT 디코더: 의미 있는 단어를 예측 → 간단한 MLP로도 충분
+<br>MAE 디코더: 픽셀값을 복원 → 낮은 semantic 수준, 디코더 설계가 중요해짐
+<br><br><br>인코더 (무거움)<br>
+<br>보이는 패치(25%)만 처리 → 마스크 토큰 없음
+<br>표준 ViT 구조 사용
+<br>포지셔널 임베딩 추가
+<br>디코더 (가벼움)<br>
+<br>인코더 출력 + 마스크 토큰을 모두 받아서 처리
+<br>인코더보다 훨씬 작음 (FLOPs 기준 ~9% 수준)
+<br>Pre-training 때만 사용 → fine-tuning 시엔 버림
+<br>왜 이 설계가 효율적인가? 인코더가 전체 패치의 25%만 처리하니 연산량이 대폭 줄어듦. 논문 실험 기준 3× 이상 학습 속도 향상<br><br><br>손실 함수는 MSE (Mean Squared Error) — 마스킹된 패치에 대해서만 계산 (BERT와 동일한 방식)<br>흥미로운 변형: 패치별 정규화(normalized pixels)<br>
+<br>각 패치의 픽셀값을 해당 패치의 평균/표준편차로 정규화해서 예측 target으로 사용
+<br>로컬 대비(local contrast)를 강화 → 실험 결과 성능 향상
+<br>토큰 기반 방법(BEiT 등)과 비교했을 때 픽셀 기반도 충분히 좋거나 더 나음 → 복잡한 tokenizer 없이도 잘 된다는 게 MAE의 강점<br><br><br>마스킹 비율의 영향 (Figure 5)<br>
+<br>fine-tuning: 40~80% 범위에서 전반적으로 잘 됨, 75%가 sweet spot
+<br>linear probing: 비율이 높을수록 꾸준히 향상. 75%가 최적
+<br>BERT의 15%와 대조적으로 이미지에선 왜 75%가 필요한지 직접 실험으로 보여줌
+<br>주요 성능 (Table 3)<br>
+<br>ViT-H로 ImageNet-1K에서 87.8% top-1 달성 — IN1K 데이터만 사용한 방법 중 최고
+<br>supervised pre-training보다 transfer learning 성능도 좋음
+<br>학습 효율<br>
+<br>BEiT보다 3.5× 빠름 (인코더에서 마스크 토큰 제거 덕분)
+<br>MoCo v3보다 적은 epoch에서 더 높은 성능
+<br><br><br>data augmentation 의존도 차이가 흥미로움. SimCLR은 crop+color distortion 조합이 없으면 성능이 크게 떨어지는데, MAE는 random masking 자체가 augmentation 역할을 하기 때문에 크게 의존하지 않음.<br><br><br>MAE = "이미지의 75%를 가리고 복원하는 task를 통해, 라벨 없이도 지도학습을 능가하는 표현을 학습한다. 핵심은 비대칭 구조로 빠르게, 높은 마스킹 비율로 어렵게."<br>
+코드 구현 시 rotation 기반과의 가장 큰 차이는 task의 성격 — rotation은 분류(4-class), MAE는 픽셀 복원(regression+MSE)이라는 점, 그리고 아키텍처도 ViT 기반이어야 패치 단위 마스킹이 자연스럽다는 점이 구현에서 핵심 고려사항이 될 것 같음!]]></description><link>https://ejkiwi.github.io/2025-26_동계_모각코/20260206-모각코-활동-5회차.html</link><guid isPermaLink="false">2025-26_동계_모각코/20260206 모각코 활동 5회차.md</guid><pubDate>Wed, 18 Feb 2026 06:35:20 GMT</pubDate></item><item><title><![CDATA[20260213 모각코 활동 6회차]]></title><description><![CDATA[ 
+ ]]></description><link>https://ejkiwi.github.io/2025-26_동계_모각코/20260213-모각코-활동-6회차.html</link><guid isPermaLink="false">2025-26_동계_모각코/20260213 모각코 활동 6회차.md</guid><pubDate>Wed, 18 Feb 2026 04:16:10 GMT</pubDate></item><item><title><![CDATA[01]]></title><description><![CDATA[ 
+ <br><br>인공지능은 기본적으로 '낯선'지능이다<br>
+ai의 낯선 특징 3가지<br>
+<br>자각 없는 수행 : 의식적 경험의 부재
+<br>이해할 수 없는 실패 : 진정한 이해의 부재
+<br>계산과 실재의 간극 : 몸이 없는 사이버 존재<br>
+우리의 기준과 동일한 기준으로 인공지능을 쉽게 이해할 순 없음.
+<br>
+<br>공감이라는 측면에서만 보아도, 사실 단순한 감정 노동은 인간보다 인공지능이 훨씬 더 탁월함. 이런 측면에서 인간은 인간만의 "현명한" 공감능력을 길러야 함<br>
+ai 윤리 - ethics 고대의 '에토스'라는 개념으로 이해해야 함.
+<br>우리가 생각하는 공자, 맹자 뭐 그런 윤리라기보다는, 인공지능의 규범이라고 보면 됨.
+<br>인공지능을 만드는 각 테크기업들마다 지니고 있는 ai 규범들은 각각 다름.
+<br>그냥 막연하게 착하고 좋은것~ 을 논하는게 아니라는 것! 인공지능은 낯선 지능이라는 특성 때문에, 설계 단계에서부터 다양한 윤리(에토스)들을 추구하는 방식으로 논의되고 있음.
+<br><br><br>]]></description><link>https://ejkiwi.github.io/lgaimers/강의수강_chapter01.html</link><guid isPermaLink="false">lgAimers/강의수강_chapter01.md</guid><pubDate>Tue, 13 Jan 2026 15:31:26 GMT</pubDate></item><item><title><![CDATA[01]]></title><description><![CDATA[ 
+ <br><br><br>머신러닝 : 데이터로부터 패턴 파악, 학습<br>
+<br>알고리즘이 학습과정에서의 피드백 받는 방식
+
+<br>supervised
+
+<br>data + labels
+<br>overfitting 가능성
+<br>regression / classification
+
+
+<br>semisupervised / selfsupervised
+
+<br>pseudo-labeled data
+
+
+<br>unsupervised
+
+<br>unlabeled data
+
+
+<br>reinforcement
+
+<br>agent의 action -&gt; state + reward ( reward system )
+<br>trial and error<br>
+딥러닝 : 하나 이상의 hidden layer를 갖고 있는 neural network
+
+
+
+
+<br>neural network : 행렬의 모임 ( feature들의 weight 만큼의 정보가 담겨있는 유의미한 행렬임 )
+
+<br>이 neural network를 학습한다는 것 : 각 node를 연결하는 weight의 값을 얼마로 할당해줄까? 에 대한 것들을 찾아가는 과정임
+
+<br>loss -&gt; backpropagation으로 계속 업데이트해나가며 찾아감
+
+
+
+
+<br>단일 neural network -&gt; 이건 아무리 딥하게 쌓아도 그냥 linear한 함수가 되는거임 -&gt; non linear fuction이 꼬옥 필요한 이유. 비선형성이 추가되어야함 ( xor 문제 생각해보기! )
+<br>일반적인 neural network ( 비선형성이 추가됨 )
+
+<br>fully connected networkt : 앞 모든 뉴런들 - 다음 뉴런 모두 연결
+
+
+<br>그럼 prediction에서는?
+
+<br>우리가 하자고 했던 task에 맞추어 결과를 뽑아낼 수 있어야 함 - 확률 분포를 뽑아내야 함.
+
+<br>softmax layer
+
+
+<br>prediction을 통해 loss를 구하고, backpropagation 수행
+
+
+<br><br><br>tokenization<br>
+<br>vocab size
+
+<br>too big : 너무 많은 계산량
+<br>too small : 너무 많은 단어가 unk token이 되는것<br>
+word embedding
+
+
+<br>bag of words : 고냥 제일 단순한 단어 매칭임 (one hot vector같은 고)
+<br>word2vec : 특정 단어A의 임베딩을 위해 주변 단어들을 이용해서 A를 예측하도록 하는 pseudo task를 정의하여 학습시킨 임베딩 방식
+
+<br>cbow : 주변 단어들을 통해 특정 단어를 예측하는 방식으로 vector값 업데이트
+<br>skip gram : 특정 단어를 통해 주변 단어를 예측하는 방식으로 vector값 업데이트
+<br>위와 같은 방식들의 최종(마지막) hidden layer가 각 단어의 word vector묶음마냥 표현이 되는 것 -&gt; word embedding vector<br>
+language model ( lstm 까지..! )<br>
+language model의 학습 단어 시퀀스에서 다음 단어의 확률 분포를 뽑는 과정
+
+
+<br>fixed language model : windows가 정해진(문맥의 단어 개수가 정해진 상황) 상황이 가정된 모델 -&gt; 전체 문맥을 봐야하는데 이러면 어떡함?
+<br>rnn : sequential data에 너무나도 자연스러운 형태임 이전 내용 계속 누적. 하나의 weight를 계속 공유하기 때문에 이러한 것이 가능함. 그러나 computation측면에서 많은 단점.
+
+<br>매 step(시퀀스에서 단어를 하나하나 가져올 때마다)마다 loss 계산, gradient 계산 하는 과정
+
+<br>이 때 이전 결과를 다음 입력으로 넣을수도,
+<br>정답 자체를 다음 입력으로 넣을수도 있음.
+
+
+
+
+<br>lstm rnn : rnn에 gate, cell추가됨
+
+<br>forget gate : 얼마나 잊을것인가? -&gt; 이전 정보를 얼마 만큼만 보존하고 반영할 것인지를 -&gt; 이전 정보의 중요도 결정
+<br>input gate : 얼마나 입력할것인가? -&gt; 새로운 내용을 얼마만큼 반영할 것인지를 -&gt; 새 값의 가중치 결정
+<br>output gate : cell state에서 얼마나 출력할것인가? ( hidden sate 결정 )
+<br>cell state : 장기 기억 저장 벡터 값
+<br>C_t = (forget gate × C_{t-1}) + (input gate × C̃_t) : forget gate, input gate는 각각 순차적인 계산이 아니라 두 gate의 결과를 병렬로 계산 후 더하는 것
+
+
+<br><br><br>기존 seq2seq (encoder-decoder) 구조 모델<br>
+<br>encoder rnn : input 문장 요약 / 이해
+<br>decoder rnn : encoder layer를 거친 마지막 hidden state를 다시 decoder rnn 입력으로 넣어, 순차으로 단어 예측
+<br>rnn이 가지는 기존 단점이 여전히 존재. encoder의 last hidden state만을 가지고 decoder의 입력으로 들어가기 때문에, encoder에서의 최근 정보만 강하게 기억, 초반 부분의 내용은 많이 잊게 됨
+
+<br>그럼 초기~최근 으로 갈수록 더 많이 기억하게 되는 구조를 사용하지 말아보자
+<br>중요한 부분에만 집중하도록 해보는 건? -&gt;attention
+
+<br>encoder의 last hidden state를 쓰는 것이 아니라, context vector라는 것을 만들어서 사용해보기
+<br>context vector : encoder의 hidden state -&gt; attention weight 계산 -&gt; weighted sum - normalization (softmax)
+<br>attention weight
+
+<br>encoder의 hidden state와 decoder의 hidden state의 연관성을 보자
+<br>여기서의 연관성 =&gt; dot product를 계산 후 socre 뽑아내기
+
+
+
+
+
+
+<br>rnn &lt;-&gt; transformer<br>
+<br>rnn의 기존 문제점 : 한 번에 많은 sequence를 처리하기 힘들다, 병렬 처리가 불가능한 구조, 장기 의존성 문제
+<br>transformer : rnn과는 완전히 새롭고 다른 구조 -&gt; attention mechanism만 이용해서 만들어진 구조, 병렬 처리 가능, 애초에 모든 단어들이 fully connected하게 연결되어 처리됨
+<br>self attention<br>
+<br>스스로 각 문장 안에서 각 단어끼리의 관계성(attention weight) 계산
+<br>계속 단어간의 표현(representation)의 상호작용을 일으키게 됨
+<br>query key value
+
+<br>단어의 representation을 projection 하여 query key value를 만드는 것에서 부터 시작함
+
+<br>기존 단어들에서부터 그대로 사영하여 query 하나를 만들어두고
+<br>기존 단어들에서부터 그대로 사영하여 key 하나를 만들어두고
+<br>기존 단어들에서부터 그대로 사영하여 value 하나를 만들어둠
+<br>결국 이 query key value는 하나의 입력에서부터 동일하게 나온 것들임 -&gt; "self" attention
+
+
+<br>query와 key의 dot product 계산 -&gt; 확률 형태로 normalization : 문장 속 각 단어들간의 관계 (중요성)을 뽑아냄
+<br>앞에서 뽑아낸 중요성을 value vector와 곱함(weighted sum) -&gt;  단어의 새로운 representation을 만들기 =&gt; "self attention"
+
+
+<br>positional embedding<br>
+rnn은 시퀀스를 처리할 때 단어 하나하나를 순차적으로 처리 -&gt; 시간의 순서가 반영됨<br>
+transformer는 병렬 처리되기 때문에 순차적(시간적)인 개념이 반영되지 않음. -&gt; positional embedding 사용<br>multi head self attention<br>
+self attention을 여러번 나눠서 계산하는 것임<br>
+<br>다양한 관점에서의 weight를 계산하여 그 결과를 합쳐나간다고 이해하면 됨 마지막에 concat해서 합침
+<br>실제 실험에서는 8개의 multi head를 사용함
+<br>이것 또한 동일하게 병렬 처리가 가능
+<br>각 head 별로 단어별 중요도가 다르게 나옴.
+<br>그 "다양한" 관점의 기준은 누가 정하는가? : 누가 정하는 것이 아님. 학습 과정에서 자동으로 정해지는 것. 
+
+<br>각 헤드가 독립적인 가중치 행렬을 가지는데, 각 해드가 다른 패턴을 포착하도록 자동ㅡ로 학습됨. 우리는 이해하지 못하겠지만 attention layer의 신경망이 어떠한 "패턴"을 찾을것임.
+<br>근데 8개의 헤드가 각각 다른 패턴을 찾도록 하는것
+
+
+<br>encoder<br>
+multi head self attention + feed forward neural network의 반복 : input문장에 대한 representation 업데이트<br>
+decoder<br>
+encoder에서 생성된 representation -&gt; conditional 하게 문장 생성<br>
+encoder에서는 key와 value만 넘어오며,  query는 decoder에서 계속 업데이트해나가는 방식임.<br>
+<br>inference : 순차적으로 다음 단어 하나씩 예측하며 처리
+
+<br>지금까지 생성한 단어들"까지"만 보고 (masked self-attention)
+<br>다음 단어로 뭘 만들지를(query) 원문(encoder에서 생성된 representation) 참고하여
+<br>새 단어를 생성함(feed forward)
+
+
+<br>greedy search : 매번 가장 높은 확률의 다음 단어를 선택하지만, 이는 최적의 선택이 아닐 수 있음. 
+<br>beam search : 매번 가장 높은 확률의 다음 단어를 선택하는 것이 아님. 여러 후보를 유함
+
+
+<br><br><br>word embedding의 pretraining<br><br>llm agent : 어떠한 특정환경과 상호작용할 수 있는 llm. 스스로 다음 절차를 생각해낼 수 있는 자율성과 반응성이라는 핵심 특징 존재.<br>
+short-term memory : 현재 대화 세션 내에서만 유지되는 즉각적인 문맥 정보로 대화의 최근 몇 턴을 기억하며 주로 컨텍스트 윈도우에 저장<br>
+long-term memory : 긴 대화 내용들을 저장해두고<br>
+toolformer :<br>
+MCP :<br>
+Reasoning :<br>
+planning :<br>
+ReAct : reason and act planning을 하면서 계속 답을 내는 형태<br>
+multi agent collaboration : supervised agent의 역할을 중심으로 ... <br><br>AI 하드웨어와 GPU]]></description><link>https://ejkiwi.github.io/lgaimers/강의수강_chapter02.html</link><guid isPermaLink="false">lgAimers/강의수강_chapter02.md</guid><pubDate>Fri, 16 Jan 2026 07:48:59 GMT</pubDate></item><item><title><![CDATA[대회 기록]]></title><description><![CDATA[ 
+ <br>기본 베이스라인<br>
+<br>캘리브레이션: 양자화 시 가중치 손실을 최소화하기 위해 실제 데이터로<br>
+모델의 활성화 패턴을 분석하는 과정
+<br>SCHEME = "W4A16"의 의미? : - W = Weight(가중치), A = Activation(활성화), W4A16 = 가중치 4비트, 활성화 16비트
+]]></description><link>https://ejkiwi.github.io/lgaimers/대회-기록.html</link><guid isPermaLink="false">lgAimers/대회 기록.md</guid><pubDate>Wed, 11 Feb 2026 06:05:31 GMT</pubDate></item><item><title><![CDATA[lgAimers]]></title><description><![CDATA[ 
+ ]]></description><link>https://ejkiwi.github.io/lgaimers/lgaimers.html</link><guid isPermaLink="false">lgAimers/lgAimers.md</guid><pubDate>Wed, 14 Jan 2026 01:28:19 GMT</pubDate></item><item><title><![CDATA[나의 2025-26 동계 모각코 목표와 계획은...]]></title><description><![CDATA[ 
  <br><br>주제는! 자기지도학습 논문 구현 스터디이다.<br>2025 2학기, 학술동아리에서 자기지도학습 강의를 진행했었다.<br>
 나름 공부해서 직접 rotation기반의 자기지도학습을 직접 구현하며 교육자료를 만들었지만!<br>
 끝나고 나니 부족한 부분도 많았고 아쉬운 부분이 한두개가 아니었다는 것~!<br>

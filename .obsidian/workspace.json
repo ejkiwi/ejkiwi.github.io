@@ -13,15 +13,72 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "2025-26_동계_모각코/20260110 모각코 활동 1회차.md",
+                "file": "2025-26_동계_모각코/20260213 모각코 활동 6회차.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "20260110 모각코 활동 1회차"
+              "title": "20260213 모각코 활동 6회차"
+            }
+          },
+          {
+            "id": "b804fa3e436385d2",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "2025-26_동계_모각코/20260116 모각코 활동 2회차.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "20260116 모각코 활동 2회차"
+            }
+          },
+          {
+            "id": "6272ebfd11b0fbbd",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "2025-26_동계_모각코/20251216 모각코 활동 0회차.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "20251216 모각코 활동 0회차"
+            }
+          },
+          {
+            "id": "988767c48836bffc",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "2025-26_동계_모각코/20260130 모각코 활동 4회차.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "20260130 모각코 활동 4회차"
+            }
+          },
+          {
+            "id": "dbb35a43e5918d86",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "2025-26_동계_모각코/20260130 모각코 활동 4회차.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "20260130 모각코 활동 4회차"
             }
           }
-        ]
+        ],
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
@@ -62,7 +119,19 @@
             }
           },
           {
-            "id": "b8ff0ac96e5efc52",
+            "id": "2ca5f5dc800cf132",
+            "type": "leaf",
+            "state": {
+              "type": "mk-space",
+              "state": {
+                "path": "2025-26_동계_모각코"
+              },
+              "icon": "lucide-file",
+              "title": "2025-26_동계_모각코"
+            }
+          },
+          {
+            "id": "2b451f7d950a6fdc",
             "type": "leaf",
             "state": {
               "type": "file-explorer",
@@ -75,7 +144,7 @@
             }
           },
           {
-            "id": "868862e470ab488e",
+            "id": "590bdb0d4052f830",
             "type": "leaf",
             "state": {
               "type": "mk-path-view",
@@ -85,7 +154,7 @@
             }
           }
         ],
-        "currentTab": 3
+        "currentTab": 4
       }
     ],
     "direction": "horizontal",
@@ -179,20 +248,32 @@
       "webpage-html-export:Export Vault to HTML": false
     }
   },
-  "active": "0ba4dba5300385f0",
+  "active": "988767c48836bffc",
   "lastOpenFiles": [
-    "docs/2025-26_동계_모각코/20260110-모각코-활동-1회차.html",
+    "docs/무제.html",
+    "docs/lgaimers/대회-기록.html",
+    "docs/lgaimers/강의수강_chapter02.html",
+    "docs/lgaimers/강의수강_chapter01.html",
+    "docs/lgaimers/lgaimers.html",
+    "docs/lgaimers",
+    "docs/2025-26_동계_모각코/20260213-모각코-활동-6회차.html",
+    "docs/2025-26_동계_모각코/20260206-모각코-활동-5회차.html",
+    "docs/2025-26_동계_모각코/20260130-모각코-활동-4회차.html",
+    "docs/2025-26_동계_모각코/20260123-모각코-활동-3회차.html",
+    "docs/2025-26_동계_모각코/20260116-모각코-활동-2회차.html",
+    "2025-26_동계_모각코/20260213 모각코 활동 6회차.md",
+    "lgAimers/대회 기록.md",
+    "2025-26_동계_모각코/20260130 모각코 활동 4회차.md",
+    "2025-26_동계_모각코/무제 3.md",
+    "2025-26_동계_모각코/20260123 모각코 활동 3회차.md",
+    "2025-26_동계_모각코/20260206 모각코 활동 5회차.md",
+    "2025-26_동계_모각코/20260116 모각코 활동 2회차.md",
+    "2024 cnu 2차 학습동아리/회고.md",
+    "무제.md",
+    "lgAimers/lgAimers.md",
+    "lgAimers/강의수강_chapter02.md",
+    "lgAimers/강의수강_chapter01.md",
     "2025-26_동계_모각코/20260110 모각코 활동 1회차.md",
-    "docs/2025_하계_모각코/뿌가각-모각코-활동.html",
-    "docs/2025_하계_모각코/20250810-모각코-활동-5회차.html",
-    "docs/2025_하계_모각코/2025_하계_모각코.html",
-    "docs/2025_하계_모각코/20250808-모각코-활동-4회차.html",
-    "docs/2025_하계_모각코/20250815-모각코-활동-6회차.html",
-    "docs/2025_하계_모각코/20250731-모각코-활동-3회차.html",
-    "docs/2025_하계_모각코/20250718-모각코-활동-1회차.html",
-    "docs/2025_하계_모각코/20250721-모각코-활동-2회차.html",
-    "docs/2025_하계_모각코",
-    "docs/2024_하계_모각코/모.구.모.구-모각코-활동.html",
     "2025-26_동계_모각코/20251216 모각코 활동 0회차.md",
     "2025_겨울_모각코.md",
     "2025-26_동계_모각코/강낭콩자반슨 모각코 활동.md",
@@ -214,18 +295,6 @@
     "docs/lib/media/BERT1.png",
     "AI_study/궁금햇던것들 모음.md",
     "AI_study/토큰이라....md",
-    "AI_study/저는 진짜 몰랐어요..md",
-    "AI_study/활성화 함수들과 최적화 알고리즘과 손실함수.md",
-    "2025_하계_모각코/20250810 모각코 활동 5회차.md",
-    "2025_하계_모각코/20250815 모각코 활동 6회차.md",
-    "2025_하계_모각코/20250808 모각코 활동 4회차.md",
-    "2025_하계_모각코/20250731 모각코 활동 3회차.md",
-    "2025_하계_모각코/20250721 모각코 활동 2회차.md",
-    "2025_하계_모각코/20250718 모각코 활동 1회차.md",
-    "2025_하계_모각코/뿌가각 모각코 활동.md",
-    "2025_하계_모각코/2025_하계_모각코.md",
-    "2025_여름_모각코.md",
-    "컴프3/Lec01.md",
-    "논문읽기/논문읽기.md"
+    "AI_study/저는 진짜 몰랐어요..md"
   ]
 }

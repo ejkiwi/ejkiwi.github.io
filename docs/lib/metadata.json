@@ -1,12 +1,13 @@
 {
   "vaultName": "ejkiwi.github.io",
-  "lastExport": 1768051019810,
+  "lastExport": 1771396931067,
   "pluginVersion": "1.8.01",
   "validBodyClasses": "publish css-settings-manager theme-light show-inline-title show-ribbon mk-readable-line mk-folder-lines mk-spaces-enabled mk-inline-context-enabled mk-flow-seamless",
   "useCustomHeadContent": false,
   "useCustomFavicon": false,
   "files": [
     "2024 cnu 2차 학습동아리/2024 cnu 2차 학습동아리.md",
+    "2024 cnu 2차 학습동아리/회고.md",
     "2024_하계_모각코/2024_하계_모각코.md",
     "2024_하계_모각코/20240707 모각코 활동 1회차.md",
     "2024_하계_모각코/20240709 모각코 활동 2회차.md",
@@ -24,6 +25,8 @@
     "2024-25_동계_모각코/20250209 모각코 활동 5회차.md",
     "2024-25_동계_모각코/20250215 모각코 활동 6회차.md",
     "2024-25_동계_모각코/파샤샥 모각코 활동.md",
+    "2025 cnu 동계 학습동아리 (복습)/2025 cnu 동계 학습동아리 (복습).md",
+    "2025 cnu 동계 학습동아리 (복습)/통통이들 학습 동아리 활동.md",
     "2025_하계_모각코/2025_하계_모각코.md",
     "2025_하계_모각코/20250718 모각코 활동 1회차.md",
     "2025_하계_모각코/20250721 모각코 활동 2회차.md",
@@ -35,6 +38,11 @@
     "2025-26_동계_모각코/2025-26_동계_모각코.md",
     "2025-26_동계_모각코/20251216 모각코 활동 0회차.md",
     "2025-26_동계_모각코/20260110 모각코 활동 1회차.md",
+    "2025-26_동계_모각코/20260116 모각코 활동 2회차.md",
+    "2025-26_동계_모각코/20260123 모각코 활동 3회차.md",
+    "2025-26_동계_모각코/20260130 모각코 활동 4회차.md",
+    "2025-26_동계_모각코/20260206 모각코 활동 5회차.md",
+    "2025-26_동계_모각코/20260213 모각코 활동 6회차.md",
     "2025-26_동계_모각코/강낭콩자반슨 모각코 활동.md",
     "백준/문제 1011.md",
     "백준/문제 1931.md",
@@ -51,23 +59,20 @@
     "git&github/명령어.md",
     "git&github/버전 관리.md",
     "git&github/git&github.md",
+    "lgAimers/강의수강_chapter01.md",
+    "lgAimers/강의수강_chapter02.md",
+    "lgAimers/대회 기록.md",
+    "lgAimers/lgAimers.md",
+    "무제.md",
     "index.md",
     "lib/scripts/graph-wasm.wasm",
-    "lib/fonts/94f2f163d4b698242fef.otf",
-    "lib/fonts/72505e6a122c6acd5471.woff2",
-    "lib/fonts/2d5198822ab091ce4305.woff2",
-    "lib/fonts/c8ba52b05a9ef10f4758.woff2",
-    "lib/fonts/cb10ffd7684cd9836a05.woff2",
-    "lib/fonts/293fd13dbca5a3e450ef.woff2",
-    "lib/fonts/085cb93e613ba3d40d2b.woff2",
-    "lib/fonts/b5f0f109bc88052d4000.woff2",
-    "lib/fonts/cbe0ae49c52c920fd563.woff2",
-    "lib/fonts/535a6cf662596b3bd6a6.woff2",
     "lib/fonts/70cc7ff27245e82ad414.ttf",
     "lib/fonts/454577c22304619db035.ttf",
     "lib/fonts/52ac8f3034507f1d9e53.ttf",
     "lib/fonts/05b618077343fbbd92b7.ttf",
     "lib/fonts/4bb6ac751d1c5478ff3a.woff2",
+    "lib/fonts/c504db5c06caaf7cdfba.woff2",
+    "lib/fonts/01dcbad1bac635f9c9cd.woff2",
     "lib/media/6155340132a851f6089e.svg",
     "lib/html/file-tree.html",
     "lib/scripts/webpage.js",
@@ -86,21 +91,13 @@
   ],
   "mainDependencies": [
     "lib/scripts/graph-wasm.wasm",
-    "lib/fonts/94f2f163d4b698242fef.otf",
-    "lib/fonts/72505e6a122c6acd5471.woff2",
-    "lib/fonts/2d5198822ab091ce4305.woff2",
-    "lib/fonts/c8ba52b05a9ef10f4758.woff2",
-    "lib/fonts/cb10ffd7684cd9836a05.woff2",
-    "lib/fonts/293fd13dbca5a3e450ef.woff2",
-    "lib/fonts/085cb93e613ba3d40d2b.woff2",
-    "lib/fonts/b5f0f109bc88052d4000.woff2",
-    "lib/fonts/cbe0ae49c52c920fd563.woff2",
-    "lib/fonts/535a6cf662596b3bd6a6.woff2",
     "lib/fonts/70cc7ff27245e82ad414.ttf",
     "lib/fonts/454577c22304619db035.ttf",
     "lib/fonts/52ac8f3034507f1d9e53.ttf",
     "lib/fonts/05b618077343fbbd92b7.ttf",
     "lib/fonts/4bb6ac751d1c5478ff3a.woff2",
+    "lib/fonts/c504db5c06caaf7cdfba.woff2",
+    "lib/fonts/01dcbad1bac635f9c9cd.woff2",
     "lib/media/6155340132a851f6089e.svg",
     "lib/html/file-tree.html",
     "lib/scripts/webpage.js",
@@ -119,7 +116,7 @@
   ],
   "fileInfo": {
     "lib/scripts/graph-wasm.wasm": {
-      "modifiedTime": 1768051019810,
+      "modifiedTime": 1771396931067,
       "sourceSize": 23377,
       "exportedPath": "lib/scripts/graph-wasm.wasm",
       "dependencies": []
@@ -173,31 +170,31 @@
       "dependencies": []
     },
     "lib/fonts/70cc7ff27245e82ad414.ttf": {
-      "modifiedTime": 1768051019810,
+      "modifiedTime": 1771396931067,
       "sourceSize": 192740,
       "exportedPath": "lib/fonts/70cc7ff27245e82ad414.ttf",
       "dependencies": []
     },
     "lib/fonts/454577c22304619db035.ttf": {
-      "modifiedTime": 1768051019810,
+      "modifiedTime": 1771396931067,
       "sourceSize": 161376,
       "exportedPath": "lib/fonts/454577c22304619db035.ttf",
       "dependencies": []
     },
     "lib/fonts/52ac8f3034507f1d9e53.ttf": {
-      "modifiedTime": 1768051019810,
+      "modifiedTime": 1771396931067,
       "sourceSize": 191568,
       "exportedPath": "lib/fonts/52ac8f3034507f1d9e53.ttf",
       "dependencies": []
     },
     "lib/fonts/05b618077343fbbd92b7.ttf": {
-      "modifiedTime": 1768051019810,
+      "modifiedTime": 1771396931067,
       "sourceSize": 155288,
       "exportedPath": "lib/fonts/05b618077343fbbd92b7.ttf",
       "dependencies": []
     },
     "lib/fonts/4bb6ac751d1c5478ff3a.woff2": {
-      "modifiedTime": 1768051019810,
+      "modifiedTime": 1771396931067,
       "sourceSize": 7876,
       "exportedPath": "lib/fonts/4bb6ac751d1c5478ff3a.woff2",
       "dependencies": []
@@ -215,85 +212,85 @@
       "dependencies": []
     },
     "lib/html/file-tree.html": {
-      "modifiedTime": 1768051019810,
-      "sourceSize": 21433,
+      "modifiedTime": 1771396931067,
+      "sourceSize": 27150,
       "exportedPath": "lib/html/file-tree.html",
       "dependencies": []
     },
     "lib/scripts/webpage.js": {
-      "modifiedTime": 1768051019810,
+      "modifiedTime": 1771396931067,
       "sourceSize": 47290,
       "exportedPath": "lib/scripts/webpage.js",
       "dependencies": []
     },
     "lib/scripts/graph-view.js": {
-      "modifiedTime": 1768051019810,
+      "modifiedTime": 1771396931067,
       "sourceSize": 15519,
       "exportedPath": "lib/scripts/graph-view.js",
       "dependencies": []
     },
     "lib/scripts/graph-wasm.js": {
-      "modifiedTime": 1768051019810,
+      "modifiedTime": 1771396931067,
       "sourceSize": 14021,
       "exportedPath": "lib/scripts/graph-wasm.js",
       "dependencies": []
     },
     "lib/scripts/graph-render-worker.js": {
-      "modifiedTime": 1768051019810,
+      "modifiedTime": 1771396931067,
       "sourceSize": 5179,
       "exportedPath": "lib/scripts/graph-render-worker.js",
       "dependencies": []
     },
     "lib/scripts/tinycolor.js": {
-      "modifiedTime": 1768051019810,
+      "modifiedTime": 1771396931067,
       "sourceSize": 29832,
       "exportedPath": "lib/scripts/tinycolor.js",
       "dependencies": []
     },
     "lib/scripts/pixi.js": {
-      "modifiedTime": 1768051019810,
+      "modifiedTime": 1771396931067,
       "sourceSize": 449509,
       "exportedPath": "lib/scripts/pixi.js",
       "dependencies": []
     },
     "lib/scripts/minisearch.js": {
-      "modifiedTime": 1768051019810,
+      "modifiedTime": 1771396931067,
       "sourceSize": 29422,
       "exportedPath": "lib/scripts/minisearch.js",
       "dependencies": []
     },
     "lib/media/favicon.png": {
-      "modifiedTime": 1768051019810,
+      "modifiedTime": 1771396931067,
       "sourceSize": 1105,
       "exportedPath": "lib/media/favicon.png",
       "dependencies": []
     },
     "lib/scripts/graph-data.js": {
-      "modifiedTime": 1768051019810,
-      "sourceSize": 3223,
+      "modifiedTime": 1771396931067,
+      "sourceSize": 3920,
       "exportedPath": "lib/scripts/graph-data.js",
       "dependencies": []
     },
     "lib/styles/obsidian.css": {
-      "modifiedTime": 1768051019810,
-      "sourceSize": 172918,
+      "modifiedTime": 1771396931067,
+      "sourceSize": 176675,
       "exportedPath": "lib/styles/obsidian.css",
       "dependencies": []
     },
     "lib/styles/global-variable-styles.css": {
-      "modifiedTime": 1768051019810,
+      "modifiedTime": 1771396931067,
       "sourceSize": 395,
       "exportedPath": "lib/styles/global-variable-styles.css",
       "dependencies": []
     },
     "lib/styles/main-styles.css": {
-      "modifiedTime": 1768051019810,
+      "modifiedTime": 1771396931067,
       "sourceSize": 23392,
       "exportedPath": "lib/styles/main-styles.css",
       "dependencies": []
     },
     "lib/styles/other-plugins.css": {
-      "modifiedTime": 1768051019810,
+      "modifiedTime": 1771396931067,
       "sourceSize": 165390,
       "exportedPath": "lib/styles/other-plugins.css",
       "dependencies": []
@@ -443,7 +440,7 @@
       "dependencies": []
     },
     "lib/media/6155340132a851f6089e.svg": {
-      "modifiedTime": 1768051019810,
+      "modifiedTime": 1771396931067,
       "sourceSize": 315,
       "exportedPath": "lib/media/6155340132a851f6089e.svg",
       "dependencies": []
@@ -719,9 +716,99 @@
       "dependencies": []
     },
     "2025-26_동계_모각코/20260110 모각코 활동 1회차.md": {
-      "modifiedTime": 1768051019810,
-      "sourceSize": 5119,
+      "modifiedTime": 1771396931067,
+      "sourceSize": 5120,
       "exportedPath": "2025-26_동계_모각코/20260110-모각코-활동-1회차.html",
+      "dependencies": []
+    },
+    "2024 cnu 2차 학습동아리/회고.md": {
+      "modifiedTime": 1771396931067,
+      "sourceSize": 2337,
+      "exportedPath": "2024-cnu-2차-학습동아리/회고.html",
+      "dependencies": []
+    },
+    "2025 cnu 동계 학습동아리 (복습)/2025 cnu 동계 학습동아리 (복습).md": {
+      "modifiedTime": 1771396931067,
+      "sourceSize": 149,
+      "exportedPath": "2025-cnu-동계-학습동아리-(복습)/2025-cnu-동계-학습동아리-(복습).html",
+      "dependencies": []
+    },
+    "2025 cnu 동계 학습동아리 (복습)/통통이들 학습 동아리 활동.md": {
+      "modifiedTime": 1771396931067,
+      "sourceSize": 137,
+      "exportedPath": "2025-cnu-동계-학습동아리-(복습)/통통이들-학습-동아리-활동.html",
+      "dependencies": []
+    },
+    "2025-26_동계_모각코/20260116 모각코 활동 2회차.md": {
+      "modifiedTime": 1771396931067,
+      "sourceSize": 5854,
+      "exportedPath": "2025-26_동계_모각코/20260116-모각코-활동-2회차.html",
+      "dependencies": []
+    },
+    "2025-26_동계_모각코/20260123 모각코 활동 3회차.md": {
+      "modifiedTime": 1771396931067,
+      "sourceSize": 5315,
+      "exportedPath": "2025-26_동계_모각코/20260123-모각코-활동-3회차.html",
+      "dependencies": []
+    },
+    "2025-26_동계_모각코/20260130 모각코 활동 4회차.md": {
+      "modifiedTime": 1771396931067,
+      "sourceSize": 0,
+      "exportedPath": "2025-26_동계_모각코/20260130-모각코-활동-4회차.html",
+      "dependencies": []
+    },
+    "2025-26_동계_모각코/20260206 모각코 활동 5회차.md": {
+      "modifiedTime": 1771396931067,
+      "sourceSize": 5173,
+      "exportedPath": "2025-26_동계_모각코/20260206-모각코-활동-5회차.html",
+      "dependencies": []
+    },
+    "2025-26_동계_모각코/20260213 모각코 활동 6회차.md": {
+      "modifiedTime": 1771396931067,
+      "sourceSize": 0,
+      "exportedPath": "2025-26_동계_모각코/20260213-모각코-활동-6회차.html",
+      "dependencies": []
+    },
+    "lgAimers/강의수강_chapter01.md": {
+      "modifiedTime": 1771396931067,
+      "sourceSize": 1129,
+      "exportedPath": "lgaimers/강의수강_chapter01.html",
+      "dependencies": []
+    },
+    "lgAimers/강의수강_chapter02.md": {
+      "modifiedTime": 1771396931067,
+      "sourceSize": 8783,
+      "exportedPath": "lgaimers/강의수강_chapter02.html",
+      "dependencies": []
+    },
+    "lgAimers/대회 기록.md": {
+      "modifiedTime": 1771396931067,
+      "sourceSize": 303,
+      "exportedPath": "lgaimers/대회-기록.html",
+      "dependencies": []
+    },
+    "lgAimers/lgAimers.md": {
+      "modifiedTime": 1771396931067,
+      "sourceSize": 149,
+      "exportedPath": "lgaimers/lgaimers.html",
+      "dependencies": []
+    },
+    "무제.md": {
+      "modifiedTime": 1771396931067,
+      "sourceSize": 0,
+      "exportedPath": "무제.html",
+      "dependencies": []
+    },
+    "lib/fonts/c504db5c06caaf7cdfba.woff2": {
+      "modifiedTime": 1771396931067,
+      "sourceSize": 352240,
+      "exportedPath": "lib/fonts/c504db5c06caaf7cdfba.woff2",
+      "dependencies": []
+    },
+    "lib/fonts/01dcbad1bac635f9c9cd.woff2": {
+      "modifiedTime": 1771396931067,
+      "sourceSize": 387976,
+      "exportedPath": "lib/fonts/01dcbad1bac635f9c9cd.woff2",
       "dependencies": []
     }
   }
