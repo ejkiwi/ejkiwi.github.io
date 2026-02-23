@@ -1,4 +1,602 @@
-<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[ejkiwi.github.io]]></title><description><![CDATA[Obsidian digital garden]]></description><link>https://ejkiwi.github.io/</link><image><url>https://ejkiwi.github.io/lib/media/favicon.png</url><title>ejkiwi.github.io</title><link>https://ejkiwi.github.io/</link></image><generator>Webpage HTML Export plugin for Obsidian</generator><lastBuildDate>Wed, 18 Feb 2026 06:42:13 GMT</lastBuildDate><atom:link href="https://ejkiwi.github.io/lib/rss.xml" rel="self" type="application/rss+xml"/><pubDate>Wed, 18 Feb 2026 06:42:11 GMT</pubDate><ttl>60</ttl><dc:creator/><item><title><![CDATA[회고]]></title><description><![CDATA[ 
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[ejkiwi.github.io]]></title><description><![CDATA[Obsidian digital garden]]></description><link>https://ejkiwi.github.io/</link><image><url>https://ejkiwi.github.io/lib/media/favicon.png</url><title>ejkiwi.github.io</title><link>https://ejkiwi.github.io/</link></image><generator>Webpage HTML Export plugin for Obsidian</generator><lastBuildDate>Mon, 23 Feb 2026 00:30:56 GMT</lastBuildDate><atom:link href="https://ejkiwi.github.io/lib/rss.xml" rel="self" type="application/rss+xml"/><pubDate>Mon, 23 Feb 2026 00:30:55 GMT</pubDate><ttl>60</ttl><dc:creator/><item><title><![CDATA[20260130 모각코 활동 4회차]]></title><description><![CDATA[ 
+ <br>
+<br>SimCLRDataset: 동일 이미지에 augmentation 두 번 적용해 (view1, view2) 반환
+<br>SimCLRModel: 기존 ResNet18 backbone + Projection Head (MLP)
+<br>NTXentLoss + SimCLRTrainer 추가
+<br>(클로드가잔뜩도와줘서어찌저찌햇다다)
+<br><br>SimCLR은 동일 이미지에 서로 다른 Augmentation을 두 번 적용해 Positive Pair를 만든다.<br>
+__getitem__이 (view1, view2) 쌍을 반환하도록 해봤다.<br># src/dataset.py 에 추가
+def get_simclr_transform(img_size: int = 32, s: float = 0.5) -&gt; transforms.Compose:
+    color_jitter = transforms.ColorJitter(
+        brightness=0.8 * s, contrast=0.8 * s,
+        saturation=0.8 * s, hue=0.2 * s
+    )
+    return transforms.Compose([
+        transforms.RandomResizedCrop(img_size, scale=(0.2, 1.0)),
+        transforms.RandomHorizontalFlip(),
+        transforms.RandomApply([color_jitter], p=0.8),
+        transforms.RandomGrayscale(p=0.2),
+        transforms.RandomApply(
+            [transforms.GaussianBlur(kernel_size=3, sigma=(0.1, 2.0))], p=0.5
+        ),
+        transforms.ToTensor(),
+        transforms.Normalize(mean=[0.485, 0.456, 0.406],
+                             std=[0.229, 0.224, 0.225]),
+    ])
+
+
+class SimCLRDataset(CIFAR10):
+    def __init__(
+        self,
+        root: str,
+        train: bool = True,
+        transform=None,     # get_simclr_transform() 결과를 주입
+        download: bool = True,
+    ):
+        super().__init__(root, train=train, transform=None, download=download)
+        self.aug = transform  # 두 번 각각 따로 적용
+
+    def __getitem__(self, index):
+        img = Image.fromarray(self.data[index])
+        view1 = self.aug(img)
+        view2 = self.aug(img)
+        return view1, view2   # label 불필요 (self-supervised)
+
+    def __len__(self):
+        return len(self.data)
+<br><br><br>기존 Model(ResNet18)의 backbone을 인코더로 재사용하고,<br>
+그 위에 Projection Head (MLP) 를 추가한다.<br>
+Downstream에서는 Projection Head를 제거하고 backbone만 사용할 것이다다.<br># src/model.py 에 추가
+
+class SimCLRModel(nn.Module):
+    def __init__(
+        self,
+        embed_dim: int = 512,
+        projection_dim: int = 128,
+        num_classes: int = 10,
+    ):
+        super().__init__()
+        self.embed_dim = embed_dim
+
+        backbone = models.resnet18()
+        backbone.conv1 = nn.Conv2d(3, 64, kernel_size=3, stride=1, padding=1, bias=False)
+        backbone.maxpool = nn.Identity()
+        self.backbone = nn.Sequential(*list(backbone.children())[:-1])  
+        
+        self.projection_head = nn.Sequential(  
+            nn.Linear(embed_dim, embed_dim),
+            nn.ReLU(inplace=True),
+            nn.Linear(embed_dim, projection_dim),
+        )
+        self.classifier = nn.Linear(embed_dim, num_classes)
+        self.use_projection = True   # Pretext: True / Downstream: False
+
+    def forward(self, x):
+        h = self.backbone(x).flatten(1)  
+        if self.use_projection:
+            return self.projection_head(h)  
+            return self.classifier(h)     
+
+    def freeze_backbone(self):
+        for param in self.backbone.parameters():
+            param.requires_grad = False
+
+    @classmethod
+    def from_checkpoint(cls, path, **kwargs):
+        model = cls(**kwargs)
+        model.load_state_dict(torch.load(path, map_location="cpu"))
+        return model
+<br><br><br>NT-Xent Loss(Normalized Temperature-scaled Cross Entropy)를 구현하고,<br>
+Pretext 학습 전용 Trainer를 추가한다.<br># src/trainer.py 에 추가
+
+import torch.nn.functional as F
+
+class NTXentLoss(nn.Module):
+    def __init__(self, temperature: float = 0.5):
+        super().__init__()
+        self.temperature = temperature
+
+    def forward(self, z1: torch.Tensor, z2: torch.Tensor) -&gt; torch.Tensor:
+        B = z1.size(0)
+
+        # L2 정규화
+        z1 = F.normalize(z1, dim=1)
+        z2 = F.normalize(z2, dim=1)
+
+        # (2B, 2B) 유사도 행렬
+        z  = torch.cat([z1, z2], dim=0)                        # (2B, dim)
+        sim = torch.mm(z, z.t()) / self.temperature             # (2B, 2B)
+
+        # 자기 자신(대각선) 마스킹
+        mask = torch.eye(2 * B, dtype=torch.bool, device=z.device)
+        sim.masked_fill_(mask, float("-inf"))
+
+        # Positive index: i번째의 positive는 i+B 또는 i-B 근데 이게 맞는지 모르겠다
+        labels = torch.cat([
+            torch.arange(B, 2 * B),   # z1[i] → z2[i]
+            torch.arange(0, B),        # z2[i] → z1[i]
+        ]).to(z.device)
+
+        loss = F.cross_entropy(sim, labels)
+        return loss
+
+
+class SimCLRTrainer:
+    def __init__(
+        self,
+        model: SimCLRModel,
+        device: torch.device = None,
+        temperature: float = 0.5,
+    ):
+        self.model = model
+        self.device = device or torch.device("cpu")
+        self.model.to(self.device)
+        self.criterion = NTXentLoss(temperature)
+
+    def _train_one_epoch(self, loader, optimizer):
+        self.model.train()
+        self.model.use_projection = True
+        total_loss = 0.0
+        for view1, view2 in tqdm(loader, desc="SimCLR Train", leave=False):
+            view1 = view1.to(self.device)
+            view2 = view2.to(self.device)
+
+            z1 = self.model(view1)
+            z2 = self.model(view2)
+            loss = self.criterion(z1, z2)
+
+            optimizer.zero_grad()
+            loss.backward()
+            optimizer.step()
+            total_loss += loss.item()
+
+        return total_loss / len(loader)
+
+    @torch.no_grad()
+    def _evaluate(self, loader):
+        self.model.eval()
+        self.model.use_projection = True
+        total_loss = 0.0
+        for view1, view2 in loader:
+            view1 = view1.to(self.device)
+            view2 = view2.to(self.device)
+            z1 = self.model(view1)
+            z2 = self.model(view2)
+            total_loss += self.criterion(z1, z2).item()
+        return total_loss / len(loader)
+
+    def train(
+        self,
+        train_loader,
+        valid_loader,
+        optimizer,
+        epochs: int = 100,
+        patience: int = 10,
+        save_path: str = "./checkpoints/simclr/pretext",
+        scheduler=None,
+    ):
+        save_dir = Path(save_path)
+        save_dir.mkdir(parents=True, exist_ok=True)
+
+        best_valid_loss = float("inf")
+        patience_counter = 0
+
+        for epoch in range(1, epochs + 1):
+            train_loss = self._train_one_epoch(train_loader, optimizer)
+            valid_loss = self._evaluate(valid_loader)
+
+            if scheduler:
+                scheduler.step()
+
+            print(f"[SimCLR] Epoch {epoch:03d} | Train Loss: {train_loss:.6f} | Valid Loss: {valid_loss:.6f}")
+
+            if valid_loss &lt; best_valid_loss:
+                best_valid_loss = valid_loss
+                patience_counter = 0
+                ckpt_path = save_dir / f"epoch_{epoch:03d}_loss_{valid_loss:.6f}.pt"
+                torch.save(self.model.state_dict(), ckpt_path)
+            else:
+                patience_counter += 1
+                if patience_counter &gt;= patience:
+                    print(f"[SimCLR] Early stopping at epoch {epoch}.")
+                    break
+<br><br><br>simclr:
+  temperature: 0.5
+  projection_dim: 128
+  embed_dim: 512
+  pretext:
+    lr: 3e-4
+    weight_decay: 1e-4
+    epochs: 100
+    patience: 10
+    save_path: "./checkpoints/simclr/pretext"
+    scheduler:
+      enabled: true
+      type: "CosineAnnealingLR"
+      T_max: 100
+  downstream:
+    lr: 1e-4
+    weight_decay: 1e-4
+    epochs: 50
+    patience: 7
+    freeze_backbone: true          
+    save_path: "./checkpoints/simclr/downstream"
+    scheduler:
+      enabled: false
+<br><br><br># experiments/train.py 에 추가 (기존 supervised / rotation 흐름 아래에 이어서 작성)
+
+from src.dataset import SimCLRDataset, get_simclr_transform
+from src.model import SimCLRModel
+from src.trainer import SimCLRTrainer, Trainer
+
+simclr_cfg = config["simclr"]
+
+simclr_aug = get_simclr_transform(
+    img_size=config["data"]["img_size"][0],
+    s=0.5
+)
+simclr_train_data = SimCLRDataset(
+    root=config["data"]["root"],
+    train=True,
+    transform=simclr_aug,
+)
+simclr_valid_data = SimCLRDataset(
+    root=config["data"]["root"],
+    train=False,
+    transform=simclr_aug,
+)
+
+simclr_train_loader = DataLoader(
+    simclr_train_data, batch_size=config["batch_size"]["unlabeled"], shuffle=True
+)
+simclr_valid_loader = DataLoader(
+    simclr_valid_data, batch_size=config["batch_size"]["valid"]
+)
+
+simclr_model = SimCLRModel(
+    embed_dim=simclr_cfg["embed_dim"],
+    projection_dim=simclr_cfg["projection_dim"],
+)
+simclr_trainer = SimCLRTrainer(
+    simclr_model, device, temperature=simclr_cfg["temperature"]
+)
+
+simclr_optimizer = torch.optim.AdamW(
+    simclr_model.parameters(),
+    lr=simclr_cfg["pretext"]["lr"],
+    weight_decay=simclr_cfg["pretext"]["weight_decay"],
+)
+simclr_scheduler = build_scheduler(simclr_optimizer, simclr_cfg["pretext"]["scheduler"]) \
+    if simclr_cfg["pretext"]["scheduler"]["enabled"] else None
+
+simclr_trainer.train(
+    train_loader=simclr_train_loader,
+    valid_loader=simclr_valid_loader,
+    optimizer=simclr_optimizer,
+    epochs=simclr_cfg["pretext"]["epochs"],
+    patience=simclr_cfg["pretext"]["patience"],
+    save_path=simclr_cfg["pretext"]["save_path"],
+    scheduler=simclr_scheduler,
+)
+
+# 최적 체크포인트 로드
+best_simclr_ckpt = min(
+    Path(simclr_cfg["pretext"]["save_path"]).glob("*.pt"),
+    key=lambda p: float(p.stem.split("_loss_")[-1])
+)
+simclr_model = SimCLRModel.from_checkpoint(
+    best_simclr_ckpt,
+    embed_dim=simclr_cfg["embed_dim"],
+    projection_dim=simclr_cfg["projection_dim"],
+)
+
+# Linear Probe 설정 (backbone 고정, classifier만 학습)
+if simclr_cfg["downstream"]["freeze_backbone"]:
+    simclr_model.freeze_backbone()
+simclr_model.use_projection = False   # classifier 모드로 전환
+
+simclr_downstream_trainer = Trainer(simclr_model).to(device)
+
+simclr_downstream_optimizer = torch.optim.AdamW(
+    filter(lambda p: p.requires_grad, simclr_model.parameters()),
+    lr=simclr_cfg["downstream"]["lr"],
+    weight_decay=simclr_cfg["downstream"]["weight_decay"],
+)
+
+# 기존 labeled_loader / valid_loader 재사용
+simclr_downstream_trainer.train(
+    train_loader=labeled_loader,
+    valid_loader=valid_loader,
+    optimizer=simclr_downstream_optimizer,
+    epochs=simclr_cfg["downstream"]["epochs"],
+    is_pretext=False,
+    patience=simclr_cfg["downstream"]["patience"],
+    save_path=simclr_cfg["downstream"]["save_path"],
+)
+
+print("--- SimCLR Model ---")
+simclr_downstream_trainer.test(test_loader)
+]]></description><link>https://ejkiwi.github.io/2025-26_동계_모각코/20260130-모각코-활동-4회차.html</link><guid isPermaLink="false">2025-26_동계_모각코/20260130 모각코 활동 4회차.md</guid><pubDate>Mon, 23 Feb 2026 00:30:33 GMT</pubDate></item><item><title><![CDATA[20260213 모각코 활동 6회차]]></title><description><![CDATA[ 
+ <br>
+<br>MAEDataset: 패치 마스킹 후 (masked_img, original_img, mask) 반환
+<br>MAEModel: ViT 인코더(마스킹 안 된 패치만 처리) + 경량 디코더 구조
+<br>MAETrainer: 마스킹된 패치에 대한 MSE Loss
+<br><br>Rotation과 달리 MAE는 이미지를 패치로 나눈 뒤 일부를 마스킹하고 원본 픽셀을 복원하는 것이 목표!!<br>
+__getitem__이 (masked_img, original_img) 쌍을 반환하도록 했당<br># src/dataset.py 에 추가
+
+class MAEDataset(CIFAR10):
+    def __init__(
+        self,
+        root: str,
+        train: bool = True,
+        mask_ratio: float = 0.75,
+        patch_size: int = 4,           # CIFAR-10(32x32) 기준 → 8x8 = 64패치
+        transform=None,
+        download: bool = True,
+    ):
+        super().__init__(root, train=train, transform=None, download=download)
+        self.mask_ratio = mask_ratio
+        self.patch_size = patch_size
+        self.base_transform = transform  # ToTensor + Normalize
+        self.to_tensor = transforms.ToTensor()
+
+    def _make_mask(self, num_patches: int) -&gt; torch.BoolTensor:
+        """True인 위치 = 마스킹(제거)할 패치임임"""
+        num_mask = int(num_patches * self.mask_ratio)
+        mask = torch.zeros(num_patches, dtype=torch.bool)
+        mask[torch.randperm(num_patches)[:num_mask]] = True
+        return mask  # shape: (num_patches,)
+
+    def __getitem__(self, index):
+        img = Image.fromarray(self.data[index])
+
+        # 원본 텐서 (복원 target)
+        original = self.base_transform(img)          # (C, H, W)
+
+        # 마스킹된 텐서 생성
+        C, H, W = original.shape
+        P = self.patch_size
+        num_patches = (H // P) * (W // P)
+
+        mask = self._make_mask(num_patches)          # (num_patches,)
+
+        # 패치 단위로 마스킹 (마스킹 위치를 0으로)
+        masked = original.clone()
+        idx = 0
+        for row in range(H // P):
+            for col in range(W // P):
+                if mask[idx]:
+                    masked[:, row*P:(row+1)*P, col*P:(col+1)*P] = 0.0
+                idx += 1
+
+        return masked, original, mask   # mask는 loss 계산에 사용
+
+    def __len__(self):
+        return len(self.data)
+<br><br><br>기존 Model(ResNet18)은 Downstream에서 그대로 재사용한다.<br>
+MAE Pretext 전용으로 ViT 인코더 + 작은디코더 구조를 추가했다.<br># src/model.py 에 추가
+
+import math
+
+class PatchEmbed(nn.Module):
+    def __init__(self, img_size=32, patch_size=4, in_channels=3, embed_dim=192):
+        super().__init__()
+        self.num_patches = (img_size // patch_size) ** 2
+        self.proj = nn.Conv2d(in_channels, embed_dim, kernel_size=patch_size, stride=patch_size)
+
+    def forward(self, x):
+        # x: (B, C, H, W) → (B, num_patches, embed_dim)
+        return self.proj(x).flatten(2).transpose(1, 2)
+
+
+class MAEModel(nn.Module):
+    """
+    - 인코더: 마스킹되지 않은 패치만 처리
+    - 디코더: 전체 패치 받아 픽셀 복원
+    """
+    def __init__(
+        self,
+        img_size: int = 32,
+        patch_size: int = 4,
+        in_channels: int = 3,
+        encoder_dim: int = 192,
+        encoder_depth: int = 6,
+        encoder_heads: int = 3,
+        decoder_dim: int = 96,
+        decoder_depth: int = 2,
+        decoder_heads: int = 3,
+    ):
+        super().__init__()
+        self.patch_size = patch_size
+        self.num_patches = (img_size // patch_size) ** 2
+        self.encoder_dim = encoder_dim
+        self.patch_embed = PatchEmbed(img_size, patch_size, in_channels, encoder_dim)
+        self.cls_token = nn.Parameter(torch.zeros(1, 1, encoder_dim))
+        self.enc_pos_embed = nn.Parameter(
+            torch.zeros(1, 1 + self.num_patches, encoder_dim)
+        )
+        encoder_layer = nn.TransformerEncoderLayer(
+            d_model=encoder_dim, nhead=encoder_heads,
+            dim_feedforward=encoder_dim * 4, batch_first=True, norm_first=True
+        )
+        self.encoder = nn.TransformerEncoder(encoder_layer, num_layers=encoder_depth)
+        self.enc_norm = nn.LayerNorm(encoder_dim)
+        self.enc_to_dec = nn.Linear(encoder_dim, decoder_dim)
+        self.mask_token = nn.Parameter(torch.zeros(1, 1, decoder_dim))
+        self.dec_pos_embed = nn.Parameter(
+            torch.zeros(1, 1 + self.num_patches, decoder_dim)
+        )
+        decoder_layer = nn.TransformerEncoderLayer(
+            d_model=decoder_dim, nhead=decoder_heads,
+            dim_feedforward=decoder_dim * 4, batch_first=True, norm_first=True
+        )
+        self.decoder = nn.TransformerEncoder(decoder_layer, num_layers=decoder_depth)
+        self.dec_norm = nn.LayerNorm(decoder_dim)
+        self.pred_head = nn.Linear(decoder_dim, patch_size ** 2 * in_channels)
+        self._init_weights()
+
+    def _init_weights(self):
+        nn.init.trunc_normal_(self.cls_token, std=0.02)
+        nn.init.trunc_normal_(self.enc_pos_embed, std=0.02)
+        nn.init.trunc_normal_(self.dec_pos_embed, std=0.02)
+        nn.init.trunc_normal_(self.mask_token, std=0.02)
+
+    def encode(self, x, mask):
+        B = x.size(0)
+        # cls token 추가
+        cls = self.cls_token.expand(B, -1, -1)
+        x = torch.cat([cls, x], dim=1)             # (B, 1+num_patches, dim)
+        x = x + self.enc_pos_embed
+
+        cls_x = x[:, :1, :]
+        patch_x = x[:, 1:, :]                      # (B, num_patches, dim)
+        visible = patch_x[~mask.unsqueeze(-1).expand_as(patch_x)].view(B, -1, self.encoder_dim)
+        x_enc = torch.cat([cls_x, visible], dim=1)
+
+        x_enc = self.encoder(x_enc)
+        x_enc = self.enc_norm(x_enc)
+        return x_enc
+
+    def decode(self, x_enc, mask):
+        B = x_enc.size(0)
+        x_dec = self.enc_to_dec(x_enc)             # 차원 축소
+
+        tokens = self.mask_token.expand(B, self.num_patches, -1).clone()
+        num_visible = (~mask).sum(dim=1)[0].item()
+        tokens[~mask] = x_dec[:, 1:1 + int(num_visible), :].reshape(-1, x_dec.size(-1))
+
+        cls_dec = x_dec[:, :1, :]
+        full = torch.cat([cls_dec, tokens], dim=1)
+        full = full + self.dec_pos_embed
+        full = self.decoder(full)
+        full = self.dec_norm(full)
+
+        return self.pred_head(full[:, 1:, :])       # (B, num_patches, patch_size^2*C)
+
+    def forward(self, x, mask):
+        patches = self.patch_embed(x)              # (B, num_patches, encoder_dim)
+        x_enc   = self.encode(patches, mask)
+        pred    = self.decode(x_enc, mask)
+        return pred
+
+    def get_encoder(self):
+        return nn.Sequential(self.patch_embed, self.encoder, self.enc_norm)
+<br><br><br>MAE는 마스킹 패치에 대한 MSE Loss를 사용하므로 별도 Trainer를 추가했다...<br># src/trainer.py 에 추가
+class MAETrainer:
+    def __init__(self, model: MAEModel, device: torch.device = None):
+        self.model = model
+        self.device = device or torch.device("cpu")
+        self.model.to(self.device)
+
+    def _patchify(self, imgs: torch.Tensor, patch_size: int) -&gt; torch.Tensor:
+        B, C, H, W = imgs.shape
+        P = patch_size
+        imgs = imgs.reshape(B, C, H // P, P, W // P, P)
+        imgs = imgs.permute(0, 2, 4, 1, 3, 5).reshape(B, -1, P * P * C)
+        return imgs
+
+    def _compute_loss(self, pred, target, mask):
+        loss = ((pred - target) ** 2).mean(dim=-1)  # (B, num_patches)
+        loss = (loss * mask.float()).sum() / mask.float().sum()
+        return loss
+
+    def _train_one_epoch(self, loader, optimizer):
+        self.model.train()
+        total_loss = 0.0
+        for masked_imgs, original_imgs, masks in tqdm(loader, desc="MAE Train", leave=False):
+            masked_imgs  = masked_imgs.to(self.device)
+            original_imgs = original_imgs.to(self.device)
+            masks        = masks.to(self.device)           # (B, num_patches)
+
+            pred   = self.model(masked_imgs, masks)
+            target = self._patchify(original_imgs, self.model.patch_size)
+
+            loss = self._compute_loss(pred, target, masks)
+            optimizer.zero_grad()
+            loss.backward()
+            optimizer.step()
+            total_loss += loss.item()
+
+        return total_loss / len(loader)
+
+    @torch.no_grad()
+    def _evaluate(self, loader):
+        self.model.eval()
+        total_loss = 0.0
+        for masked_imgs, original_imgs, masks in loader:
+            masked_imgs   = masked_imgs.to(self.device)
+            original_imgs  = original_imgs.to(self.device)
+            masks         = masks.to(self.device)
+
+            pred   = self.model(masked_imgs, masks)
+            target = self._patchify(original_imgs, self.model.patch_size)
+            total_loss += self._compute_loss(pred, target, masks).item()
+
+        return total_loss / len(loader)
+
+    def train(
+        self,
+        train_loader,
+        valid_loader,
+        optimizer,
+        epochs: int = 100,
+        patience: int = 10,
+        save_path: str = "./checkpoints/mae",
+        scheduler=None,
+    ):
+        save_dir = Path(save_path)
+        save_dir.mkdir(parents=True, exist_ok=True)
+
+        best_valid_loss = float("inf")
+        patience_counter = 0
+
+        for epoch in range(1, epochs + 1):
+            train_loss = self._train_one_epoch(train_loader, optimizer)
+            valid_loss = self._evaluate(valid_loader)
+
+            if scheduler:
+                scheduler.step()
+
+            print(f"[MAE] Epoch {epoch:03d} | Train Loss: {train_loss:.6f} | Valid Loss: {valid_loss:.6f}")
+
+            if valid_loss &lt; best_valid_loss:
+                best_valid_loss = valid_loss
+                patience_counter = 0
+                ckpt_path = save_dir / f"epoch_{epoch:03d}_loss_{valid_loss:.6f}.pt"
+                torch.save(self.model.state_dict(), ckpt_path)
+            else:
+                patience_counter += 1
+                if patience_counter &gt;= patience:
+                    print(f"[MAE] Early stopping at epoch {epoch}.")
+                    break
+<br><br><br># configs/config.yaml 에 추가
+
+mae:
+  patch_size: 4          # 32x32 이미지 → 8x8 = 64패치
+  mask_ratio: 0.75
+  encoder_dim: 192
+  encoder_depth: 6
+  decoder_dim: 96
+  decoder_depth: 2
+  pretext:
+    lr: 1.5e-4
+    weight_decay: 0.05
+    epochs: 100
+    patience: 10
+    save_path: "./checkpoints/mae/pretext"
+    scheduler:
+      enabled: true
+      type: "CosineAnnealingLR"
+      T_max: 100
+  downstream:
+    lr: 1e-4
+    weight_decay: 0.05
+    epochs: 50
+    patience: 7
+    save_path: "./checkpoints/mae/downstream"
+    scheduler:
+      enabled: false
+<br><br><br>곧 추가할 예정이다...!]]></description><link>https://ejkiwi.github.io/2025-26_동계_모각코/20260213-모각코-활동-6회차.html</link><guid isPermaLink="false">2025-26_동계_모각코/20260213 모각코 활동 6회차.md</guid><pubDate>Mon, 23 Feb 2026 00:29:34 GMT</pubDate></item><item><title><![CDATA[회고]]></title><description><![CDATA[ 
  <br><br><a data-tooltip-position="top" aria-label="https://colab.research.google.com/drive/1n9Pjthb3W4q-MO891Ce_-y5Jh2uOw4uv?usp=sharing" rel="noopener nofollow" class="external-link" href="https://colab.research.google.com/drive/1n9Pjthb3W4q-MO891Ce_-y5Jh2uOw4uv?usp=sharing" target="_blank">2024 cnu 2차 학습동아리 실습코드</a><br><br>24년 여름방학 모각코(모여서 각자 코딩) 활동에서 처음 만나 각자 인공지능 기초 공부를 진행했었는데, 이번에는 한 단계 더 나아가 실제로 음성 데이터를 다루는 인공지능 모델을 직접 구현해보자는 목표를 가지고 또 참여하게 되었다.<br><br>
 <br>최종 목표: 여러 최적화 방법을 도입하여 성능을 높인 음성 분류 모델 구현
 <br>세부 목표:
@@ -186,8 +784,7 @@ python experiments/train.py --config configs/config.yaml
 2. 학습 가능한 비선형 변환을 도입하면 성능이 크게 향상됨<br>
 3. 대조 학습은 큰 배치 크기와 더 많은 학습 단계로부터 이득을 봄<br>
 이 논문의 핵심 기여 3가지를 미리 요약! 발견 (1): 데이터 증강 ∙ “composition” = 여러 개를 조합하는 것 ∙ Critical role = 매우 중요함 ∙ 특히 crop + color distortion 조합 발견 (2): Projection head ∙ “nonlinear transformation” = MLP (비선형 신경망) ∙ “between representation and loss” = 표현 h와 손실 함수 사이에 삽입 ∙ Substantially improves = 엄청 좋아짐 (실제로 10%+ 향상) 발견 (3): 학습 설정 ∙ Larger batch sizes = 4096 이상 ∙ More training steps = 1000 epochs ∙ “compared to supervised learning” = 지도학습보다 더 필요함<br>“By combining these findings, we are able to considerably outperform previous methods for self-supervised and semi-supervised learning on ImageNet.” 이러한 발견들을 결합하여, 우리는 ImageNet에서 자기지도학습과 준지도학습에 대한 이전 방법들을 크게 능가할 수 있었습니다. 평가 데이터셋 ImageNet (가장 널리 쓰이는 벤치마크)으로 두 가지 세팅에서 테스트: ∙ Self-supervised: 라벨 전혀 안 씀 ∙ Semi-supervised: 라벨 조금만 씀 (1%, 10%)<br>
-(구체적 성능) “A linear classifier trained on self-supervised representations learned by SimCLR achieves 76.5% top-1 accuracy, which is a 7% relative improvement over previous state-of-the-art, matching the performance of a supervised ResNet-50.” SimCLR이 학습한 자기지도 표현에 선형 분류기를 학습시키면 76.5% top-1 정확도를 달성하며, 이는 이전 최고 성능 대비 7% 상대적 향상이고, 지도학습 ResNet-50의 성능과 동등합니다. Linear evaluation 학습된 feature를 고정 (freeze)하고 그 위에 간단한 선형 분류기만 학습하는건데 Feature의 품질을 측정하는 표준 방법임 ∙ “matching supervised ResNet-50” ∙ 엄청난 의미! 라벨 없이도 지도학습과 같은 성능!<br>(Semi-supervised 성능) “When fine-tuned on only 1% of the labels, we achieve 85.8% top-5 accuracy, outperforming AlexNet with 100× fewer labels.” 한글: 라벨의 1%만으로 fine-tuning 했을 때, 우리는 85.8% top-5 정확도를 달성하며, 이는 100배 적은 라벨로 AlexNet을 능가합니다. ∙ 1% labels = ImageNet의 1%만 라벨 사용 ∙ Top-5 accuracy = 상위 5개 예측 중 정답이 있으면 맞음 ∙ AlexNet: 100% 라벨 필요 ∙ SimCLR: 1% 라벨로 더 좋은 성능 ∙ 라벨링 비용을 100배 줄일 수 있다! 왜 AlexNet과 비교? ∙ AlexNet은 2012년 ImageNet 우승 모델이어가지고 딥러닝 역사에서 중요한 baseline이엇음.]]></description><link>https://ejkiwi.github.io/2025-26_동계_모각코/20260123-모각코-활동-3회차.html</link><guid isPermaLink="false">2025-26_동계_모각코/20260123 모각코 활동 3회차.md</guid><pubDate>Wed, 18 Feb 2026 03:17:56 GMT</pubDate></item><item><title><![CDATA[20260130 모각코 활동 4회차]]></title><description><![CDATA[ 
- ]]></description><link>https://ejkiwi.github.io/2025-26_동계_모각코/20260130-모각코-활동-4회차.html</link><guid isPermaLink="false">2025-26_동계_모각코/20260130 모각코 활동 4회차.md</guid><pubDate>Wed, 11 Feb 2026 05:47:35 GMT</pubDate></item><item><title><![CDATA[MAE (Masked Autoencoders Are Scalable Vision Learners)]]></title><description><![CDATA[ 
+(구체적 성능) “A linear classifier trained on self-supervised representations learned by SimCLR achieves 76.5% top-1 accuracy, which is a 7% relative improvement over previous state-of-the-art, matching the performance of a supervised ResNet-50.” SimCLR이 학습한 자기지도 표현에 선형 분류기를 학습시키면 76.5% top-1 정확도를 달성하며, 이는 이전 최고 성능 대비 7% 상대적 향상이고, 지도학습 ResNet-50의 성능과 동등합니다. Linear evaluation 학습된 feature를 고정 (freeze)하고 그 위에 간단한 선형 분류기만 학습하는건데 Feature의 품질을 측정하는 표준 방법임 ∙ “matching supervised ResNet-50” ∙ 엄청난 의미! 라벨 없이도 지도학습과 같은 성능!<br>(Semi-supervised 성능) “When fine-tuned on only 1% of the labels, we achieve 85.8% top-5 accuracy, outperforming AlexNet with 100× fewer labels.” 한글: 라벨의 1%만으로 fine-tuning 했을 때, 우리는 85.8% top-5 정확도를 달성하며, 이는 100배 적은 라벨로 AlexNet을 능가합니다. ∙ 1% labels = ImageNet의 1%만 라벨 사용 ∙ Top-5 accuracy = 상위 5개 예측 중 정답이 있으면 맞음 ∙ AlexNet: 100% 라벨 필요 ∙ SimCLR: 1% 라벨로 더 좋은 성능 ∙ 라벨링 비용을 100배 줄일 수 있다! 왜 AlexNet과 비교? ∙ AlexNet은 2012년 ImageNet 우승 모델이어가지고 딥러닝 역사에서 중요한 baseline이엇음.]]></description><link>https://ejkiwi.github.io/2025-26_동계_모각코/20260123-모각코-활동-3회차.html</link><guid isPermaLink="false">2025-26_동계_모각코/20260123 모각코 활동 3회차.md</guid><pubDate>Wed, 18 Feb 2026 03:17:56 GMT</pubDate></item><item><title><![CDATA[MAE (Masked Autoencoders Are Scalable Vision Learners)]]></title><description><![CDATA[ 
  <br><br><a rel="noopener nofollow" class="external-link" href="https://arxiv.org/abs/2111.06377" target="_blank">https://arxiv.org/abs/2111.06377</a><br>자기지도학습 - 이미지의 일부를 가리고 복원하는 방식으로 표현을 학습하는 방법<br><br><br>"This paper shows that masked autoencoders (MAE) are scalable self-supervised learners for computer vision." 이 논문은 마스크 오토인코더(MAE)가 컴퓨터 비전에서 확장 가능한 자기지도학습 모델임을 보입니다. #MAE #maskedautoencoder #scalable 핵심 키워드는 "scalable" — SimCLR이 "simple"을 강조했다면, MAE는 "크게 키워도 잘 된다"는 확장성을 강조함<br>"Our MAE approach is simple: we mask random patches of the input image and reconstruct the missing pixels." 우리의 접근법은 단순합니다: 입력 이미지의 랜덤 패치를 마스킹하고 빠진 픽셀을 복원합니다. NLP의 BERT와 유사한 발상 — BERT는 단어를 마스킹하고 예측, MAE는 이미지 패치를 마스킹하고 복원. 개념적으로는 단순하지만 구현에서 핵심적인 설계 선택들이 있음<br>"First, we develop an asymmetric encoder-decoder architecture... Second, we find that masking a high proportion of the input image, e.g., 75%, yields a nontrivial and meaningful self-supervisory task." 두 가지 핵심 설계:<br>
 <br>비대칭 인코더-디코더: 인코더는 보이는 패치만 처리 (마스크 토큰 없음), 디코더는 가볍게
 <br>높은 마스킹 비율(75%): 이미지 중복성이 높기 때문에, 쉬운 task가 되지 않으려면 많이 가려야 함
@@ -220,8 +817,7 @@ python experiments/train.py --config configs/config.yaml
 <br>BEiT보다 3.5× 빠름 (인코더에서 마스크 토큰 제거 덕분)
 <br>MoCo v3보다 적은 epoch에서 더 높은 성능
 <br><br><br>data augmentation 의존도 차이가 흥미로움. SimCLR은 crop+color distortion 조합이 없으면 성능이 크게 떨어지는데, MAE는 random masking 자체가 augmentation 역할을 하기 때문에 크게 의존하지 않음.<br><br><br>MAE = "이미지의 75%를 가리고 복원하는 task를 통해, 라벨 없이도 지도학습을 능가하는 표현을 학습한다. 핵심은 비대칭 구조로 빠르게, 높은 마스킹 비율로 어렵게."<br>
-코드 구현 시 rotation 기반과의 가장 큰 차이는 task의 성격 — rotation은 분류(4-class), MAE는 픽셀 복원(regression+MSE)이라는 점, 그리고 아키텍처도 ViT 기반이어야 패치 단위 마스킹이 자연스럽다는 점이 구현에서 핵심 고려사항이 될 것 같음!]]></description><link>https://ejkiwi.github.io/2025-26_동계_모각코/20260206-모각코-활동-5회차.html</link><guid isPermaLink="false">2025-26_동계_모각코/20260206 모각코 활동 5회차.md</guid><pubDate>Wed, 18 Feb 2026 06:35:20 GMT</pubDate></item><item><title><![CDATA[20260213 모각코 활동 6회차]]></title><description><![CDATA[ 
- ]]></description><link>https://ejkiwi.github.io/2025-26_동계_모각코/20260213-모각코-활동-6회차.html</link><guid isPermaLink="false">2025-26_동계_모각코/20260213 모각코 활동 6회차.md</guid><pubDate>Wed, 18 Feb 2026 04:16:10 GMT</pubDate></item><item><title><![CDATA[01]]></title><description><![CDATA[ 
+코드 구현 시 rotation 기반과의 가장 큰 차이는 task의 성격 — rotation은 분류(4-class), MAE는 픽셀 복원(regression+MSE)이라는 점, 그리고 아키텍처도 ViT 기반이어야 패치 단위 마스킹이 자연스럽다는 점이 구현에서 핵심 고려사항이 될 것 같음!]]></description><link>https://ejkiwi.github.io/2025-26_동계_모각코/20260206-모각코-활동-5회차.html</link><guid isPermaLink="false">2025-26_동계_모각코/20260206 모각코 활동 5회차.md</guid><pubDate>Wed, 18 Feb 2026 06:35:20 GMT</pubDate></item><item><title><![CDATA[01]]></title><description><![CDATA[ 
  <br><br>인공지능은 기본적으로 '낯선'지능이다<br>
 ai의 낯선 특징 3가지<br>
 <br>자각 없는 수행 : 의식적 경험의 부재
